@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBB223D298500B081FD /* AppDelegate.swift */; };
-		19B58DBE223D298500B081FD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBD223D298500B081FD /* FirstViewController.swift */; };
-		19B58DC0223D298500B081FD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBF223D298500B081FD /* SecondViewController.swift */; };
+		19B58DBE223D298500B081FD /* Bagis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBD223D298500B081FD /* Bagis.swift */; };
+		19B58DC0223D298500B081FD /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBF223D298500B081FD /* Profil.swift */; };
 		19B58DC3223D298500B081FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC1223D298500B081FD /* Main.storyboard */; };
 		19B58DC5223D298600B081FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC4223D298600B081FD /* Assets.xcassets */; };
 		19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC6223D298600B081FD /* LaunchScreen.storyboard */; };
 		19B58DD3223D298600B081FD /* Tau_PayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DD2223D298600B081FD /* Tau_PayTests.swift */; };
 		19B58DDE223D298600B081FD /* Tau_PayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DDD223D298600B081FD /* Tau_PayUITests.swift */; };
+		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
+		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,8 @@
 /* Begin PBXFileReference section */
 		19B58DB8223D298500B081FD /* Tau-Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tau-Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B58DBB223D298500B081FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19B58DBD223D298500B081FD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		19B58DBF223D298500B081FD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		19B58DBD223D298500B081FD /* Bagis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bagis.swift; sourceTree = "<group>"; };
+		19B58DBF223D298500B081FD /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
 		19B58DC2223D298500B081FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B58DC4223D298600B081FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B58DC7223D298600B081FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		19B58DD9223D298600B081FD /* Tau-PayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tau-PayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B58DDD223D298600B081FD /* Tau_PayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tau_PayUITests.swift; sourceTree = "<group>"; };
 		19B58DDF223D298600B081FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
+		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
-				19B58DBD223D298500B081FD /* FirstViewController.swift */,
-				19B58DBF223D298500B081FD /* SecondViewController.swift */,
+				19B58DBD223D298500B081FD /* Bagis.swift */,
+				19B58DBF223D298500B081FD /* Profil.swift */,
+				19B58DEB223D2D4C00B081FD /* Oner.swift */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
 				19B58DC9223D298600B081FD /* Info.plist */,
+				19B58DED223D323800B081FD /* ParaGonder.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B58DC0223D298500B081FD /* SecondViewController.swift in Sources */,
+				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
 				19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */,
-				19B58DBE223D298500B081FD /* FirstViewController.swift in Sources */,
+				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
+				19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */,
+				19B58DBE223D298500B081FD /* Bagis.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
