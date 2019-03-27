@@ -110,11 +110,11 @@
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				19B58DEB223D2D4C00B081FD /* Oner.swift */,
+				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
 				19B58DC9223D298600B081FD /* Info.plist */,
-				19B58DED223D323800B081FD /* ParaGonder.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";

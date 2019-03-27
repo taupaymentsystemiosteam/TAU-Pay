@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwv-HC-mT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63.200000000000003" y="-716.49175412293857"/>
+            <point key="canvasLocation" x="-1" y="-1032"/>
         </scene>
         <!--Donation-->
         <scene sceneID="hNz-n2-bh7">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-716"/>
+            <point key="canvasLocation" x="750" y="-1032"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="0.0"/>
+            <point key="canvasLocation" x="750" y="-304"/>
         </scene>
         <!--Send Money-->
         <scene sceneID="zbj-CX-taz">
@@ -181,35 +181,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Para Gönder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-m8-pja">
-                                <rect key="frame" x="92" y="312" width="191" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRb-6F-IOJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="dyp-aS-wZO"/>
+                                    <navigationItem title="Para Gönder" id="dyp-aS-wZO"/>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4cm-zk-AO2">
+                                <rect key="frame" x="16" y="231" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g37-39-piG">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StudentNummer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5e-j7-Msd">
+                                <rect key="frame" x="16" y="202" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geldbetrag:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-ng-ewu">
+                                <rect key="frame" x="16" y="289" width="91" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOh-Fh-IpP">
+                                <rect key="frame" x="310" y="376" width="53" height="30"/>
+                                <state key="normal" title="Senden"/>
+                                <connections>
+                                    <action selector="SendMoney:" destination="sIp-Ur-iT4" eventType="touchUpInside" id="Icm-WA-T5X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wmY-m8-pja" firstAttribute="centerY" secondItem="Ckp-Ib-ozO" secondAttribute="centerY" id="6qs-Xz-DDg"/>
-                            <constraint firstItem="bRb-6F-IOJ" firstAttribute="centerX" secondItem="wmY-m8-pja" secondAttribute="centerX" id="NcK-Nq-QS5"/>
-                            <constraint firstItem="wmY-m8-pja" firstAttribute="centerX" secondItem="Ckp-Ib-ozO" secondAttribute="centerX" id="UVa-r6-DsB"/>
+                            <constraint firstItem="g37-39-piG" firstAttribute="leading" secondItem="bab-dc-LiD" secondAttribute="leading" constant="16" id="5Gi-ST-yo9"/>
+                            <constraint firstItem="4cm-zk-AO2" firstAttribute="top" secondItem="B5e-j7-Msd" secondAttribute="bottom" constant="8" id="9jO-hB-bZq"/>
+                            <constraint firstItem="bab-dc-LiD" firstAttribute="trailing" secondItem="B5e-j7-Msd" secondAttribute="trailing" constant="227" id="NvP-6K-39S"/>
+                            <constraint firstItem="4cm-zk-AO2" firstAttribute="leading" secondItem="bab-dc-LiD" secondAttribute="leading" constant="16" id="PSs-tL-bZK"/>
+                            <constraint firstItem="bRb-6F-IOJ" firstAttribute="centerX" secondItem="4cm-zk-AO2" secondAttribute="centerX" id="QXW-Gp-nKN"/>
+                            <constraint firstItem="fOh-Fh-IpP" firstAttribute="top" secondItem="g37-39-piG" secondAttribute="bottom" constant="28" id="YWU-dM-bIE"/>
+                            <constraint firstItem="bab-dc-LiD" firstAttribute="trailing" secondItem="4cm-zk-AO2" secondAttribute="trailing" constant="16" id="Z4R-HG-N7i"/>
                             <constraint firstItem="bRb-6F-IOJ" firstAttribute="leading" secondItem="Ckp-Ib-ozO" secondAttribute="leading" id="afc-o8-Dyy"/>
+                            <constraint firstItem="fOh-Fh-IpP" firstAttribute="leading" secondItem="bab-dc-LiD" secondAttribute="leading" constant="310" id="bjh-ue-hmM"/>
+                            <constraint firstItem="bab-dc-LiD" firstAttribute="trailing" secondItem="fOh-Fh-IpP" secondAttribute="trailing" constant="12" id="dg4-6C-IZw"/>
+                            <constraint firstItem="bRb-6F-IOJ" firstAttribute="top" secondItem="bab-dc-LiD" secondAttribute="top" id="kIY-VR-Cjk"/>
+                            <constraint firstItem="bab-dc-LiD" firstAttribute="trailing" secondItem="g37-39-piG" secondAttribute="trailing" constant="16" id="lE7-B1-BE3"/>
+                            <constraint firstItem="IoU-ng-ewu" firstAttribute="top" secondItem="4cm-zk-AO2" secondAttribute="bottom" constant="28" id="m5k-Xr-ceY"/>
+                            <constraint firstItem="bab-dc-LiD" firstAttribute="trailing" secondItem="IoU-ng-ewu" secondAttribute="trailing" constant="268" id="mg6-CU-65i"/>
+                            <constraint firstItem="g37-39-piG" firstAttribute="top" secondItem="IoU-ng-ewu" secondAttribute="bottom" constant="8.5" id="nnt-gF-B4u"/>
+                            <constraint firstItem="B5e-j7-Msd" firstAttribute="leading" secondItem="bab-dc-LiD" secondAttribute="leading" constant="16" id="tC8-x3-fvW"/>
+                            <constraint firstItem="B5e-j7-Msd" firstAttribute="top" secondItem="bRb-6F-IOJ" secondAttribute="bottom" constant="138" id="uQm-9O-s0j"/>
                             <constraint firstItem="bRb-6F-IOJ" firstAttribute="top" secondItem="bab-dc-LiD" secondAttribute="top" id="xcw-A3-9eO"/>
+                            <constraint firstItem="IoU-ng-ewu" firstAttribute="leading" secondItem="bab-dc-LiD" secondAttribute="leading" constant="16" id="yIv-QU-Scn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bab-dc-LiD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Send Money" image="money" id="WRY-DQ-1iH"/>
+                    <connections>
+                        <outlet property="moneyBetrag" destination="g37-39-piG" id="7qK-iE-Js3"/>
+                        <outlet property="studentNumber" destination="4cm-zk-AO2" id="T9G-IT-DMo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmv-Yc-sK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="5"/>
+            <point key="canvasLocation" x="1562" y="-304"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z5N-Xs-lMo">
+            <objects>
+                <navigationController id="qju-nf-r5m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQK-FT-Qcf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="Fce-dD-yMK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJg-nG-5ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1030" y="-303"/>
         </scene>
         <!--Advice-->
         <scene sceneID="3Hd-WU-Wgk">
@@ -247,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ua-ii-TtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="715"/>
+            <point key="canvasLocation" x="1562" y="-1032"/>
         </scene>
         <!--FeedBack-->
         <scene sceneID="EhG-W1-dsd">
@@ -262,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPc-lh-jF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="687"/>
+            <point key="canvasLocation" x="750" y="376"/>
         </scene>
         <!--Login-->
         <scene sceneID="pFT-6x-0kh">
@@ -276,7 +334,7 @@
                                 <rect key="frame" x="284" y="617" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="GTY-HQ-Axr"/>
+                                    <segue destination="qju-nf-r5m" kind="show" id="Q12-Co-WMf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,12 +348,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTH-Mr-cVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-930" y="0.0"/>
+            <point key="canvasLocation" x="-1876" y="-304"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QO8-se-vsT"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -311,7 +370,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-2" y="-304"/>
         </scene>
     </scenes>
     <resources>
