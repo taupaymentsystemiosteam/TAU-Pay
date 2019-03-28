@@ -82,10 +82,14 @@ class SecondViewController: UIViewController {
                 
             }
         }
+        // The task above is not started until the resume method is called on it
         task.resume()
+        // I believe that the task is started on a different thread for this reason I wait until I get a response
         while done == false {
             usleep(500000)
         }
+            
+        // Here I check for different failures that could happen
         if(connectionFailure) {
             return (error: nil, token: nil, connectionError: true)
         }
