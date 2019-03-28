@@ -13,7 +13,7 @@
         <!--FirstTimeLogin-->
         <scene sceneID="jmx-43-IBu">
             <objects>
-                <viewController id="jIn-tw-n0f" userLabel="FirstTimeLogin" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLoginPage" id="jIn-tw-n0f" userLabel="FirstTimeLogin" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ir0-mM-XXF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

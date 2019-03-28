@@ -24,7 +24,6 @@
 		AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224A224CF11700F1765E /* TransferPage.storyboard */; };
 		AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */; };
 		AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392250224CF28200F1765E /* FeedbackPage.storyboard */; };
-		AC392253224CF2A100F1765E /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392252224CF2A100F1765E /* LoginPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 		AC39224A224CF11700F1765E /* TransferPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferPage.storyboard; sourceTree = "<group>"; };
 		AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLoginPage.storyboard; sourceTree = "<group>"; };
 		AC392250224CF28200F1765E /* FeedbackPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackPage.storyboard; sourceTree = "<group>"; };
-		AC392252224CF2A100F1765E /* LoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 			children = (
 				19B58DC9223D298600B081FD /* Info.plist */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
-				AC392252224CF2A100F1765E /* LoginPage.storyboard */,
 				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
@@ -272,7 +269,6 @@
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
 				AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
-				AC392253224CF2A100F1765E /* LoginPage.storyboard in Resources */,
 				AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */,
 				AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */,
 			);
