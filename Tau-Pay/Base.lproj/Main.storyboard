@@ -308,15 +308,17 @@
                                     <segue destination="qju-nf-r5m" kind="show" id="Q12-Co-WMf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-n5-fyQ">
-                                <rect key="frame" x="164" y="375" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxR-Qk-QGb">
+                                <rect key="frame" x="164" y="261" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="m4S-Nr-nT2" firstAttribute="trailing" secondItem="pxR-Qk-QGb" secondAttribute="trailing" constant="165" id="3fO-ap-40o"/>
+                            <constraint firstItem="pxR-Qk-QGb" firstAttribute="leading" secondItem="m4S-Nr-nT2" secondAttribute="leading" constant="164" id="6gd-4c-WAY"/>
                             <constraint firstItem="eaA-tG-IeA" firstAttribute="centerY" secondItem="h22-Qv-0cw" secondAttribute="centerY" id="Cyz-Ny-LJE"/>
+                            <constraint firstItem="pxR-Qk-QGb" firstAttribute="top" secondItem="m4S-Nr-nT2" secondAttribute="top" constant="241" id="OvF-sn-UTU"/>
                             <constraint firstItem="eaA-tG-IeA" firstAttribute="centerX" secondItem="h22-Qv-0cw" secondAttribute="centerX" id="qgD-Mf-t69"/>
                             <constraint firstAttribute="bottom" secondItem="eaA-tG-IeA" secondAttribute="bottom" constant="20" symbolic="YES" id="x1W-sv-xyV"/>
                         </constraints>
