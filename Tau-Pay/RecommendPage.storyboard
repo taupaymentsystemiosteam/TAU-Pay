@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Advice-->
+        <scene sceneID="drd-uV-l7l">
+            <objects>
+                <viewController title="Advice" id="BAA-MA-DoZ" customClass="ThirdViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0j-Ke-Ncq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Öner" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="erw-Gh-pfg">
+                                <rect key="frame" x="169" y="382.5" width="76" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="erw-Gh-pfg" firstAttribute="centerY" secondItem="v0j-Ke-Ncq" secondAttribute="centerY" id="D7a-Dn-Hbk"/>
+                            <constraint firstItem="erw-Gh-pfg" firstAttribute="centerX" secondItem="v0j-Ke-Ncq" secondAttribute="centerX" id="O19-I0-lNE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XCr-Ke-l6N"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Advice" image="feedback" id="fp3-me-2A5"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xF4-3g-E7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="-1032"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feedback" width="30" height="30"/>
+    </resources>
+</document>

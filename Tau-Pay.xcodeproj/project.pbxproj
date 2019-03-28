@@ -19,6 +19,12 @@
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
+		AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392246224CF0EA00F1765E /* ProfilePage.storyboard */; };
+		AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392248224CF10000F1765E /* RecommendPage.storyboard */; };
+		AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224A224CF11700F1765E /* TransferPage.storyboard */; };
+		AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */; };
+		AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392250224CF28200F1765E /* FeedbackPage.storyboard */; };
+		AC392253224CF2A100F1765E /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392252224CF2A100F1765E /* LoginPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AC392246224CF0EA00F1765E /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
+		AC392248224CF10000F1765E /* RecommendPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendPage.storyboard; sourceTree = "<group>"; };
+		AC39224A224CF11700F1765E /* TransferPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferPage.storyboard; sourceTree = "<group>"; };
+		AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLoginPage.storyboard; sourceTree = "<group>"; };
+		AC392250224CF28200F1765E /* FeedbackPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackPage.storyboard; sourceTree = "<group>"; };
+		AC392252224CF2A100F1765E /* LoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +119,23 @@
 		19B58DBA223D298500B081FD /* Tau-Pay */ = {
 			isa = PBXGroup;
 			children = (
+				19B58DC9223D298600B081FD /* Info.plist */,
+				19B58DC1223D298500B081FD /* Main.storyboard */,
+				AC392252224CF2A100F1765E /* LoginPage.storyboard */,
+				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
+				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
+				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
+				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
+				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
-				19B58DBF223D298500B081FD /* Profil.swift */,
 				19B58DEB223D2D4C00B081FD /* Oner.swift */,
-				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
-				19B58DC1223D298500B081FD /* Main.storyboard */,
+				19B58DBF223D298500B081FD /* Profil.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
-				19B58DC9223D298600B081FD /* Info.plist */,
+				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -247,10 +265,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */,
 				1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */,
 				19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */,
+				AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
+				AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
+				AC392253224CF2A100F1765E /* LoginPage.storyboard in Resources */,
+				AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */,
+				AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
