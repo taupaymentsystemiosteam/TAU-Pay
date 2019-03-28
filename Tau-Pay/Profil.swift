@@ -12,12 +12,16 @@ import UIKit
 
 class SecondViewController: UIViewController {
     var token = ""
-    let ip = "http://192.168.1.200:8080/login"
+    //let ip = "http://192.168.1.200:8080"
+    let ip = "http://85.103.87.12:50090"
     
-    func getInfo(token: String) -> (info: Dictionary<String, String>?, error: String?, connectionError: Bool) {
-        
-        let url = URL(string: ip)!
+    func getInfo(token: String) -> (info: Dictionary<String, Any>?, error: String?, connectionError: Bool) {
 
+        var infoIp = ip + "/customers/get-info"
+        let url = URL(string: infoIp)!
+
+
+        
         let session = URLSession.shared
 
         var request = URLRequest(url : url)
@@ -25,8 +29,7 @@ class SecondViewController: UIViewController {
         request.httpMethod = "POST"
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(token, forHTTPHeaderField: "token")
-        
+        request.setValue(token, forHTTPHeaderField: "Authorization")
         var json: [String: Any] = [:]
         
         var jsonData: Data
@@ -42,9 +45,9 @@ class SecondViewController: UIViewController {
         var httpFailure = ""
         // If the server unsucessfully connects to the server then this boolean will be set to true
         var connectionFailure = false
-        var info: [String: String] = [:]
+        var info: [String: Any] = [:]
         
-        let task = session.uploadTask(with: request, from: nil) { data, response, error in
+        let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
             
             // I don't really know what this is for but I know it's important
             if error != nil {
@@ -56,15 +59,25 @@ class SecondViewController: UIViewController {
                 print(httpResponse.statusCode)
                 if((400...2999).contains(httpResponse.statusCode)) {
                     httpFailure = String(httpResponse.statusCode)
+                    done = true
                     return
                 }
-                // Here I read the header labeled autorhization
+                // Here I convert the response data into a json
                 do {
-                    info = try ( JSONSerialization.jsonObject(with: data!, options: []) as! [String: String] )
+                    do {
+                        info = try (((JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, Any>)!))
+                    } catch {
+                        print("JSON error: \(error.localizedDescription)")
+                        httpFailure = "Parse Error"
+                        done = true
+                        return
+                    }
+                    print("info")
                 }
                 catch {
                     print("Error: Unable to convert to json file")
-                    httpFailure = "invalidJson"
+                    httpFailure = "invalid JSON"
+                    done = true
                     return
                 }
                 done = true
@@ -97,7 +110,8 @@ class SecondViewController: UIViewController {
         // The function expects there to be an ip already defined else it will complain about it not being defined.
         
         // Defines the url, session and request which are in turn where you connect to and then creates a sessions which is where all of tge informatiojn is exchanged and finally the request which has the json inside of it
-        let url = URL(string: ip)!
+        var loginIp = ip + "/login"
+        let url = URL(string: loginIp)!
         
         let session = URLSession.shared
         
@@ -150,6 +164,7 @@ class SecondViewController: UIViewController {
                 print(httpResponse.statusCode)
                 if((400...2999).contains(httpResponse.statusCode)) {
                     httpFailure = String(httpResponse.statusCode)
+                    done = true
                     return
                 }
                 // Here I read the header labeled autorhization
@@ -157,7 +172,7 @@ class SecondViewController: UIViewController {
                 done = true
             } else {
                 connectionFailure = true
-                
+                done = true
             }
         }
         // The task above is not started until the resume method is called on it
@@ -167,6 +182,7 @@ class SecondViewController: UIViewController {
         while done == false {
             print(waitedTime)
             if waitedTime > 50 {
+                task.cancel()
                 return (error: "Connection Timeout", token: nil, false)
             }
             usleep(500000)
@@ -200,11 +216,16 @@ class SecondViewController: UIViewController {
             print("error: \(loginResult.error)")
             return
         }
+        token = loginResult.token!
         tempConsole.text = loginResult.token
     }
     @IBAction func getInfoAction(_ sender: Any) {
-        var info = getInfo(token: token)
-        infoConsole.text = info.info!["name"]
+        var person = getInfo(token: token)
+        if person.connectionError {
+            print("Connection Error!")
+        } else {
+            infoConsole.text = person.info!["name"] as! String
+        }
     }
     
     
