@@ -13,7 +13,7 @@
         <!--Advice-->
         <scene sceneID="drd-uV-l7l">
             <objects>
-                <viewController title="Advice" id="BAA-MA-DoZ" customClass="ThirdViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommendPage" title="Advice" id="BAA-MA-DoZ" customClass="ThirdViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v0j-Ke-Ncq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

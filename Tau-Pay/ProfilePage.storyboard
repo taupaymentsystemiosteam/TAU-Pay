@@ -13,7 +13,7 @@
         <!--Profle-->
         <scene sceneID="upO-Ez-KOB">
             <objects>
-                <viewController title="Profle" id="tar-ev-gJV" customClass="SecondViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfilePage" title="Profle" id="tar-ev-gJV" customClass="SecondViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqv-mt-ZgS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

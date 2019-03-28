@@ -13,7 +13,7 @@
         <!--Geldubertrag-->
         <scene sceneID="aXp-Oy-b2Q">
             <objects>
-                <viewController title="Geldubertrag" id="f8N-LP-vyg" customClass="ParaGonder" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GeldTransfer" title="Geldubertrag" id="f8N-LP-vyg" customClass="ParaGonder" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zeo-tk-KuR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
