@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bagis-->
+        <scene sceneID="Xcb-Hf-TQn">
+            <objects>
+                <viewController storyboardIdentifier="bagis_screen" title="Bagis" id="xve-zS-lcr" customClass="FirstViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CoW-qJ-rtW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Bağış" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zvj-7K-AhE">
+                                <rect key="frame" x="164" y="426.5" width="86" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEp-t9-SEs">
+                                <rect key="frame" x="109.5" y="477.5" width="195" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Zvj-7K-AhE" secondAttribute="centerX" id="2I5-0X-s2L"/>
+                            <constraint firstAttribute="centerY" secondItem="Zvj-7K-AhE" secondAttribute="centerY" id="b1Z-bD-Kiy"/>
+                            <constraint firstItem="qEp-t9-SEs" firstAttribute="centerX" secondItem="Zvj-7K-AhE" secondAttribute="centerX" id="g9f-m4-H5q"/>
+                            <constraint firstItem="qEp-t9-SEs" firstAttribute="top" secondItem="Zvj-7K-AhE" secondAttribute="bottom" constant="8" symbolic="YES" id="uuq-mn-mas"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Donation" image="apple" id="vx8-96-o0h"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1t3-RR-iNz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-1032"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple" width="30" height="30"/>
+    </resources>
+</document>
