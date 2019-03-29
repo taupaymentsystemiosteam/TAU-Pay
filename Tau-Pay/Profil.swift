@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
     
     func getInfo(token: String) -> (info: Dictionary<String, Any>?, error: String?, connectionError: Bool) {
 
-        var infoIp = ip + "/customers/get-info"
+        let infoIp = ip + "/customers/get-info"
         let url = URL(string: infoIp)!
 
 
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(token, forHTTPHeaderField: "Authorization")
-        var json: [String: Any] = [:]
+        let json: [String: Any] = [:]
         
         var jsonData: Data
         var done = false
@@ -63,23 +63,16 @@ class SecondViewController: UIViewController {
                     return
                 }
                 // Here I convert the response data into a json
+                
                 do {
-                    do {
-                        info = try (((JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, Any>)!))
-                    } catch {
-                        print("JSON error: \(error.localizedDescription)")
-                        httpFailure = "Parse Error"
-                        done = true
-                        return
-                    }
-                    print("info")
-                }
-                catch {
-                    print("Error: Unable to convert to json file")
-                    httpFailure = "invalid JSON"
+                    info = try (((JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, Any>)!))
+                } catch {
+                    print("JSON error: \(error.localizedDescription)")
+                    httpFailure = "Parse Error"
                     done = true
                     return
                 }
+
                 done = true
             } else {
                 connectionFailure = true
@@ -110,14 +103,14 @@ class SecondViewController: UIViewController {
         // The function expects there to be an ip already defined else it will complain about it not being defined.
         
         // Defines the url, session and request which are in turn where you connect to and then creates a sessions which is where all of tge informatiojn is exchanged and finally the request which has the json inside of it
-        var loginIp = ip + "/login"
+        let loginIp = ip + "/login"
         let url = URL(string: loginIp)!
         
         let session = URLSession.shared
         
         var request = URLRequest(url : url)
         
-        // There are multiple httpMethods, this one uses the post method which is used to send and recieve information to and from the server
+        // There are multiple letpMethods, this one uses the post method which is used to send and recieve information to and from the server
         request.httpMethod = "POST"
         
         
@@ -205,7 +198,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var tempConsole: UITextField!
     @IBOutlet weak var infoConsole: UITextField!
     @IBAction func loginDummyAction(_ sender: Any) {
-        var loginResult = login(id: "160503133", password: "pass")
+        let loginResult = login(id: "160503133", password: "pass")
         if loginResult.connectionError == true {
             print("bad connection")
             tempConsole.text = "bad connection"
@@ -224,7 +217,7 @@ class SecondViewController: UIViewController {
         if person.connectionError {
             print("Connection Error!")
         } else {
-            infoConsole.text = person.info!["name"] as! String
+            infoConsole.text = person.info!["name"] as? String
         }
     }
     
