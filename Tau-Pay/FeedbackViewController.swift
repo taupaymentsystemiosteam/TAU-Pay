@@ -12,7 +12,7 @@ class FeedbackViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                print("jlskjfskljfskljfskdljf")
         // Do any additional setup after loading the view.
     }
     
