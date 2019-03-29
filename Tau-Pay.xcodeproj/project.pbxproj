@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */; };
+		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
 		19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBB223D298500B081FD /* AppDelegate.swift */; };
 		19B58DBE223D298500B081FD /* Bagis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBD223D298500B081FD /* Bagis.swift */; };
 		19B58DC0223D298500B081FD /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBF223D298500B081FD /* Profil.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BagisStoryboard.storyboard; sourceTree = "<group>"; };
+		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		19B58DB8223D298500B081FD /* Tau-Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tau-Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B58DBB223D298500B081FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B58DBD223D298500B081FD /* Bagis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bagis.swift; sourceTree = "<group>"; };
@@ -124,15 +126,16 @@
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
 				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
 				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
+				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
+				1967EFBE224E355200E0173F /* FeedbackViewController.swift */,
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
 				19B58DEB223D2D4C00B081FD /* Oner.swift */,
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
-				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */,
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
 				19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */,
+				1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */,
 				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
 				19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */,
 				19B58DBE223D298500B081FD /* Bagis.swift in Sources */,

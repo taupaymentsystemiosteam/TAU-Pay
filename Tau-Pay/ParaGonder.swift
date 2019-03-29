@@ -23,7 +23,7 @@ class ParaGonder: UIViewController {
 
     func getNumberInfo() -> (info: String?, error: String?, connectionError: Bool) {
       
-        let ip = "http://172.20.10.2:8080"
+        let ip = "http://172.17.26.203:8080"
         
         let link = ip + "/customers/get-name"
         
