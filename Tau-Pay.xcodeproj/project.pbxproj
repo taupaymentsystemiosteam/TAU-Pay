@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1658BADC926F7D5B97C304A7 /* Pods_Tau_Pay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB376284D1182199FB903822 /* Pods_Tau_Pay.framework */; };
 		1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */; };
 		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
 		19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBB223D298500B081FD /* AppDelegate.swift */; };
@@ -20,11 +21,13 @@
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
+		9CE0A1C62C3098F69B800156 /* Pods_Tau_PayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3867339AB5CFD246CFB23FE /* Pods_Tau_PayTests.framework */; };
 		AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392246224CF0EA00F1765E /* ProfilePage.storyboard */; };
 		AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392248224CF10000F1765E /* RecommendPage.storyboard */; };
 		AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224A224CF11700F1765E /* TransferPage.storyboard */; };
 		AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */; };
 		AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392250224CF28200F1765E /* FeedbackPage.storyboard */; };
+		B8738F95279867B7C418A54E /* Pods_Tau_PayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5346D45DA0B271006DDA6648 /* Pods_Tau_PayUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6D38B0389157F44E5F7A0A /* Pods-Tau-PayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-PayTests.debug.xcconfig"; path = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BagisStoryboard.storyboard; sourceTree = "<group>"; };
 		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		19B58DB8223D298500B081FD /* Tau-Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tau-Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,11 +68,19 @@
 		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3BF2C6205806024A3432C204 /* Pods-Tau-PayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-PayUITests.release.xcconfig"; path = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3D89EF053F8E4371D1D88BB6 /* Pods-Tau-Pay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-Pay.release.xcconfig"; path = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay.release.xcconfig"; sourceTree = "<group>"; };
+		5346D45DA0B271006DDA6648 /* Pods_Tau_PayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_PayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70CE9AB00CB7BF5003E1EA07 /* Pods-Tau-PayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-PayUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		956A5E84E4AD71969201916A /* Pods-Tau-Pay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-Pay.debug.xcconfig"; path = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay.debug.xcconfig"; sourceTree = "<group>"; };
 		AC392246224CF0EA00F1765E /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		AC392248224CF10000F1765E /* RecommendPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendPage.storyboard; sourceTree = "<group>"; };
 		AC39224A224CF11700F1765E /* TransferPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferPage.storyboard; sourceTree = "<group>"; };
 		AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLoginPage.storyboard; sourceTree = "<group>"; };
 		AC392250224CF28200F1765E /* FeedbackPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackPage.storyboard; sourceTree = "<group>"; };
+		B300295C70A55DA188361046 /* Pods-Tau-PayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-PayTests.release.xcconfig"; path = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3867339AB5CFD246CFB23FE /* Pods_Tau_PayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_PayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB376284D1182199FB903822 /* Pods_Tau_Pay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_Pay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1658BADC926F7D5B97C304A7 /* Pods_Tau_Pay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE0A1C62C3098F69B800156 /* Pods_Tau_PayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8738F95279867B7C418A54E /* Pods_Tau_PayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +118,8 @@
 				19B58DD1223D298600B081FD /* Tau-PayTests */,
 				19B58DDC223D298600B081FD /* Tau-PayUITests */,
 				19B58DB9223D298500B081FD /* Products */,
+				E2888571C7D7521A098B5D83 /* Pods */,
+				C1247724020176BA96581A88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +175,30 @@
 			path = "Tau-PayUITests";
 			sourceTree = "<group>";
 		};
+		C1247724020176BA96581A88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB376284D1182199FB903822 /* Pods_Tau_Pay.framework */,
+				D3867339AB5CFD246CFB23FE /* Pods_Tau_PayTests.framework */,
+				5346D45DA0B271006DDA6648 /* Pods_Tau_PayUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2888571C7D7521A098B5D83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				956A5E84E4AD71969201916A /* Pods-Tau-Pay.debug.xcconfig */,
+				3D89EF053F8E4371D1D88BB6 /* Pods-Tau-Pay.release.xcconfig */,
+				0F6D38B0389157F44E5F7A0A /* Pods-Tau-PayTests.debug.xcconfig */,
+				B300295C70A55DA188361046 /* Pods-Tau-PayTests.release.xcconfig */,
+				70CE9AB00CB7BF5003E1EA07 /* Pods-Tau-PayUITests.debug.xcconfig */,
+				3BF2C6205806024A3432C204 /* Pods-Tau-PayUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19B58DE2223D298600B081FD /* Build configuration list for PBXNativeTarget "Tau-Pay" */;
 			buildPhases = (
+				28C6DC44CAF22D14C0257FD0 /* [CP] Check Pods Manifest.lock */,
 				19B58DB4223D298500B081FD /* Sources */,
 				19B58DB5223D298500B081FD /* Frameworks */,
 				19B58DB6223D298500B081FD /* Resources */,
+				8F3BE517ED9A24AB44A2845B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19B58DE5223D298600B081FD /* Build configuration list for PBXNativeTarget "Tau-PayTests" */;
 			buildPhases = (
+				7EAF712A7FBADE5CB3F3B9FD /* [CP] Check Pods Manifest.lock */,
 				19B58DCA223D298600B081FD /* Sources */,
 				19B58DCB223D298600B081FD /* Frameworks */,
 				19B58DCC223D298600B081FD /* Resources */,
@@ -200,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19B58DE8223D298600B081FD /* Build configuration list for PBXNativeTarget "Tau-PayUITests" */;
 			buildPhases = (
+				C4CBE72D6F4E9AA9FE645039 /* [CP] Check Pods Manifest.lock */,
 				19B58DD5223D298600B081FD /* Sources */,
 				19B58DD6223D298600B081FD /* Frameworks */,
 				19B58DD7223D298600B081FD /* Resources */,
@@ -292,6 +337,97 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28C6DC44CAF22D14C0257FD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tau-Pay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EAF712A7FBADE5CB3F3B9FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tau-PayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F3BE517ED9A24AB44A2845B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStarRatingView/SwiftyStarRatingView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStarRatingView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4CBE72D6F4E9AA9FE645039 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tau-PayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19B58DB4223D298500B081FD /* Sources */ = {
@@ -477,6 +613,7 @@
 		};
 		19B58DE3223D298600B081FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 956A5E84E4AD71969201916A /* Pods-Tau-Pay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +632,7 @@
 		};
 		19B58DE4223D298600B081FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D89EF053F8E4371D1D88BB6 /* Pods-Tau-Pay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +651,7 @@
 		};
 		19B58DE6223D298600B081FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6D38B0389157F44E5F7A0A /* Pods-Tau-PayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -534,6 +673,7 @@
 		};
 		19B58DE7223D298600B081FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B300295C70A55DA188361046 /* Pods-Tau-PayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -555,6 +695,7 @@
 		};
 		19B58DE9223D298600B081FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70CE9AB00CB7BF5003E1EA07 /* Pods-Tau-PayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +716,7 @@
 		};
 		19B58DEA223D298600B081FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF2C6205806024A3432C204 /* Pods-Tau-PayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
