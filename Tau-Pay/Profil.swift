@@ -99,6 +99,9 @@ class SecondViewController: UIViewController {
         
 }
     
+    
+    
+    
     func login(id: String, password: String) -> (token: String?, error: String?, connectionError: Bool) {
         // The function expects there to be an ip already defined else it will complain about it not being defined.
         
@@ -195,23 +198,29 @@ class SecondViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var tempConsole: UITextField!
+    @IBOutlet weak var tokenBox: UITextField!
     @IBOutlet weak var infoConsole: UITextField!
+    
+    
+    
     @IBAction func loginDummyAction(_ sender: Any) {
         let loginResult = login(id: "160503133", password: "pass")
         if loginResult.connectionError == true {
             print("bad connection")
-            tempConsole.text = "bad connection"
+            tokenBox.text = "bad connection"
             return
         }
         if loginResult.error != nil {
-            tempConsole.text = loginResult.error!
+            tokenBox.text = loginResult.error!
             print("error: \(loginResult.error)")
             return
         }
         token = loginResult.token!
-        tempConsole.text = loginResult.token
+        tokenBox.text = loginResult.token
     }
+    
+    
+    
     @IBAction func getInfoAction(_ sender: Any) {
         var person = getInfo(token: token)
         if person.connectionError {
