@@ -13,7 +13,8 @@ import UIKit
 class SecondViewController: UIViewController {
     var token = ""
     //let ip = "http://192.168.1.200:8080"
-    let ip = "http://85.103.87.12:50090"
+    //let ip = "http://85.103.87.12:50090"
+    let ip = "http://172.17.27.229:8080"
     
     func getInfo(token: String) -> (info: Dictionary<String, Any>?, error: String?, connectionError: Bool) {
 
@@ -34,7 +35,6 @@ class SecondViewController: UIViewController {
         
         var jsonData: Data
         var done = false
-        
         do {
             jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
         } catch {
@@ -47,43 +47,52 @@ class SecondViewController: UIViewController {
         var connectionFailure = false
         var info: [String: Any] = [:]
         
-        let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
-            
-            // I don't really know what this is for but I know it's important
-            if error != nil {
-                print("This is an error \(error!)")
-                return
-            }
-            // The server sends a response which contains the http error code and all of the headers in the response
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.statusCode)
-                if((400...2999).contains(httpResponse.statusCode)) {
-                    httpFailure = String(httpResponse.statusCode)
-                    done = true
-                    return
-                }
-                // Here I convert the response data into a json
+            let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
                 
-                do {
-                    info = try (((JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, Any>)!))
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                    httpFailure = "Parse Error"
+                // I don't really know what this is for but I know it's important
+                if error != nil {
+                    print("This is an error \(error!)")
                     done = true
                     return
                 }
+                // The server sends a response which contains the http error code and all of the headers in the response
+                if let httpResponse = response as? HTTPURLResponse {
+                    print(httpResponse.statusCode)
+                    if((400...2999).contains(httpResponse.statusCode)) {
+                        httpFailure = String(httpResponse.statusCode)
+                        done = true
+                        return
+                    }
+                    // Here I convert the response data into a json
+                    
+                    do {
+                        info = try (((JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, Any>)!))
+                    } catch {
+                        print("JSON error: \(error.localizedDescription)")
+                        httpFailure = "Parse Error"
+                        done = true
+                        return
+                    }
 
-                done = true
-            } else {
-                connectionFailure = true
-                
+                    done = true
+                } else {
+                    connectionFailure = true
+                    
+                }
             }
-        }
-        // The task above is not started until the resume method is called on it
-        task.resume()
+            // The task above is not started until the resume method is called on it
+            task.resume()
         
+        var waitedTime = 0
         while done == false {
+            print(waitedTime)
+            if waitedTime > 50 {
+                task.cancel()
+                return (error: "Connection Timeout", info: nil, false)
+            }
             usleep(500000)
+            waitedTime = waitedTime + 5
+            
         }
         
         // Here I check for different failures that could happen
@@ -120,7 +129,6 @@ class SecondViewController: UIViewController {
         // Adding a header which is where you specify that you will send a json file.  Later on when you want to send your token you need to add token: tokenKey to the header
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        //request.setValue("")
         
         // The json file is first initalized as a dictionary which contains the id and the password
         let json = [
@@ -132,12 +140,13 @@ class SecondViewController: UIViewController {
         var jsonData: Data
         // this variable will be false unntil the request is sent to the server and a response is given and processed
         var done = false
-        
+
         // This is where the json dictionary is converted to a an actual json file
         do {
             jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
         } catch {
-            print("Error: \(error.localizedDescription)")
+            //print("Error: \(error.localizedDescription)")
+
             return (error: error.localizedDescription, token: nil, false)
         }
         
@@ -147,33 +156,38 @@ class SecondViewController: UIViewController {
         var httpFailure = ""
         // If the server unsucessfully connects to the server then this boolean will be set to true
         var connectionFailure = false
+
+    let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
         
-        let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
-            
-            // I don't really know what this is for but I know it's important
-            if error != nil {
-                print("This is an error \(error!)")
+        // I don't really know what this is for but I know it's important
+
+        if error != nil {
+            print("This is an error \(error!)")
+            done = true
+            return
+        }
+        // The server sends a response which contains the http error code and all of the headers in the response
+        if let httpResponse = response as? HTTPURLResponse {
+            print(httpResponse.statusCode)
+            if((400...2999).contains(httpResponse.statusCode)) {
+                httpFailure = String(httpResponse.statusCode)
+
+                done = true
                 return
             }
-            // The server sends a response which contains the http error code and all of the headers in the response
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.statusCode)
-                if((400...2999).contains(httpResponse.statusCode)) {
-                    httpFailure = String(httpResponse.statusCode)
-                    done = true
-                    return
-                }
-                // Here I read the header labeled autorhization
-                token = (httpResponse.allHeaderFields["Authorization"] as? String)!
-                done = true
-            } else {
-                connectionFailure = true
-                done = true
-            }
+            // Here I read the header labeled autorhization
+            token = (httpResponse.allHeaderFields["Authorization"] as? String)!
+            done = true
+        } else {
+
+            connectionFailure = true
+            done = true
         }
+    }
         // The task above is not started until the resume method is called on it
         task.resume()
         // I believe that the task is started on a different thread. For this reason I wait until I get a response
+
         var waitedTime = 0
         while done == false {
             print(waitedTime)
@@ -183,7 +197,6 @@ class SecondViewController: UIViewController {
             }
             usleep(500000)
             waitedTime = waitedTime + 5
-            
         }
             
         // Here I check for different failures that could happen
@@ -199,12 +212,13 @@ class SecondViewController: UIViewController {
     }
     
     @IBOutlet weak var tokenBox: UITextField!
-    @IBOutlet weak var infoConsole: UITextField!
+    @IBOutlet weak var nameBox: UITextField!
+    @IBOutlet weak var numberBox: UITextField!
     
     
     
     @IBAction func loginDummyAction(_ sender: Any) {
-        let loginResult = login(id: "160503133", password: "pass")
+        let loginResult = login(id: "160503134", password: "pass123")
         if loginResult.connectionError == true {
             print("bad connection")
             tokenBox.text = "bad connection"
@@ -225,8 +239,12 @@ class SecondViewController: UIViewController {
         var person = getInfo(token: token)
         if person.connectionError {
             print("Connection Error!")
+        } else if (person.error != nil) {
+            print("error \(person.error)")
         } else {
-            infoConsole.text = person.info!["name"] as? String
+            nameBox.text = person.info!["name"] as? String
+            numberBox.text = person.info!["id"] as? String
+            
         }
     }
     
