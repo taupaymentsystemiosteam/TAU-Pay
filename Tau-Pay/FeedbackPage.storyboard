@@ -17,13 +17,25 @@
                     <view key="view" contentMode="scaleToFill" id="qLk-cT-SUH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pex-bY-Ogx" customClass="SwiftyStarRatingView" customModule="SwiftyStarRatingView">
+                                <rect key="frame" x="302" y="44" width="105" height="111"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pex-bY-Ogx" firstAttribute="centerX" secondItem="qLk-cT-SUH" secondAttribute="centerX" constant="147.5" id="CWp-Go-P5e"/>
+                            <constraint firstItem="pex-bY-Ogx" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="302" id="mNb-cI-z36"/>
+                            <constraint firstItem="pex-bY-Ogx" firstAttribute="centerY" secondItem="qLk-cT-SUH" secondAttribute="centerY" constant="-348.5" id="wei-KZ-kmA"/>
+                            <constraint firstItem="pex-bY-Ogx" firstAttribute="top" secondItem="qGX-MU-K9W" secondAttribute="top" id="yCb-dS-vO1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXc-d1-J1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2308" y="-640"/>
+            <point key="canvasLocation" x="2307.2463768115945" y="-640.17857142857144"/>
         </scene>
     </scenes>
 </document>
