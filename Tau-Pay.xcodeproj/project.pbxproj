@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1658BADC926F7D5B97C304A7 /* Pods_Tau_Pay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB376284D1182199FB903822 /* Pods_Tau_Pay.framework */; };
+		192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */; };
 		1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */; };
 		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
 		19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBB223D298500B081FD /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0F6D38B0389157F44E5F7A0A /* Pods-Tau-PayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau-PayTests.debug.xcconfig"; path = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndRequestFunctions.swift; sourceTree = "<group>"; };
 		1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BagisStoryboard.storyboard; sourceTree = "<group>"; };
 		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		19B58DB8223D298500B081FD /* Tau-Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tau-Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
+				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -195,7 +198,6 @@
 				70CE9AB00CB7BF5003E1EA07 /* Pods-Tau-PayUITests.debug.xcconfig */,
 				3BF2C6205806024A3432C204 /* Pods-Tau-PayUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -437,6 +439,7 @@
 				19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */,
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
 				19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */,
+				192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */,
 				1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */,
 				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
 				19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */,

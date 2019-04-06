@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FB19B438F404A9D23CC46E1647CD768 /* Pods_Tau_PayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tau_PayTests.framework; path = "Pods-Tau-PayTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB19B438F404A9D23CC46E1647CD768 /* Pods_Tau_PayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_PayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B251905F62A41353CC78E2C8DFF7B38 /* Pods-Tau-PayTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tau-PayTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2BEE673CDD084012E946D62A758E10F7 /* Pods-Tau-PayTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tau-PayTests.modulemap"; sourceTree = "<group>"; };
 		2CC2A2A87EA4B9575D77199269B605F5 /* Pods-Tau-Pay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-Pay.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,12 +62,12 @@
 		56805584976FA41BFDB6324F3EF420E3 /* Pods-Tau-PayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-PayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5883447D9ACDEAECB02D27A52B24DDCA /* Pods-Tau-PayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-PayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B2C4233E3E2DAAB0AD8489029C02EE2 /* Pods-Tau-PayTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tau-PayTests-umbrella.h"; sourceTree = "<group>"; };
-		604EA9BCD59DA41D383C74BD795E30FE /* SwiftyStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStarRatingView.framework; path = SwiftyStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		825CC93DDF1D6CD03580C7CBBBA43B94 /* Pods_Tau_PayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tau_PayUITests.framework; path = "Pods-Tau-PayUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		604EA9BCD59DA41D383C74BD795E30FE /* SwiftyStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825CC93DDF1D6CD03580C7CBBBA43B94 /* Pods_Tau_PayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_PayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		864D7428CD3DB9118553476A401A28B6 /* Pods-Tau-PayUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tau-PayUITests-dummy.m"; sourceTree = "<group>"; };
 		89C8F275A35F8EB4A52D09CE437372EE /* Pods-Tau-PayUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tau-PayUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A04261450E6A5481EB5957DE2E3A41 /* Pods-Tau-Pay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-Pay.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5BD5F6DF77E0008FD6AC69B390B7A52 /* Pods-Tau-PayUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-PayUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A5C3DC8020BB11E53752689D600E6E4E /* Pods-Tau-PayUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tau-PayUITests.modulemap"; sourceTree = "<group>"; };
 		A6EADD50449DC198A8669CA986E83792 /* Pods-Tau-Pay-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-Pay-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		D7E355FEA4F1E639C4DB698FED6F0D3E /* Pods-Tau-Pay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tau-Pay-dummy.m"; sourceTree = "<group>"; };
 		E8F07B283F959A2829AF7936C2C612DE /* SwiftyStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStarRatingView-prefix.pch"; sourceTree = "<group>"; };
 		E95AB7BCBC10B4C9D81179BC311C4D21 /* SwiftyStarRatingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyStarRatingView-Info.plist"; sourceTree = "<group>"; };
-		F2F2A826242BCC2021C7E76916FE8370 /* Pods_Tau_Pay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tau_Pay.framework; path = "Pods-Tau-Pay.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F2A826242BCC2021C7E76916FE8370 /* Pods_Tau_Pay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_Pay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDD23B96543FDD4A3F6FB2D9091B021 /* SwiftyStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStarRatingView.modulemap; sourceTree = "<group>"; };
 		FDA272B9C0B32BC1CE27BEAFACEDB061 /* Pods-Tau-PayUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tau-PayUITests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +178,6 @@
 				AF6C8079639DC6E223BF7CBF5212AC22 /* SwiftyStarRatingView.swift */,
 				48F5CAB71D53809631C28807DF397DAF /* Support Files */,
 			);
-			name = SwiftyStarRatingView;
 			path = SwiftyStarRatingView;
 			sourceTree = "<group>";
 		};
@@ -372,14 +371,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = B9052E74898E799B9B8DDEF3A97DDA95 /* Products */;
@@ -501,11 +501,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -539,11 +535,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -577,11 +569,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay.modulemap";
 				OTHER_LDFLAGS = "";
@@ -616,11 +604,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -654,11 +638,7 @@
 				INFOPLIST_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyStarRatingView;
 				PRODUCT_NAME = SwiftyStarRatingView;
@@ -676,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -725,8 +706,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -750,11 +730,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay.modulemap";
 				OTHER_LDFLAGS = "";
@@ -774,6 +750,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -852,11 +829,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -890,11 +863,7 @@
 				INFOPLIST_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyStarRatingView;
 				PRODUCT_NAME = SwiftyStarRatingView;
