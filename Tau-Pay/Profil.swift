@@ -52,6 +52,7 @@ class SecondViewController: UIViewController {
                 // I don't really know what this is for but I know it's important
                 if error != nil {
                     print("This is an error \(error!)")
+                    httpFailure = error!.localizedDescription
                     done = true
                     return
                 }
@@ -163,6 +164,7 @@ class SecondViewController: UIViewController {
 
         if error != nil {
             print("This is an error \(error!)")
+            httpFailure = error!.localizedDescription
             done = true
             return
         }
@@ -171,7 +173,6 @@ class SecondViewController: UIViewController {
             print(httpResponse.statusCode)
             if((400...2999).contains(httpResponse.statusCode)) {
                 httpFailure = String(httpResponse.statusCode)
-
                 done = true
                 return
             }
