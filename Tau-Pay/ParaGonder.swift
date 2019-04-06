@@ -28,7 +28,7 @@ class ParaGonder: UIViewController {
     {
         let json = ["id":studentNumber.text!]
         
-        let getname = Constants.SendRequestStringReturned(request: "/customers/get-name", json: json)
+        let getname = Constants.SendRequestGetString(request: "/customers/get-name", json: json)
         
         if getname.connectionError
         {
