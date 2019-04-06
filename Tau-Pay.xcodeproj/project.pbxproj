@@ -195,7 +195,6 @@
 				70CE9AB00CB7BF5003E1EA07 /* Pods-Tau-PayUITests.debug.xcconfig */,
 				3BF2C6205806024A3432C204 /* Pods-Tau-PayUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -625,7 +624,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nusretozates.Tau-Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -644,7 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nusretozates.Tau-Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
