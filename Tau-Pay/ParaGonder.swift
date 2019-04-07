@@ -68,7 +68,16 @@ class ParaGonder: UIViewController {
         func sendMoneyRequest()
     {
         
-    
+        let json = ["recieverId":studentNumber.text!,
+                    "balanceId":"mensa",
+                    "amount": Int(moneyBetrag.text!)!] as [String : Any]
+        let response = Constants.SendRequestGetString(request: "/customers/transfer", json: json)
+        let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info))", preferredStyle: UIAlertController.Style.alert)
+        responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            responseAlert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(responseAlert,animated: true,completion: nil)
+
     
     
     }
