@@ -8,15 +8,41 @@
 
 import UIKit
 
-class ParaGonder: UIViewController {
+class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+   
+    let values = ["Shuttle","Mensa"]
+    var selectedValue = ""
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+       return values.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return values[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+        selectedValue = values[row]
+        
+    }
 
     @IBOutlet weak var moneyBetrag: UITextField!
     @IBOutlet weak var studentNumber: UITextField!
+    @IBOutlet weak var picker: UIPickerView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        picker.delegate = self
+        picker.dataSource = self
+        
         
         // Do any additional setup after loading the view.
     }
@@ -68,17 +94,17 @@ class ParaGonder: UIViewController {
         func sendMoneyRequest()
     {
         
-        let json = ["recieverId":studentNumber.text!,
-                    "balanceId":"mensa",
+        let json = ["receiverId":studentNumber.text!,
+                    "balanceId":selectedValue.lowercased(),
                     "amount": Int(moneyBetrag.text!)!] as [String : Any]
         let response = Constants.SendRequestGetString(request: "/customers/transfer", json: json)
-        let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info))", preferredStyle: UIAlertController.Style.alert)
+        let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
+        
         responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
             responseAlert.dismiss(animated: true, completion: nil)
         }))
         self.present(responseAlert,animated: true,completion: nil)
 
-    
     
     }
     

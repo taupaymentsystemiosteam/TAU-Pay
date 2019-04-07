@@ -16,13 +16,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let matrikelnummerImage = UIImage(named: "matrikelnummer_")
-        addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
+       // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
+       // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         
-        let passwortImage = UIImage(named: "passwort_")
-        addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
+        //let passwortImage = UIImage(named: "passwort_")
+        //addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
         
-        matrikelnummer_.layer.cornerRadius = 15.0
+        //matrikelnummer_.layer.cornerRadius = 15.0
 
     }
     

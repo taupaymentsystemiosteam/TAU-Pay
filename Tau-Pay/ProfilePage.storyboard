@@ -99,6 +99,9 @@
                                 <rect key="frame" x="160" y="626" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Şifre Değiştir"/>
+                                <connections>
+                                    <segue destination="RSj-Vj-NEn" kind="show" id="iP7-i7-l9I"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-gi-4WX">
                                 <rect key="frame" x="321" y="626" width="68" height="30"/>
@@ -133,6 +136,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5d-q0-Zws" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-90259.420289855087" y="-157.36607142857142"/>
+        </scene>
+        <!--ChangePass-->
+        <scene sceneID="ong-G4-rd4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChangePasswordPage" referencedIdentifier="ChangePass" id="RSj-Vj-NEn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKj-6V-CMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89595" y="-355"/>
         </scene>
         <!--loginPage-->
         <scene sceneID="B8B-1c-89e">

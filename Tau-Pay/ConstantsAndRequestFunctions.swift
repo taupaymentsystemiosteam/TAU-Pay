@@ -10,7 +10,7 @@ import Foundation
 class Constants
 {
     
-    static let IP = "http://172.16.1.214:8080"
+    static let IP = "http://192.168.43.142:8080"
     static let TOKEN = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjA1MDMxMzkiLCJleHAiOjE1NTQ5Njg4NTB9.Maaj88j5QQkYFq0p94Pqnw1LYsmdGIGR6CQ4j1WEoixED4E_ze9MRlc_W4b-4Ru9pnYC8hdOviRb3B3PFF1D9w"
     
     /*
@@ -28,7 +28,7 @@ class Constants
         
         let session = URLSession.shared
         
-        var request = URLRequest(url: URL(string:link)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 5	)
+        var request = URLRequest(url: URL(string:link)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15	)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(TOKEN, forHTTPHeaderField: "Authorization")
