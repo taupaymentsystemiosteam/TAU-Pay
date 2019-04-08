@@ -52,13 +52,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICW-m0-18C">
-                                <rect key="frame" x="160" y="111" width="94" height="30"/>
-                                <state key="normal" title="Login Dummy"/>
-                                <connections>
-                                    <action selector="loginDummyAction:" destination="tar-ev-gJV" eventType="touchUpInside" id="Xpt-w7-yQD"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-ej-3GL">
                                 <rect key="frame" x="112" y="292" width="282" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,16 +108,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9NA-tP-ZeJ" firstAttribute="trailing" secondItem="KJl-t4-PFM" secondAttribute="trailing" constant="151" id="84N-Gg-kTQ"/>
-                            <constraint firstItem="9NA-tP-ZeJ" firstAttribute="trailing" secondItem="ICW-m0-18C" secondAttribute="trailing" constant="160" id="8o4-El-GH1"/>
                             <constraint firstItem="79b-JF-1nO" firstAttribute="centerX" secondItem="z1o-Ik-v4P" secondAttribute="centerX" id="DRy-kt-xwM"/>
-                            <constraint firstItem="KJl-t4-PFM" firstAttribute="top" secondItem="ICW-m0-18C" secondAttribute="bottom" constant="8" id="TK6-IC-YwL"/>
                             <constraint firstItem="KJl-t4-PFM" firstAttribute="leading" secondItem="9NA-tP-ZeJ" secondAttribute="leading" constant="152" id="VQG-m2-fYJ"/>
                             <constraint firstAttribute="centerX" secondItem="z1o-Ik-v4P" secondAttribute="centerX" id="WpM-dj-drX"/>
                             <constraint firstItem="79b-JF-1nO" firstAttribute="top" secondItem="z1o-Ik-v4P" secondAttribute="bottom" constant="8" symbolic="YES" id="bFN-7x-Pkg"/>
-                            <constraint firstItem="ICW-m0-18C" firstAttribute="leading" secondItem="9NA-tP-ZeJ" secondAttribute="leading" constant="160" id="eQI-W9-RXt"/>
                             <constraint firstAttribute="centerY" secondItem="z1o-Ik-v4P" secondAttribute="centerY" id="tNQ-7a-WXH"/>
                             <constraint firstItem="KJl-t4-PFM" firstAttribute="top" secondItem="9NA-tP-ZeJ" secondAttribute="top" constant="61" id="txH-qJ-eNX"/>
-                            <constraint firstItem="ICW-m0-18C" firstAttribute="top" secondItem="9NA-tP-ZeJ" secondAttribute="top" constant="23" id="yTJ-u4-FHf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9NA-tP-ZeJ"/>
                     </view>

@@ -35,42 +35,7 @@ class LoginViewController: UIViewController {
         txtField.leftViewMode = .always
     }
     
-    @IBAction func login_button(_ sender: Any) {
-        let user = matrikelnummer_.text!
-        let pass = passwort_.text!
-        
-        if (user == "" || pass == "") {
-            return
-        }
-        
-        let dict: [String: String] = [
-            "id": user,
-            "password": pass
-            
-        ]
-        
-        let response = Constants.SendRequestGetString(requestType: "/login", json: dict)
-        if(response.connectionError){
-            //pop up
-        }
-        else if(response.error != nil){
-            //benim hatam
-        }
-        
-       // == 403 /matrikelnummer falsch
-        
-        else {
-            //login
-            Constants.setToken(token: response.info!)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "navController") as UIViewController
-            present(vc, animated: true, completion: nil)
-        }
-        
-        
-    }
-
+    
     /*
      
      // MARK: - Navigation
