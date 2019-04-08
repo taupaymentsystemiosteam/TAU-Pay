@@ -26,7 +26,7 @@ class ChangePasswordViewController: UIViewController {
     {
         if newPass.text == newPassRepeated.text {
             let json = ["newPass":newPass.text]
-            let response = Constants.SendRequestGetString(request: "/customers/change-password", json: json as Dictionary<String, Any>)
+            let response = Constants.SendRequestGetString(requestType: "/customers/change-password", json: json as Dictionary<String, Any>)
            
             if let responseInfo = response.info
            {

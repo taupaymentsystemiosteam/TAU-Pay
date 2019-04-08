@@ -54,7 +54,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     {
         let json = ["id":studentNumber.text!]
         
-        let getname = Constants.SendRequestGetString(request: "/customers/get-name", json: json)
+        let getname = Constants.SendRequestGetString(requestType: "/customers/get-name", json: json)
         
         if getname.connectionError
         {
@@ -97,7 +97,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         let json = ["receiverId":studentNumber.text!,
                     "balanceId":selectedValue.lowercased(),
                     "amount": Int(moneyBetrag.text!)!] as [String : Any]
-        let response = Constants.SendRequestGetString(request: "/customers/transfer", json: json)
+        let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
         let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
         
         responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
