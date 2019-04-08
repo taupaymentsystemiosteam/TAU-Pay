@@ -146,7 +146,7 @@
                 <viewControllerPlaceholder storyboardName="ChangePasswordPage" referencedIdentifier="ChangePass" id="RSj-Vj-NEn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKj-6V-CMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89595" y="-355"/>
+            <point key="canvasLocation" x="-89575" y="-230"/>
         </scene>
         <!--loginPage-->
         <scene sceneID="B8B-1c-89e">
@@ -154,7 +154,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="loginPage" id="Qwm-KL-pSr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRt-wk-Bfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89511" y="-157"/>
+            <point key="canvasLocation" x="-89586" y="-157"/>
         </scene>
         <!--FeedbackPage-->
         <scene sceneID="R3U-HC-h8q">
@@ -162,7 +162,7 @@
                 <viewControllerPlaceholder storyboardName="FeedbackPage" referencedIdentifier="FeedbackPage" id="gNQ-cE-Ei7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM4-Va-bYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89674" y="-69"/>
+            <point key="canvasLocation" x="-89586" y="-75"/>
         </scene>
     </scenes>
     <resources>
