@@ -51,13 +51,6 @@
                                     <segment title="Shuttle"/>
                                 </segments>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Burada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
-                                <rect key="frame" x="39" y="188" width="355" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="95D-QN-Zq3" userLabel="Yorum">
                                 <rect key="frame" x="39" y="361" width="355" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,6 +63,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Gönder"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Burada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
+                                <rect key="frame" x="39" y="194" width="355" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
