@@ -22,6 +22,7 @@ class FeedbackViewController: UIViewController {
     
     @IBAction func StarAction2(_ sender: Any) {
         Star1.setImage(UIImage(named: "circled_pay"), for: <#T##UIControl.State#>)
+        Star2.setImage(UIImage(named: "circled_pay"), for: <#T##UIControl.State#>)
     }
     @IBAction func StarAction3(_ sender: Any) {
     }
