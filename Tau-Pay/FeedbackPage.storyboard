@@ -18,18 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pex-bY-Ogx" customClass="SwiftyStarRatingView" customModule="SwiftyStarRatingView">
-                                <rect key="frame" x="302" y="44" width="105" height="111"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3">
+                                <rect key="frame" x="276" y="175" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="star"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh">
+                                <rect key="frame" x="234" y="175" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="star"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo">
+                                <rect key="frame" x="192" y="175" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="star"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY">
+                                <rect key="frame" x="318" y="175" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="star"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A">
+                                <rect key="frame" x="360" y="175" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="star"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="pex-bY-Ogx" firstAttribute="centerX" secondItem="qLk-cT-SUH" secondAttribute="centerX" constant="147.5" id="CWp-Go-P5e"/>
-                            <constraint firstItem="pex-bY-Ogx" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="302" id="mNb-cI-z36"/>
-                            <constraint firstItem="pex-bY-Ogx" firstAttribute="centerY" secondItem="qLk-cT-SUH" secondAttribute="centerY" constant="-348.5" id="wei-KZ-kmA"/>
-                            <constraint firstItem="pex-bY-Ogx" firstAttribute="top" secondItem="qGX-MU-K9W" secondAttribute="top" id="yCb-dS-vO1"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
                     </view>
                 </viewController>
@@ -38,4 +53,7 @@
             <point key="canvasLocation" x="2307.2463768115945" y="-640.17857142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" width="30" height="30"/>
+    </resources>
 </document>
