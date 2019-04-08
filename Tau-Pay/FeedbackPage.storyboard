@@ -18,84 +18,178 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
-                                <rect key="frame" x="190" y="288" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
+                                <rect key="frame" x="195" y="289" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C8Y-05-8R5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="JYI-ho-UAF"/>
+                                    <constraint firstAttribute="width" constant="34" id="PxL-9N-sNV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XAj-jG-6HL"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
-                                    <action selector="Star1Action:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="0vM-5c-liC"/>
+                                    <action selector="StarAction1:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="FXK-Y0-wAz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh" userLabel="StarButton2">
-                                <rect key="frame" x="225" y="289" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh" userLabel="StarButton2">
+                                <rect key="frame" x="234" y="289" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GMf-q0-CaR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="MdZ-AV-Ql9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="YuE-YV-PCN"/>
+                                    <constraint firstAttribute="width" constant="34" id="hdT-Ph-yTD"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction2:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="51w-7M-3nu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
-                                <rect key="frame" x="309" y="289" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
+                                <rect key="frame" x="312" y="289" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="1MP-hK-voH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="6cr-ka-xKd"/>
+                                    <constraint firstAttribute="width" constant="34" id="cGU-my-23W"/>
+                                    <constraint firstAttribute="height" constant="30" id="gMF-J0-pbY"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction4:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="yUM-93-8np"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
-                                <rect key="frame" x="351" y="289" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
+                                <rect key="frame" x="351" y="289" width="33" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Bzj-sx-w8W"/>
+                                    <constraint firstAttribute="height" constant="30" id="GSD-Zz-dy7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="f7h-aj-XYu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="nEX-Jx-wH4"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
-                                    <action selector="StarsRate:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="jSX-qB-3EI"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg">
-                                <rect key="frame" x="39" y="291" width="121" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Mensa"/>
-                                    <segment title="Shuttle"/>
-                                </segments>
-                            </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Burada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
-                                <rect key="frame" x="39" y="194" width="355" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Burada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
+                                <rect key="frame" x="30" y="194" width="354" height="58"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="95D-QN-Zq3" userLabel="Yorum">
-                                <rect key="frame" x="39" y="361" width="355" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="95D-QN-Zq3" userLabel="Yorum">
+                                <rect key="frame" x="30" y="361" width="354" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-PE-KbG" userLabel="GönderButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-PE-KbG" userLabel="GönderButton">
                                 <rect key="frame" x="343" y="506" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Gönder"/>
+                                <connections>
+                                    <action selector="GonderButton:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="kvH-d4-TMU"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3" userLabel="StarButton3">
-                                <rect key="frame" x="267" y="288" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3" userLabel="StarButton3">
+                                <rect key="frame" x="273" y="288" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="MOJ-fO-Zfn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="i19-n2-OVp"/>
+                                    <constraint firstAttribute="height" constant="30" id="ieu-R9-zn9"/>
+                                    <constraint firstAttribute="width" constant="34" id="pNT-oP-xK7"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction3:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="CqH-Ma-eXo"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg">
+                                <rect key="frame" x="30" y="290" width="135" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="1B6-GO-kdp"/>
+                                    <constraint firstAttribute="height" constant="27" id="nbV-tK-Raa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Mensa"/>
+                                    <segment title="Shuttle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MensaShuttleSelect:" destination="pPF-2m-Pkg" eventType="valueChanged" id="Ztf-no-cXh"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="leading" secondItem="Mbg-k1-afh" secondAttribute="trailing" constant="5" id="1Hi-Cf-FyC"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="sbS-R0-m4A" secondAttribute="bottom" constant="45" id="246-Nf-kSa"/>
+                            <constraint firstItem="NNZ-PE-KbG" firstAttribute="top" secondItem="95D-QN-Zq3" secondAttribute="bottom" constant="35" id="46e-aJ-7IY"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="5TY-xf-SS4"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="sbS-R0-m4A" secondAttribute="bottom" constant="45" id="69c-dv-4QB"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="leading" secondItem="RdN-6p-Czg" secondAttribute="trailing" constant="10" id="6Cb-g3-xb4"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="RdN-6p-Czg" secondAttribute="bottom" constant="35" id="7Kp-ke-IVc"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="centerY" secondItem="Mef-ME-gNo" secondAttribute="centerY" id="7jt-hs-WkQ"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="leading" secondItem="Mnc-GO-dG3" secondAttribute="trailing" constant="5" id="7l8-L2-Af1"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="leading" secondItem="JcJ-Cd-PSY" secondAttribute="trailing" constant="10" id="85g-Dv-5OM"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="8Fd-xt-qId"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="RdN-6p-Czg" secondAttribute="bottom" constant="45" id="EfJ-MX-6rY"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mbg-k1-afh" secondAttribute="bottom" constant="45" id="GNM-lO-fkA"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="leading" secondItem="Mnc-GO-dG3" secondAttribute="trailing" constant="5" id="I7x-v7-e7H"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="30" id="IRy-h0-rb3"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="JzK-f1-v3i"/>
+                            <constraint firstItem="Mef-ME-gNo" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="K8g-Ih-ZN4"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="leading" secondItem="JcJ-Cd-PSY" secondAttribute="trailing" constant="5" id="KjR-fP-yFA"/>
+                            <constraint firstItem="qGX-MU-K9W" firstAttribute="trailing" secondItem="sbS-R0-m4A" secondAttribute="trailing" constant="30" id="N3v-jl-keg"/>
+                            <constraint firstItem="Mef-ME-gNo" firstAttribute="leading" secondItem="RdN-6p-Czg" secondAttribute="trailing" constant="5" id="OMs-vm-E0N"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="30" id="ONQ-Ho-ye3"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="OvJ-9O-QAZ"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mbg-k1-afh" secondAttribute="bottom" constant="45" id="PTr-Pi-zRb"/>
+                            <constraint firstItem="Mef-ME-gNo" firstAttribute="leading" secondItem="RdN-6p-Czg" secondAttribute="trailing" constant="194" id="Rgx-55-Zsh"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="leading" secondItem="Mnc-GO-dG3" secondAttribute="trailing" constant="10" id="Scl-Oc-NNi"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="T7n-7Z-lId"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mbg-k1-afh" secondAttribute="bottom" constant="45" id="Vgz-5e-cne"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mnc-GO-dG3" secondAttribute="bottom" constant="45" id="XIZ-zR-RHb"/>
+                            <constraint firstItem="Mef-ME-gNo" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="195" id="Yjh-wF-sBb"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="bt1-4b-Dt2"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mef-ME-gNo" secondAttribute="bottom" constant="45" id="cUT-HT-9OT"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="cv6-pU-ckd"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="fkU-37-Sl3"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="hLF-U0-Chw"/>
+                            <constraint firstItem="mjb-4Q-7pu" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="30" id="huO-F3-MME"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="leading" secondItem="Mbg-k1-afh" secondAttribute="trailing" constant="5" id="igj-zu-wKI"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="RdN-6p-Czg" secondAttribute="bottom" constant="45" id="k8p-Hg-dAo"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mbg-k1-afh" secondAttribute="bottom" constant="45" id="lRU-6W-YEF"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="leading" secondItem="Mbg-k1-afh" secondAttribute="trailing" constant="10" id="lTy-O5-qgW"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mnc-GO-dG3" secondAttribute="bottom" constant="45" id="la1-iq-eo2"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="mq3-7d-EB3"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="45" id="nb3-eA-cMN"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="JcJ-Cd-PSY" secondAttribute="bottom" constant="45" id="np5-7J-8th"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="centerY" secondItem="Mef-ME-gNo" secondAttribute="centerY" id="oHf-6Q-mco"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="JcJ-Cd-PSY" secondAttribute="bottom" constant="45" id="p5C-jO-lH6"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="p7Z-gi-dqU"/>
+                            <constraint firstItem="qGX-MU-K9W" firstAttribute="trailing" secondItem="mjb-4Q-7pu" secondAttribute="trailing" constant="30" id="qFZ-1W-uY8"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="leading" secondItem="RdN-6p-Czg" secondAttribute="trailing" constant="10" id="rpp-cS-whP"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="u6Q-QC-g0E"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="RdN-6p-Czg" secondAttribute="bottom" constant="45" id="uEl-Ed-U6n"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="uzf-rV-gcU"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="centerY" secondItem="Mef-ME-gNo" secondAttribute="centerY" id="vnj-yn-eN2"/>
+                            <constraint firstItem="95D-QN-Zq3" firstAttribute="top" secondItem="Mef-ME-gNo" secondAttribute="bottom" constant="45" id="vwg-Oq-Yl1"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="centerY" secondItem="Mef-ME-gNo" secondAttribute="centerY" id="w4I-by-9aZ"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="leading" secondItem="Mef-ME-gNo" secondAttribute="trailing" constant="5" id="wFv-xa-gEp"/>
+                            <constraint firstItem="qGX-MU-K9W" firstAttribute="trailing" secondItem="95D-QN-Zq3" secondAttribute="trailing" constant="30" id="xj0-Wt-R1K"/>
+                            <constraint firstItem="NNZ-PE-KbG" firstAttribute="top" secondItem="95D-QN-Zq3" secondAttribute="bottom" constant="35" id="y3Z-RF-2XW"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="top" secondItem="mjb-4Q-7pu" secondAttribute="bottom" constant="35" id="zD4-ur-1Ar"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
                     </view>
                     <connections>
+                        <outlet property="AcıklamaText" destination="mjb-4Q-7pu" id="1Rt-hr-XSQ"/>
+                        <outlet property="GonderButton" destination="NNZ-PE-KbG" id="BWO-vx-5C5"/>
+                        <outlet property="MensaShutteSelect" destination="RdN-6p-Czg" id="hss-0R-ghp"/>
                         <outlet property="Star1" destination="Mef-ME-gNo" id="pPU-Pl-RkG"/>
                         <outlet property="Star2" destination="Mbg-k1-afh" id="FlQ-Pc-FX1"/>
                         <outlet property="Star3" destination="Mnc-GO-dG3" id="KVz-Kr-gZn"/>
                         <outlet property="Star4" destination="JcJ-Cd-PSY" id="RtR-nL-wR6"/>
                         <outlet property="Star5" destination="sbS-R0-m4A" id="aBx-zj-w5f"/>
+                        <outlet property="YorumText" destination="95D-QN-Zq3" id="NRV-jQ-P4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXc-d1-J1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
