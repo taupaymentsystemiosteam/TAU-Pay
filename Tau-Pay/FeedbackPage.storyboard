@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
                                 <rect key="frame" x="190" y="288" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="circled_play"/>
+                                <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="Star1Action:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="0vM-5c-liC"/>
                                 </connections>
@@ -29,7 +29,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh" userLabel="StarButton2">
                                 <rect key="frame" x="225" y="289" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="star"/>
+                                <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction2:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="51w-7M-3nu"/>
                                 </connections>
@@ -37,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
                                 <rect key="frame" x="309" y="289" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="star"/>
+                                <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction4:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="yUM-93-8np"/>
                                 </connections>
@@ -45,7 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
                                 <rect key="frame" x="351" y="289" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="star"/>
+                                <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
                                     <action selector="StarsRate:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="jSX-qB-3EI"/>
@@ -81,7 +81,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3" userLabel="StarButton3">
                                 <rect key="frame" x="267" y="288" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="star"/>
+                                <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction3:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="CqH-Ma-eXo"/>
                                 </connections>
@@ -104,7 +104,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circled_play" width="30" height="30"/>
-        <image name="star" width="30" height="30"/>
+        <image name="empty_star" width="48" height="48"/>
     </resources>
 </document>
