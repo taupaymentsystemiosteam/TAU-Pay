@@ -16,6 +16,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let matrikelnummerImage = UIImage(named: "user_male")
+        addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
+        
+        let passwortImage = UIImage(named: "password")
+        addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
+        
+        matrikelnummer_.layer.cornerRadius = 15.0
+        
        // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
        // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         
@@ -50,17 +58,26 @@ class LoginViewController: UIViewController {
         ]
         
         let response = Constants.SendRequestGetString(requestType: "/login", json: dict)
+        
         if(response.connectionError){
-            //pop up
+            //fehlende Internetverbindung
         }
+            
         else if(response.error != nil){
-            //benim hatam
+            
+            let alert = UIAlertController(title: "Fehlende Internetverbindung", message: "connection error", preferredStyle: .alert)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        else if(response.error == "403"){
+            let alert = UIAlertController(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", preferredStyle: .alert)
+            
+            self.present(alert, animated: true, completion: nil)
         }
         
-       // == 403 /matrikelnummer falsch
         
         else {
-            //login
             Constants.setToken(token: response.info!)
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
