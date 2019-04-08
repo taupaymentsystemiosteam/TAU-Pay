@@ -9,11 +9,30 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var matrikelnummer_: UITextField!
+    @IBOutlet weak var passwort_: UITextField!
+    @IBOutlet weak var anmelden_: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
+       // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
+        
+        //let passwortImage = UIImage(named: "passwort_")
+        //addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
+        
+        //matrikelnummer_.layer.cornerRadius = 15.0
 
-        // Do any additional setup after loading the view.
+    }
+    
+    func addLeftImageTo(txtField: UITextField, andImage img: UIImage){
+        
+        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20, height: 20))
+        
+        leftImageView.image = img
+        txtField.leftView = leftImageView
+        txtField.leftViewMode = .always
     }
     
 

@@ -1,0 +1,932 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02A1069606094FED819B001738F0D8C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		204AA00361010A26A3DFBC1BDBFE678B /* Pods-Tau-PayTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB425B2D22074738BA51B174EA72FFE3 /* Pods-Tau-PayTests-dummy.m */; };
+		286C300743AC1AC56397EEE83B482978 /* Pods-Tau-Pay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2839993062FC0FDFD7E20656F686868 /* Pods-Tau-Pay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEDEADD7DABB9C451DE0594E0CE4D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		407EF1DA5C3ACC90F9D355798B231A49 /* SwiftyStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBFA472CDDEB82B3C35FAF8C701118B /* SwiftyStarRatingView-dummy.m */; };
+		5C5E543784761E78FABFC4565A3CA06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		78C0690BA6F027BDB5BB610F8FD90AEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		8E0C62E28871C0F40F92FD73C13835B3 /* SwiftyStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 440C8AAEA2EEDD381FB7F87CFF3BCE46 /* SwiftyStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5A695526F9D48A3A4C2FA3A70231FDD /* SwiftyStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C8079639DC6E223BF7CBF5212AC22 /* SwiftyStarRatingView.swift */; };
+		AD72537F89C7D047BA085FC845968C9B /* Pods-Tau-PayUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA272B9C0B32BC1CE27BEAFACEDB061 /* Pods-Tau-PayUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB45FD07F203549EBC8B783E3064641E /* Pods-Tau-Pay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E355FEA4F1E639C4DB698FED6F0D3E /* Pods-Tau-Pay-dummy.m */; };
+		E560D193B51A1C9F97C32071E664AFE1 /* Pods-Tau-PayTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B2C4233E3E2DAAB0AD8489029C02EE2 /* Pods-Tau-PayTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB4CBEDECD505BB300B9114952CB3D08 /* Pods-Tau-PayUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 864D7428CD3DB9118553476A401A28B6 /* Pods-Tau-PayUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D07CAA278AFDC1F00314A6A13765FF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A48C4D28BFEA51757A1B18F4ADBF5479;
+			remoteInfo = "Pods-Tau-Pay";
+		};
+		62D597809CDA60BB957F2DFF31BE6630 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B726A9FBF48E098AF394AC6475719D6;
+			remoteInfo = SwiftyStarRatingView;
+		};
+		B5056A1139A2033F31278DC75D819804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A48C4D28BFEA51757A1B18F4ADBF5479;
+			remoteInfo = "Pods-Tau-Pay";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FB19B438F404A9D23CC46E1647CD768 /* Pods_Tau_PayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_PayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B251905F62A41353CC78E2C8DFF7B38 /* Pods-Tau-PayTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tau-PayTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2BEE673CDD084012E946D62A758E10F7 /* Pods-Tau-PayTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tau-PayTests.modulemap"; sourceTree = "<group>"; };
+		2CC2A2A87EA4B9575D77199269B605F5 /* Pods-Tau-Pay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-Pay.release.xcconfig"; sourceTree = "<group>"; };
+		2D58905DB92E15ED019D94497E856F26 /* Pods-Tau-Pay-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tau-Pay-frameworks.sh"; sourceTree = "<group>"; };
+		2D5E0E987D343474E20F859B40B34652 /* Pods-Tau-Pay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tau-Pay.modulemap"; sourceTree = "<group>"; };
+		37C9DC3A220845A234CDFF487D6F5EB0 /* SwiftyStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStarRatingView.xcconfig; sourceTree = "<group>"; };
+		3A16D0AAFCCD15920F93ECD01AF24BE0 /* Pods-Tau-PayTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-PayTests-Info.plist"; sourceTree = "<group>"; };
+		41AC91CBC6D3DB7AA6DF5D4FF0639413 /* Pods-Tau-PayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-PayTests.release.xcconfig"; sourceTree = "<group>"; };
+		440C8AAEA2EEDD381FB7F87CFF3BCE46 /* SwiftyStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStarRatingView-umbrella.h"; sourceTree = "<group>"; };
+		4AF58E4E1D7DA4CA141153339C4CF4C0 /* Pods-Tau-PayTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-PayTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4C99AEBC8B93285F4451FDEF7B9A2746 /* Pods-Tau-Pay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-Pay-Info.plist"; sourceTree = "<group>"; };
+		56805584976FA41BFDB6324F3EF420E3 /* Pods-Tau-PayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-PayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5883447D9ACDEAECB02D27A52B24DDCA /* Pods-Tau-PayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-PayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B2C4233E3E2DAAB0AD8489029C02EE2 /* Pods-Tau-PayTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tau-PayTests-umbrella.h"; sourceTree = "<group>"; };
+		604EA9BCD59DA41D383C74BD795E30FE /* SwiftyStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825CC93DDF1D6CD03580C7CBBBA43B94 /* Pods_Tau_PayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_PayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		864D7428CD3DB9118553476A401A28B6 /* Pods-Tau-PayUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tau-PayUITests-dummy.m"; sourceTree = "<group>"; };
+		89C8F275A35F8EB4A52D09CE437372EE /* Pods-Tau-PayUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tau-PayUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A04261450E6A5481EB5957DE2E3A41 /* Pods-Tau-Pay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-Pay.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5BD5F6DF77E0008FD6AC69B390B7A52 /* Pods-Tau-PayUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-PayUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5C3DC8020BB11E53752689D600E6E4E /* Pods-Tau-PayUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tau-PayUITests.modulemap"; sourceTree = "<group>"; };
+		A6EADD50449DC198A8669CA986E83792 /* Pods-Tau-Pay-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-Pay-acknowledgements.plist"; sourceTree = "<group>"; };
+		AA7DB64D89638CAF956C2F51AAF2D03D /* Pods-Tau-PayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tau-PayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ABBFA472CDDEB82B3C35FAF8C701118B /* SwiftyStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStarRatingView-dummy.m"; sourceTree = "<group>"; };
+		AF6C8079639DC6E223BF7CBF5212AC22 /* SwiftyStarRatingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStarRatingView.swift; path = Source/SwiftyStarRatingView.swift; sourceTree = "<group>"; };
+		B2839993062FC0FDFD7E20656F686868 /* Pods-Tau-Pay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tau-Pay-umbrella.h"; sourceTree = "<group>"; };
+		B985B552E31404045C7E989D235E539C /* Pods-Tau-Pay-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tau-Pay-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB425B2D22074738BA51B174EA72FFE3 /* Pods-Tau-PayTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tau-PayTests-dummy.m"; sourceTree = "<group>"; };
+		BB82B84D82E507ADBF4CB29A905310DE /* Pods-Tau-PayUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tau-PayUITests-Info.plist"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D7E355FEA4F1E639C4DB698FED6F0D3E /* Pods-Tau-Pay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tau-Pay-dummy.m"; sourceTree = "<group>"; };
+		E8F07B283F959A2829AF7936C2C612DE /* SwiftyStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStarRatingView-prefix.pch"; sourceTree = "<group>"; };
+		E95AB7BCBC10B4C9D81179BC311C4D21 /* SwiftyStarRatingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyStarRatingView-Info.plist"; sourceTree = "<group>"; };
+		F2F2A826242BCC2021C7E76916FE8370 /* Pods_Tau_Pay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau_Pay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBDD23B96543FDD4A3F6FB2D9091B021 /* SwiftyStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStarRatingView.modulemap; sourceTree = "<group>"; };
+		FDA272B9C0B32BC1CE27BEAFACEDB061 /* Pods-Tau-PayUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tau-PayUITests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E327D2A17058FBB8E6A3E6F5B2AC3CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CEDEADD7DABB9C451DE0594E0CE4D8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B68DB7D5A9B33FF4D46F8323734B193 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02A1069606094FED819B001738F0D8C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77504387E58E62F60AC2136A84A72224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C0690BA6F027BDB5BB610F8FD90AEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FC777ECF2BBAAE34AC70971278BC44A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5E543784761E78FABFC4565A3CA06D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F0380AB71C0720FE4AEE5BD7A0EC393 /* Pods-Tau-PayTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BEE673CDD084012E946D62A758E10F7 /* Pods-Tau-PayTests.modulemap */,
+				2B251905F62A41353CC78E2C8DFF7B38 /* Pods-Tau-PayTests-acknowledgements.markdown */,
+				4AF58E4E1D7DA4CA141153339C4CF4C0 /* Pods-Tau-PayTests-acknowledgements.plist */,
+				BB425B2D22074738BA51B174EA72FFE3 /* Pods-Tau-PayTests-dummy.m */,
+				3A16D0AAFCCD15920F93ECD01AF24BE0 /* Pods-Tau-PayTests-Info.plist */,
+				5B2C4233E3E2DAAB0AD8489029C02EE2 /* Pods-Tau-PayTests-umbrella.h */,
+				56805584976FA41BFDB6324F3EF420E3 /* Pods-Tau-PayTests.debug.xcconfig */,
+				41AC91CBC6D3DB7AA6DF5D4FF0639413 /* Pods-Tau-PayTests.release.xcconfig */,
+			);
+			name = "Pods-Tau-PayTests";
+			path = "Target Support Files/Pods-Tau-PayTests";
+			sourceTree = "<group>";
+		};
+		142023A6C40CD8AD32A77F53EA1B05C4 /* Pods-Tau-PayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5C3DC8020BB11E53752689D600E6E4E /* Pods-Tau-PayUITests.modulemap */,
+				89C8F275A35F8EB4A52D09CE437372EE /* Pods-Tau-PayUITests-acknowledgements.markdown */,
+				A5BD5F6DF77E0008FD6AC69B390B7A52 /* Pods-Tau-PayUITests-acknowledgements.plist */,
+				864D7428CD3DB9118553476A401A28B6 /* Pods-Tau-PayUITests-dummy.m */,
+				BB82B84D82E507ADBF4CB29A905310DE /* Pods-Tau-PayUITests-Info.plist */,
+				FDA272B9C0B32BC1CE27BEAFACEDB061 /* Pods-Tau-PayUITests-umbrella.h */,
+				5883447D9ACDEAECB02D27A52B24DDCA /* Pods-Tau-PayUITests.debug.xcconfig */,
+				AA7DB64D89638CAF956C2F51AAF2D03D /* Pods-Tau-PayUITests.release.xcconfig */,
+			);
+			name = "Pods-Tau-PayUITests";
+			path = "Target Support Files/Pods-Tau-PayUITests";
+			sourceTree = "<group>";
+		};
+		188D08F7210BE3A3C1993C7B88475BD6 /* Pods-Tau-Pay */ = {
+			isa = PBXGroup;
+			children = (
+				2D5E0E987D343474E20F859B40B34652 /* Pods-Tau-Pay.modulemap */,
+				B985B552E31404045C7E989D235E539C /* Pods-Tau-Pay-acknowledgements.markdown */,
+				A6EADD50449DC198A8669CA986E83792 /* Pods-Tau-Pay-acknowledgements.plist */,
+				D7E355FEA4F1E639C4DB698FED6F0D3E /* Pods-Tau-Pay-dummy.m */,
+				2D58905DB92E15ED019D94497E856F26 /* Pods-Tau-Pay-frameworks.sh */,
+				4C99AEBC8B93285F4451FDEF7B9A2746 /* Pods-Tau-Pay-Info.plist */,
+				B2839993062FC0FDFD7E20656F686868 /* Pods-Tau-Pay-umbrella.h */,
+				93A04261450E6A5481EB5957DE2E3A41 /* Pods-Tau-Pay.debug.xcconfig */,
+				2CC2A2A87EA4B9575D77199269B605F5 /* Pods-Tau-Pay.release.xcconfig */,
+			);
+			name = "Pods-Tau-Pay";
+			path = "Target Support Files/Pods-Tau-Pay";
+			sourceTree = "<group>";
+		};
+		2339E6D1D86E0DD7261FA2F999DCE925 /* SwiftyStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C8079639DC6E223BF7CBF5212AC22 /* SwiftyStarRatingView.swift */,
+				48F5CAB71D53809631C28807DF397DAF /* Support Files */,
+			);
+			path = SwiftyStarRatingView;
+			sourceTree = "<group>";
+		};
+		48F5CAB71D53809631C28807DF397DAF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBDD23B96543FDD4A3F6FB2D9091B021 /* SwiftyStarRatingView.modulemap */,
+				37C9DC3A220845A234CDFF487D6F5EB0 /* SwiftyStarRatingView.xcconfig */,
+				ABBFA472CDDEB82B3C35FAF8C701118B /* SwiftyStarRatingView-dummy.m */,
+				E95AB7BCBC10B4C9D81179BC311C4D21 /* SwiftyStarRatingView-Info.plist */,
+				E8F07B283F959A2829AF7936C2C612DE /* SwiftyStarRatingView-prefix.pch */,
+				440C8AAEA2EEDD381FB7F87CFF3BCE46 /* SwiftyStarRatingView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyStarRatingView";
+			sourceTree = "<group>";
+		};
+		6928591D8839E7923C0DAC68F543B91D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2339E6D1D86E0DD7261FA2F999DCE925 /* SwiftyStarRatingView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B39BF5E3EFDCD90CBFE6857C42A88A02 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				188D08F7210BE3A3C1993C7B88475BD6 /* Pods-Tau-Pay */,
+				0F0380AB71C0720FE4AEE5BD7A0EC393 /* Pods-Tau-PayTests */,
+				142023A6C40CD8AD32A77F53EA1B05C4 /* Pods-Tau-PayUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B9052E74898E799B9B8DDEF3A97DDA95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2F2A826242BCC2021C7E76916FE8370 /* Pods_Tau_Pay.framework */,
+				0FB19B438F404A9D23CC46E1647CD768 /* Pods_Tau_PayTests.framework */,
+				825CC93DDF1D6CD03580C7CBBBA43B94 /* Pods_Tau_PayUITests.framework */,
+				604EA9BCD59DA41D383C74BD795E30FE /* SwiftyStarRatingView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				6928591D8839E7923C0DAC68F543B91D /* Pods */,
+				B9052E74898E799B9B8DDEF3A97DDA95 /* Products */,
+				B39BF5E3EFDCD90CBFE6857C42A88A02 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6D8A35874A0DE268BA8FE923B36B3258 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD72537F89C7D047BA085FC845968C9B /* Pods-Tau-PayUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB131E4B8ED9E801CC44EA5ED3A42D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E0C62E28871C0F40F92FD73C13835B3 /* SwiftyStarRatingView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58947275E0CB8E221CD2E889A44364A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286C300743AC1AC56397EEE83B482978 /* Pods-Tau-Pay-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC246EEB1DED333008B6FC007A5F73C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E560D193B51A1C9F97C32071E664AFE1 /* Pods-Tau-PayTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		08B2F8E1FB62783A3588B6729D998415 /* Pods-Tau-PayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD84F8B1F9492720036FC06B2DDBFEAC /* Build configuration list for PBXNativeTarget "Pods-Tau-PayTests" */;
+			buildPhases = (
+				EC246EEB1DED333008B6FC007A5F73C7 /* Headers */,
+				70D84F60C447C829216AD0E2FBAD759E /* Sources */,
+				2B68DB7D5A9B33FF4D46F8323734B193 /* Frameworks */,
+				384A6F99DE28E32D1FDC65EED3F72649 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28F575B77ECB67A53D31C9FBA0FE7A09 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tau-PayTests";
+			productName = "Pods-Tau-PayTests";
+			productReference = 0FB19B438F404A9D23CC46E1647CD768 /* Pods_Tau_PayTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4B726A9FBF48E098AF394AC6475719D6 /* SwiftyStarRatingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F6EC2C51232D3EF9BAF6B6CA9A0278A /* Build configuration list for PBXNativeTarget "SwiftyStarRatingView" */;
+			buildPhases = (
+				CAB131E4B8ED9E801CC44EA5ED3A42D8 /* Headers */,
+				25ECEA10743EF3D67BA9834917F4B51C /* Sources */,
+				7FC777ECF2BBAAE34AC70971278BC44A /* Frameworks */,
+				369E5675F005DC9AB43D7FB2FF50B177 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyStarRatingView;
+			productName = SwiftyStarRatingView;
+			productReference = 604EA9BCD59DA41D383C74BD795E30FE /* SwiftyStarRatingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A48C4D28BFEA51757A1B18F4ADBF5479 /* Pods-Tau-Pay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDBDDC5C91690A67CC649DADC78D23CF /* Build configuration list for PBXNativeTarget "Pods-Tau-Pay" */;
+			buildPhases = (
+				D58947275E0CB8E221CD2E889A44364A /* Headers */,
+				EE8F924FF0D4AE489518201BF9E0096A /* Sources */,
+				77504387E58E62F60AC2136A84A72224 /* Frameworks */,
+				F5C3AFBB11DA4EF98313C285A101F5EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75ABB2FF6120E27E8210BC63799DCE2E /* PBXTargetDependency */,
+			);
+			name = "Pods-Tau-Pay";
+			productName = "Pods-Tau-Pay";
+			productReference = F2F2A826242BCC2021C7E76916FE8370 /* Pods_Tau_Pay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA69AD57A0A3B0B01612759542BA64B4 /* Pods-Tau-PayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9F860668D80864A34AE7DC888053C8 /* Build configuration list for PBXNativeTarget "Pods-Tau-PayUITests" */;
+			buildPhases = (
+				6D8A35874A0DE268BA8FE923B36B3258 /* Headers */,
+				816974E0EF69C4E5EDF17B348270152A /* Sources */,
+				1E327D2A17058FBB8E6A3E6F5B2AC3CA /* Frameworks */,
+				53B295E7FA3F4B1D532095D675C81037 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29A3BC2D1199A0A204D8F2AF05EA2D97 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tau-PayUITests";
+			productName = "Pods-Tau-PayUITests";
+			productReference = 825CC93DDF1D6CD03580C7CBBBA43B94 /* Pods_Tau_PayUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B9052E74898E799B9B8DDEF3A97DDA95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A48C4D28BFEA51757A1B18F4ADBF5479 /* Pods-Tau-Pay */,
+				08B2F8E1FB62783A3588B6729D998415 /* Pods-Tau-PayTests */,
+				BA69AD57A0A3B0B01612759542BA64B4 /* Pods-Tau-PayUITests */,
+				4B726A9FBF48E098AF394AC6475719D6 /* SwiftyStarRatingView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		369E5675F005DC9AB43D7FB2FF50B177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384A6F99DE28E32D1FDC65EED3F72649 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B295E7FA3F4B1D532095D675C81037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C3AFBB11DA4EF98313C285A101F5EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25ECEA10743EF3D67BA9834917F4B51C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407EF1DA5C3ACC90F9D355798B231A49 /* SwiftyStarRatingView-dummy.m in Sources */,
+				A5A695526F9D48A3A4C2FA3A70231FDD /* SwiftyStarRatingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D84F60C447C829216AD0E2FBAD759E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204AA00361010A26A3DFBC1BDBFE678B /* Pods-Tau-PayTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		816974E0EF69C4E5EDF17B348270152A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4CBEDECD505BB300B9114952CB3D08 /* Pods-Tau-PayUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8F924FF0D4AE489518201BF9E0096A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB45FD07F203549EBC8B783E3064641E /* Pods-Tau-Pay-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28F575B77ECB67A53D31C9FBA0FE7A09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tau-Pay";
+			target = A48C4D28BFEA51757A1B18F4ADBF5479 /* Pods-Tau-Pay */;
+			targetProxy = B5056A1139A2033F31278DC75D819804 /* PBXContainerItemProxy */;
+		};
+		29A3BC2D1199A0A204D8F2AF05EA2D97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tau-Pay";
+			target = A48C4D28BFEA51757A1B18F4ADBF5479 /* Pods-Tau-Pay */;
+			targetProxy = 3D07CAA278AFDC1F00314A6A13765FF0 /* PBXContainerItemProxy */;
+		};
+		75ABB2FF6120E27E8210BC63799DCE2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyStarRatingView;
+			target = 4B726A9FBF48E098AF394AC6475719D6 /* SwiftyStarRatingView */;
+			targetProxy = 62D597809CDA60BB957F2DFF31BE6630 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		076561FE6C9C85FFE0CC1F1368C70701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5883447D9ACDEAECB02D27A52B24DDCA /* Pods-Tau-PayUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0A392C4FF8299F8D556BBB8B47F9189B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56805584976FA41BFDB6324F3EF420E3 /* Pods-Tau-PayTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A246D04A2DC9643FB1A741CBF5BD17B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC2A2A87EA4B9575D77199269B605F5 /* Pods-Tau-Pay.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80E5FB2B648BCF06E45503D3232E8941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AC91CBC6D3DB7AA6DF5D4FF0639413 /* Pods-Tau-PayTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayTests/Pods-Tau-PayTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		915906154294D05FA05A2BFBCC137340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C9DC3A220845A234CDFF487D6F5EB0 /* SwiftyStarRatingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyStarRatingView;
+				PRODUCT_NAME = SwiftyStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A105C1752A0A49B30ED621B71E226CDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AA4FADFD43267682F446A9CB86A9C233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A04261450E6A5481EB5957DE2E3A41 /* Pods-Tau-Pay.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tau-Pay/Pods-Tau-Pay.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1391485F05B41BD35738A433056B7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CACC74737925BECED822E4A23151AF44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7DB64D89638CAF956C2F51AAF2D03D /* Pods-Tau-PayUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tau-PayUITests/Pods-Tau-PayUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD5093B4303340D207E85E99F436F92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C9DC3A220845A234CDFF487D6F5EB0 /* SwiftyStarRatingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStarRatingView/SwiftyStarRatingView.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyStarRatingView;
+				PRODUCT_NAME = SwiftyStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F6EC2C51232D3EF9BAF6B6CA9A0278A /* Build configuration list for PBXNativeTarget "SwiftyStarRatingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915906154294D05FA05A2BFBCC137340 /* Debug */,
+				CD5093B4303340D207E85E99F436F92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1391485F05B41BD35738A433056B7FA /* Debug */,
+				A105C1752A0A49B30ED621B71E226CDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9F860668D80864A34AE7DC888053C8 /* Build configuration list for PBXNativeTarget "Pods-Tau-PayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076561FE6C9C85FFE0CC1F1368C70701 /* Debug */,
+				CACC74737925BECED822E4A23151AF44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD84F8B1F9492720036FC06B2DDBFEAC /* Build configuration list for PBXNativeTarget "Pods-Tau-PayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A392C4FF8299F8D556BBB8B47F9189B /* Debug */,
+				80E5FB2B648BCF06E45503D3232E8941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDBDDC5C91690A67CC649DADC78D23CF /* Build configuration list for PBXNativeTarget "Pods-Tau-Pay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4FADFD43267682F446A9CB86A9C233 /* Debug */,
+				4A246D04A2DC9643FB1A741CBF5BD17B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
