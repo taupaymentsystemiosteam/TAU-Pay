@@ -10,8 +10,12 @@ import Foundation
 class Constants
 {
     
-    static let IP = "http://192.168.43.142:8080"
-    static let TOKEN = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjA1MDMxMzkiLCJleHAiOjE1NTQ5Njg4NTB9.Maaj88j5QQkYFq0p94Pqnw1LYsmdGIGR6CQ4j1WEoixED4E_ze9MRlc_W4b-4Ru9pnYC8hdOviRb3B3PFF1D9w"
+    static let IP = "http://172.17.24.98:8080"
+    static var TOKEN = ""
+    
+    static func setToken(token: String){
+        TOKEN = token
+    }
     
     /*
         Request = "/customer/get-name" etc.
@@ -21,17 +25,19 @@ class Constants
      
      NUSRET OZATES
  */
-    static func SendRequestGetString(request : String ,json : Dictionary<String, Any>?) ->(info : String? , error: String? , connectionError : Bool)
+    static func SendRequestGetString(requestType : String ,json : Dictionary<String, Any>?) ->(info : String? , error: String? , connectionError : Bool)
     {
         
-        let link = IP + request
+        let link = IP + requestType
         
         let session = URLSession.shared
         
         var request = URLRequest(url: URL(string:link)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15	)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(TOKEN, forHTTPHeaderField: "Authorization")
+        if(requestType != "/login"){
+            request.setValue(TOKEN, forHTTPHeaderField: "Authorization")
+        }
         
         var httpFailure = ""
         // If the server unsucessfully connects to the server then this boolean will be set to true
