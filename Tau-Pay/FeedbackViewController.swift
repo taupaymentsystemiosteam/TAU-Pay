@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FeedbackViewController: UIViewController {
 
     @IBOutlet var AcıklamaText: UITextView!
