@@ -31,6 +31,8 @@ class SecondViewController: UIViewController {
         hamburgerIsOpen = !hamburgerIsOpen
     }
     
+    
+    
     func getInfo(token: String) -> (info: Dictionary<String, Any>?, error: String?, connectionError: Bool) {
 
         let infoIp = ip + "/customers/get-info"
@@ -226,6 +228,7 @@ class SecondViewController: UIViewController {
         return (token: token, nil, false)
         
     }
+    */
     
     @IBOutlet weak var tokenBox: UITextField!
     @IBOutlet weak var nameBox: UITextField!
