@@ -18,23 +18,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSG-ML-Z2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="-547"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="z5N-Xs-lMo">
-            <objects>
-                <navigationController storyboardIdentifier="navController" id="qju-nf-r5m" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQK-FT-Qcf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="Fce-dD-yMK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJg-nG-5ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1030" y="-303"/>
+            <point key="canvasLocation" x="-423" y="-548"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -56,17 +40,17 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-304"/>
+            <point key="canvasLocation" x="-1046" y="-304"/>
         </scene>
-        <!--ProfilePage-->
+        <!--ProfileNavController-->
         <scene sceneID="z5L-2M-lxf">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfilePage" id="FaL-YJ-cIP" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="FaL-YJ-cIP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="MxI-t7-Tj9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnE-1c-8YP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="-680"/>
+            <point key="canvasLocation" x="-430" y="-680"/>
         </scene>
         <!--GeldTransfer-->
         <scene sceneID="3wP-eG-763">
@@ -76,7 +60,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rug-Ba-LQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614" y="-637"/>
+            <point key="canvasLocation" x="-430" y="-638"/>
         </scene>
         <!--RecommendPage-->
         <scene sceneID="o0R-h9-P45">
@@ -86,7 +70,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SR3-5n-AsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614" y="-591"/>
+            <point key="canvasLocation" x="-430" y="-591"/>
         </scene>
         <!--Login-->
         <scene sceneID="QF6-ie-Xlu">
@@ -137,8 +121,19 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-kt-7H9">
+                                <rect key="frame" x="16" y="623" width="91" height="30"/>
+                                <state key="normal" title="Bypass Login"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="NUj-fn-CC6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91229027509689331" green="0.96138221025466919" blue="0.96934956312179565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3sK-kt-7H9" firstAttribute="leading" secondItem="jbs-Iu-7ra" secondAttribute="leading" constant="16" id="EJ9-wo-st3"/>
+                            <constraint firstItem="jbs-Iu-7ra" firstAttribute="bottom" secondItem="3sK-kt-7H9" secondAttribute="bottom" constant="14" id="b1X-EQ-Ywc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jbs-Iu-7ra"/>
                     </view>
                     <connections>
