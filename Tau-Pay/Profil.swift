@@ -12,9 +12,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
     var token = ""
+    var hamburgerIsOpen = false
+    
     //let ip = "http://192.168.1.200:8080"
     //let ip = "http://85.103.87.12:50090"
     let ip = "http://172.17.27.229:8080"
+    
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
+    
+    @IBAction func hamburgerAction(_ sender: Any) {
+        if hamburgerIsOpen {
+            leadingConstraint.constant = -330
+        } else {
+            leadingConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.3, animations: self.view.layoutIfNeeded)
+        hamburgerIsOpen = !hamburgerIsOpen
+    }
     
     func getInfo(token: String) -> (info: Dictionary<String, Any>?, error: String?, connectionError: Bool) {
 

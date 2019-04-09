@@ -20,22 +20,6 @@
             </objects>
             <point key="canvasLocation" x="620" y="-547"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="z5N-Xs-lMo">
-            <objects>
-                <navigationController storyboardIdentifier="navController" id="qju-nf-r5m" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQK-FT-Qcf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="Fce-dD-yMK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJg-nG-5ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1030" y="-303"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -58,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="-2" y="-304"/>
         </scene>
-        <!--ProfilePage-->
+        <!--ProfileNavController-->
         <scene sceneID="z5L-2M-lxf">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfilePage" id="FaL-YJ-cIP" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="FaL-YJ-cIP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="MxI-t7-Tj9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnE-1c-8YP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,7 +85,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="qju-nf-r5m" kind="show" id="aUT-wh-ZQ8"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="ywO-kN-wTn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-av-mgO">
