@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FeedbackViewController: UIViewController {
+class FeedbackViewController: UIViewController , UITextViewDelegate {
 
     @IBOutlet var AcıklamaText: UITextView!
     @IBOutlet var Star1: UIButton!
@@ -103,15 +103,24 @@ class FeedbackViewController: UIViewController {
         YorumText.text = " "
     }
     
+   
+    
+  
+     @IBOutlet var TextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        
-        
-        
-        
+       TextView.delegate = self
+        TextView.layer.borderColor = UIColor.lightGray.cgColor
+        TextView.layer.borderWidth = 1.0
         
     }
+    
+    @IBAction func textViewDidBeginEditing (_ textView: UITextView) {
+        
+        textView.text = ""
+    }
+    
+    
     
 
     /*

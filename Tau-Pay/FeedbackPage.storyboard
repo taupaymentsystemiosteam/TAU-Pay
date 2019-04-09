@@ -94,13 +94,12 @@
                                     <action selector="YorumText:" destination="pPF-2m-Pkg" eventType="editingDidBegin" id="Ywo-nt-Gqn"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-ZZ-HsO">
-                                <rect key="frame" x="28" y="535" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-ZZ-HsO" userLabel="TextView">
+                                <rect key="frame" x="92" y="538" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,6 +114,7 @@
                         <outlet property="Star3" destination="Mnc-GO-dG3" id="KVz-Kr-gZn"/>
                         <outlet property="Star4" destination="JcJ-Cd-PSY" id="RtR-nL-wR6"/>
                         <outlet property="Star5" destination="sbS-R0-m4A" id="aBx-zj-w5f"/>
+                        <outlet property="TextView" destination="nwi-ZZ-HsO" id="ubh-fO-bW2"/>
                         <outlet property="YorumText" destination="02h-uR-h26" id="8Ic-Mp-hmG"/>
                     </connections>
                 </viewController>
