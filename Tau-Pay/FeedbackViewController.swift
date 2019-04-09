@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class FeedbackViewController: UIViewController , UITextViewDelegate {
 
     @IBOutlet var AcıklamaText: UITextView!
@@ -19,7 +18,10 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     @IBOutlet var Star5: UIButton!
     @IBOutlet var MensaShutteSelect: UISegmentedControl!
     @IBOutlet var GonderButton: UIButton!
-    @IBOutlet var YorumText: UITextField!
+    @IBOutlet var YorumText: UITextView!
+    
+    var star : Int = 0
+    
     
 
     @IBAction func StarAction1(_ sender: Any) {
@@ -32,6 +34,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         Star3.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
         Star4.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
         Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
+        
+        star = 1
     }
     
     @IBAction func StarAction2(_ sender: Any) {
@@ -43,6 +47,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         Star3.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
         Star4.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
         Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
+        
+        star = 2
 
     }
     @IBAction func StarAction3(_ sender: Any) {
@@ -56,6 +62,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         Star4.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
         Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
         
+        star = 3
+        
         
     }
     @IBAction func StarAction4(_ sender: Any) {
@@ -68,7 +76,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         
         //Emptying 1 Star
         Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-
+        
+        star = 4
         
     }
     @IBAction func StarAction5(_ sender: Any) {
@@ -80,7 +89,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         Star3.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
         Star4.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
         Star5.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-
+        
+        star = 5
     }
     
     
@@ -99,14 +109,12 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
  
     
-    @IBAction func YorumText(_ sender: Any) {
-        YorumText.text = " "
-    }
+    
     
    
     
   
-     @IBOutlet var TextView: UITextView!
+    @IBOutlet var TextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
        TextView.delegate = self
@@ -117,7 +125,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
     @IBAction func textViewDidBeginEditing (_ textView: UITextView) {
         
-        textView.text = ""
+        textView.text = " "
+        TextView.textColor = UIColor.black
     }
     
     
