@@ -15,6 +15,7 @@ class Constants
     
     static func setToken(token: String){
         TOKEN = token
+    
     }
     
     /*

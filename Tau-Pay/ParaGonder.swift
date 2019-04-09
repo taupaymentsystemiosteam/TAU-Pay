@@ -98,6 +98,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
                     "balanceId":selectedValue.lowercased(),
                     "amount": Int(moneyBetrag.text!)!] as [String : Any]
         let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
+       
         let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
         
         responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
