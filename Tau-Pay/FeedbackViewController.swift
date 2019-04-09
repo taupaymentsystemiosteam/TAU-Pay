@@ -19,8 +19,7 @@ class FeedbackViewController: UIViewController {
     @IBOutlet var Star5: UIButton!
     @IBOutlet var MensaShutteSelect: UISegmentedControl!
     @IBOutlet var GonderButton: UIButton!
-    
-    @IBOutlet var YorumText: UITextView!
+    @IBOutlet var YorumText: UITextField!
     
 
     @IBAction func StarAction1(_ sender: Any) {
@@ -96,9 +95,13 @@ class FeedbackViewController: UIViewController {
     @IBAction func GonderButton(_ sender: Any) {
     }
     
+   
     
+ 
     
-    
+    @IBAction func YorumText(_ sender: Any) {
+        YorumText.text = " "
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
