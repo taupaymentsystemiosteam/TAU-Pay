@@ -18,7 +18,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     @IBOutlet var Star5: UIButton!
     @IBOutlet var MensaShutteSelect: UISegmentedControl!
     @IBOutlet var GonderButton: UIButton!
-    @IBOutlet var YorumText: UITextView!
+     @IBOutlet var FeedbackText: UITextView!
     
     var star : Int = 0
     
@@ -96,40 +96,45 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
     @IBAction func MensaShuttleSelect(_ sender: Any) {
         
-        
         let Selected = MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex)
         print(Selected!)
        
         
-        
     }
     
     
+    
+    
     @IBAction func GonderButton(_ sender: Any) {
+        
+        
+        let Feedback: String = FeedbackText.text
+        print(Feedback)
+        
+        let infos = ["Feedback" : String() ,"Selected" : String.self, "star" : Int()] as [String : Any]
+        
+        
+        
+        
+        
     }
     
    
     
  
-    
-    
-    
    
-    
-  
-    @IBOutlet var TextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       TextView.delegate = self
-        TextView.layer.borderColor = UIColor.lightGray.cgColor
-        TextView.layer.borderWidth = 1.0
+       FeedbackText.delegate = self
+        FeedbackText.layer.borderColor = UIColor.lightGray.cgColor
+        FeedbackText.layer.borderWidth = 1.0
         
     }
     
-    @IBAction func textViewDidBeginEditing (_ textView: UITextView) {
+    @IBAction func textViewDidBeginEditing (_ FeedbackText: UITextView) {
         
-        textView.text = " "
-        TextView.textColor = UIColor.black
+        FeedbackText.text = " "
+        FeedbackText.textColor = UIColor.black
     }
     
     
