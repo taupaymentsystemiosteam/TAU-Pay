@@ -130,6 +130,7 @@
 				19B58DC9223D298600B081FD /* Info.plist */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
+				431D0A7A225BF2C700638214 /* Bezahlen.storyboard */,
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
 				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
@@ -147,7 +148,6 @@
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 				19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */,
 				19789EDB225A3B010028029C /* ChangePasswordViewController.swift */,
-				431D0A7A225BF2C700638214 /* Bezahlen.storyboard */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
