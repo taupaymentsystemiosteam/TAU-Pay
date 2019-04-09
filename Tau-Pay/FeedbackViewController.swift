@@ -97,6 +97,9 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     @IBAction func MensaShuttleSelect(_ sender: Any) {
         
         
+        let Selected = MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex)
+        print(Selected!)
+       
         
         
     }
