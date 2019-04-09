@@ -43,15 +43,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var person = Constants.SendRequestGetDictionary(request: "/customer/get-info", json: [:])
-        if person.connectionError {
-            print("Connection Error!")
-        } else if (person.error != nil) {
-            print("error \(person.error)")
-        } else {
 
-            
-        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }

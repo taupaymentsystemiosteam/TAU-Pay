@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */; };
+		1930ECFA225D276400438BFC /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930ECF9225D276400438BFC /* ProfileTabController.swift */; };
 		1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */; };
 		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
 		19789EDA225A39AD0028029C /* ChangePasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndRequestFunctions.swift; sourceTree = "<group>"; };
+		1930ECF9225D276400438BFC /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BagisStoryboard.storyboard; sourceTree = "<group>"; };
 		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordPage.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
+				1930ECF9225D276400438BFC /* ProfileTabController.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
 				19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */,
 				19B58DBE223D298500B081FD /* Bagis.swift in Sources */,
+				1930ECFA225D276400438BFC /* ProfileTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
