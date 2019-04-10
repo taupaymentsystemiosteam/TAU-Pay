@@ -51,12 +51,12 @@ class ChangePasswordViewController: UIViewController {
             
             if response.connectionError {
                 // Handle connection error
-                createAnimatedPopUp(title: "Bağlanamadı", message: "Internete bağlanamadı, internet bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
                 return
             }
             if response.error != nil {
                 // Handle improper connection
-                createAnimatedPopUp(title: "Error", message: "Hatalı giriş")
+                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
                 return
             }
             
@@ -65,7 +65,7 @@ class ChangePasswordViewController: UIViewController {
             }
             
         } else {
-            let alert = UIAlertController(title: "Hatalı Şifre", message: "Şifreler uyuşmuyor AQ.", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Hata", message: "Şifreler uyuşmuyor AQ.", preferredStyle: UIAlertController.Style.alert)
             
             alert.addAction(UIAlertAction(title: "Tamam AQ", style: UIAlertAction.Style.default, handler: {(action) in
                 alert.dismiss(animated: true, completion: nil)

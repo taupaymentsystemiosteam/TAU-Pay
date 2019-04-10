@@ -9,7 +9,7 @@
 import UIKit
 
 class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
-   
+    
     let values = ["Shuttle","Mensa"]
     var selectedValue = ""
     
@@ -18,7 +18,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       return values.count
+        return values.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -31,7 +31,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         selectedValue = values[row]
         
     }
-
+    
     @IBOutlet weak var moneyBetrag: UITextField!
     @IBOutlet weak var studentNumber: UITextField!
     @IBOutlet weak var picker: UIPickerView!
@@ -50,6 +50,8 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     
     
     
+    
+    
     @IBAction func SendMoney(_ sender: Any)
     {
         let json = ["id":studentNumber.text!]
@@ -58,7 +60,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         
         if getname.connectionError
         {
-            let connError = UIAlertController(title: "Hata", message: "Connection error, please try again", preferredStyle: UIAlertController.Style.alert)
+            let connError = UIAlertController(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz", preferredStyle: UIAlertController.Style.alert)
             connError.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
                 connError.dismiss(animated: true, completion: nil)
             }))
@@ -67,7 +69,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         }
         else if getname.error != nil
         {
-            let connError = UIAlertController(title: "Hata", message: "Error : \(getname.error!) try again", preferredStyle: UIAlertController.Style.alert)
+            let connError = UIAlertController(title: "Hata", message: "Error : \(getname.error!) tekrar deneyiniz", preferredStyle: UIAlertController.Style.alert)
             connError.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
                 connError.dismiss(animated: true, completion: nil)
             }))
@@ -91,27 +93,27 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         
     }
     
-        func sendMoneyRequest()
+    func sendMoneyRequest()
     {
         
         let json = ["receiverId":studentNumber.text!,
                     "balanceId":selectedValue.lowercased(),
                     "amount": Int(moneyBetrag.text!)!] as [String : Any]
         let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
-       
+        
         let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
         
         responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
             responseAlert.dismiss(animated: true, completion: nil)
         }))
         self.present(responseAlert,animated: true,completion: nil)
-
-    
+        
+        
     }
     
     
     
     
     
-
+    
 }
