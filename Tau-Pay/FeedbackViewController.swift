@@ -121,7 +121,10 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         let Feedback: String = FeedbackText.text
         print(Feedback)
         
-        let infos = ["star" : star , "Type" :MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex) as Any ,"Text" : Feedback , "star" : star] as [String : Any]
+        let infos = [
+            "star" : star,
+            "type" :MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex) as Any,
+            "text" : Feedback] as [String : Any]
         
         let response = Constants.SendRequestGetString(requestType: "/customers/feedback", json: infos)
         
