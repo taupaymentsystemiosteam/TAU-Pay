@@ -10,7 +10,7 @@ import Foundation
 class Constants
 {
     
-    static let IP = "http://172.17.24.98:8080"
+    static let IP = "http://192.168.137.109:8080"
     static var TOKEN = ""
     
     static func setToken(token: String){

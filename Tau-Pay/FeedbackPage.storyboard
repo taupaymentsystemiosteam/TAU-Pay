@@ -50,7 +50,7 @@
                                     <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Burada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Bu sayfada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
                                 <rect key="frame" x="30" y="194" width="354" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,7 +85,7 @@
                                 </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0qG-QY-WYu">
-                                <rect key="frame" x="30" y="338" width="364" height="150"/>
+                                <rect key="frame" x="30" y="339" width="364" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
