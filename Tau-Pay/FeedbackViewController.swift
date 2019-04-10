@@ -130,7 +130,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
             return
         }
         if response.error != nil {
