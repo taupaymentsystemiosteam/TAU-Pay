@@ -25,7 +25,6 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
     func changeStarColors(fillYellowUntil: Int) {
         for i in 1...stars.count {
-            print(i)
             if i <= fillYellowUntil {
                 stars[i - 1].setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
             }
