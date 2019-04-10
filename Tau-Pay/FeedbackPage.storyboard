@@ -98,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="AcıklamaText" destination="mjb-4Q-7pu" id="1Rt-hr-XSQ"/>
+                        <outlet property="FeedbackText" destination="nwi-ZZ-HsO" id="k2R-kn-eg7"/>
                         <outlet property="GonderButton" destination="NNZ-PE-KbG" id="BWO-vx-5C5"/>
                         <outlet property="MensaShutteSelect" destination="RdN-6p-Czg" id="hss-0R-ghp"/>
                         <outlet property="Star1" destination="Mef-ME-gNo" id="pPU-Pl-RkG"/>
@@ -105,8 +106,6 @@
                         <outlet property="Star3" destination="Mnc-GO-dG3" id="KVz-Kr-gZn"/>
                         <outlet property="Star4" destination="JcJ-Cd-PSY" id="RtR-nL-wR6"/>
                         <outlet property="Star5" destination="sbS-R0-m4A" id="aBx-zj-w5f"/>
-                        <outlet property="TextView" destination="nwi-ZZ-HsO" id="bhZ-8h-uck"/>
-                        <outlet property="YorumText" destination="nwi-ZZ-HsO" id="xjk-GJ-VRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXc-d1-J1L" userLabel="First Responder" sceneMemberID="firstResponder"/>

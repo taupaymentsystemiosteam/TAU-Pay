@@ -18,7 +18,6 @@
 		19B58DC0223D298500B081FD /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBF223D298500B081FD /* Profil.swift */; };
 		19B58DC3223D298500B081FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC1223D298500B081FD /* Main.storyboard */; };
 		19B58DC5223D298600B081FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC4223D298600B081FD /* Assets.xcassets */; };
-		19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC6223D298600B081FD /* LaunchScreen.storyboard */; };
 		19B58DD3223D298600B081FD /* Tau_PayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DD2223D298600B081FD /* Tau_PayTests.swift */; };
 		19B58DDE223D298600B081FD /* Tau_PayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DDD223D298600B081FD /* Tau_PayUITests.swift */; };
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
@@ -63,7 +62,6 @@
 		19B58DBF223D298500B081FD /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
 		19B58DC2223D298500B081FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B58DC4223D298600B081FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		19B58DC7223D298600B081FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B58DC9223D298600B081FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B58DCE223D298600B081FD /* Tau-PayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tau-PayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B58DD2223D298600B081FD /* Tau_PayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tau_PayTests.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 				431D0A7A225BF2C700638214 /* Bezahlen.storyboard */,
 				19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */,
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
-				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
 				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
 				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
@@ -284,7 +281,6 @@
 			files = (
 				AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */,
 				1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */,
-				19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */,
 				AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
 				431D0A7B225BF2C700638214 /* Bezahlen.storyboard in Resources */,
@@ -369,14 +365,6 @@
 				19B58DC2223D298500B081FD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		19B58DC6223D298600B081FD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19B58DC7223D298600B081FD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
