@@ -40,9 +40,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjt-YR-kTA">
-                                <rect key="frame" x="184" y="285" width="103" height="30"/>
+                                <rect key="frame" x="184" y="303" width="103" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Empfehlen"/>
+                                <connections>
+                                    <action selector="Oner:" destination="BAA-MA-DoZ" eventType="touchUpInside" id="k74-FK-vNv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

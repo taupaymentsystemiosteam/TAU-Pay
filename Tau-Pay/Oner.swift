@@ -8,6 +8,7 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     @IBAction func Oner(_ sender: Any) {
         
         if recommendText.text == nil{
@@ -22,6 +23,7 @@ class ThirdViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "İptal", style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)
         }))
+        self.present(alert, animated: true, completion: nil)
         
     }
     func recommendRequest(){
@@ -38,8 +40,9 @@ class ThirdViewController: UIViewController {
             // Handle improper connection
             createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
             return
-        }
+        } else {
         createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.")
+        }
     }
     func createAnimatedPopUp(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
