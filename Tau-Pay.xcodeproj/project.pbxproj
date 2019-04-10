@@ -26,6 +26,7 @@
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
 		431D0A7B225BF2C700638214 /* Bezahlen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431D0A7A225BF2C700638214 /* Bezahlen.storyboard */; };
+		76B467EA225E22A000DD2E25 /* Bezahlen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B467E9225E22A000DD2E25 /* Bezahlen.swift */; };
 		AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392246224CF0EA00F1765E /* ProfilePage.storyboard */; };
 		AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392248224CF10000F1765E /* RecommendPage.storyboard */; };
 		AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224A224CF11700F1765E /* TransferPage.storyboard */; };
@@ -76,6 +77,7 @@
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		431D0A7A225BF2C700638214 /* Bezahlen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bezahlen.storyboard; sourceTree = "<group>"; };
+		76B467E9225E22A000DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
 		AC392246224CF0EA00F1765E /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		AC392248224CF10000F1765E /* RecommendPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendPage.storyboard; sourceTree = "<group>"; };
 		AC39224A224CF11700F1765E /* TransferPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferPage.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
+				76B467E9225E22A000DD2E25 /* Bezahlen.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
 				19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */,
 				19789EDC225A3B010028029C /* ChangePasswordViewController.swift in Sources */,
+				76B467EA225E22A000DD2E25 /* Bezahlen.swift in Sources */,
 				192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */,
 				1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */,
 				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
