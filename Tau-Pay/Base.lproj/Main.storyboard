@@ -120,6 +120,9 @@
                                 <state key="normal" title="Passwort vergessen?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="P6x-mA-nLu" kind="show" id="Qei-5t-8BT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-kt-7H9">
                                 <rect key="frame" x="16" y="623" width="91" height="30"/>
@@ -145,6 +148,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfQ-gn-p5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1876" y="-304.4977511244378"/>
+        </scene>
+        <!--forgotPassword-->
+        <scene sceneID="PH6-sq-F4d">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ForgotPasswordPage" referencedIdentifier="forgotPassword" id="P6x-mA-nLu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3v-xH-iXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1876" y="216"/>
         </scene>
     </scenes>
     <resources>
