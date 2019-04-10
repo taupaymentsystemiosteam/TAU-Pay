@@ -16,7 +16,7 @@ class SecondViewController: UIViewController {
     
     //let ip = "http://192.168.1.200:8080"
     //let ip = "http://85.103.87.12:50090"
-    let ip = "http://172.17.27.229:8080"
+    //let ip = "http://172.17.27.229:8080"
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
@@ -31,27 +31,8 @@ class SecondViewController: UIViewController {
         hamburgerIsOpen = !hamburgerIsOpen
     }
     
-    
-    
-    
-    @IBAction func getInfoAction(_ sender: Any) {
-
-    }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var person = Constants.SendRequestGetDictionary(request: "/customer/get-info", json: [:])
-        if person.connectionError {
-            print("Connection Error!")
-        } else if (person.error != nil) {
-            print("error \(person.error)")
-        } else {
-
-            
-        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
