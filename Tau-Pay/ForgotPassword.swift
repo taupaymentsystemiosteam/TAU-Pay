@@ -33,10 +33,11 @@ class ForgotPassword: UIViewController {
             "id": number!
         ]
         
-        var response = Constants.SendRequestGetString(requestType: "/customers/forgot-password", json: json)
+        let response = Constants.SendRequestGetString(requestType: "/customers/forgot-password", json: json)
+        
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
             return
         }
         if response.error != nil {

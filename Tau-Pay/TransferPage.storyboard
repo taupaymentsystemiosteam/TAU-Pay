@@ -79,7 +79,7 @@
                     <tabBarItem key="tabBarItem" title="Send Money" image="money" id="Y2N-86-2sw"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="moneyBetrag" destination="pzY-N2-ql1" id="1WB-mC-U6x"/>
+                        <outlet property="moneyAmount" destination="pzY-N2-ql1" id="1WB-mC-U6x"/>
                         <outlet property="picker" destination="0u7-yl-HoP" id="fg1-dh-reu"/>
                         <outlet property="studentNumber" destination="CrX-PP-MZq" id="6gu-la-ccj"/>
                     </connections>
