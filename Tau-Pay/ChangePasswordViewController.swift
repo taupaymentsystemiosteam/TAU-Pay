@@ -21,8 +21,7 @@ class ChangePasswordViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    
+
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         

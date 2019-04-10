@@ -47,6 +47,15 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         // Do any additional setup after loading the view.
     }
     
+    func createAnimatedPopUp(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        return
+    }
     
     
     
@@ -54,29 +63,25 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     
     @IBAction func SendMoney(_ sender: Any)
     {
+        
+        if studentNumber.text == nil || moneyBetrag.text == nil {
+            createAnimatedPopUp(title: "Hata", message: "Kutuların hepsini doldurunuz")
+            return
+        }
+        
+        
         let json = ["id":studentNumber.text!]
         
         let getname = Constants.SendRequestGetString(requestType: "/customers/get-name", json: json)
         
-        if getname.connectionError
-        {
-            let connError = UIAlertController(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz", preferredStyle: UIAlertController.Style.alert)
-            connError.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-                connError.dismiss(animated: true, completion: nil)
-            }))
-            self.present(connError,animated: true,completion: nil)
+        if getname.connectionError {
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
             
         }
-        else if getname.error != nil
-        {
-            let connError = UIAlertController(title: "Hata", message: "Error : \(getname.error!) tekrar deneyiniz", preferredStyle: UIAlertController.Style.alert)
-            connError.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-                connError.dismiss(animated: true, completion: nil)
-            }))
-            self.present(connError,animated: true,completion: nil)
+        else if getname.error != nil {
+            createAnimatedPopUp(title: "Hata", message: "Error : \(getname.error!) tekrar deneyiniz")
         }
-        else
-        {
+        else {
             let name = getname.info
             let alert = UIAlertController(title: "Emin misin", message: "\(name ?? "Bulunamadı") adli ogrenciye \(moneyBetrag.text!) TL para gonderilecek emin misiniz ?", preferredStyle: UIAlertController.Style.alert)
             
@@ -95,20 +100,24 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     
     func sendMoneyRequest()
     {
-        
         let json = ["receiverId":studentNumber.text!,
                     "balanceId":selectedValue.lowercased(),
                     "amount": Int(moneyBetrag.text!)!] as [String : Any]
+        
         let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
         
-        let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
+        if response.connectionError {
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
         
-        responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-            responseAlert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(responseAlert,animated: true,completion: nil)
-        
-        
+        createAnimatedPopUp(title: "Sonuç", message: "(String(describing: response.info!)")
+
     }
     
     
