@@ -9,18 +9,48 @@
 import UIKit
 
 class ForgotPassword: UIViewController {
+    
+    func createAnimatedPopUp(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        return
+    }
+
 
     @IBAction func sendButton(_ sender: Any) {
         
-        //let userNumber =
+        let number = numberBox.text
+        
+        if number == "" {
+            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            return
+        }
+        let json: [String: String] = [
+            "id": number!
+        ]
+        
+        var response = Constants.SendRequestGetString(requestType: "/customers/forgot-password", json: json)
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        createAnimatedPopUp(title: "Başarı", message: "Mailinizi kontrol edebilirsiniz")
+        let vc = storyboard!.instantiateViewController(withIdentifier: "navController") as UIViewController
+        present(vc, animated: true, completion: nil)
         
         
     }
-    @IBAction func cancelButton(_ sender: Any) {
-        
-        
-        
-    }
+
     @IBOutlet weak var numberBox: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
