@@ -41,7 +41,10 @@ class ChangePasswordViewController: UIViewController {
         }
         
         if newPass.text == newPassRepeated.text {
-            let json = ["newPass":newPass.text]
+            let json = [
+                "oldPass": oldPass.text,
+                "newPass": newPass.text
+            ]
             let response = Constants.SendRequestGetString(requestType: "/customers/change-password", json: json as Dictionary<String, Any>)
             
             
@@ -57,7 +60,7 @@ class ChangePasswordViewController: UIViewController {
             }
             
             if let responseInfo = response.info {
-                createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")
+                createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: responseInfo))")
             }
             
         } else {
