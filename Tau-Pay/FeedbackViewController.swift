@@ -19,9 +19,31 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     @IBOutlet var Star5: UIButton!
     @IBOutlet var MensaShutteSelect: UISegmentedControl!
     @IBOutlet var GonderButton: UIButton!
-    @IBOutlet var YorumText: UITextField!
-    
+    @IBOutlet var FeedbackText: UITextView!
 
+
+   
+    // Feedback TextView
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        FeedbackText.delegate = self
+        FeedbackText.layer.borderColor = UIColor.lightGray.cgColor
+        FeedbackText.layer.borderWidth = 1.0
+        
+    }
+    
+    @IBAction func textViewDidBeginEditing (_ FeedbackText: UITextView) {
+        
+        FeedbackText.text = " "
+        FeedbackText.textColor = UIColor.black
+    }
+    // END
+    
+    // Star Rating
+    
+    var star : Int = 0
+
+    
     @IBAction func StarAction1(_ sender: Any) {
         
         //Filling 1 Star
@@ -83,42 +105,54 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
 
     }
     
+    //END
+    
     
     @IBAction func MensaShuttleSelect(_ sender: Any) {
         
-        
+           let Type = MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex)
         
         
     }
     
     
     @IBAction func GonderButton(_ sender: Any) {
-    }
-    
-   
-    
- 
-    
-    @IBAction func YorumText(_ sender: Any) {
-        YorumText.text = " "
-    }
-    
-   
-    
-  
-     @IBOutlet var TextView: UITextView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       TextView.delegate = self
-        TextView.layer.borderColor = UIColor.lightGray.cgColor
-        TextView.layer.borderWidth = 1.0
         
+        let Feedback: String = FeedbackText.text
+        print(Feedback)
+        
+        let infos = ["star" : star , "Type" :MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex) as Any ,"Text" : Feedback , "star" : star] as [String : Any]
+        
+        let response = Constants.SendRequestGetString(requestType: "/customers/feedback", json: infos)
+        
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        
+        
+        createAnimatedPopUp(title: "Başarılı", message: "Yorumunuz iletilmiştir")
+        
+
     }
     
-    @IBAction func textViewDidBeginEditing (_ textView: UITextView) {
+    func createAnimatedPopUp(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        textView.text = ""
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        return
     }
+    
+    
     
     
     

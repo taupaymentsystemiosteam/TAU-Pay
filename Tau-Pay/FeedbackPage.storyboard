@@ -50,7 +50,7 @@
                                     <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Burada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Bu sayfada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
                                 <rect key="frame" x="30" y="194" width="354" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,7 +73,7 @@
                                     <action selector="StarAction3:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="CqH-Ma-eXo"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg" userLabel="MensaShuttleSelect">
                                 <rect key="frame" x="30" y="290" width="135" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -84,22 +84,13 @@
                                     <action selector="MensaShuttleSelect:" destination="pPF-2m-Pkg" eventType="valueChanged" id="Ztf-no-cXh"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yorumlarınız" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02h-uR-h26" userLabel="YorumText">
-                                <rect key="frame" x="30" y="369" width="354" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <action selector="YorumText:" destination="pPF-2m-Pkg" eventType="editingDidBegin" id="Ywo-nt-Gqn"/>
-                                </connections>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-ZZ-HsO" userLabel="TextView">
-                                <rect key="frame" x="92" y="538" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0qG-QY-WYu">
+                                <rect key="frame" x="30" y="339" width="364" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="AcıklamaText" destination="mjb-4Q-7pu" id="1Rt-hr-XSQ"/>
+                        <outlet property="FeedbackText" destination="0qG-QY-WYu" id="SVY-Hq-lSf"/>
                         <outlet property="GonderButton" destination="NNZ-PE-KbG" id="BWO-vx-5C5"/>
                         <outlet property="MensaShutteSelect" destination="RdN-6p-Czg" id="hss-0R-ghp"/>
                         <outlet property="Star1" destination="Mef-ME-gNo" id="pPU-Pl-RkG"/>
@@ -114,8 +106,6 @@
                         <outlet property="Star3" destination="Mnc-GO-dG3" id="KVz-Kr-gZn"/>
                         <outlet property="Star4" destination="JcJ-Cd-PSY" id="RtR-nL-wR6"/>
                         <outlet property="Star5" destination="sbS-R0-m4A" id="aBx-zj-w5f"/>
-                        <outlet property="TextView" destination="nwi-ZZ-HsO" id="ubh-fO-bW2"/>
-                        <outlet property="YorumText" destination="02h-uR-h26" id="8Ic-Mp-hmG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXc-d1-J1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
