@@ -46,7 +46,9 @@ class ForgotPassword: UIViewController {
             return
         }
         createAnimatedPopUp(title: "Başarı", message: "Mailinizi kontrol edebilirsiniz")
-        let vc = storyboard!.instantiateViewController(withIdentifier: "navController") as UIViewController
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "loginPage") as UIViewController
         present(vc, animated: true, completion: nil)
         
         
