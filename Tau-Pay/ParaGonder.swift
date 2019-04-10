@@ -113,19 +113,6 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
             return
         }
         
-        let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
-        
-        responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-            responseAlert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(responseAlert,animated: true,completion: nil)
-        
-        
+        createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")
     }
-    
-    
-    
-    
-    
-    
 }
