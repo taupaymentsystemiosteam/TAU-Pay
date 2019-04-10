@@ -41,7 +41,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
     // Star Rating
     
-    var star : Int = 0
+    var star : Int = 1
 
     
     @IBAction func StarAction1(_ sender: Any) {
