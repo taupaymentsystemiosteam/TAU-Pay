@@ -28,7 +28,7 @@ class Constants
  */
     static func SendRequestGetString(requestType : String ,json : Dictionary<String, Any>?) ->(info : String? , error: String? , connectionError : Bool)
     {
-        // All code ın this function was written by ALP AKyÜZ
+        // All code ın this function was written by ALP AKYÜZ
         /*
          Sets the ip type
          Ex:
@@ -237,8 +237,17 @@ class Constants
             }
         }
         task.resume()
+        
+        var waitedTime = 0
         while done == false {
+            print(waitedTime)
+            if waitedTime > 50 {
+                task.cancel()
+                // Return Connection Timeout if it has waited 500000 units of time
+                return (error: "Connection Timeout", info: nil, false)
+            }
             usleep(500000)
+            waitedTime = waitedTime + 5
         }
         
         // Here I check for different failures that could happen
