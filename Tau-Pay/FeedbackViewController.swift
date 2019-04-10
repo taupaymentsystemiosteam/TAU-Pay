@@ -19,7 +19,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     @IBOutlet var Star5: UIButton!
     @IBOutlet var MensaShutteSelect: UISegmentedControl!
     @IBOutlet var GonderButton: UIButton!
-    @IBOutlet var YorumText: UITextField!
+    @IBOutlet var FeedbackText: UITextView!
+    
     
 
     @IBAction func StarAction1(_ sender: Any) {
@@ -97,28 +98,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
    
     
- 
-    
-    @IBAction func YorumText(_ sender: Any) {
-        YorumText.text = " "
-    }
-    
-   
-    
-  
-     @IBOutlet var TextView: UITextView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       TextView.delegate = self
-        TextView.layer.borderColor = UIColor.lightGray.cgColor
-        TextView.layer.borderWidth = 1.0
-        
-    }
-    
-    @IBAction func textViewDidBeginEditing (_ textView: UITextView) {
-        
-        textView.text = ""
-    }
+
     
     
     
