@@ -91,7 +91,7 @@ class Constants
         catch
         {
             print("Error: \(error.localizedDescription)")
-            return (nil,error.localizedDescription,false)
+            return (nil, error.localizedDescription, false)
         }
         
         let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
@@ -138,7 +138,7 @@ class Constants
             if waitedTime > 50 {
                 task.cancel()
                 // Return Connection Timeout if it has waited 500000 units of time
-                return (error: "Connection Timeout", info: nil, false)
+                return (error: "Connection Timeout", info: nil, true)
             }
             usleep(500000)
             waitedTime = waitedTime + 5
@@ -244,7 +244,7 @@ class Constants
             if waitedTime > 50 {
                 task.cancel()
                 // Return Connection Timeout if it has waited 500000 units of time
-                return (error: "Connection Timeout", info: nil, false)
+                return (error: "Connection Timeout", info: nil, true)
             }
             usleep(500000)
             waitedTime = waitedTime + 5
