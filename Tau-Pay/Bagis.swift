@@ -53,7 +53,6 @@ class FirstViewController: UIViewController {
         
         createAnimatedPopUp(title: "Başarılı", message: "Bağışınız kabul edilmiştir")
         
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
