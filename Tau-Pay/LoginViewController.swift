@@ -67,6 +67,10 @@ class LoginViewController: UIViewController {
             
             let alert = UIAlertController(title: "Fehlende Internetverbindung", message: "connection error", preferredStyle: .alert)
             
+            let tryAgain = UIAlertAction(title: "Try again", style: .default) { (action) -> Void in
+            }
+            
+            alert.addAction(tryAgain)
             self.present(alert, animated: true, completion: nil)
             
         }
