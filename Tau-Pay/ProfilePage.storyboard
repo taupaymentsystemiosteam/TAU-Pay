@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="-89350.724637681167" y="-157.36607142857142"/>
         </scene>
-        <!--BezahlenPage-->
+        <!--Bezahlen-->
         <scene sceneID="q0e-66-Pmw">
             <objects>
-                <viewControllerPlaceholder storyboardName="Bezahlen" referencedIdentifier="BezahlenPage" id="lcG-21-YvS" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="BezahlenPage" referencedIdentifier="Bezahlen" id="lcG-21-YvS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5l4-Tt-p4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-88291" y="-391"/>

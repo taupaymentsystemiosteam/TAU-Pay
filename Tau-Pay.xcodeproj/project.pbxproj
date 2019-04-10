@@ -23,8 +23,10 @@
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
-		431D0A7B225BF2C700638214 /* Bezahlen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431D0A7A225BF2C700638214 /* Bezahlen.storyboard */; };
-		76B467EA225E22A000DD2E25 /* Bezahlen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B467E9225E22A000DD2E25 /* Bezahlen.swift */; };
+		76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D63225E267B00205B71 /* BezahlenPage.storyboard */; };
+		76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D65225E445A00205B71 /* QrCodePage.storyboard */; };
+		76A02D68225E44E100205B71 /* QrCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A02D67225E44E100205B71 /* QrCodeController.swift */; };
+		76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B467EB225E25B300DD2E25 /* Bezahlen.swift */; };
 		AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392246224CF0EA00F1765E /* ProfilePage.storyboard */; };
 		AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392248224CF10000F1765E /* RecommendPage.storyboard */; };
 		AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224A224CF11700F1765E /* TransferPage.storyboard */; };
@@ -72,8 +74,10 @@
 		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		431D0A7A225BF2C700638214 /* Bezahlen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bezahlen.storyboard; sourceTree = "<group>"; };
-		76B467E9225E22A000DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
+		76A02D63225E267B00205B71 /* BezahlenPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BezahlenPage.storyboard; sourceTree = "<group>"; };
+		76A02D65225E445A00205B71 /* QrCodePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QrCodePage.storyboard; sourceTree = "<group>"; };
+		76A02D67225E44E100205B71 /* QrCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeController.swift; sourceTree = "<group>"; };
+		76B467EB225E25B300DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
 		AC392246224CF0EA00F1765E /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		AC392248224CF10000F1765E /* RecommendPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendPage.storyboard; sourceTree = "<group>"; };
 		AC39224A224CF11700F1765E /* TransferPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferPage.storyboard; sourceTree = "<group>"; };
@@ -132,7 +136,7 @@
 				19B58DC9223D298600B081FD /* Info.plist */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
-				431D0A7A225BF2C700638214 /* Bezahlen.storyboard */,
+				76A02D63225E267B00205B71 /* BezahlenPage.storyboard */,
 				19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */,
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
@@ -142,6 +146,7 @@
 				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
+				76B467EB225E25B300DD2E25 /* Bezahlen.swift */,
 				19789EDB225A3B010028029C /* ChangePasswordViewController.swift */,
 				1967EFBE224E355200E0173F /* FeedbackViewController.swift */,
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
@@ -150,7 +155,8 @@
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
-				76B467E9225E22A000DD2E25 /* Bezahlen.swift */,
+				76A02D65225E445A00205B71 /* QrCodePage.storyboard */,
+				76A02D67225E44E100205B71 /* QrCodeController.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -285,8 +291,9 @@
 				19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */,
 				AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
-				431D0A7B225BF2C700638214 /* Bezahlen.storyboard in Resources */,
 				AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */,
+				76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */,
+				76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
 				AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */,
 				19789EDA225A39AD0028029C /* ChangePasswordPage.storyboard in Resources */,
@@ -315,11 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A02D68225E44E100205B71 /* QrCodeController.swift in Sources */,
 				19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */,
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
 				19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */,
 				19789EDC225A3B010028029C /* ChangePasswordViewController.swift in Sources */,
-				76B467EA225E22A000DD2E25 /* Bezahlen.swift in Sources */,
+				76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */,
 				192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */,
 				1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */,
 				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
