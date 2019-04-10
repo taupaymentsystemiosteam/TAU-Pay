@@ -96,8 +96,9 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
     @IBAction func MensaShuttleSelect(_ sender: Any) {
         
-        let Selected = MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex)
-        print(Selected!)
+        let Type = MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex)
+        
+        
        
         
     }
@@ -111,15 +112,37 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         let Feedback: String = FeedbackText.text
         print(Feedback)
         
-        let infos = ["Feedback" : String() ,"Selected" : String.self, "star" : Int()] as [String : Any]
+        let infos = ["Feedback" : Feedback ,"Type" :MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex) as Any , "star" : star] as [String : Any]
+        
+        let response = Constants.SendRequestGetString(requestType: "/customers/feedback", json: infos)
+        
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
         
         
-        
+        createAnimatedPopUp(title: "Başarılı", message: "Yorumunuz iletilmiştir")
         
         
     }
     
    
+    func createAnimatedPopUp(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        return
+    }
     
  
    
