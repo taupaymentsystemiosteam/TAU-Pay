@@ -29,23 +29,26 @@ class Bezahlen: UIViewController {
     }
     
     @IBAction func paybutton(_ sender: Any) {
-        if Constants.TOKEN != "" {
+        
+        let dict: [String: String] = [:]
             
-            let dict: [String: String] = [:]
-            
-            let response = Constants.SendRequestGetString(requestType: "/customers/get-qr-code", json: dict)
-            
-            if response.connectionError {
-                // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
-                return
-            }
-            if response.error != nil {
-                // Handle improper connection
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
-                return
-            }
+        let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
+    
+    
+        
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
         }
+        if response.error != nil {
+            // Handle improper connection
+
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        
+        QrCodeController.setString(qr: response.info!)
         
         
 

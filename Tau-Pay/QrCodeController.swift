@@ -10,7 +10,13 @@ import UIKit
 
 class QrCodeController: UIViewController {
 
+    static var qrString = ""
+    
     @IBOutlet weak var qrCodeImage: UIImageView!
+    
+    static func setString(qr: String) {
+        qrString = qr
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +25,7 @@ class QrCodeController: UIViewController {
         
         // 1
         //let myString = response.info
-        let myString = "https://pennlabs.org"
-        let data = myString.data(using: String.Encoding.ascii)
+        let data = QrCodeController.qrString.data(using: String.Encoding.ascii)
         
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(data, forKey: "inputMessage")
