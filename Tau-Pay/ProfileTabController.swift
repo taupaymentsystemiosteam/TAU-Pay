@@ -17,6 +17,8 @@ class ProfileTabController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Constants.TOKEN)
+        print("bob")
         
         let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
         

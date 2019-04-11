@@ -24,14 +24,14 @@ class LoginViewController: UIViewController {
         
         matrikelnummer_.layer.cornerRadius = 15.0
         
-       // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
-       // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
+        // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
+        // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         
         //let passwortImage = UIImage(named: "passwort_")
         //addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
         
         //matrikelnummer_.layer.cornerRadius = 15.0
-
+        
     }
     
     func addLeftImageTo(txtField: UITextField, andImage img: UIImage){
@@ -79,8 +79,8 @@ class LoginViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
         }
-        
-        
+            
+            
         else {
             Constants.setToken(token: response.info!)
             
@@ -91,18 +91,18 @@ class LoginViewController: UIViewController {
         
         
     }
-
+    
     /*
      
      // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     
-
+    
 }
