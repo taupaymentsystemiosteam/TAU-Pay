@@ -22,8 +22,10 @@ class SecondViewController: UIViewController {
             leadingConstraint.constant = -330
         } else {
             //let quee
-            DispatchQueue.main.async {
-                NotificationCenter.default.post(name: .updateInfo, object: self)
+            if token != "" {
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: .updateInfo, object: self)
+                }
             }
             leadingConstraint.constant = 0
         }
