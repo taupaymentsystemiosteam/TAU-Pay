@@ -11,66 +11,44 @@
     </dependencies>
     <scenes>
         <!--bagis_screen-->
-        <scene sceneID="sSa-sD-5ce">
+        <scene sceneID="5es-21-2a5">
             <objects>
-                <viewControllerPlaceholder storyboardName="BagisStoryboard" referencedIdentifier="bagis_screen" id="2Ip-Z3-R2c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="KvA-d0-DFK"/>
+                <viewControllerPlaceholder storyboardName="BagisStoryboard" referencedIdentifier="bagis_screen" id="A9r-uh-22p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="OWF-Qu-0pO"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eSG-ML-Z2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SW4-wi-a9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423" y="-548"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController storyboardIdentifier="navController" id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="QO8-se-vsT"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="FaL-YJ-cIP" kind="relationship" relationship="viewControllers" id="M7h-Mp-9aN"/>
-                        <segue destination="La3-S7-2He" kind="relationship" relationship="viewControllers" id="ICE-bT-Tgd"/>
-                        <segue destination="2Ip-Z3-R2c" kind="relationship" relationship="viewControllers" id="37O-vf-qhG"/>
-                        <segue destination="j4P-P5-Xsw" kind="relationship" relationship="viewControllers" id="gzD-MI-4p1"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1046" y="-304"/>
+            <point key="canvasLocation" x="-414" y="-611"/>
         </scene>
         <!--ProfileNavController-->
-        <scene sceneID="z5L-2M-lxf">
+        <scene sceneID="Id3-kL-j9t">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="FaL-YJ-cIP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profil" image="Profil" landscapeImage="Profil" largeContentSizeImage="Profil" id="MxI-t7-Tj9"/>
+                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="xap-PB-Kj7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profil" image="Profil" landscapeImage="Profil" largeContentSizeImage="Profil" id="eem-O5-48d"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rnE-1c-8YP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKe-oN-d84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-430" y="-680"/>
+            <point key="canvasLocation" x="-446" y="-813"/>
         </scene>
         <!--GeldTransfer-->
-        <scene sceneID="3wP-eG-763">
+        <scene sceneID="Orn-hU-pPk">
             <objects>
-                <viewControllerPlaceholder storyboardName="TransferPage" referencedIdentifier="GeldTransfer" id="La3-S7-2He" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Para Gönder" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="qNW-up-zCW"/>
+                <viewControllerPlaceholder storyboardName="TransferPage" referencedIdentifier="GeldTransfer" id="Xup-dT-HLV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Para Gönder" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="EY0-9E-fEg"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rug-Ba-LQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8PC-DL-F4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-430" y="-638"/>
+            <point key="canvasLocation" x="-440" y="-760"/>
         </scene>
         <!--RecommendPage-->
-        <scene sceneID="o0R-h9-P45">
+        <scene sceneID="iw8-Qp-rHU">
             <objects>
-                <viewControllerPlaceholder storyboardName="RecommendPage" referencedIdentifier="RecommendPage" id="j4P-P5-Xsw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Öner" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="kOb-Nq-oJ3"/>
+                <viewControllerPlaceholder storyboardName="RecommendPage" referencedIdentifier="RecommendPage" id="ABM-uX-jIR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Öner" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="ukI-VC-1q3"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SR3-5n-AsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEr-9s-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-430" y="-591"/>
+            <point key="canvasLocation" x="-424" y="-689"/>
         </scene>
         <!--Login-->
         <scene sceneID="QF6-ie-Xlu">
@@ -128,7 +106,7 @@
                                 <rect key="frame" x="16" y="623" width="91" height="30"/>
                                 <state key="normal" title="Bypass Login"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="NUj-fn-CC6"/>
+                                    <segue destination="LX9-io-Qsv" kind="show" id="MTh-np-dDw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,6 +134,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3v-xH-iXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1876" y="216"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lWr-5R-jGy">
+            <objects>
+                <tabBarController id="LX9-io-Qsv" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xO6-Kp-fan">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xap-PB-Kj7" kind="relationship" relationship="viewControllers" id="xqk-W9-JS4"/>
+                        <segue destination="Xup-dT-HLV" kind="relationship" relationship="viewControllers" id="A8v-ha-DHX"/>
+                        <segue destination="A9r-uh-22p" kind="relationship" relationship="viewControllers" id="TEN-KE-yfG"/>
+                        <segue destination="ABM-uX-jIR" kind="relationship" relationship="viewControllers" id="YRQ-1o-eGl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTE-aW-f9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="-304"/>
         </scene>
     </scenes>
     <resources>

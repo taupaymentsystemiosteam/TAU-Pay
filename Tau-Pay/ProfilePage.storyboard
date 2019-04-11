@@ -95,11 +95,11 @@
             </objects>
             <point key="canvasLocation" x="-88147" y="618"/>
         </scene>
-        <!--Profile-->
+        <!--Profil-->
         <scene sceneID="Hrd-LC-0DE">
             <objects>
                 <navigationController storyboardIdentifier="ProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="k5N-ho-bSY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="user_male" id="6Jt-Me-ary"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="Profil" landscapeImage="Profil" largeContentSizeImage="Profil" id="6Jt-Me-ary"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VVX-eD-kj4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -242,7 +242,7 @@
     </scenes>
     <resources>
         <image name="00" width="702" height="544"/>
+        <image name="Profil" width="30" height="30"/>
         <image name="hamburgerMenu" width="40" height="40"/>
-        <image name="user_male" width="30" height="30"/>
     </resources>
 </document>

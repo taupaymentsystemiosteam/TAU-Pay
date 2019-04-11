@@ -61,7 +61,7 @@ Her yemek öğün için bağış miktarı 4.00 TL, her Shuttle seyahati için is
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Donation" image="apple" id="vx8-96-o0h"/>
+                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="vx8-96-o0h"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="DikkatText" destination="Bia-Mv-BAM" id="MZW-RQ-JF5"/>
@@ -75,6 +75,6 @@ Her yemek öğün için bağış miktarı 4.00 TL, her Shuttle seyahati için is
         </scene>
     </scenes>
     <resources>
-        <image name="apple" width="30" height="30"/>
+        <image name="bagis" width="30" height="30"/>
     </resources>
 </document>
