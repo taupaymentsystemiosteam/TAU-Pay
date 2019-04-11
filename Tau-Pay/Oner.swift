@@ -7,7 +7,7 @@ class ThirdViewController: UIViewController {
     @IBOutlet var Oner: UIButton!
     
     override func viewDidLoad() {
-        self.title = "Öner"
+        
         super.viewDidLoad()
     }
     

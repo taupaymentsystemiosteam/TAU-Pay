@@ -42,7 +42,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Para Gönder"
+        
         
         picker.delegate = self
         picker.dataSource = self
