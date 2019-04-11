@@ -64,20 +64,21 @@ class LoginViewController: UIViewController {
         }
             
         else if(response.error != nil){
-            
-            let alert = UIAlertController(title: "Fehlende Internetverbindung", message: "connection error", preferredStyle: .alert)
-            
-            let tryAgain = UIAlertAction(title: "Try again", style: .default) { (action) -> Void in
+            if(response.error == "403"){
+                let alert = UIAlertController(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", preferredStyle: .alert)
+                
+                self.present(alert, animated: true, completion: nil)
             }
-            
-            alert.addAction(tryAgain)
-            self.present(alert, animated: true, completion: nil)
-            
-        }
-        else if(response.error == "403"){
-            let alert = UIAlertController(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", preferredStyle: .alert)
-            
-            self.present(alert, animated: true, completion: nil)
+            else {
+                
+                let alert = UIAlertController(title: "Fehlende Internetverbindung", message: "connection error", preferredStyle: .alert)
+                
+                let tryAgain = UIAlertAction(title: "Try again", style: .default) { (action) -> Void in
+                }
+                
+                alert.addAction(tryAgain)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
             
             
