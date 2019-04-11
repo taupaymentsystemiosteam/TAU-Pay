@@ -167,8 +167,8 @@
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
-				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19298634225F406000765D3A /* ProfileTabController.swift */,
+				19B58DC4223D298600B081FD /* Assets.xcassets */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
