@@ -14,7 +14,9 @@ class Bezahlen: UIViewController {
     @IBOutlet weak var Matrikelnummer: UILabel!
     @IBOutlet weak var shuttleGuthaben: UILabel!
     @IBOutlet weak var mensaGuthaben: UILabel!
-
+    @IBOutlet weak var mguthaben: UILabel!
+    @IBOutlet weak var sguthaben: UILabel!
+    
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
