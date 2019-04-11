@@ -70,7 +70,9 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
             return
         }
         
-        let json = ["id":studentNumber.text!]
+        let json = [
+            "id":studentNumber.text!
+        ]
         
         let getname = Constants.SendRequestGetString(requestType: "/customers/get-name", json: json)
         
@@ -79,6 +81,9 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         }
         else if getname.error != nil {
             createAnimatedPopUp(title: "Hata", message: "Hata: \(getname.error!) tekrar deneyiniz")
+        }
+        else if getname.info == "user not found" {
+            createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
         }
         else {
             let name = getname.info
@@ -100,9 +105,11 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     func sendMoneyRequest()
     {
         
-        let json = ["receiverId":studentNumber.text!,
-                    "balanceId":selectedValue.lowercased(),
-                    "amount": Int(moneyAmount.text!)!] as [String : Any]
+        let json = [
+            "receiverId":studentNumber.text!,
+            "balanceId":selectedValue.lowercased(),
+            "amount": Double(moneyAmount.text!)!
+            ] as [String : Any]
         
         let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
         
@@ -115,6 +122,10 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
             // Handle improper connection
             createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
             return
+        }
+        
+        if response.info == "balance not found" {
+            createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
         }
         
         createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")

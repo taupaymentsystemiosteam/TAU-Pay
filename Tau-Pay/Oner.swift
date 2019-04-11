@@ -43,7 +43,7 @@ class ThirdViewController: UIViewController {
             createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
             return
         } else {
-        createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.")
+            createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.")
         }
     }
     func createAnimatedPopUp(title: String, message: String){
