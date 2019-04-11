@@ -18,7 +18,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW4-wi-a9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="-611"/>
+            <point key="canvasLocation" x="-457" y="-611"/>
         </scene>
         <!--ProfileNavController-->
         <scene sceneID="Id3-kL-j9t">
@@ -28,7 +28,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKe-oN-d84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="-813"/>
+            <point key="canvasLocation" x="-421" y="-795"/>
         </scene>
         <!--GeldTransfer-->
         <scene sceneID="Orn-hU-pPk">
@@ -38,7 +38,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PC-DL-F4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="-760"/>
+            <point key="canvasLocation" x="-457" y="-734"/>
         </scene>
         <!--RecommendPage-->
         <scene sceneID="iw8-Qp-rHU">
@@ -48,7 +48,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEr-9s-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-424" y="-689"/>
+            <point key="canvasLocation" x="-436" y="-671"/>
         </scene>
         <!--Login-->
         <scene sceneID="QF6-ie-Xlu">
@@ -138,7 +138,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lWr-5R-jGy">
             <objects>
-                <tabBarController id="LX9-io-Qsv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="navController" id="LX9-io-Qsv" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xO6-Kp-fan">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
