@@ -17,9 +17,11 @@ class ProfileTabController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Constants.TOKEN)
-        print("bob")
         
+        if Constants.TOKEN == "" {
+            print("No Token Entry")
+            return
+        }
         let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
         
         nameBox.text = "\(response.info!["name"]!)"
