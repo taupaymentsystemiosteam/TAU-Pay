@@ -31,7 +31,9 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         selectedValue = values[row]
         
     }
-    
+    @IBOutlet var OkulNoLabel: UILabel!
+    @IBOutlet var MiktarLabel: UILabel!
+    @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var moneyAmount: UITextField!
     @IBOutlet weak var studentNumber: UITextField!
     @IBOutlet weak var picker: UIPickerView!
@@ -39,6 +41,8 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Para Gönder"
         
         picker.delegate = self
         picker.dataSource = self

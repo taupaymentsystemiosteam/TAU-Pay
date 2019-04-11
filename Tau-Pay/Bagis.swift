@@ -12,6 +12,7 @@ class FirstViewController: UIViewController {
 
     
     
+    @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var selection: UISegmentedControl!
     
@@ -57,7 +58,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Bagis"
+        self.title = "Bağış"
     
     }
 

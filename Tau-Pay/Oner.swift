@@ -2,10 +2,12 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var recommendText: UITextField!
     @IBOutlet var Oner: UIButton!
     
     override func viewDidLoad() {
+        self.title = "Öner"
         super.viewDidLoad()
     }
     
