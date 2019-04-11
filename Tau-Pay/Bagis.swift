@@ -12,6 +12,7 @@ class FirstViewController: UIViewController {
 
     
     
+    @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var selection: UISegmentedControl!
     
@@ -51,13 +52,13 @@ class FirstViewController: UIViewController {
             return
         }
         
-        createAnimatedPopUp(title: "Başarılı", message: "Bağışınız kabul edilmiştir")
+        createAnimatedPopUp(title: "Başarılı", message: "Bağışınız kabul edilmiştir, Allah razı olsun!")
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Bagis"
+        
     
     }
 

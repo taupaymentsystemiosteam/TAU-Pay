@@ -10,7 +10,7 @@ import Foundation
 class Constants
 {
     
-    static let IP = "http://192.168.137.109:8080"
+    static let IP = "http://45.77.214.216:8080"
     static var TOKEN = ""
     
     static func setToken(token: String){
@@ -18,21 +18,23 @@ class Constants
     }
     
     /*
-        Request = "/customer/get-name" etc.
-        json = your Dictionary Data to serialized as Json
-        This function wil return response and error(If any) as String , and connectionError as Boolean
-        Note : Eger sadece token gonderilecekse json nil olsun
+     Request = "/customer/get-name" etc.
+     json = your Dictionary Data to serialized as Json
+     This function wil return response and error(If any) as String , and connectionError as Boolean
+     Note : Eger sadece token gonderilecekse json nil olsun
      
      NUSRET OZATES
- */
+     */
     static func SendRequestGetString(requestType : String ,json : Dictionary<String, Any>?) ->(info : String? , error: String? , connectionError : Bool)
     {
+        
+        
         
         let link = IP + requestType
         
         let session = URLSession.shared
         
-        var request = URLRequest(url: URL(string:link)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15	)
+        var request = URLRequest(url: URL(string:link)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15    )
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if(requestType != "/login"){
@@ -49,15 +51,15 @@ class Constants
         
         do
         {
-           if json != nil
-           {
-             jsonData = try JSONSerialization.data(withJSONObject: json!, options: [])
-           }
+            if json != nil
+            {
+                jsonData = try JSONSerialization.data(withJSONObject: json!, options: [])
+            }
             else
-           {
-            let newjson: [String: Any] = [:]
-             jsonData = try JSONSerialization.data(withJSONObject: newjson, options: [])
-           }
+            {
+                let newjson: [String: Any] = [:]
+                jsonData = try JSONSerialization.data(withJSONObject: newjson, options: [])
+            }
         }
         catch
         {
@@ -82,17 +84,20 @@ class Constants
                     done = true
                     return
                 }
-                
-                info = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as String?
+                if requestType == "/login" {
+                    info = (httpResponse.allHeaderFields["Authorization"] as? String)!
+                } else {
+                    info = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as String?
+                }
                 done = true
                 
             } else {
                 connectionFailure = true
             }
         }
-      task.resume()
+        task.resume()
         while done == false {
-            usleep(500000)	
+            usleep(500000)
         }
         
         // Here I check for different failures that could happen
@@ -194,7 +199,6 @@ class Constants
         if(httpFailure != "") {
             return (error: httpFailure, info: nil, false)
         }
-        
         return (info: info, error: nil, connectionError: false)
     }
     

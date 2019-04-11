@@ -13,7 +13,7 @@
         <!--FirstTimeLogin-->
         <scene sceneID="jmx-43-IBu">
             <objects>
-                <viewController storyboardIdentifier="FirstLoginPage" id="jIn-tw-n0f" userLabel="FirstTimeLogin" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLoginPage" id="jIn-tw-n0f" userLabel="FirstTimeLogin" customClass="FirstLogin" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ir0-mM-XXF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,13 +28,13 @@
                                 <rect key="frame" x="16" y="165" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-Ey-sao">
                                 <rect key="frame" x="16" y="242.5" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Pass:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGx-ey-w5u">
                                 <rect key="frame" x="16" y="136.5" width="125" height="20.5"/>
@@ -51,6 +51,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAk-Oe-LLO">
                                 <rect key="frame" x="239" y="302.5" width="159" height="30"/>
                                 <state key="normal" title="Change my mind!"/>
+                                <connections>
+                                    <action selector="changePassword:" destination="jIn-tw-n0f" eventType="touchUpInside" id="SRj-Kt-JvJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,6 +79,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x0Q-dj-rZh"/>
                     </view>
+                    <connections>
+                        <outlet property="newPassBox" destination="zOx-FQ-7jk" id="qOi-c6-uYv"/>
+                        <outlet property="newPassRepeatedBox" destination="eNw-Ey-sao" id="tDw-HN-Wbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAr-P2-OXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

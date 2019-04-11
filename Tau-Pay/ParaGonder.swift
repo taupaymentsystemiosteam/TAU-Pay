@@ -9,7 +9,7 @@
 import UIKit
 
 class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
-   
+    
     let values = ["Shuttle","Mensa"]
     var selectedValue = ""
     
@@ -18,7 +18,7 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       return values.count
+        return values.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -31,14 +31,18 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         selectedValue = values[row]
         
     }
-
-    @IBOutlet weak var moneyBetrag: UITextField!
+    @IBOutlet var OkulNoLabel: UILabel!
+    @IBOutlet var MiktarLabel: UILabel!
+    @IBOutlet var DikkatText: UITextView!
+    @IBOutlet weak var moneyAmount: UITextField!
     @IBOutlet weak var studentNumber: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         picker.delegate = self
         picker.dataSource = self
@@ -47,36 +51,43 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         // Do any additional setup after loading the view.
     }
     
-    
+    func createAnimatedPopUp(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        return
+    }
     
     
     @IBAction func SendMoney(_ sender: Any)
     {
-        let json = ["id":studentNumber.text!]
+        
+        if studentNumber.text == ""  || moneyAmount.text == "" {
+            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            return
+        }
+        
+        let json = [
+            "id":studentNumber.text!
+        ]
         
         let getname = Constants.SendRequestGetString(requestType: "/customers/get-name", json: json)
         
-        if getname.connectionError
-        {
-            let connError = UIAlertController(title: "Hata", message: "Connection error, please try again", preferredStyle: UIAlertController.Style.alert)
-            connError.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-                connError.dismiss(animated: true, completion: nil)
-            }))
-            self.present(connError,animated: true,completion: nil)
-            
+        if getname.connectionError {
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
         }
-        else if getname.error != nil
-        {
-            let connError = UIAlertController(title: "Hata", message: "Error : \(getname.error!) try again", preferredStyle: UIAlertController.Style.alert)
-            connError.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-                connError.dismiss(animated: true, completion: nil)
-            }))
-            self.present(connError,animated: true,completion: nil)
+        else if getname.error != nil {
+            createAnimatedPopUp(title: "Hata", message: "Hata: \(getname.error!) tekrar deneyiniz")
         }
-        else
-        {
+        else if getname.info == "user not found" {
+            createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
+        }
+        else {
             let name = getname.info
-            let alert = UIAlertController(title: "Emin misin", message: "\(name ?? "Bulunamadı") adli ogrenciye \(moneyBetrag.text!) TL para gonderilecek emin misiniz ?", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Emin misin", message: "\(name ?? "Bulunamadı") adli ogrenciye \(moneyAmount.text!) TL para gonderilecek emin misiniz ?", preferredStyle: UIAlertController.Style.alert)
             
             alert.addAction(UIAlertAction(title: "Eminim", style: UIAlertAction.Style.default, handler: {(action) in
                 self.sendMoneyRequest()
@@ -91,26 +102,32 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         
     }
     
-        func sendMoneyRequest()
+    func sendMoneyRequest()
     {
         
-        let json = ["receiverId":studentNumber.text!,
-                    "balanceId":selectedValue.lowercased(),
-                    "amount": Int(moneyBetrag.text!)!] as [String : Any]
-        let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
-        let responseAlert = UIAlertController(title: "Result", message: "\(String(describing: response.info!))", preferredStyle: UIAlertController.Style.alert)
+        let json = [
+            "receiverId":studentNumber.text!,
+            "balanceId":selectedValue.lowercased(),
+            "amount": Double(moneyAmount.text!)!
+            ] as [String : Any]
         
-        responseAlert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-            responseAlert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(responseAlert,animated: true,completion: nil)
-
-    
+        let response = Constants.SendRequestGetString(requestType: "/customers/transfer", json: json)
+        
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        
+        if response.info == "balance not found" {
+            createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
+        }
+        
+        createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")
     }
-    
-    
-    
-    
-    
-
 }

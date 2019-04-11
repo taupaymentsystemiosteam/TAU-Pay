@@ -18,68 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-PP-MZq">
-                                <rect key="frame" x="16" y="334.5" width="382" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-PP-MZq">
+                                <rect key="frame" x="16" y="426" width="382" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzY-N2-ql1">
-                                <rect key="frame" x="16" y="422" width="382" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzY-N2-ql1">
+                                <rect key="frame" x="16" y="493" width="382" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StudentNummer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-qW-BAt">
-                                <rect key="frame" x="16" y="305.5" width="171" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Okul Numarası:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-qW-BAt">
+                                <rect key="frame" x="16" y="397" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geldbetrag:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-20-xhr">
-                                <rect key="frame" x="16" y="392.5" width="130" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-20-xhr">
+                                <rect key="frame" x="16" y="464" width="130" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rON-ma-B9v">
-                                <rect key="frame" x="306" y="695" width="92" height="30"/>
-                                <state key="normal" title="Senden"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rON-ma-B9v">
+                                <rect key="frame" x="306" y="765" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gönder"/>
                                 <connections>
                                     <action selector="SendMoney:" destination="f8N-LP-vyg" eventType="touchUpInside" id="ns1-Rd-m6p"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-yl-HoP">
-                                <rect key="frame" x="20" y="469" width="374" height="216"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-yl-HoP">
+                                <rect key="frame" x="16" y="541" width="374" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Dikkat: Bu sayfada bir arkadaşınıza okul numarasını girerek para gönderebilirsiniz." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fs9-Z8-EPR" userLabel="DikkatText">
+                                <rect key="frame" x="16" y="239" width="374" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="CrX-PP-MZq" secondAttribute="trailing" constant="16" id="2HN-q1-iim"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="16" id="4dh-qH-dtD"/>
-                            <constraint firstItem="Jj1-20-xhr" firstAttribute="top" secondItem="CrX-PP-MZq" secondAttribute="bottom" constant="28" id="5nh-wz-cT6"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="8ub-qW-BAt" secondAttribute="trailing" constant="227" id="7ke-S2-gN9"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="Jj1-20-xhr" secondAttribute="trailing" constant="268" id="9IT-Ip-fKM"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="0u7-yl-HoP" secondAttribute="trailing" constant="20" id="Hsb-1L-OSP"/>
-                            <constraint firstItem="CrX-PP-MZq" firstAttribute="top" secondItem="8ub-qW-BAt" secondAttribute="bottom" constant="8" id="N4c-oE-3pT"/>
-                            <constraint firstItem="8ub-qW-BAt" firstAttribute="top" secondItem="FRm-Dz-O2N" secondAttribute="top" constant="217.5" id="NtR-i0-ux4"/>
-                            <constraint firstItem="0u7-yl-HoP" firstAttribute="top" secondItem="pzY-N2-ql1" secondAttribute="bottom" constant="17" id="P3o-WB-y1h"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="pzY-N2-ql1" secondAttribute="trailing" constant="16" id="PxU-kA-PAR"/>
-                            <constraint firstItem="CrX-PP-MZq" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="VVl-4l-T9p"/>
-                            <constraint firstItem="rON-ma-B9v" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="306" id="Wib-b8-oDx"/>
-                            <constraint firstItem="Jj1-20-xhr" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="YKm-5W-g0F"/>
-                            <constraint firstItem="pzY-N2-ql1" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="Zt5-4L-28g"/>
-                            <constraint firstItem="0u7-yl-HoP" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="a6M-aY-uat"/>
-                            <constraint firstItem="pzY-N2-ql1" firstAttribute="top" secondItem="Jj1-20-xhr" secondAttribute="bottom" constant="9" id="drJ-zL-wt3"/>
-                            <constraint firstItem="rON-ma-B9v" firstAttribute="top" secondItem="0u7-yl-HoP" secondAttribute="bottom" constant="10" id="gLA-FA-63V"/>
-                            <constraint firstItem="8ub-qW-BAt" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="tDN-3F-3a8"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FRm-Dz-O2N"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Send Money" image="money" id="Y2N-86-2sw"/>
+                    <tabBarItem key="tabBarItem" title="Para Gönder" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="Y2N-86-2sw"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="moneyBetrag" destination="pzY-N2-ql1" id="1WB-mC-U6x"/>
+                        <outlet property="DikkatText" destination="fs9-Z8-EPR" id="hup-r5-F84"/>
+                        <outlet property="MiktarLabel" destination="Jj1-20-xhr" id="JOT-kP-paQ"/>
+                        <outlet property="OkulNoLabel" destination="8ub-qW-BAt" id="dcl-2p-usd"/>
+                        <outlet property="moneyAmount" destination="pzY-N2-ql1" id="1WB-mC-U6x"/>
                         <outlet property="picker" destination="0u7-yl-HoP" id="fg1-dh-reu"/>
                         <outlet property="studentNumber" destination="CrX-PP-MZq" id="6gu-la-ccj"/>
                     </connections>
@@ -90,6 +86,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="money" width="30" height="30"/>
+        <image name="ParaGonder" width="30" height="30"/>
     </resources>
 </document>

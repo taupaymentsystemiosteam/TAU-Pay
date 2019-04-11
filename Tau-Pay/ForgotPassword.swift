@@ -33,10 +33,11 @@ class ForgotPassword: UIViewController {
             "id": number!
         ]
         
-        var response = Constants.SendRequestGetString(requestType: "/customers/forgot-password", json: json)
+        let response = Constants.SendRequestGetString(requestType: "/customers/forgot-password", json: json)
+        
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
             return
         }
         if response.error != nil {
@@ -45,7 +46,9 @@ class ForgotPassword: UIViewController {
             return
         }
         createAnimatedPopUp(title: "Başarı", message: "Mailinizi kontrol edebilirsiniz")
-        let vc = storyboard!.instantiateViewController(withIdentifier: "navController") as UIViewController
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "loginPage") as UIViewController
         present(vc, animated: true, completion: nil)
         
         

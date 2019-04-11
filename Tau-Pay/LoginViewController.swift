@@ -13,6 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
     
+    func createAnimatedPopUp(title: String, message: String, actionTitle: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: actionTitle,style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
+        self.present(alert, animated: true, completion: nil)
+        return
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +31,14 @@ class LoginViewController: UIViewController {
         
         matrikelnummer_.layer.cornerRadius = 15.0
         
-       // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
-       // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
+        // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
+        // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         
         //let passwortImage = UIImage(named: "passwort_")
         //addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
         
         //matrikelnummer_.layer.cornerRadius = 15.0
-
+        
     }
     
     func addLeftImageTo(txtField: UITextField, andImage img: UIImage){
@@ -64,23 +71,15 @@ class LoginViewController: UIViewController {
         }
             
         else if(response.error != nil){
-            
-            let alert = UIAlertController(title: "Fehlende Internetverbindung", message: "connection error", preferredStyle: .alert)
-            
-            let tryAgain = UIAlertAction(title: "Try again", style: .default) { (action) -> Void in
+            if(response.error == "403"){
+                createAnimatedPopUp(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", actionTitle: "Try Again")
             }
-            
-            alert.addAction(tryAgain)
-            self.present(alert, animated: true, completion: nil)
-            
+            else {
+                createAnimatedPopUp(title: "Fehlende Internetverbindung", message: "connection error", actionTitle: "Try again")
+            }
         }
-        else if(response.error == "403"){
-            let alert = UIAlertController(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", preferredStyle: .alert)
             
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        
+            
         else {
             Constants.setToken(token: response.info!)
             
@@ -91,18 +90,18 @@ class LoginViewController: UIViewController {
         
         
     }
-
+    
     /*
      
      // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     
-
+    
 }

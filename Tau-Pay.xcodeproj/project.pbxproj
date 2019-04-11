@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19298635225F406000765D3A /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298634225F406000765D3A /* ProfileTabController.swift */; };
 		192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */; };
 		1965F06E225E24C700C8427D /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965F06D225E24C700C8427D /* ForgotPassword.swift */; };
 		1965F070225E24E300C8427D /* ForgotPasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */; };
+		1965F072225E717500C8427D /* FirstLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965F071225E717500C8427D /* FirstLogin.swift */; };
 		1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */; };
 		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
 		19789EDA225A39AD0028029C /* ChangePasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */; };
@@ -54,9 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19298634225F406000765D3A /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndRequestFunctions.swift; sourceTree = "<group>"; };
 		1965F06D225E24C700C8427D /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordPage.storyboard; sourceTree = "<group>"; };
+		1965F071225E717500C8427D /* FirstLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLogin.swift; sourceTree = "<group>"; };
 		1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BagisStoryboard.storyboard; sourceTree = "<group>"; };
 		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordPage.storyboard; sourceTree = "<group>"; };
@@ -142,27 +146,29 @@
 				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
 				76A02D63225E267B00205B71 /* BezahlenPage.storyboard */,
 				19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */,
+				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
 				1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */,
 				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
+				76A02D65225E445A00205B71 /* QrCodePage.storyboard */,
 				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
 				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
-				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
 				76B467EB225E25B300DD2E25 /* Bezahlen.swift */,
 				19789EDB225A3B010028029C /* ChangePasswordViewController.swift */,
 				1967EFBE224E355200E0173F /* FeedbackViewController.swift */,
+				1965F071225E717500C8427D /* FirstLogin.swift */,
 				1965F06D225E24C700C8427D /* ForgotPassword.swift */,
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
+				76A02D67225E44E100205B71 /* QrCodeController.swift */,
 				19B58DEB223D2D4C00B081FD /* Oner.swift */,
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
+				19298634225F406000765D3A /* ProfileTabController.swift */,
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
-				76A02D65225E445A00205B71 /* QrCodePage.storyboard */,
-				76A02D67225E44E100205B71 /* QrCodeController.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -298,7 +304,6 @@
 				AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
 				1965F070225E24E300C8427D /* ForgotPasswordPage.storyboard in Resources */,
-				431D0A7B225BF2C700638214 /* Bezahlen.storyboard in Resources */,
 				AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */,
 				76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */,
 				76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */,
@@ -337,7 +342,9 @@
 				19789EDC225A3B010028029C /* ChangePasswordViewController.swift in Sources */,
 				76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */,
 				192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */,
+				1965F072225E717500C8427D /* FirstLogin.swift in Sources */,
 				1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */,
+				19298635225F406000765D3A /* ProfileTabController.swift in Sources */,
 				19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */,
 				19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */,
 				19B58DBE223D298500B081FD /* Bagis.swift in Sources */,
