@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
                                 <rect key="frame" x="195" y="289" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="empty_star"/>
+                                <state key="normal" title="Button" image="filled_star"/>
                                 <connections>
                                     <action selector="StarAction1:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="FXK-Y0-wAz"/>
                                 </connections>

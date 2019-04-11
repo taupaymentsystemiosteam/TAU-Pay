@@ -51,7 +51,7 @@ class FirstViewController: UIViewController {
             return
         }
         
-        createAnimatedPopUp(title: "Başarılı", message: "Bağışınız kabul edilmiştir")
+        createAnimatedPopUp(title: "Başarılı", message: "Bağışınız kabul edilmiştir, Allah razı olsun!")
         
     }
     override func viewDidLoad() {

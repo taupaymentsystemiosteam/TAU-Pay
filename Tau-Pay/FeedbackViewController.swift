@@ -11,6 +11,8 @@ import UIKit
 
 class FeedbackViewController: UIViewController , UITextViewDelegate {
 
+    var stars = [UIButton]()
+    
     @IBOutlet var AcıklamaText: UITextView!
     @IBOutlet var Star1: UIButton!
     @IBOutlet var Star2: UIButton!
@@ -20,15 +22,31 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     @IBOutlet var MensaShutteSelect: UISegmentedControl!
     @IBOutlet var GonderButton: UIButton!
     @IBOutlet var FeedbackText: UITextView!
+    
+    func changeStarColors(fillYellowUntil: Int) {
+        for i in 1...stars.count {
+            if i <= fillYellowUntil {
+                stars[i - 1].setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
+            }
+            else {
+                stars[i - 1].setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
+            }
+        }
+        star = fillYellowUntil
+    }
 
-
-   
     // Feedback TextView
     override func viewDidLoad() {
         super.viewDidLoad()
         FeedbackText.delegate = self
         FeedbackText.layer.borderColor = UIColor.lightGray.cgColor
         FeedbackText.layer.borderWidth = 1.0
+        
+        stars.append(Star1)
+        stars.append(Star2)
+        stars.append(Star3)
+        stars.append(Star4)
+        stars.append(Star5)
         
     }
     
@@ -41,67 +59,32 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
     
     // Star Rating
     
-    var star : Int = 0
+    var star : Int = 1
 
     
     @IBAction func StarAction1(_ sender: Any) {
         
-        //Filling 1 Star
-        Star1.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        
-        //Emptying 4 Stars
-        Star2.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        Star3.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        Star4.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
+        changeStarColors(fillYellowUntil: 1)
     }
     
     @IBAction func StarAction2(_ sender: Any) {
         //Filling 2 Stars
-        Star1.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star2.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        
-        //Emptying 3 Stars
-        Star3.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        Star4.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
+        changeStarColors(fillYellowUntil: 2)
 
     }
     @IBAction func StarAction3(_ sender: Any) {
-        
         //Filling 3 Stars
-        Star1.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star2.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star3.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        
-        //Emptying 2 Stars
-        Star4.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-        
+        changeStarColors(fillYellowUntil: 3)
         
     }
     @IBAction func StarAction4(_ sender: Any) {
-        
         //Filling 4 Stars
-        Star1.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star2.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star3.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star4.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        
-        //Emptying 1 Star
-        Star5.setImage(UIImage(named: "empty_star"), for: UIControl.State.normal)
-
+        changeStarColors(fillYellowUntil: 4)
         
     }
     @IBAction func StarAction5(_ sender: Any) {
-        
         //Filling 5 Stars
-        
-        Star1.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star2.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star3.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star4.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
-        Star5.setImage(UIImage(named: "filled_star"), for: UIControl.State.normal)
+        changeStarColors(fillYellowUntil: 5)
 
     }
     
