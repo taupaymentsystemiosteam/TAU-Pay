@@ -60,6 +60,13 @@ class Bezahlen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
+        
+        Name.text = "İSİM: " + "\(response.info!["name"]!)"
+        Matrikelnummer.text = "NUMARA: " + "\(response.info!["id"]!)"
+        sguthaben.text = "\(response.info!["balanceShuttle"]!) TL"
+        mguthaben.text = "\(response.info!["balanceMensa"]!) TL"
+        
         // Do any additional setup after loading the view.
     }
     
