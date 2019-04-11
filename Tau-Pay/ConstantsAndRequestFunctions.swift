@@ -199,7 +199,6 @@ class Constants
         if(httpFailure != "") {
             return (error: httpFailure, info: nil, false)
         }
-        
         return (info: info, error: nil, connectionError: false)
     }
     
