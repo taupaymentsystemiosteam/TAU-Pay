@@ -64,7 +64,7 @@ class ChangePasswordViewController: UIViewController {
             }
             
         } else {
-            createAnimatedPopUp(title: "Sonuç", message: "Şifreler uyuşmuyor AQ.")
+            createAnimatedPopUp(title: "Sonuç", message: "Şifreler uyuşmuyor.")
         }
     }
     
