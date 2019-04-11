@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-90260.869565217392" y="-157.36607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Tab Controller-->
         <scene sceneID="dZj-Fm-yID">
             <objects>
-                <viewController id="hO6-oZ-1rm" sceneMemberID="viewController">
+                <viewController id="hO6-oZ-1rm" customClass="ProfileTabController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DN1-XA-0wa">
                         <rect key="frame" x="0.0" y="0.0" width="330" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,6 +228,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uxy-Yo-Vbn"/>
                     </view>
+                    <connections>
+                        <outlet property="cafeteriaBox" destination="llO-Zj-fXY" id="UAy-4T-FFI"/>
+                        <outlet property="nameBox" destination="WlB-8x-lHZ" id="ZuB-Wu-PuA"/>
+                        <outlet property="numberBox" destination="aIL-jS-GGU" id="i15-9a-6si"/>
+                        <outlet property="shuttleBox" destination="Sy7-CG-Rbg" id="lfg-jk-WB2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpq-B1-aWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,8 +12,8 @@ class ProfileTabController: UIViewController {
     
     @IBOutlet weak var nameBox: UILabel!
     @IBOutlet weak var numberBox: UILabel!
-    @IBOutlet weak var ShuttleBox: UILabel!
-    @IBOutlet weak var CafeteriaBox: UILabel!
+    @IBOutlet weak var shuttleBox: UILabel!
+    @IBOutlet weak var cafeteriaBox: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,9 @@ class ProfileTabController: UIViewController {
         
         nameBox.text = "\(response.info!["name"]!)"
         numberBox.text = "\(response.info!["id"]!)"
-        ShuttleBox.text = "\(response.info!["balanceShuttle"]!)"
-        CafeteriaBox.text = "\(response.info!["balanceMensa"]!)"
+        shuttleBox.text = "\(response.info!["balanceShuttle"]!)"
+        cafeteriaBox.text = "\(response.info!["balanceMensa"]!)"
         
-        //ShuttleBox.text = response
         
         
     }
