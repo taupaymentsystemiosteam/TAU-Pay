@@ -21,6 +21,10 @@ class SecondViewController: UIViewController {
         if hamburgerIsOpen {
             leadingConstraint.constant = -330
         } else {
+            //let quee
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .updateInfo, object: self)
+            }
             leadingConstraint.constant = 0
         }
         UIView.animate(withDuration: 0.3, animations: self.view.layoutIfNeeded)

@@ -15,21 +15,28 @@ class ProfileTabController: UIViewController {
     @IBOutlet weak var shuttleBox: UILabel!
     @IBOutlet weak var cafeteriaBox: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if Constants.TOKEN == "" {
-            print("No Token Entry")
-            return
-        }
+    @objc func updateInfo() {
         let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
         
         nameBox.text = "\(response.info!["name"]!)"
         numberBox.text = "\(response.info!["id"]!)"
         shuttleBox.text = "\(response.info!["balanceShuttle"]!)"
         cafeteriaBox.text = "\(response.info!["balanceMensa"]!)"
-        
-        
-        
     }
+    
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        if Constants.TOKEN == "" {
+            print("No Token Entry")
+            return
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateInfo), name: .updateInfo, object: nil)
+        
+        updateInfo()
+    }
+    
 }
