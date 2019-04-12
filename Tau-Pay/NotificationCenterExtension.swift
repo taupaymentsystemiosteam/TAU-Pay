@@ -9,4 +9,5 @@
 import Foundation
 extension Notification.Name {
     static let updateInfo = Notification.Name("updateInfo")
+    static let failedUpdateInfo = Notification.Name("failedUpdateInfo")
 }

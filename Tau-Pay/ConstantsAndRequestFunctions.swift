@@ -17,6 +17,20 @@ class Constants
         TOKEN = token
     }
     
+    static func getInfo() {
+        
+        let responseLocal = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: [:])
+        
+        if responseLocal.error != nil || responseLocal.connectionError {
+            var response: [String: Any?] = [:]
+            response["connectionError"] = String(responseLocal.connectionError)
+            response["error"] = responseLocal.error
+        }
+        else {
+            NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: ["info": responseLocal.info!])
+        }
+    }
+    
     /*
      Request = "/customer/get-name" etc.
      json = your Dictionary Data to serialized as Json
