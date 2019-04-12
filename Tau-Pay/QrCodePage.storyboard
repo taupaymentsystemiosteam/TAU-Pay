@@ -40,7 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="ykF-Eh-9DG"/>
                     </view>
                     <connections>
-                        <outlet property="progress" destination="kYs-Xc-m9R" id="S1D-oK-bro"/>
+                        <outlet property="progressBar" destination="kYs-Xc-m9R" id="S1D-oK-bro"/>
                         <outlet property="pview" destination="TTW-fY-Eeg" id="vV6-Eh-Abd"/>
                         <outlet property="qrCodeImage" destination="8ZG-3Z-DkV" id="yg2-he-kyc"/>
                     </connections>
