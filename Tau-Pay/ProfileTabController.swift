@@ -18,6 +18,28 @@ class ProfileTabController: UIViewController {
     @objc func updateInfo() {
         let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
         
+        func createAnimatedPopUp(title: String, message: String) {
+            let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            
+            alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, bakiyeleriniz güncellenmemiştir")
+            
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        
         nameBox.text = "\(response.info!["name"]!)"
         numberBox.text = "\(response.info!["id"]!)"
         shuttleBox.text = "\(response.info!["balanceShuttle"]!)"

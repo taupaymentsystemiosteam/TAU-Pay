@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,21 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kYs-Xc-m9R">
-                                <rect key="frame" x="54" y="607" width="307" height="2"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kYs-Xc-m9R">
+                                <rect key="frame" x="20" y="732" width="374" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="MPK-iK-aJH"/>
                                     <constraint firstAttribute="height" constant="30" id="jKT-an-Ms4"/>
                                 </constraints>
+                                <color key="progressTintColor" red="0.23487566568982049" green="0.55155154799754247" blue="0.69796954314720816" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZG-3Z-DkV">
-                                <rect key="frame" x="54" y="135" width="307" height="294"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZG-3Z-DkV">
+                                <rect key="frame" x="54" y="286" width="307" height="294"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kYs-Xc-m9R" firstAttribute="top" secondItem="8ZG-3Z-DkV" secondAttribute="bottom" constant="100" id="ALY-dz-MxD"/>
+                            <constraint firstItem="kYs-Xc-m9R" firstAttribute="leading" secondItem="TTW-fY-Eeg" secondAttribute="leading" constant="20" id="gYr-E6-WB2"/>
+                            <constraint firstItem="ykF-Eh-9DG" firstAttribute="bottom" secondItem="kYs-Xc-m9R" secondAttribute="bottom" constant="100" id="omt-Wk-zde"/>
+                            <constraint firstAttribute="trailing" secondItem="kYs-Xc-m9R" secondAttribute="trailing" constant="20" id="za3-9d-aPM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ykF-Eh-9DG"/>
                     </view>
                     <connections>
+                        <outlet property="pview" destination="TTW-fY-Eeg" id="vV6-Eh-Abd"/>
                         <outlet property="qrCodeImage" destination="8ZG-3Z-DkV" id="yg2-he-kyc"/>
                     </connections>
                 </viewController>
