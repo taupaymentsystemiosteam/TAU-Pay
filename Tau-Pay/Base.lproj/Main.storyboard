@@ -24,7 +24,7 @@
         <scene sceneID="Id3-kL-j9t">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="xap-PB-Kj7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profil" image="Profil" landscapeImage="Profil" largeContentSizeImage="Profil" id="eem-O5-48d"/>
+                    <tabBarItem key="tabBarItem" title="Ödeme" image="odeme" landscapeImage="odeme" largeContentSizeImage="odeme" id="eem-O5-48d"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKe-oN-d84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +177,7 @@
         <image name="00" width="702" height="544"/>
         <image name="Oner" width="30" height="30"/>
         <image name="ParaGonder" width="30" height="30"/>
-        <image name="Profil" width="30" height="30"/>
         <image name="bagis" width="30" height="30"/>
+        <image name="odeme" width="29" height="29"/>
     </resources>
 </document>
