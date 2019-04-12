@@ -57,7 +57,7 @@ class QrCodeController: UIViewController {
     @objc func updateProgress() {
         progressValue = progressValue - 0.01
         self.progressBar.progress = Float(progressValue)
-        if progressValue != 1.0 {
+        if progressValue != 0.0 {
             self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         }
     }

@@ -60,14 +60,45 @@ class Bezahlen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
+        //let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
         
-        Name.text = "İSİM: " + "\(response.info!["name"]!)"
-        Matrikelnummer.text = "NUMARA: " + "\(response.info!["id"]!)"
-        sguthaben.text = "\(response.info!["balanceShuttle"]!) TL"
-        mguthaben.text = "\(response.info!["balanceMensa"]!) TL"
+        
         
         // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateInfo(_:)), name: .updateInfo, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
+        
+        Constants.getInfo()
+    }
+    
+    @objc func failedUpdateInfo(_ notification: Notification) {
+        if let response = notification.userInfo as? [String: Any?] {
+            if (response["connectionError"] as? String == "true") {
+                // Handle connection error
+                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+                return
+            }
+            if response["error"] != nil {
+                // Handle improper connection
+                
+                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                return
+            }
+        } else {
+            print("Something went wront")
+        }
+    }
+    
+    @objc func updateInfo(_ notification: Notification) {
+        if let response = (notification.userInfo as? [String: [String: Any?]]) {
+            print(response["info"]?.keys)
+            Name.text = "İSİM: \(response["info"]!["name"]!)"
+            Matrikelnummer.text = "NUMARA: \(response["info"]!["id"]!)"
+            sguthaben.text = "\(response["info"]!["balanceShuttle"]!) TL"
+            mguthaben.text = "\(response["info"]!["balanceMensa"]!) TL"
+
+        }
     }
     
     
