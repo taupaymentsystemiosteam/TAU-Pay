@@ -59,6 +59,9 @@ class ProfileTabController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateInfo), name: .updateInfo, object: nil)
         
         updateInfo()
+        
+        
     }
+    
     
 }

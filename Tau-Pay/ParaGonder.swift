@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource , UITextFieldDelegate {
     
     let values = ["Shuttle","Mensa"]
     var selectedValue = "shuttle"
@@ -47,8 +47,15 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         picker.delegate = self
         picker.dataSource = self
         
+        moneyAmount.delegate = self
+        studentNumber.delegate = self
+        
         
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.endEditing(false)
     }
     
     func createAnimatedPopUp(title: String, message: String) {
