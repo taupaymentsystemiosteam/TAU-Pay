@@ -99,7 +99,7 @@
         <scene sceneID="Hrd-LC-0DE">
             <objects>
                 <navigationController storyboardIdentifier="ProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="k5N-ho-bSY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Ödeme" image="odeme" landscapeImage="odeme" largeContentSizeImage="odeme" id="6Jt-Me-ary"/>
+                    <tabBarItem key="tabBarItem" title="Ödeme" image="odeme" landscapeImage="odeme" largeContentSizeImage="odeme" id="6Jt-Me-ary"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VVX-eD-kj4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
