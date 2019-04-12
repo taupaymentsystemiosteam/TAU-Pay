@@ -28,6 +28,11 @@ class QrCodeController: UIViewController {
         
         // 1
         //let myString = response.info
+        
+        UIView.animate(withDuration: 4.0) {
+            self.progress.setProgress(1.0, animated: true)
+        }
+        
         let data = QrCodeController.qrString.data(using: String.Encoding.ascii)
         
         if let filter = CIFilter(name: "CIQRCodeGenerator") {

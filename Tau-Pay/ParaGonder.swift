@@ -11,7 +11,7 @@ import UIKit
 class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource , UITextFieldDelegate {
     
     let values = ["Shuttle","Mensa"]
-    var selectedValue = ""
+    var selectedValue = "shuttle"
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
