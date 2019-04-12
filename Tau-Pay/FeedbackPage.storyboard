@@ -74,10 +74,10 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg" userLabel="MensaShuttleSelect">
-                                <rect key="frame" x="30" y="290" width="135" height="28"/>
+                                <rect key="frame" x="30" y="290" width="157" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Mensa"/>
+                                    <segment title="Yemekhane"/>
                                     <segment title="Shuttle"/>
                                 </segments>
                                 <connections>
