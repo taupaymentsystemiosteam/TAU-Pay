@@ -13,8 +13,9 @@ class QrCodeController: UIViewController {
     static var qrString = ""
     
     @IBOutlet weak var qrCodeImage: UIImageView!
-    @IBOutlet weak var progress: UIProgressView!
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet var pview: UIView!
+    var progressValue = 1.0
     
     
     static func setString(qr: String) {
@@ -29,9 +30,7 @@ class QrCodeController: UIViewController {
         // 1
         //let myString = response.info
         
-        UIView.animate(withDuration: 4.0) {
-            self.progress.setProgress(1.0, animated: true)
-        }
+        
         
         let data = QrCodeController.qrString.data(using: String.Encoding.ascii)
         
@@ -53,10 +52,17 @@ class QrCodeController: UIViewController {
         
         
         // go back to previous page
-        
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         
     }
     
+    @objc func updateProgress() {
+        progressValue = progressValue - 0.01
+        self.progressBar.progress = Float(progressValue)
+        if progressValue != 0.0 {
+            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        }
+    }
 
     /*
     // MARK: - Navigation
