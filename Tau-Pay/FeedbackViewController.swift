@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FeedbackViewController: UIViewController , UITextViewDelegate {
+class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFieldDelegate {
 
     var stars = [UIButton]()
     
@@ -35,6 +35,9 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         star = fillYellowUntil
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.endEditing(false)
+    }
     // Feedback TextView
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +50,13 @@ class FeedbackViewController: UIViewController , UITextViewDelegate {
         stars.append(Star3)
         stars.append(Star4)
         stars.append(Star5)
+        FeedbackText.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
     }
+    
+    
     
     @IBAction func textViewDidBeginEditing (_ FeedbackText: UITextView) {
         

@@ -60,7 +60,7 @@ class ChangePasswordViewController: UIViewController {
             }
             
             if let responseInfo = response.info {
-                createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: responseInfo))")
+                createAnimatedPopUp(title: "Sonuç", message: "Şifre başarı ile değiştirildi. \(String(describing: responseInfo))")
             }
             
         } else {
