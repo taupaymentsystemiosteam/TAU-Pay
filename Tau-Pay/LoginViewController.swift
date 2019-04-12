@@ -40,6 +40,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         matrikelnummer_.delegate = self
         passwort_.delegate = self
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
         // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
         // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         

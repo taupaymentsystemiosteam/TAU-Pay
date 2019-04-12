@@ -50,6 +50,8 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         moneyAmount.delegate = self
         studentNumber.delegate = self
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
         
         // Do any additional setup after loading the view.
     }

@@ -50,6 +50,9 @@ class ProfileTabController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+     
     
         if Constants.TOKEN == "" {
             print("No Token Entry")
@@ -60,7 +63,7 @@ class ProfileTabController: UIViewController {
         
         updateInfo()
         
-        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
     
     
