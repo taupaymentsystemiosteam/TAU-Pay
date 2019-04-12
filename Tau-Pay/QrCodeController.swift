@@ -13,6 +13,9 @@ class QrCodeController: UIViewController {
     static var qrString = ""
     
     @IBOutlet weak var qrCodeImage: UIImageView!
+    @IBOutlet weak var progress: UIProgressView!
+    @IBOutlet var pview: UIView!
+    
     
     static func setString(qr: String) {
         qrString = qr
@@ -29,7 +32,7 @@ class QrCodeController: UIViewController {
         
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
+            let transform = CGAffineTransform(scaleX: 13, y: 13)
             print("bob")
             if let output = filter.outputImage?.transformed(by: transform) {
                 qrCodeImage.image = UIImage(ciImage: output)
