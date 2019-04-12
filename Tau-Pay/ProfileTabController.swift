@@ -50,6 +50,9 @@ class ProfileTabController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+     
     
         if Constants.TOKEN == "" {
             print("No Token Entry")
@@ -59,6 +62,9 @@ class ProfileTabController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateInfo), name: .updateInfo, object: nil)
         
         updateInfo()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
+    
     
 }

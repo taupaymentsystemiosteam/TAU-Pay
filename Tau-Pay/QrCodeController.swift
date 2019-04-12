@@ -30,6 +30,8 @@ class QrCodeController: UIViewController {
         // 1
         //let myString = response.info
         
+        
+        
         let data = QrCodeController.qrString.data(using: String.Encoding.ascii)
         
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
@@ -50,7 +52,7 @@ class QrCodeController: UIViewController {
         
         
         // go back to previous page
-        
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         
     }
     

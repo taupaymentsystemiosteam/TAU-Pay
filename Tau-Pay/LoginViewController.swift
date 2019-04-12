@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var matrikelnummer_: UITextField!
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
@@ -20,6 +20,12 @@ class LoginViewController: UIViewController {
         return
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.endEditing(false)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +36,11 @@ class LoginViewController: UIViewController {
         addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
         
         matrikelnummer_.layer.cornerRadius = 15.0
+        
+        matrikelnummer_.delegate = self
+        passwort_.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
         // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
