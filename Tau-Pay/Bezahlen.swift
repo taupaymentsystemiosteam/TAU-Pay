@@ -60,16 +60,11 @@ class Bezahlen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
-        
-        
-        
-        // Do any additional setup after loading the view.
-        
         NotificationCenter.default.addObserver(self, selector: #selector(updateInfo(_:)), name: .updateInfo, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
         
         Constants.getInfo()
+    
     }
     
     @objc func failedUpdateInfo(_ notification: Notification) {
@@ -91,25 +86,14 @@ class Bezahlen: UIViewController {
     }
     
     @objc func updateInfo(_ notification: Notification) {
-        if let response = (notification.userInfo as? [String: [String: Any?]]) {
-            print(response["info"]?.keys)
-            Name.text = "İSİM: \(response["info"]!["name"]!)"
-            Matrikelnummer.text = "NUMARA: \(response["info"]!["id"]!)"
-            sguthaben.text = "\(response["info"]!["balanceShuttle"]!) TL"
-            mguthaben.text = "\(response["info"]!["balanceMensa"]!) TL"
-
+        
+        if let response = (notification.userInfo as? [String: Any]) {
+            
+            Name.text = "İSİM: \(String(describing: response["name"]!))"
+            Matrikelnummer.text = "NUMARA: \(String(describing: response["id"]!))"
+            sguthaben.text = "\(String(describing: response["balanceShuttle"]!)) TL"
+            mguthaben.text = "\(String(describing: response["balanceMensa"]!)) TL"
         }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

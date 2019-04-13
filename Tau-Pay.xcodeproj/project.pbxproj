@@ -143,6 +143,7 @@
 		19B58DBA223D298500B081FD /* Tau-Pay */ = {
 			isa = PBXGroup;
 			children = (
+				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC9223D298600B081FD /* Info.plist */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
@@ -159,6 +160,7 @@
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
 				76B467EB225E25B300DD2E25 /* Bezahlen.swift */,
+				19298634225F406000765D3A /* ProfileTabController.swift */,
 				19789EDB225A3B010028029C /* ChangePasswordViewController.swift */,
 				1967EFBE224E355200E0173F /* FeedbackViewController.swift */,
 				1965F071225E717500C8427D /* FirstLogin.swift */,
@@ -169,8 +171,6 @@
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
-				19298634225F406000765D3A /* ProfileTabController.swift */,
-				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */,
 			);
 			path = "Tau-Pay";

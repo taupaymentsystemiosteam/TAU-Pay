@@ -19,7 +19,7 @@ class Constants
     
     static func getInfo() {
         
-        let responseLocal = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: [:])
+        let responseLocal = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
         
         if responseLocal.error != nil || responseLocal.connectionError {
             var response: [String: Any?] = [:]
@@ -27,7 +27,7 @@ class Constants
             response["error"] = responseLocal.error
         }
         else {
-            NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: ["info": responseLocal.info!])
+            NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: responseLocal.info)
         }
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource , UITextFieldDelegate {
+class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
     let values = ["Shuttle","Mensa"]
     var selectedValue = "shuttle"
@@ -42,23 +42,15 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         picker.delegate = self
         picker.dataSource = self
         
-        moneyAmount.delegate = self
-        studentNumber.delegate = self
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
-        
-        // Do any additional setup after loading the view.
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return textField.endEditing(false)
-    }
+
     
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)

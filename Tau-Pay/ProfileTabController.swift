@@ -15,35 +15,44 @@ class ProfileTabController: UIViewController {
     @IBOutlet weak var shuttleBox: UILabel!
     @IBOutlet weak var cafeteriaBox: UILabel!
     
-    @objc func updateInfo() {
-        let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
+    func createAnimatedPopUp(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        func createAnimatedPopUp(title: String, message: String) {
-            let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            
-            alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-                alert.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
         
-        if response.connectionError {
-            // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, bakiyeleriniz güncellenmemiştir")
-            
-            return
+        return
+    }
+    
+    
+    @objc func updateInfo(_ notification: Notification) {
+    
+        if let response = (notification.userInfo as? [String: Any]) {
+            nameBox.text = "\(String(describing: response["name"]!))"
+            numberBox.text = "\(String(describing: response["id"]!))"
+            shuttleBox.text = "\(String(describing: response["balanceShuttle"]!))"
+            cafeteriaBox.text = "\(String(describing: response["balanceMensa"]!))"
         }
-        if response.error != nil {
-            // Handle improper connection
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
-            return
+    }
+    
+    @objc func failedUpdateInfo(_ notification: Notification) {
+        if let response = notification.userInfo as? [String: Any?] {
+            if (response["connectionError"] as? String == "true") {
+                // Handle connection error
+                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+                return
+            }
+            if response["error"] != nil {
+                // Handle improper connection
+                
+                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                return
+            }
+        } else {
+            print("Something went wront")
         }
-        
-        nameBox.text = "\(response.info!["name"]!)"
-        numberBox.text = "\(response.info!["id"]!)"
-        shuttleBox.text = "\(response.info!["balanceShuttle"]!)"
-        cafeteriaBox.text = "\(response.info!["balanceMensa"]!)"
     }
     
 
@@ -51,8 +60,6 @@ class ProfileTabController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-     
     
         if Constants.TOKEN == "" {
             print("No Token Entry")
@@ -61,7 +68,7 @@ class ProfileTabController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateInfo), name: .updateInfo, object: nil)
         
-        updateInfo()
+         NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }

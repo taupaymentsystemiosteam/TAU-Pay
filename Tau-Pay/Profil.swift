@@ -43,8 +43,6 @@ class SecondViewController: UIViewController {
         rightSwipe.direction = .right
         self.view.addGestureRecognizer(rightSwipe)
         
-    
-        
     }
     
     

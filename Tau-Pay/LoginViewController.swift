@@ -21,11 +21,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return textField.endEditing(false)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +32,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         matrikelnummer_.layer.cornerRadius = 15.0
         
-        matrikelnummer_.delegate = self
-        passwort_.delegate = self
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
