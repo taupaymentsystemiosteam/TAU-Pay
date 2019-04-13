@@ -50,7 +50,6 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         
     }
     
-
     
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -68,6 +67,13 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         
         if studentNumber.text == ""  || moneyAmount.text == "" {
             createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            return
+        }
+        
+        let money : Int? = Int(moneyAmount.text!)
+        
+        if money! < 0 {
+            createAnimatedPopUp(title: "Çok zekisin ", message: "Para çalmaya çalışma artık Alp bitte!")
             return
         }
         
@@ -130,5 +136,6 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         }
         
         createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")
+        Constants.getInfo()
     }
 }

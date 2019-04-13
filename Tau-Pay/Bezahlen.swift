@@ -51,10 +51,6 @@ class Bezahlen: UIViewController {
         QrCodeController.setString(qr: response.info!)
         
         
-
-        
-
-        
     }
 
     override func viewDidLoad() {
