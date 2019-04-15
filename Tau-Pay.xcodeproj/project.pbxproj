@@ -28,6 +28,7 @@
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
+		6D1750BE2264B9D700A447A0 /* TauPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D1750BD2264B9D700A447A0 /* TauPay.png */; };
 		76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D63225E267B00205B71 /* BezahlenPage.storyboard */; };
 		76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D65225E445A00205B71 /* QrCodePage.storyboard */; };
 		76A02D68225E44E100205B71 /* QrCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A02D67225E44E100205B71 /* QrCodeController.swift */; };
@@ -84,6 +85,7 @@
 		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6D1750BD2264B9D700A447A0 /* TauPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TauPay.png; path = ../../../Downloads/TauPay.png; sourceTree = "<group>"; };
 		76A02D63225E267B00205B71 /* BezahlenPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BezahlenPage.storyboard; sourceTree = "<group>"; };
 		76A02D65225E445A00205B71 /* QrCodePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QrCodePage.storyboard; sourceTree = "<group>"; };
 		76A02D67225E44E100205B71 /* QrCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
 				19B58DC9223D298600B081FD /* Info.plist */,
+				6D1750BD2264B9D700A447A0 /* TauPay.png */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
 				76A02D63225E267B00205B71 /* BezahlenPage.storyboard */,
@@ -312,6 +315,7 @@
 				76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
 				AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */,
+				6D1750BE2264B9D700A447A0 /* TauPay.png in Resources */,
 				19789EDA225A39AD0028029C /* ChangePasswordPage.storyboard in Resources */,
 				AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */,
 			);
