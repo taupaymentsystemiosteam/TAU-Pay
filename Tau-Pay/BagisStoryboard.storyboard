@@ -70,7 +70,7 @@ Her yemek öğün için bağış miktarı 4.00 TL, her Shuttle seyahati için is
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="vx8-96-o0h"/>
+                    <tabBarItem key="tabBarItem" title="Bağış" image="Bagis" landscapeImage="Bagis" largeContentSizeImage="Bagis" id="vx8-96-o0h"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="amountBox" destination="srK-s8-hil" id="ECm-UV-HNE"/>
@@ -83,6 +83,6 @@ Her yemek öğün için bağış miktarı 4.00 TL, her Shuttle seyahati için is
         </scene>
     </scenes>
     <resources>
-        <image name="bagis" width="30" height="30"/>
+        <image name="Bagis" width="30" height="30"/>
     </resources>
 </document>

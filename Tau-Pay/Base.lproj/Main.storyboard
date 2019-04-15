@@ -14,7 +14,7 @@
         <scene sceneID="5es-21-2a5">
             <objects>
                 <viewControllerPlaceholder storyboardName="BagisStoryboard" referencedIdentifier="bagis_screen" id="A9r-uh-22p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="OWF-Qu-0pO"/>
+                    <tabBarItem key="tabBarItem" title="" id="OWF-Qu-0pO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW4-wi-a9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -24,7 +24,7 @@
         <scene sceneID="Id3-kL-j9t">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="xap-PB-Kj7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ödeme" image="odeme" landscapeImage="odeme" largeContentSizeImage="odeme" id="eem-O5-48d"/>
+                    <tabBarItem key="tabBarItem" title="" id="eem-O5-48d"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKe-oN-d84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,7 +34,7 @@
         <scene sceneID="Orn-hU-pPk">
             <objects>
                 <viewControllerPlaceholder storyboardName="TransferPage" referencedIdentifier="GeldTransfer" id="Xup-dT-HLV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Para Gönder" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="EY0-9E-fEg"/>
+                    <tabBarItem key="tabBarItem" title="" id="EY0-9E-fEg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PC-DL-F4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,7 @@
         <scene sceneID="iw8-Qp-rHU">
             <objects>
                 <viewControllerPlaceholder storyboardName="RecommendPage" referencedIdentifier="RecommendPage" id="ABM-uX-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Öner" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="ukI-VC-1q3"/>
+                    <tabBarItem key="tabBarItem" title="" id="ukI-VC-1q3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEr-9s-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,9 +175,5 @@
     </scenes>
     <resources>
         <image name="00" width="702" height="544"/>
-        <image name="Oner" width="30" height="30"/>
-        <image name="ParaGonder" width="30" height="30"/>
-        <image name="bagis" width="30" height="30"/>
-        <image name="odeme" width="29" height="29"/>
     </resources>
 </document>
