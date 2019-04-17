@@ -76,10 +76,10 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             
         else if(response.error != nil){
             if(response.error == "403"){
-                createAnimatedPopUp(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", actionTitle: "Try Again")
+                createAnimatedPopUp(title: "Giriş yapılamadı", message: "Öğrenci numarası veya parola yanlış", actionTitle: "Tekrar Dene")
             }
             else {
-                createAnimatedPopUp(title: "Fehlende Internetverbindung", message: "connection error", actionTitle: "Try again")
+                createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", actionTitle: "Tekrar Dene")
             }
         }
             
