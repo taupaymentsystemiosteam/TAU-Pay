@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,71 +15,75 @@
             <objects>
                 <viewController storyboardIdentifier="GeldTransfer" title="Geldubertrag" id="f8N-LP-vyg" customClass="ParaGonder" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zeo-tk-KuR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-PP-MZq">
-                                <rect key="frame" x="20" y="234.66666666666666" width="374" height="29.999999999999972"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzY-N2-ql1">
-                                <rect key="frame" x="20" y="310" width="374" height="30"/>
+                                <rect key="frame" x="16" y="288.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Okul Numarası:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-qW-BAt">
-                                <rect key="frame" x="20" y="203.66666666666666" width="117" height="21"/>
+                                <rect key="frame" x="16" y="185" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-20-xhr">
-                                <rect key="frame" x="20" y="284.66666666666669" width="374" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-20-xhr">
+                                <rect key="frame" x="16" y="260" width="44.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-yl-HoP">
-                                <rect key="frame" x="20" y="390" width="374" height="216"/>
+                                <rect key="frame" x="0.0" y="334.5" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="VRd-Qt-YNZ"/>
+                                    <constraint firstAttribute="width" constant="320" id="sbX-gk-E5z"/>
+                                </constraints>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu sayfada bir arkadaşınıza okul numarasını girerek para gönderebilirsiniz." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-E8-2DH">
+                                <rect key="frame" x="16" y="99" width="288" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-PP-MZq">
+                                <rect key="frame" x="16" y="214" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rON-ma-B9v">
-                                <rect key="frame" x="343" y="656" width="51" height="30"/>
+                                <rect key="frame" x="253" y="400.5" width="51" height="30"/>
                                 <state key="normal" title="Gönder"/>
                                 <connections>
                                     <action selector="SendMoney:" destination="f8N-LP-vyg" eventType="touchUpInside" id="ns1-Rd-m6p"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dikkat: Bu sayfada bir arkadaşınıza okul numarasını girerek para gönderebilirsiniz." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-E8-2DH">
-                                <rect key="frame" x="20" y="133" width="374" height="40.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Jj1-20-xhr" firstAttribute="top" secondItem="CrX-PP-MZq" secondAttribute="bottom" constant="20" id="04j-BB-Wj7"/>
-                            <constraint firstItem="8ub-qW-BAt" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="46L-lF-nBX"/>
-                            <constraint firstItem="pzY-N2-ql1" firstAttribute="top" secondItem="Jj1-20-xhr" secondAttribute="bottom" constant="5" id="7Ik-Y8-6xQ"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="pzY-N2-ql1" secondAttribute="trailing" constant="20" id="ED1-N4-2ij"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="3d4-E8-2DH" secondAttribute="trailing" constant="20" id="HEi-UF-cNr"/>
-                            <constraint firstItem="0u7-yl-HoP" firstAttribute="top" secondItem="pzY-N2-ql1" secondAttribute="bottom" constant="50" id="MQy-6w-Kr5"/>
-                            <constraint firstItem="rON-ma-B9v" firstAttribute="top" secondItem="0u7-yl-HoP" secondAttribute="bottom" constant="50" id="OPm-cS-b7m"/>
-                            <constraint firstItem="8ub-qW-BAt" firstAttribute="top" secondItem="3d4-E8-2DH" secondAttribute="bottom" constant="30" id="QVd-GE-B6R"/>
-                            <constraint firstItem="Jj1-20-xhr" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="QxS-B8-dCA"/>
-                            <constraint firstItem="0u7-yl-HoP" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="Rq3-Y8-MaL"/>
-                            <constraint firstItem="pzY-N2-ql1" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="Uc3-gR-fgz"/>
-                            <constraint firstItem="3d4-E8-2DH" firstAttribute="top" secondItem="FRm-Dz-O2N" secondAttribute="top" constant="45" id="XIi-LT-JtX"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="0u7-yl-HoP" secondAttribute="trailing" constant="20" id="anb-kE-mlk"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="CrX-PP-MZq" secondAttribute="trailing" constant="20" id="bb2-4w-FCZ"/>
-                            <constraint firstItem="3d4-E8-2DH" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="fgy-b8-FTm"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="20" id="ipw-hO-FD9"/>
-                            <constraint firstItem="CrX-PP-MZq" firstAttribute="top" secondItem="8ub-qW-BAt" secondAttribute="bottom" constant="10" id="lOL-tx-lGA"/>
-                            <constraint firstItem="CrX-PP-MZq" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="20" id="mMf-H8-h8I"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="Jj1-20-xhr" secondAttribute="trailing" constant="20" id="mxf-FC-6Go"/>
+                            <constraint firstItem="3d4-E8-2DH" firstAttribute="top" secondItem="FRm-Dz-O2N" secondAttribute="top" constant="35" id="0ey-pb-mgg"/>
+                            <constraint firstItem="CrX-PP-MZq" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="0gs-8Y-CwB"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="16" id="3cL-1i-RgV"/>
+                            <constraint firstItem="pzY-N2-ql1" firstAttribute="top" secondItem="Jj1-20-xhr" secondAttribute="bottom" constant="8" id="7Jg-yK-y8X"/>
+                            <constraint firstItem="Jj1-20-xhr" firstAttribute="top" secondItem="CrX-PP-MZq" secondAttribute="bottom" constant="16" id="Auq-EI-I3z"/>
+                            <constraint firstItem="8ub-qW-BAt" firstAttribute="top" secondItem="3d4-E8-2DH" secondAttribute="bottom" constant="25" id="Dzg-Wx-b12"/>
+                            <constraint firstItem="8ub-qW-BAt" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="E8f-cd-BvX"/>
+                            <constraint firstItem="CrX-PP-MZq" firstAttribute="top" secondItem="8ub-qW-BAt" secondAttribute="bottom" constant="8" id="EH0-x4-ct2"/>
+                            <constraint firstItem="Jj1-20-xhr" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="EeW-YX-Arh"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="3d4-E8-2DH" secondAttribute="trailing" constant="16" id="Mbs-Xg-oK1"/>
+                            <constraint firstItem="pzY-N2-ql1" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="SzI-RM-CEp"/>
+                            <constraint firstItem="rON-ma-B9v" firstAttribute="top" secondItem="0u7-yl-HoP" secondAttribute="bottom" constant="2" id="TJ7-Yf-nSR"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="pzY-N2-ql1" secondAttribute="trailing" constant="16" id="ZB0-TW-1Sr"/>
+                            <constraint firstItem="pzY-N2-ql1" firstAttribute="top" secondItem="Jj1-20-xhr" secondAttribute="bottom" constant="8" id="ZiT-rp-98o"/>
+                            <constraint firstItem="0u7-yl-HoP" firstAttribute="top" secondItem="pzY-N2-ql1" secondAttribute="bottom" constant="16" id="fBt-bC-zGr"/>
+                            <constraint firstItem="3d4-E8-2DH" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="guZ-AG-FT2"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="CrX-PP-MZq" secondAttribute="trailing" constant="16" id="hRA-ow-W8U"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="16" id="hRj-kg-ufY"/>
+                            <constraint firstItem="0u7-yl-HoP" firstAttribute="centerX" secondItem="Zeo-tk-KuR" secondAttribute="centerX" id="zF2-HX-JVl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FRm-Dz-O2N"/>
                     </view>
@@ -96,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYK-X8-bol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586.9565217391305" y="-304.6875"/>
+            <point key="canvasLocation" x="1584.375" y="-306.25"/>
         </scene>
     </scenes>
     <resources>

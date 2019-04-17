@@ -10,7 +10,7 @@ import UIKit
 
 class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
-    let values = ["Shuttle","Mensa"]
+    let values = ["Shuttle","Yemekhane"]
     var selectedValue = "shuttle"
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

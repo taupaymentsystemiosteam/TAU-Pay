@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,45 @@
             <objects>
                 <viewController storyboardIdentifier="FeedbackPage" title="FeedBack" id="pPF-2m-Pkg" customClass="FeedbackViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qLk-cT-SUH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
+                                <rect key="frame" x="16" y="159" width="343" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-PE-KbG" userLabel="GönderButton">
+                                <rect key="frame" x="298" y="382" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gönder"/>
+                                <connections>
+                                    <action selector="GonderButton:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="kvH-d4-TMU"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg" userLabel="MensaShuttleSelect">
+                                <rect key="frame" x="16" y="243" width="169" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Shuttle"/>
+                                    <segment title="Yemekhane"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MensaShuttleSelect:" destination="pPF-2m-Pkg" eventType="valueChanged" id="Ztf-no-cXh"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
+                                <rect key="frame" x="276" y="245" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="empty_star"/>
+                                <connections>
+                                    <action selector="StarAction4:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="yUM-93-8np"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
-                                <rect key="frame" x="195" y="289" width="34" height="30"/>
+                                <rect key="frame" x="201" y="245" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="filled_star"/>
                                 <connections>
@@ -27,71 +61,37 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh" userLabel="StarButton2">
-                                <rect key="frame" x="234" y="289" width="34" height="30"/>
+                                <rect key="frame" x="224" y="245" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction2:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="51w-7M-3nu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
-                                <rect key="frame" x="312" y="289" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="empty_star"/>
-                                <connections>
-                                    <action selector="StarAction4:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="yUM-93-8np"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
-                                <rect key="frame" x="350" y="289" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="empty_star"/>
-                                <connections>
-                                    <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Dikkat: Bu sayfada yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
-                                <rect key="frame" x="30" y="194" width="354" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-PE-KbG" userLabel="GönderButton">
-                                <rect key="frame" x="343" y="506" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gönder"/>
-                                <connections>
-                                    <action selector="GonderButton:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="kvH-d4-TMU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3" userLabel="StarButton3">
-                                <rect key="frame" x="273" y="288" width="34" height="30"/>
+                                <rect key="frame" x="250" y="245" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction3:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="CqH-Ma-eXo"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg" userLabel="MensaShuttleSelect">
-                                <rect key="frame" x="30" y="290" width="157" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Yemekhane"/>
-                                    <segment title="Shuttle"/>
-                                </segments>
-                                <connections>
-                                    <action selector="MensaShuttleSelect:" destination="pPF-2m-Pkg" eventType="valueChanged" id="Ztf-no-cXh"/>
-                                </connections>
-                            </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0qG-QY-WYu">
-                                <rect key="frame" x="30" y="339" width="364" height="149"/>
+                                <rect key="frame" x="16" y="279" width="343" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
+                                <rect key="frame" x="309" y="245" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="empty_star"/>
+                                <connections>
+                                    <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
@@ -110,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXc-d1-J1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2307.2463768115945" y="-640.17857142857144"/>
+            <point key="canvasLocation" x="2304.8000000000002" y="-642.11822660098528"/>
         </scene>
     </scenes>
     <resources>
