@@ -36,13 +36,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-yl-HoP">
-                                <rect key="frame" x="0.0" y="334.5" width="320" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="VRd-Qt-YNZ"/>
-                                    <constraint firstAttribute="width" constant="320" id="sbX-gk-E5z"/>
-                                </constraints>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu sayfada bir arkadaşınıza okul numarasını girerek para gönderebilirsiniz." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-E8-2DH">
                                 <rect key="frame" x="16" y="99" width="288" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -62,12 +55,21 @@
                                     <action selector="SendMoney:" destination="f8N-LP-vyg" eventType="touchUpInside" id="ns1-Rd-m6p"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bA2-Kd-dHJ">
+                                <rect key="frame" x="187" y="328.5" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Shuttle"/>
+                                    <segment title="Mensa"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onTransferTypeSelected:" destination="f8N-LP-vyg" eventType="valueChanged" id="TCt-8s-Oiq"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3d4-E8-2DH" firstAttribute="top" secondItem="FRm-Dz-O2N" secondAttribute="top" constant="35" id="0ey-pb-mgg"/>
                             <constraint firstItem="CrX-PP-MZq" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="0gs-8Y-CwB"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="16" id="3cL-1i-RgV"/>
                             <constraint firstItem="pzY-N2-ql1" firstAttribute="top" secondItem="Jj1-20-xhr" secondAttribute="bottom" constant="8" id="7Jg-yK-y8X"/>
                             <constraint firstItem="Jj1-20-xhr" firstAttribute="top" secondItem="CrX-PP-MZq" secondAttribute="bottom" constant="16" id="Auq-EI-I3z"/>
                             <constraint firstItem="8ub-qW-BAt" firstAttribute="top" secondItem="3d4-E8-2DH" secondAttribute="bottom" constant="25" id="Dzg-Wx-b12"/>
@@ -76,14 +78,14 @@
                             <constraint firstItem="Jj1-20-xhr" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="EeW-YX-Arh"/>
                             <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="3d4-E8-2DH" secondAttribute="trailing" constant="16" id="Mbs-Xg-oK1"/>
                             <constraint firstItem="pzY-N2-ql1" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="SzI-RM-CEp"/>
-                            <constraint firstItem="rON-ma-B9v" firstAttribute="top" secondItem="0u7-yl-HoP" secondAttribute="bottom" constant="2" id="TJ7-Yf-nSR"/>
                             <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="pzY-N2-ql1" secondAttribute="trailing" constant="16" id="ZB0-TW-1Sr"/>
                             <constraint firstItem="pzY-N2-ql1" firstAttribute="top" secondItem="Jj1-20-xhr" secondAttribute="bottom" constant="8" id="ZiT-rp-98o"/>
-                            <constraint firstItem="0u7-yl-HoP" firstAttribute="top" secondItem="pzY-N2-ql1" secondAttribute="bottom" constant="16" id="fBt-bC-zGr"/>
+                            <constraint firstItem="bA2-Kd-dHJ" firstAttribute="top" secondItem="pzY-N2-ql1" secondAttribute="bottom" constant="10" id="eNO-Aa-kYm"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="16" id="fGq-9l-qsr"/>
                             <constraint firstItem="3d4-E8-2DH" firstAttribute="leading" secondItem="FRm-Dz-O2N" secondAttribute="leading" constant="16" id="guZ-AG-FT2"/>
                             <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="CrX-PP-MZq" secondAttribute="trailing" constant="16" id="hRA-ow-W8U"/>
-                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="rON-ma-B9v" secondAttribute="trailing" constant="16" id="hRj-kg-ufY"/>
-                            <constraint firstItem="0u7-yl-HoP" firstAttribute="centerX" secondItem="Zeo-tk-KuR" secondAttribute="centerX" id="zF2-HX-JVl"/>
+                            <constraint firstItem="rON-ma-B9v" firstAttribute="top" secondItem="bA2-Kd-dHJ" secondAttribute="bottom" constant="44" id="sPS-L7-Jm8"/>
+                            <constraint firstItem="FRm-Dz-O2N" firstAttribute="trailing" secondItem="bA2-Kd-dHJ" secondAttribute="trailing" constant="16" id="te6-Nl-cky"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FRm-Dz-O2N"/>
                     </view>
@@ -94,7 +96,7 @@
                         <outlet property="MiktarLabel" destination="Jj1-20-xhr" id="JOT-kP-paQ"/>
                         <outlet property="OkulNoLabel" destination="8ub-qW-BAt" id="dcl-2p-usd"/>
                         <outlet property="moneyAmount" destination="pzY-N2-ql1" id="1WB-mC-U6x"/>
-                        <outlet property="picker" destination="0u7-yl-HoP" id="fg1-dh-reu"/>
+                        <outlet property="segmentedControl" destination="bA2-Kd-dHJ" id="WjY-Mf-3Uh"/>
                         <outlet property="studentNumber" destination="CrX-PP-MZq" id="6gu-la-ccj"/>
                     </connections>
                 </viewController>
