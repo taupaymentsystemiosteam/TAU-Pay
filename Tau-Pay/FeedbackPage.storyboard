@@ -18,24 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-4Q-7pu" userLabel="Açıklama">
-                                <rect key="frame" x="16" y="159" width="343" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-PE-KbG" userLabel="GönderButton">
-                                <rect key="frame" x="298" y="382" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-PE-KbG" userLabel="GönderButton">
+                                <rect key="frame" x="263" y="378" width="51" height="30"/>
                                 <state key="normal" title="Gönder"/>
                                 <connections>
                                     <action selector="GonderButton:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="kvH-d4-TMU"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg" userLabel="MensaShuttleSelect">
-                                <rect key="frame" x="16" y="243" width="169" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0qG-QY-WYu">
+                                <rect key="frame" x="16" y="283" width="288" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="cww-kd-Svv"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkt-Dd-38O">
+                                <rect key="frame" x="16" y="114" width="288" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-6p-Czg" userLabel="MensaShuttleSelect">
+                                <rect key="frame" x="16" y="225" width="169" height="29"/>
                                 <segments>
                                     <segment title="Shuttle"/>
                                     <segment title="Yemekhane"/>
@@ -44,49 +51,56 @@
                                     <action selector="MensaShuttleSelect:" destination="pPF-2m-Pkg" eventType="valueChanged" id="Ztf-no-cXh"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
-                                <rect key="frame" x="276" y="245" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
+                                <rect key="frame" x="263" y="225" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="aJb-kb-X8M"/>
+                                    <constraint firstAttribute="width" constant="25" id="nIA-fc-XbU"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction4:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="yUM-93-8np"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
-                                <rect key="frame" x="201" y="245" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-ME-gNo" userLabel="StarButton1">
+                                <rect key="frame" x="193" y="225" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="7OV-9f-nH9"/>
+                                    <constraint firstAttribute="width" constant="25" id="xLx-Wh-1ZL"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="filled_star"/>
                                 <connections>
                                     <action selector="StarAction1:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="FXK-Y0-wAz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh" userLabel="StarButton2">
-                                <rect key="frame" x="224" y="245" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-k1-afh" userLabel="StarButton2">
+                                <rect key="frame" x="217" y="225" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1Ha-go-iYD"/>
+                                    <constraint firstAttribute="width" constant="25" id="5aA-q5-Uhv"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction2:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="51w-7M-3nu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3" userLabel="StarButton3">
-                                <rect key="frame" x="250" y="245" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-GO-dG3" userLabel="StarButton3">
+                                <rect key="frame" x="240" y="225" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="AV3-fm-mny"/>
+                                    <constraint firstAttribute="width" constant="25" id="aB3-aE-cYH"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction3:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="CqH-Ma-eXo"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Yorumlarınız" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0qG-QY-WYu">
-                                <rect key="frame" x="16" y="279" width="343" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
-                                <rect key="frame" x="309" y="245" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-R0-m4A" userLabel="StarButton5">
+                                <rect key="frame" x="286" y="225" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="B8o-2w-dgM"/>
+                                    <constraint firstAttribute="width" constant="25" id="rWn-Xd-zxo"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="empty_star"/>
                                 <connections>
                                     <action selector="StarAction5:" destination="pPF-2m-Pkg" eventType="touchUpInside" id="NpE-8w-dpN"/>
@@ -94,10 +108,31 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mef-ME-gNo" firstAttribute="leading" secondItem="RdN-6p-Czg" secondAttribute="trailing" constant="8" id="22G-XA-gt1"/>
+                            <constraint firstItem="NNZ-PE-KbG" firstAttribute="top" secondItem="0qG-QY-WYu" secondAttribute="bottom" constant="20" id="5Da-dZ-EPk"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="leading" secondItem="Mnc-GO-dG3" secondAttribute="trailing" constant="21" id="9bZ-LA-ljz"/>
+                            <constraint firstItem="Wkt-Dd-38O" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="16" id="Ab5-ay-khh"/>
+                            <constraint firstItem="qGX-MU-K9W" firstAttribute="trailing" secondItem="0qG-QY-WYu" secondAttribute="trailing" constant="16" id="Bdl-JD-PDp"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="leading" secondItem="Mef-ME-gNo" secondAttribute="trailing" constant="22" id="GMI-Ch-WSi"/>
+                            <constraint firstItem="Mnc-GO-dG3" firstAttribute="top" secondItem="Wkt-Dd-38O" secondAttribute="bottom" constant="50" id="J5E-cN-0vZ"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="top" secondItem="Wkt-Dd-38O" secondAttribute="bottom" constant="50" id="Juf-ZS-a5o"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="top" secondItem="Wkt-Dd-38O" secondAttribute="bottom" constant="50" id="LWD-sG-QiM"/>
+                            <constraint firstItem="Wkt-Dd-38O" firstAttribute="top" secondItem="qGX-MU-K9W" secondAttribute="top" constant="94" id="Mly-bT-ZCB"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="top" secondItem="Wkt-Dd-38O" secondAttribute="bottom" constant="50" id="N9C-5A-xF2"/>
+                            <constraint firstItem="JcJ-Cd-PSY" firstAttribute="leading" secondItem="Mbg-k1-afh" secondAttribute="trailing" constant="21" id="O1G-aH-IN3"/>
+                            <constraint firstItem="qGX-MU-K9W" firstAttribute="trailing" secondItem="Wkt-Dd-38O" secondAttribute="trailing" constant="16" id="ON0-1r-T6Q"/>
+                            <constraint firstItem="sbS-R0-m4A" firstAttribute="top" secondItem="Wkt-Dd-38O" secondAttribute="bottom" constant="50" id="Qsg-9t-gyQ"/>
+                            <constraint firstItem="Mbg-k1-afh" firstAttribute="leading" secondItem="RdN-6p-Czg" secondAttribute="trailing" constant="32" id="UZS-LK-D3i"/>
+                            <constraint firstItem="qGX-MU-K9W" firstAttribute="trailing" secondItem="NNZ-PE-KbG" secondAttribute="trailing" constant="6" id="V26-sC-vzh"/>
+                            <constraint firstItem="Mef-ME-gNo" firstAttribute="top" secondItem="Wkt-Dd-38O" secondAttribute="bottom" constant="50" id="WVf-WW-ZKb"/>
+                            <constraint firstItem="0qG-QY-WYu" firstAttribute="top" secondItem="RdN-6p-Czg" secondAttribute="bottom" constant="30" id="e3c-Uc-ahw"/>
+                            <constraint firstItem="RdN-6p-Czg" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="16" id="jSg-aR-aV3"/>
+                            <constraint firstItem="0qG-QY-WYu" firstAttribute="leading" secondItem="qGX-MU-K9W" secondAttribute="leading" constant="16" id="oOw-2M-oLT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
                     </view>
                     <connections>
-                        <outlet property="AcıklamaText" destination="mjb-4Q-7pu" id="1Rt-hr-XSQ"/>
                         <outlet property="FeedbackText" destination="0qG-QY-WYu" id="SVY-Hq-lSf"/>
                         <outlet property="GonderButton" destination="NNZ-PE-KbG" id="BWO-vx-5C5"/>
                         <outlet property="MensaShutteSelect" destination="RdN-6p-Czg" id="hss-0R-ghp"/>
@@ -110,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXc-d1-J1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2304.8000000000002" y="-642.11822660098528"/>
+            <point key="canvasLocation" x="2304.375" y="-642.5"/>
         </scene>
     </scenes>
     <resources>
