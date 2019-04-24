@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-1876" y="216"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar View Controller-->
         <scene sceneID="lWr-5R-jGy">
             <objects>
-                <tabBarController storyboardIdentifier="navController" id="LX9-io-Qsv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="navController" id="LX9-io-Qsv" customClass="TabbarViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xO6-Kp-fan">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

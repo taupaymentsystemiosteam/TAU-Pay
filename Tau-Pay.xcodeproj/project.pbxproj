@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1915D4DC226E19FF00BBC463 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */; };
 		19298635225F406000765D3A /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298634225F406000765D3A /* ProfileTabController.swift */; };
 		192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */; };
 		195D78292269CB140041B1CF /* TauPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 195D78282269CB140041B1CF /* TauPay.png */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		19298634225F406000765D3A /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndRequestFunctions.swift; sourceTree = "<group>"; };
 		195D78282269CB140041B1CF /* TauPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TauPay.png; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				19B58DBF223D298500B081FD /* Profil.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 				197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */,
+				1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1915D4DC226E19FF00BBC463 /* TabbarViewController.swift in Sources */,
 				76A02D68225E44E100205B71 /* QrCodeController.swift in Sources */,
 				19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */,
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,

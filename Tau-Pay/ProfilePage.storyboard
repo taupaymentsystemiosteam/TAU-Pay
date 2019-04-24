@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-90260.869565217392" y="-157.36607142857142"/>
         </scene>
-        <!--Profile Tab Controller-->
+        <!--Profile-->
         <scene sceneID="dZj-Fm-yID">
             <objects>
-                <viewController id="hO6-oZ-1rm" customClass="ProfileTabController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="hO6-oZ-1rm" customClass="ProfileTabController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DN1-XA-0wa">
                         <rect key="frame" x="0.0" y="0.0" width="330" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

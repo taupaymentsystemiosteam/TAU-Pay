@@ -13,7 +13,7 @@
         <!--Bezahlen-->
         <scene sceneID="mDg-gE-uqn">
             <objects>
-                <viewController storyboardIdentifier="Bezahlen" id="qs8-HQ-vC5" customClass="Bezahlen" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Bezahlen" title="Bezahlen" id="qs8-HQ-vC5" customClass="Bezahlen" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDy-Am-C7Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
