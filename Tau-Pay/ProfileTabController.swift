@@ -10,8 +10,7 @@ import UIKit
 
 class ProfileTabController: UIViewController {
     
-    @IBOutlet weak var nameBox: UILabel!
-    @IBOutlet weak var numberBox: UILabel!
+    @IBOutlet weak var helloBox: UILabel!
     @IBOutlet weak var shuttleBox: UILabel!
     @IBOutlet weak var cafeteriaBox: UILabel!
     
@@ -26,14 +25,12 @@ class ProfileTabController: UIViewController {
         return
     }
     
-    
     @objc func updateInfo(_ notification: Notification) {
     
         if let response = (notification.userInfo as? [String: Any]) {
-            nameBox.text = "\(String(describing: response["name"]!))"
-            numberBox.text = "\(String(describing: response["id"]!))"
-            shuttleBox.text = "\(String(describing: response["balanceShuttle"]!))"
-            cafeteriaBox.text = "\(String(describing: response["balanceMensa"]!))"
+            helloBox.text = "Merhaba \(String(describing: response["name"]!))"
+            shuttleBox.text = "\(String(describing: response["balanceShuttle"]!)) TL"
+            cafeteriaBox.text = "\(String(describing: response["balanceMensa"]!)) TL"
         }
     }
     
