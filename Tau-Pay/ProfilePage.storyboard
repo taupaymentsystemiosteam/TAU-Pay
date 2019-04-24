@@ -71,29 +71,21 @@
             </objects>
             <point key="canvasLocation" x="-88291" y="-391"/>
         </scene>
-        <!--ChangePass-->
-        <scene sceneID="ong-G4-rd4">
+        <!--settingsPage-->
+        <scene sceneID="P35-FW-TOQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChangePasswordPage" referencedIdentifier="ChangePass" id="RSj-Vj-NEn" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pKj-6V-CMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SettingsPage" referencedIdentifier="settingsPage" id="OT8-hk-cj1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNg-po-4Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88137" y="463"/>
-        </scene>
-        <!--loginPage-->
-        <scene sceneID="B8B-1c-89e">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="loginPage" id="Qwm-KL-pSr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zRt-wk-Bfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-88149" y="536"/>
+            <point key="canvasLocation" x="-89048" y="554"/>
         </scene>
         <!--FeedbackPage-->
         <scene sceneID="R3U-HC-h8q">
             <objects>
-                <viewControllerPlaceholder storyboardName="FeedbackPage" referencedIdentifier="FeedbackPage" id="gNQ-cE-Ei7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM4-Va-bYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="FeedbackPage" referencedIdentifier="FeedbackPage" id="gNQ-cE-Ei7" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="-88147" y="618"/>
+            <point key="canvasLocation" x="-89040" y="522"/>
         </scene>
         <!--Ödeme-->
         <scene sceneID="Hrd-LC-0DE">
@@ -123,10 +115,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP6-Ha-xz3">
-                                <rect key="frame" x="16" y="339" width="89" height="30"/>
-                                <state key="normal" title="Şifre Değiştir"/>
+                                <rect key="frame" x="16" y="339" width="48" height="30"/>
+                                <state key="normal" title="Ayarlar"/>
                                 <connections>
-                                    <segue destination="RSj-Vj-NEn" kind="show" id="iP7-i7-l9I"/>
+                                    <segue destination="OT8-hk-cj1" kind="show" id="Z3n-bs-zGg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-gi-4WX">
@@ -178,13 +170,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYO-Im-NcR">
-                                <rect key="frame" x="16" y="377" width="33" height="30"/>
-                                <state key="normal" title="Çıkış"/>
-                                <connections>
-                                    <segue destination="Qwm-KL-pSr" kind="showDetail" id="M8n-Va-5ZL"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="00" translatesAutoresizingMaskIntoConstraints="NO" id="nv6-xQ-a5q">
                                 <rect key="frame" x="8" y="53" width="314" height="107"/>
                                 <constraints>
@@ -207,21 +192,18 @@
                             <constraint firstItem="llO-Zj-fXY" firstAttribute="top" secondItem="jpk-uc-N1w" secondAttribute="bottom" constant="8" id="3LX-o7-Rqa"/>
                             <constraint firstItem="uxy-Yo-Vbn" firstAttribute="trailing" secondItem="nv6-xQ-a5q" secondAttribute="trailing" constant="8" id="4WT-PV-38K"/>
                             <constraint firstItem="uxy-Yo-Vbn" firstAttribute="trailing" secondItem="akM-E1-xq8" secondAttribute="trailing" constant="16" id="9GE-xA-hng"/>
-                            <constraint firstItem="sYO-Im-NcR" firstAttribute="top" secondItem="OP6-Ha-xz3" secondAttribute="bottom" constant="8" id="E1E-fZ-pIF"/>
                             <constraint firstItem="nv6-xQ-a5q" firstAttribute="top" secondItem="uxy-Yo-Vbn" secondAttribute="top" constant="9" id="Fmf-Io-k7N"/>
                             <constraint firstItem="1BB-vu-4Wj" firstAttribute="top" secondItem="WlB-8x-lHZ" secondAttribute="bottom" constant="8" id="G0f-Fa-L26"/>
                             <constraint firstItem="nv6-xQ-a5q" firstAttribute="leading" secondItem="uxy-Yo-Vbn" secondAttribute="leading" constant="8" id="G7Q-oO-cov"/>
                             <constraint firstItem="aIL-jS-GGU" firstAttribute="top" secondItem="akM-E1-xq8" secondAttribute="bottom" constant="8" id="IFx-CA-3xS"/>
                             <constraint firstItem="OP6-Ha-xz3" firstAttribute="top" secondItem="2y3-gi-4WX" secondAttribute="bottom" constant="8" id="Joo-Cl-AZ8"/>
                             <constraint firstItem="WlB-8x-lHZ" firstAttribute="top" secondItem="O14-jS-oSm" secondAttribute="bottom" constant="8" id="LdE-z6-xWq"/>
-                            <constraint firstItem="sYO-Im-NcR" firstAttribute="top" secondItem="OP6-Ha-xz3" secondAttribute="bottom" constant="8" id="NCz-jt-Dzj"/>
                             <constraint firstItem="Sy7-CG-Rbg" firstAttribute="top" secondItem="1BB-vu-4Wj" secondAttribute="bottom" constant="8" id="PKr-ZO-4RO"/>
                             <constraint firstItem="OP6-Ha-xz3" firstAttribute="leading" secondItem="uxy-Yo-Vbn" secondAttribute="leading" constant="16" id="Q1v-oM-0KI"/>
                             <constraint firstItem="O14-jS-oSm" firstAttribute="leading" secondItem="uxy-Yo-Vbn" secondAttribute="leading" constant="16" id="QIb-he-9YL"/>
                             <constraint firstItem="jpk-uc-N1w" firstAttribute="top" secondItem="aIL-jS-GGU" secondAttribute="bottom" constant="8" id="Quq-8y-WR7"/>
                             <constraint firstItem="nv6-xQ-a5q" firstAttribute="leading" secondItem="uxy-Yo-Vbn" secondAttribute="leading" constant="8" id="RH6-iS-YNk"/>
                             <constraint firstItem="O14-jS-oSm" firstAttribute="top" secondItem="nv6-xQ-a5q" secondAttribute="bottom" constant="8" id="Tbs-Lz-2dE"/>
-                            <constraint firstItem="sYO-Im-NcR" firstAttribute="leading" secondItem="uxy-Yo-Vbn" secondAttribute="leading" constant="16" id="U5G-Ar-vHp"/>
                             <constraint firstItem="O14-jS-oSm" firstAttribute="top" secondItem="nv6-xQ-a5q" secondAttribute="bottom" constant="8" id="VBi-N6-h0z"/>
                             <constraint firstItem="akM-E1-xq8" firstAttribute="top" secondItem="nv6-xQ-a5q" secondAttribute="bottom" constant="8" id="VbV-KO-r0F"/>
                             <constraint firstItem="uxy-Yo-Vbn" firstAttribute="trailing" secondItem="llO-Zj-fXY" secondAttribute="trailing" constant="16" id="YEy-dH-H93"/>
