@@ -26,7 +26,6 @@
 		19B58DC0223D298500B081FD /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBF223D298500B081FD /* Profil.swift */; };
 		19B58DC3223D298500B081FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC1223D298500B081FD /* Main.storyboard */; };
 		19B58DC5223D298600B081FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC4223D298600B081FD /* Assets.xcassets */; };
-		19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B58DC6223D298600B081FD /* LaunchScreen.storyboard */; };
 		19B58DD3223D298600B081FD /* Tau_PayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DD2223D298600B081FD /* Tau_PayTests.swift */; };
 		19B58DDE223D298600B081FD /* Tau_PayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DDD223D298600B081FD /* Tau_PayUITests.swift */; };
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
@@ -81,7 +80,6 @@
 		19B58DBF223D298500B081FD /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
 		19B58DC2223D298500B081FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B58DC4223D298600B081FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		19B58DC7223D298600B081FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B58DC9223D298600B081FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B58DCE223D298600B081FD /* Tau-PayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tau-PayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B58DD2223D298600B081FD /* Tau_PayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tau_PayTests.swift; sourceTree = "<group>"; };
@@ -161,29 +159,28 @@
 				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
 				1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */,
-				19B58DC6223D298600B081FD /* LaunchScreen.storyboard */,
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
 				76A02D65225E445A00205B71 /* QrCodePage.storyboard */,
 				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
+				1915D4E722707CA500BBC463 /* SettingsPage.storyboard */,
 				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
 				76B467EB225E25B300DD2E25 /* Bezahlen.swift */,
 				19298634225F406000765D3A /* ProfileTabController.swift */,
 				19789EDB225A3B010028029C /* ChangePasswordViewController.swift */,
+				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
 				1967EFBE224E355200E0173F /* FeedbackViewController.swift */,
 				1965F071225E717500C8427D /* FirstLogin.swift */,
 				1965F06D225E24C700C8427D /* ForgotPassword.swift */,
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
-				76A02D67225E44E100205B71 /* QrCodeController.swift */,
 				19B58DEB223D2D4C00B081FD /* Oner.swift */,
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
-				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
-				197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */,
-				1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */,
-				1915D4E722707CA500BBC463 /* SettingsPage.storyboard */,
+				76A02D67225E44E100205B71 /* QrCodeController.swift */,
 				1915D4E92270D04E00BBC463 /* SettingsController.swift */,
+				1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */,
+				197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -315,7 +312,6 @@
 			files = (
 				AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */,
 				1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */,
-				19B58DC8223D298600B081FD /* LaunchScreen.storyboard in Resources */,
 				AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
 				1965F070225E24E300C8427D /* ForgotPasswordPage.storyboard in Resources */,
@@ -410,14 +406,6 @@
 				19B58DC2223D298500B081FD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		19B58DC6223D298600B081FD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19B58DC7223D298600B081FD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
