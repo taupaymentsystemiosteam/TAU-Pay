@@ -37,7 +37,7 @@ class QrCodeController: UIViewController {
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(data, forKey: "inputMessage")
             let transform = CGAffineTransform(scaleX: 13, y: 13)
-            print("bob")
+            //print("bob")
             if let output = filter.outputImage?.transformed(by: transform) {
                 qrCodeImage.image = UIImage(ciImage: output)
             }

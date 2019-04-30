@@ -10,12 +10,9 @@ import UIKit
 
 class Bezahlen: UIViewController {
     
-    @IBOutlet weak var Name: UILabel!
-    @IBOutlet weak var Matrikelnummer: UILabel!
-    @IBOutlet weak var shuttleGuthaben: UILabel!
-    @IBOutlet weak var mensaGuthaben: UILabel!
-    @IBOutlet weak var mguthaben: UILabel!
-    @IBOutlet weak var sguthaben: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var qrCodeImage: UIImageView!
     
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -56,40 +53,10 @@ class Bezahlen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateInfo(_:)), name: .updateInfo, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
         
-        Constants.getInfo()
     
     }
     
-    @objc func failedUpdateInfo(_ notification: Notification) {
-        if let response = notification.userInfo as? [String: Any?] {
-            if (response["connectionError"] as? String == "true") {
-                // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
-                return
-            }
-            if response["error"] != nil {
-                // Handle improper connection
-                
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
-                return
-            }
-        } else {
-            print("Something went wront")
-        }
-    }
-    
-    @objc func updateInfo(_ notification: Notification) {
-        
-        if let response = (notification.userInfo as? [String: Any]) {
-            
-            Name.text = "İSİM: \(String(describing: response["name"]!))"
-            Matrikelnummer.text = "NUMARA: \(String(describing: response["id"]!))"
-            sguthaben.text = "\(String(describing: response["balanceShuttle"]!)) TL"
-            mguthaben.text = "\(String(describing: response["balanceMensa"]!)) TL"
-        }
-    }
+
     
 }
