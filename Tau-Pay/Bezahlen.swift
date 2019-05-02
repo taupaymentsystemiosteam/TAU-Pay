@@ -10,12 +10,15 @@ import UIKit
 
 class Bezahlen: UIViewController {
     
-    @IBOutlet weak var Name: UILabel!
-    @IBOutlet weak var Matrikelnummer: UILabel!
-    @IBOutlet weak var shuttleGuthaben: UILabel!
-    @IBOutlet weak var mensaGuthaben: UILabel!
-    @IBOutlet weak var mguthaben: UILabel!
-    @IBOutlet weak var sguthaben: UILabel!
+    static var qrString = ""
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var qrCodeImage: UIImageView!
+    var progressValue = 1.0
+    
+    static func setString(qr: String){
+        qrString = qr
+    }
     
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -35,7 +38,6 @@ class Bezahlen: UIViewController {
         let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
     
     
-        
         if response.connectionError {
             // Handle connection error
             createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
@@ -48,48 +50,41 @@ class Bezahlen: UIViewController {
             return
         }
         
-        QrCodeController.setString(qr: response.info!)
+        let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
+        
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 13, y: 13)
+            //print("bob")
+            if let output = filter.outputImage?.transformed(by: transform) {
+                qrCodeImage.image = UIImage(ciImage: output)
+            }
+        }
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        
+        //QrCodeController.setString(qr: response.info!)
         
         
+    }
+    
+    @objc func updateProgress() {
+        progressValue = progressValue - 0.01
+        self.progressBar.progress = Float(progressValue)
+        if progressValue != 0.0 {
+            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateInfo(_:)), name: .updateInfo, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
+    }
+    
+    //override func NewviewDidLoad(){
+    //    super.viewDidLoad()
         
-        Constants.getInfo()
+    //}
     
-    }
-    
-    @objc func failedUpdateInfo(_ notification: Notification) {
-        if let response = notification.userInfo as? [String: Any?] {
-            if (response["connectionError"] as? String == "true") {
-                // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
-                return
-            }
-            if response["error"] != nil {
-                // Handle improper connection
-                
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
-                return
-            }
-        } else {
-            print("Something went wront")
-        }
-    }
-    
-    @objc func updateInfo(_ notification: Notification) {
-        
-        if let response = (notification.userInfo as? [String: Any]) {
-            
-            Name.text = "İSİM: \(String(describing: response["name"]!))"
-            Matrikelnummer.text = "NUMARA: \(String(describing: response["id"]!))"
-            sguthaben.text = "\(String(describing: response["balanceShuttle"]!)) TL"
-            mguthaben.text = "\(String(describing: response["balanceMensa"]!)) TL"
-        }
-    }
+
     
 }
