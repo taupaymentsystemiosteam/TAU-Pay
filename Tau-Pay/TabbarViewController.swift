@@ -13,8 +13,7 @@ class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for controllers in self.viewControllers!
-        {
+        for controllers in self.viewControllers! {
             let button = UIButton(type: UIButton.ButtonType.custom)
             button.setTitle("Deneme", for: UIControl.State.normal)
             controllers.view.addSubview(button)

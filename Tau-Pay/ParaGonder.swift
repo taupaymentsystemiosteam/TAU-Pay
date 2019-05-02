@@ -61,11 +61,12 @@ class ParaGonder: UIViewController {
         
         let money : Int? = Int(moneyAmount.text!)
         
+        /*
         if money! < 0 {
             createAnimatedPopUp(title: "Çok zekisin ", message: "Para çalmaya çalışma artık Alp bitte!")
             return
         }
-        
+        */
         let json = [
             "id":studentNumber.text!
         ]

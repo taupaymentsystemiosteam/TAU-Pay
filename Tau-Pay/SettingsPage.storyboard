@@ -19,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uu-Xh-d1B">
-                                <rect key="frame" x="16" y="151" width="96" height="30"/>
-                                <state key="normal" title="Sayfa Değiştir"/>
+                                <rect key="frame" x="16" y="151" width="89" height="30"/>
+                                <state key="normal" title="Şifre Değiştir"/>
                                 <connections>
                                     <segue destination="0lf-0R-z6V" kind="show" id="ZEf-bg-L82"/>
                                 </connections>

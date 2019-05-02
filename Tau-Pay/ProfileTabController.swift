@@ -26,7 +26,7 @@ class ProfileTabController: UIViewController {
     }
     
     @objc func updateInfo(_ notification: Notification) {
-    
+        print("updated")
         if let response = (notification.userInfo as? [String: Any]) {
             helloBox.text = "Merhaba \(String(describing: response["name"]!))"
             shuttleBox.text = "\(String(describing: response["balanceShuttle"]!)) TL"
@@ -34,7 +34,13 @@ class ProfileTabController: UIViewController {
         }
     }
     
+    @IBAction func update(_ sender: Any) {
+        
+    }
+    
+    
     @objc func failedUpdateInfo(_ notification: Notification) {
+        //print("updated")
         if let response = notification.userInfo as? [String: Any?] {
             if (response["connectionError"] as? String == "true") {
                 // Handle connection error
