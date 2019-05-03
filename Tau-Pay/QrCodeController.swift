@@ -13,6 +13,10 @@ class QrCodeController: UIViewController {
     static var qrString = ""
     
     @IBOutlet weak var qrCodeImage: UIImageView!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet var pview: UIView!
+    var progressValue = 1.0
+    
     
     static func setString(qr: String) {
         qrString = qr
@@ -25,12 +29,15 @@ class QrCodeController: UIViewController {
         
         // 1
         //let myString = response.info
+        
+        
+        
         let data = QrCodeController.qrString.data(using: String.Encoding.ascii)
         
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
-            print("bob")
+            let transform = CGAffineTransform(scaleX: 13, y: 13)
+            //print("bob")
             if let output = filter.outputImage?.transformed(by: transform) {
                 qrCodeImage.image = UIImage(ciImage: output)
             }
@@ -41,14 +48,21 @@ class QrCodeController: UIViewController {
         
         
         // Every second reduce timer by 1
-        
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         
         
         // go back to previous page
-        
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         
     }
     
+    @objc func updateProgress() {
+        progressValue = progressValue - 0.01
+        self.progressBar.progress = Float(progressValue)
+        if progressValue != 0.0 {
+            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        }
+    }
 
     /*
     // MARK: - Navigation

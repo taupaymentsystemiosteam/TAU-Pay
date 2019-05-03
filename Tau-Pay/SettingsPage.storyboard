@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Controller-->
+        <scene sceneID="r78-kz-Cr4">
+            <objects>
+                <viewController storyboardIdentifier="settingsPage" id="l42-9U-hQs" customClass="SettingsController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xYR-4t-mft">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uu-Xh-d1B">
+                                <rect key="frame" x="16" y="151" width="89" height="30"/>
+                                <state key="normal" title="Şifre Değiştir"/>
+                                <connections>
+                                    <segue destination="0lf-0R-z6V" kind="show" id="ZEf-bg-L82"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrd-od-zbg">
+                                <rect key="frame" x="16" y="212" width="63" height="30"/>
+                                <state key="normal" title="Çıkış Yap"/>
+                                <connections>
+                                    <segue destination="7R5-QH-gq6" kind="presentation" id="R7d-gj-xQQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dil: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xL-Tt-m9F">
+                                <rect key="frame" x="16" y="85" width="29" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-BN-tA2">
+                                <rect key="frame" x="66" y="82" width="131" height="29"/>
+                                <segments>
+                                    <segment title="Türkçe"/>
+                                    <segment title="Deutsch"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onLanguageChange:" destination="l42-9U-hQs" eventType="valueChanged" id="vqG-hf-bfp"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9xL-Tt-m9F" firstAttribute="leading" secondItem="gvM-x7-jU6" secondAttribute="leading" constant="16" id="1CP-i2-zTb"/>
+                            <constraint firstItem="9xL-Tt-m9F" firstAttribute="top" secondItem="gvM-x7-jU6" secondAttribute="top" constant="65" id="426-1Y-37y"/>
+                            <constraint firstItem="SlS-BN-tA2" firstAttribute="top" secondItem="gvM-x7-jU6" secondAttribute="top" constant="62" id="4wu-nU-Fvr"/>
+                            <constraint firstItem="Mrd-od-zbg" firstAttribute="top" secondItem="5uu-Xh-d1B" secondAttribute="bottom" constant="31" id="KCr-Bv-6nQ"/>
+                            <constraint firstItem="Mrd-od-zbg" firstAttribute="leading" secondItem="gvM-x7-jU6" secondAttribute="leading" constant="16" id="LIF-GN-AP4"/>
+                            <constraint firstItem="5uu-Xh-d1B" firstAttribute="top" secondItem="SlS-BN-tA2" secondAttribute="bottom" constant="41" id="OnD-uP-9gN"/>
+                            <constraint firstItem="SlS-BN-tA2" firstAttribute="leading" secondItem="9xL-Tt-m9F" secondAttribute="trailing" constant="21" id="OwX-iS-Hpj"/>
+                            <constraint firstItem="SlS-BN-tA2" firstAttribute="leading" secondItem="9xL-Tt-m9F" secondAttribute="trailing" constant="21" id="UqM-16-lZl"/>
+                            <constraint firstItem="5uu-Xh-d1B" firstAttribute="leading" secondItem="gvM-x7-jU6" secondAttribute="leading" constant="16" id="nGs-Oy-YtF"/>
+                            <constraint firstItem="5uu-Xh-d1B" firstAttribute="top" secondItem="9xL-Tt-m9F" secondAttribute="bottom" constant="44" id="yU7-CQ-u7e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gvM-x7-jU6"/>
+                    </view>
+                    <connections>
+                        <outlet property="languageSelector" destination="SlS-BN-tA2" id="KxE-A9-oTA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57W-GN-Zmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.25" y="-247.5"/>
+        </scene>
+        <!--ChangePass-->
+        <scene sceneID="y1l-bo-Iod">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MS3-QZ-A2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ChangePasswordPage" referencedIdentifier="ChangePass" id="0lf-0R-z6V" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="-281"/>
+        </scene>
+        <!--initialScreen-->
+        <scene sceneID="mQT-eN-VLn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="initialScreen" id="7R5-QH-gq6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xh7-Q2-CoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="-216"/>
+        </scene>
+    </scenes>
+</document>

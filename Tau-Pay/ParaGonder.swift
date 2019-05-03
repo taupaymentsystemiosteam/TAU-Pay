@@ -8,48 +8,37 @@
 
 import UIKit
 
-class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+class ParaGonder: UIViewController {
     
-    let values = ["Shuttle","Mensa"]
-    var selectedValue = ""
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
+    var selectedValue = "shuttle"
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return values.count
-    }
+   
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return values[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
-        selectedValue = values[row]
-        
-    }
+   
     @IBOutlet var OkulNoLabel: UILabel!
     @IBOutlet var MiktarLabel: UILabel!
-    @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var moneyAmount: UITextField!
     @IBOutlet weak var studentNumber: UITextField!
-    @IBOutlet weak var picker: UIPickerView!
+
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBAction func onTransferTypeSelected(_ sender: Any)
+    {
+        selectedValue = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!
+        print(selectedValue)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
-        picker.delegate = self
-        picker.dataSource = self
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
-        // Do any additional setup after loading the view.
     }
+    
     
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -70,6 +59,14 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
             return
         }
         
+        let money : Int? = Int(moneyAmount.text!)
+        
+        /*
+        if money! < 0 {
+            createAnimatedPopUp(title: "Çok zekisin ", message: "Para çalmaya çalışma artık Alp bitte!")
+            return
+        }
+        */
         let json = [
             "id":studentNumber.text!
         ]
@@ -129,5 +126,6 @@ class ParaGonder: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource 
         }
         
         createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")
+        Constants.getInfo()
     }
 }

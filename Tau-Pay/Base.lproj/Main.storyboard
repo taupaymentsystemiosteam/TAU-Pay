@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQR-Mc-JX8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MGq-Dh-We3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <scene sceneID="5es-21-2a5">
             <objects>
                 <viewControllerPlaceholder storyboardName="BagisStoryboard" referencedIdentifier="bagis_screen" id="A9r-uh-22p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="OWF-Qu-0pO"/>
+                    <tabBarItem key="tabBarItem" title="" id="OWF-Qu-0pO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW4-wi-a9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -24,7 +24,7 @@
         <scene sceneID="Id3-kL-j9t">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfileNavController" id="xap-PB-Kj7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profil" image="Profil" landscapeImage="Profil" largeContentSizeImage="Profil" id="eem-O5-48d"/>
+                    <tabBarItem key="tabBarItem" title="" id="eem-O5-48d"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKe-oN-d84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,7 +34,7 @@
         <scene sceneID="Orn-hU-pPk">
             <objects>
                 <viewControllerPlaceholder storyboardName="TransferPage" referencedIdentifier="GeldTransfer" id="Xup-dT-HLV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Para Gönder" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="EY0-9E-fEg"/>
+                    <tabBarItem key="tabBarItem" title="" id="EY0-9E-fEg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PC-DL-F4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,11 +44,27 @@
         <scene sceneID="iw8-Qp-rHU">
             <objects>
                 <viewControllerPlaceholder storyboardName="RecommendPage" referencedIdentifier="RecommendPage" id="ABM-uX-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Öner" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="ukI-VC-1q3"/>
+                    <tabBarItem key="tabBarItem" title="" id="ukI-VC-1q3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEr-9s-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-436" y="-671"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6RL-qJ-GJc">
+            <objects>
+                <navigationController storyboardIdentifier="initialScreen" id="MGq-Dh-We3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b6X-oD-dwZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LQR-Mc-JX8" kind="relationship" relationship="rootViewController" id="4xN-34-WbI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZE-ey-3ME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2951" y="-304"/>
         </scene>
         <!--Login-->
         <scene sceneID="QF6-ie-Xlu">
@@ -69,7 +85,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Parola" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-vG-eJ0">
                                 <rect key="frame" x="47" y="350" width="296" height="46"/>
@@ -78,7 +94,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8O-GE-AFd">
                                 <rect key="frame" x="74" y="466" width="252" height="48"/>
@@ -106,7 +122,7 @@
                                 <rect key="frame" x="16" y="623" width="91" height="30"/>
                                 <state key="normal" title="Bypass Login"/>
                                 <connections>
-                                    <segue destination="LX9-io-Qsv" kind="show" id="MTh-np-dDw"/>
+                                    <segue destination="LX9-io-Qsv" kind="showDetail" id="XRw-xo-rAj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,6 +133,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jbs-Iu-7ra"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LAJ-uk-pPu"/>
                     <connections>
                         <outlet property="anmelden_" destination="b8O-GE-AFd" id="Bes-hP-2yz"/>
                         <outlet property="matrikelnummer_" destination="AVC-ec-khd" id="VZL-ny-XlY"/>
@@ -135,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-1876" y="216"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar View Controller-->
         <scene sceneID="lWr-5R-jGy">
             <objects>
-                <tabBarController storyboardIdentifier="navController" id="LX9-io-Qsv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="navController" id="LX9-io-Qsv" customClass="TabbarViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xO6-Kp-fan">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -158,9 +175,5 @@
     </scenes>
     <resources>
         <image name="00" width="702" height="544"/>
-        <image name="Oner" width="30" height="30"/>
-        <image name="ParaGonder" width="30" height="30"/>
-        <image name="Profil" width="30" height="30"/>
-        <image name="bagis" width="30" height="30"/>
     </resources>
 </document>

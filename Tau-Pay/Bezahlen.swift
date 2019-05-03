@@ -10,12 +10,15 @@ import UIKit
 
 class Bezahlen: UIViewController {
     
-    @IBOutlet weak var Name: UILabel!
-    @IBOutlet weak var Matrikelnummer: UILabel!
-    @IBOutlet weak var shuttleGuthaben: UILabel!
-    @IBOutlet weak var mensaGuthaben: UILabel!
-    @IBOutlet weak var mguthaben: UILabel!
-    @IBOutlet weak var sguthaben: UILabel!
+    static var qrString = ""
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var qrCodeImage: UIImageView!
+    var progressValue = 1.0
+    
+    static func setString(qr: String){
+        qrString = qr
+    }
     
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -35,7 +38,6 @@ class Bezahlen: UIViewController {
         let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
     
     
-        
         if response.connectionError {
             // Handle connection error
             createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
@@ -48,37 +50,41 @@ class Bezahlen: UIViewController {
             return
         }
         
-        QrCodeController.setString(qr: response.info!)
+        let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
+        
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 13, y: 13)
+            //print("bob")
+            if let output = filter.outputImage?.transformed(by: transform) {
+                qrCodeImage.image = UIImage(ciImage: output)
+            }
+        }
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        
+        //QrCodeController.setString(qr: response.info!)
         
         
-
-        
-
-        
+    }
+    
+    @objc func updateProgress() {
+        progressValue = progressValue - 0.01
+        self.progressBar.progress = Float(progressValue)
+        if progressValue != 0.0 {
+            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let response = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
-        
-        Name.text = "İSİM: " + "\(response.info!["name"]!)"
-        Matrikelnummer.text = "NUMARA: " + "\(response.info!["id"]!)"
-        sguthaben.text = "\(response.info!["balanceShuttle"]!) TL"
-        mguthaben.text = "\(response.info!["balanceMensa"]!) TL"
-        
-        // Do any additional setup after loading the view.
     }
     
+    //override func NewviewDidLoad(){
+    //    super.viewDidLoad()
+        
+    //}
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
 }

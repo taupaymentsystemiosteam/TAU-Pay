@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,63 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miktar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-6V-4R4">
-                                <rect key="frame" x="20" y="473" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miktar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-6V-4R4">
+                                <rect key="frame" x="16" y="341.33333333333331" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srK-s8-hil">
-                                <rect key="frame" x="20" y="502" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srK-s8-hil">
+                                <rect key="frame" x="16" y="370.33333333333331" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VpO-vw-uKL">
-                                <rect key="frame" x="20" y="408" width="169" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VpO-vw-uKL">
+                                <rect key="frame" x="16" y="268.33333333333331" width="263" height="29"/>
                                 <segments>
                                     <segment title="Shuttle"/>
                                     <segment title="Yemekhane"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzh-Iu-xpG">
-                                <rect key="frame" x="343" y="595" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Askıya yemek / shuttle seyahati bırakabilirsiniz." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wca-H1-jhf">
+                                <rect key="frame" x="16" y="203" width="382" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzh-Iu-xpG">
+                                <rect key="frame" x="347" y="408.33333333333331" width="51" height="30"/>
                                 <state key="normal" title="Gönder"/>
                                 <connections>
                                     <action selector="sendButton:" destination="xve-zS-lcr" eventType="touchUpInside" id="QoW-to-gyB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-Mv-BAM" userLabel="DikkatText">
-                                <rect key="frame" x="20" y="259" width="374" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Dikkat: Bu sayfada Türk-Alman Üniversitesi’nden rastgele seçilen bir ihtiyaç sahibi öğrenciye bağış yapmaktasınız. 
-Her yemek öğün için bağış miktarı 4.00 TL, her Shuttle seyahati için ise 2.10 TL’dir.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="srK-s8-hil" secondAttribute="trailing" constant="16" id="0Sd-fK-7cM"/>
+                            <constraint firstItem="srK-s8-hil" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="191-ea-YoC"/>
+                            <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="VpO-vw-uKL" secondAttribute="trailing" constant="135" id="7JX-JJ-hd1"/>
+                            <constraint firstItem="s5s-6V-4R4" firstAttribute="top" secondItem="VpO-vw-uKL" secondAttribute="bottom" constant="45" id="GKt-b4-J0e"/>
+                            <constraint firstItem="srK-s8-hil" firstAttribute="top" secondItem="s5s-6V-4R4" secondAttribute="bottom" constant="8" id="NG3-5N-vup"/>
+                            <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="Pzh-Iu-xpG" secondAttribute="trailing" constant="16" id="Nji-6D-lg1"/>
+                            <constraint firstItem="Pzh-Iu-xpG" firstAttribute="top" secondItem="srK-s8-hil" secondAttribute="bottom" constant="8" id="NzV-Ug-b3V"/>
+                            <constraint firstItem="s5s-6V-4R4" firstAttribute="top" secondItem="VpO-vw-uKL" secondAttribute="bottom" constant="45" id="QrP-gu-INM"/>
+                            <constraint firstItem="VpO-vw-uKL" firstAttribute="top" secondItem="Wca-H1-jhf" secondAttribute="bottom" constant="45" id="TMv-hO-MaI"/>
+                            <constraint firstItem="s5s-6V-4R4" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="YRa-YF-rnC"/>
+                            <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="s5s-6V-4R4" secondAttribute="trailing" constant="251" id="ZjB-fO-BjN"/>
+                            <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="Wca-H1-jhf" secondAttribute="trailing" constant="16" id="aPR-Za-LaP"/>
+                            <constraint firstItem="VpO-vw-uKL" firstAttribute="top" secondItem="Wca-H1-jhf" secondAttribute="bottom" constant="45" id="aec-gS-fll"/>
+                            <constraint firstItem="srK-s8-hil" firstAttribute="top" secondItem="s5s-6V-4R4" secondAttribute="bottom" constant="8" id="gio-cu-grh"/>
+                            <constraint firstItem="Wca-H1-jhf" firstAttribute="top" secondItem="UH8-o1-LVg" secondAttribute="top" constant="115" id="hbK-eO-WlD"/>
+                            <constraint firstItem="Wca-H1-jhf" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="kLQ-Fb-Y5Q"/>
+                            <constraint firstItem="VpO-vw-uKL" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="noE-ZC-FDP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bağış" image="bagis" landscapeImage="bagis" largeContentSizeImage="bagis" id="vx8-96-o0h"/>
+                    <tabBarItem key="tabBarItem" title="Askıda" image="Aski" landscapeImage="Aski" largeContentSizeImage="Aski" id="vx8-96-o0h"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="DikkatText" destination="Bia-Mv-BAM" id="MZW-RQ-JF5"/>
                         <outlet property="amountBox" destination="srK-s8-hil" id="ECm-UV-HNE"/>
                         <outlet property="selection" destination="VpO-vw-uKL" id="zOH-hz-zLm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1t3-RR-iNz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-1033.2589285714284"/>
+            <point key="canvasLocation" x="748.125" y="-1033.75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bagis" width="30" height="30"/>
+        <image name="Aski" width="30" height="30"/>
     </resources>
 </document>

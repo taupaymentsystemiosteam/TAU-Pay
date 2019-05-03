@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var matrikelnummer_: UITextField!
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         return
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +31,9 @@ class LoginViewController: UIViewController {
         addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
         
         matrikelnummer_.layer.cornerRadius = 15.0
+        
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
         // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
@@ -72,10 +76,10 @@ class LoginViewController: UIViewController {
             
         else if(response.error != nil){
             if(response.error == "403"){
-                createAnimatedPopUp(title: "Verbindung fehlgeschlagen", message: "Matrikelnummer oder Passwort wurde falsch eingegeben", actionTitle: "Try Again")
+                createAnimatedPopUp(title: "Giriş yapılamadı", message: "Öğrenci numarası veya parola yanlış", actionTitle: "Tekrar Dene")
             }
             else {
-                createAnimatedPopUp(title: "Fehlende Internetverbindung", message: "connection error", actionTitle: "Try again")
+                createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", actionTitle: "Tekrar Dene")
             }
         }
             

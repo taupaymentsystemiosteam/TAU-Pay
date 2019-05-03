@@ -12,9 +12,28 @@ class Constants
     
     static let IP = "http://45.77.214.216:8080"
     static var TOKEN = ""
+    static var language = 0 // 0 for Turkish 1 for German
+    
+    static func setLanguage(newLanguage: Int) {
+        language = newLanguage
+    }
     
     static func setToken(token: String){
         TOKEN = token
+    }
+    
+    static func getInfo() {
+        
+        let responseLocal = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
+        
+        if responseLocal.error != nil || responseLocal.connectionError {
+            var response: [String: Any?] = [:]
+            response["connectionError"] = String(responseLocal.connectionError)
+            response["error"] = responseLocal.error
+        }
+        else {
+            NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: responseLocal.info)
+        }
     }
     
     /*
