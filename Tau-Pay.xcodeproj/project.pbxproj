@@ -32,8 +32,6 @@
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
 		76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D63225E267B00205B71 /* BezahlenPage.storyboard */; };
-		76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D65225E445A00205B71 /* QrCodePage.storyboard */; };
-		76A02D68225E44E100205B71 /* QrCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A02D67225E44E100205B71 /* QrCodeController.swift */; };
 		76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B467EB225E25B300DD2E25 /* Bezahlen.swift */; };
 		AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392246224CF0EA00F1765E /* ProfilePage.storyboard */; };
 		AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392248224CF10000F1765E /* RecommendPage.storyboard */; };
@@ -91,8 +89,6 @@
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76A02D63225E267B00205B71 /* BezahlenPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BezahlenPage.storyboard; sourceTree = "<group>"; };
-		76A02D65225E445A00205B71 /* QrCodePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QrCodePage.storyboard; sourceTree = "<group>"; };
-		76A02D67225E44E100205B71 /* QrCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeController.swift; sourceTree = "<group>"; };
 		76B467EB225E25B300DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
 		AC392246224CF0EA00F1765E /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		AC392248224CF10000F1765E /* RecommendPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendPage.storyboard; sourceTree = "<group>"; };
@@ -160,7 +156,6 @@
 				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
 				1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */,
 				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
-				76A02D65225E445A00205B71 /* QrCodePage.storyboard */,
 				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
 				1915D4E722707CA500BBC463 /* SettingsPage.storyboard */,
 				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
@@ -177,7 +172,6 @@
 				19B58DEB223D2D4C00B081FD /* Oner.swift */,
 				19B58DED223D323800B081FD /* ParaGonder.swift */,
 				19B58DBF223D298500B081FD /* Profil.swift */,
-				76A02D67225E44E100205B71 /* QrCodeController.swift */,
 				1915D4E92270D04E00BBC463 /* SettingsController.swift */,
 				1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */,
 				197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */,
@@ -317,7 +311,6 @@
 				1965F070225E24E300C8427D /* ForgotPasswordPage.storyboard in Resources */,
 				AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */,
 				76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */,
-				76A02D66225E445A00205B71 /* QrCodePage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
 				AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */,
 				195D78292269CB140041B1CF /* TauPay.png in Resources */,
@@ -349,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1915D4DC226E19FF00BBC463 /* TabbarViewController.swift in Sources */,
-				76A02D68225E44E100205B71 /* QrCodeController.swift in Sources */,
 				19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */,
 				1915D4EA2270D04E00BBC463 /* SettingsController.swift in Sources */,
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
