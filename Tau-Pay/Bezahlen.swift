@@ -86,11 +86,7 @@ class Bezahlen: UIViewController {
         let alert = UIAlertController(title: "Emin misin", message: "Iptal etmek istediginize emin misiniz?", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Eminim", style: UIAlertAction.Style.default, handler: {(action) in
-            self.infotext.isHidden = false
-            self.progressBar.isHidden = true
-            self.qrCodeImage.isHidden = true
-            self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
-            
+                   self.turnToDefault()
         }))
         
         alert.addAction(UIAlertAction(title: "Iptal", style: UIAlertAction.Style.default, handler: {(action) in
@@ -146,10 +142,7 @@ class Bezahlen: UIViewController {
         {
             print("more bad news we are poor! Show dialog!")
             DispatchQueue.main.async {
-                self.infotext.isHidden = false
-                self.progressBar.isHidden = true
-                self.qrCodeImage.isHidden = true
-                self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+                       self.turnToDefault()
                 self.createAnimatedPopUp(title: "Odeme", message: "fakirsin galiba!")
             }
         }
@@ -157,10 +150,7 @@ class Bezahlen: UIViewController {
         {
             print("Yeeey we are not broke! Paid succesfully!")
             DispatchQueue.main.async {
-                self.infotext.isHidden = false
-                self.progressBar.isHidden = true
-                self.qrCodeImage.isHidden = true
-                self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+                self.turnToDefault()
                 self.createAnimatedPopUp(title: "Odeme", message: "Odeme Basarili!")
             }
         }
@@ -190,6 +180,14 @@ class Bezahlen: UIViewController {
         progressBar.isHidden = true
         qrCodeImage.isHidden = true
         
+    }
+    
+    func turnToDefault()
+    {
+        self.infotext.isHidden = false
+        self.progressBar.isHidden = true
+        self.qrCodeImage.isHidden = true
+        self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
     }
     
     
