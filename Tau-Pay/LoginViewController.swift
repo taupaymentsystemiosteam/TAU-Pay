@@ -24,6 +24,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var text = NSLocalizedString("Giriş", comment: "Giriş Yapmak için")
+        anmelden_.setTitle(text, for: UIControl.State.normal)
+        
         let matrikelnummerImage = UIImage(named: "user_male")
         addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         
