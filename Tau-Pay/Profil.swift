@@ -47,9 +47,7 @@ class SecondViewController: UIViewController {
      
     */
     
-    func openHamburger() {
-        //  Here I
-        
+    func openHamburger() {      
         
         DispatchQueue.main.async {
             Constants.getInfo()
