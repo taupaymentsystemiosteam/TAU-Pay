@@ -188,6 +188,7 @@ class Bezahlen: UIViewController {
         self.progressBar.isHidden = true
         self.qrCodeImage.isHidden = true
         self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+        progressValue = 1
     }
     
     
