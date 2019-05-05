@@ -33,41 +33,44 @@ class Bezahlen: UIViewController {
     }
     
     @IBAction func paybutton(_ sender: Any) {
-        progressBar.isHidden = false
-        infotext.isHidden = true
-        
-        let dict: [String: String] = [:]
+        if qrCodeImage.isHidden {
+            progressBar.isHidden = false
+            infotext.isHidden = true
+            qrCodeImage.isHidden = false
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
             
-        let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
-    
-    
-        if response.connectionError {
-            // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
-            return
-        }
-        if response.error != nil {
-            // Handle improper connection
-
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
-            return
-        }
+            let dict: [String: String] = [:]
+            
+            let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
         
-        let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
         
-        if let filter = CIFilter(name: "CIQRCodeGenerator") {
-            filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 17, y: 17)
-            //print("bob")
-            if let output = filter.outputImage?.transformed(by: transform) {
-                qrCodeImage.image = UIImage(ciImage: output)
+            if response.connectionError {
+                // Handle connection error
+                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+                return
             }
+            if response.error != nil {
+                // Handle improper connection
+
+                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                return
+            }
+            
+            let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
+            
+            if let filter = CIFilter(name: "CIQRCodeGenerator") {
+                filter.setValue(data, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 20, y: 20)
+                //print("bob")
+                if let output = filter.outputImage?.transformed(by: transform) {
+                    qrCodeImage.image = UIImage(ciImage: output)
+                }
+            }
+            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        
+            //QrCodeController.setString(qr: response.info!)
+        
         }
-        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
-        
-        //QrCodeController.setString(qr: response.info!)
-        
-        
     }
     
     @objc func Ispaid(){
@@ -79,9 +82,12 @@ class Bezahlen: UIViewController {
         if progressValue != 0.0 {
             self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         }
-        if progressBar.progress == 0    {        infotext.isHidden = false
+        if progressBar.progress == 0    {
+            infotext.isHidden = false
             progressBar.isHidden = true
             qrCodeImage.isHidden = true
+            progressValue = 1
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
         }
         
     }
@@ -89,6 +95,7 @@ class Bezahlen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progressBar.isHidden = true
+        qrCodeImage.isHidden = true
         infotext.text = "Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız."
         
     }
