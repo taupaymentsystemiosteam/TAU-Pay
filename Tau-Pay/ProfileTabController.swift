@@ -26,11 +26,11 @@ class ProfileTabController: UIViewController {
     }
     
     @objc func updateInfo(_ notification: Notification) {
-        print("updated")
         if let response = (notification.userInfo as? [String: Any]) {
             helloBox.text = "Merhaba \(String(describing: response["name"]!))"
             shuttleBox.text = "\(String(describing: response["balanceShuttle"]!)) TL"
             cafeteriaBox.text = "\(String(describing: response["balanceMensa"]!)) TL"
+            print("updated")
         }
     }
     
@@ -74,6 +74,7 @@ class ProfileTabController: UIViewController {
          NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
     }
     
     

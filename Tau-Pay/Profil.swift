@@ -52,7 +52,7 @@ class SecondViewController: UIViewController {
         
         
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: .updateInfo, object: self)
+            Constants.getInfo()
         }
         leadingConstraint.constant = 0
         UIView.animate(withDuration: 0.3, animations: self.view.layoutIfNeeded)
