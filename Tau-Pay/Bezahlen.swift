@@ -10,6 +10,8 @@ import UIKit
 
 class Bezahlen: UIViewController {
     
+    var timer = Timer()
+    var isTimerStarted = false
     static var qrString = ""
     
     @IBOutlet weak var infotext: UILabel!
@@ -89,7 +91,6 @@ class Bezahlen: UIViewController {
             progressValue = 1
             NSObject.cancelPreviousPerformRequests(withTarget: self)
         }
-        
     }
 
     override func viewDidLoad() {
