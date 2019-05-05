@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Bu sayfada bir arkadaşınıza okul numarasını girerek para gönderebilirsiniz."; ObjectID = "3d4-E8-2DH"; */
+"3d4-E8-2DH.text" = "Bu sayfada bir arkadaşınıza okul numarasını girerek para gönderebilirsiniz.";
+
+/* Class = "UILabel"; text = "Okul Numarası:"; ObjectID = "8ub-qW-BAt"; */
+"8ub-qW-BAt.text" = "Okul Numarası:";
+
+/* Class = "UILabel"; text = "Tutar:"; ObjectID = "Jj1-20-xhr"; */
+"Jj1-20-xhr.text" = "Tutar:";
+
+/* Class = "UITabBarItem"; title = "Para Gönder"; ObjectID = "Y2N-86-2sw"; */
+"Y2N-86-2sw.title" = "Para Gönder";
+
+/* Class = "UISegmentedControl"; bA2-Kd-dHJ.segmentTitles[0] = "Shuttle"; ObjectID = "bA2-Kd-dHJ"; */
+"bA2-Kd-dHJ.segmentTitles[0]" = "Shuttle";
+
+/* Class = "UISegmentedControl"; bA2-Kd-dHJ.segmentTitles[1] = "Mensa"; ObjectID = "bA2-Kd-dHJ"; */
+"bA2-Kd-dHJ.segmentTitles[1]" = "Mensa";
+
+/* Class = "UIViewController"; title = "Geldubertrag"; ObjectID = "f8N-LP-vyg"; */
+"f8N-LP-vyg.title" = "Geldubertrag";
+
+/* Class = "UIButton"; normalTitle = "Gönder"; ObjectID = "rON-ma-B9v"; */
+"rON-ma-B9v.normalTitle" = "Gönder";

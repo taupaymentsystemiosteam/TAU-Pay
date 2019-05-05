@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "New Pass: Again!"; ObjectID = "7l8-IY-btJ"; */
+"7l8-IY-btJ.text" = "New Pass: Again!";
+
+/* Class = "UILabel"; text = "New Pass:"; ObjectID = "KGx-ey-w5u"; */
+"KGx-ey-w5u.text" = "New Pass:";
+
+/* Class = "UIButton"; normalTitle = "Change my mind!"; ObjectID = "RAk-Oe-LLO"; */
+"RAk-Oe-LLO.normalTitle" = "Change my mind!";
+
+/* Class = "UILabel"; text = "You know this is your first Login. Change that ducking Pass!"; ObjectID = "Z3T-mv-eur"; */
+"Z3T-mv-eur.text" = "You know this is your first Login. Change that ducking Pass!";

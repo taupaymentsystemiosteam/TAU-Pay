@@ -8,17 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1915D4DC226E19FF00BBC463 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */; };
-		1915D4E822707CA500BBC463 /* SettingsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1915D4E722707CA500BBC463 /* SettingsPage.storyboard */; };
 		1915D4EA2270D04E00BBC463 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1915D4E92270D04E00BBC463 /* SettingsController.swift */; };
 		19298635225F406000765D3A /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298634225F406000765D3A /* ProfileTabController.swift */; };
 		192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */; };
 		195D78292269CB140041B1CF /* TauPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 195D78282269CB140041B1CF /* TauPay.png */; };
 		1965F06E225E24C700C8427D /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965F06D225E24C700C8427D /* ForgotPassword.swift */; };
-		1965F070225E24E300C8427D /* ForgotPasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */; };
 		1965F072225E717500C8427D /* FirstLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965F071225E717500C8427D /* FirstLogin.swift */; };
-		1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */; };
 		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
-		19789EDA225A39AD0028029C /* ChangePasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */; };
 		19789EDC225A3B010028029C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19789EDB225A3B010028029C /* ChangePasswordViewController.swift */; };
 		197DFBE4225FAD8000F84A18 /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */; };
 		19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DBB223D298500B081FD /* AppDelegate.swift */; };
@@ -31,13 +27,18 @@
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
-		76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A02D63225E267B00205B71 /* BezahlenPage.storyboard */; };
+		19E9CF41227F5D83006E6EE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF43227F5D83006E6EE5 /* Localizable.strings */; };
+		19E9CF46227F5DC1006E6EE5 /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF48227F5DC1006E6EE5 /* BagisStoryboard.storyboard */; };
+		19E9CF4F227F5E6E006E6EE5 /* BezahlenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF51227F5E6E006E6EE5 /* BezahlenPage.storyboard */; };
+		19E9CF58227F5E7C006E6EE5 /* ChangePasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF5A227F5E7C006E6EE5 /* ChangePasswordPage.storyboard */; };
+		19E9CF5B227F5E83006E6EE5 /* FeedbackPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF5D227F5E83006E6EE5 /* FeedbackPage.storyboard */; };
+		19E9CF5E227F5E87006E6EE5 /* FirstLoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF60227F5E87006E6EE5 /* FirstLoginPage.storyboard */; };
+		19E9CF61227F5E8D006E6EE5 /* ForgotPasswordPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF63227F5E8D006E6EE5 /* ForgotPasswordPage.storyboard */; };
+		19E9CF64227F5E91006E6EE5 /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF66227F5E91006E6EE5 /* ProfilePage.storyboard */; };
+		19E9CF67227F5E95006E6EE5 /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF69227F5E95006E6EE5 /* RecommendPage.storyboard */; };
+		19E9CF6A227F5E9A006E6EE5 /* SettingsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF6C227F5E9A006E6EE5 /* SettingsPage.storyboard */; };
+		19E9CF6D227F5E9D006E6EE5 /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF6F227F5E9D006E6EE5 /* TransferPage.storyboard */; };
 		76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B467EB225E25B300DD2E25 /* Bezahlen.swift */; };
-		AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392246224CF0EA00F1765E /* ProfilePage.storyboard */; };
-		AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392248224CF10000F1765E /* RecommendPage.storyboard */; };
-		AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224A224CF11700F1765E /* TransferPage.storyboard */; };
-		AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */; };
-		AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC392250224CF28200F1765E /* FeedbackPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,17 +60,13 @@
 
 /* Begin PBXFileReference section */
 		1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
-		1915D4E722707CA500BBC463 /* SettingsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPage.storyboard; sourceTree = "<group>"; };
 		1915D4E92270D04E00BBC463 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		19298634225F406000765D3A /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndRequestFunctions.swift; sourceTree = "<group>"; };
 		195D78282269CB140041B1CF /* TauPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TauPay.png; sourceTree = "<group>"; };
 		1965F06D225E24C700C8427D /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
-		1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordPage.storyboard; sourceTree = "<group>"; };
 		1965F071225E717500C8427D /* FirstLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLogin.swift; sourceTree = "<group>"; };
-		1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BagisStoryboard.storyboard; sourceTree = "<group>"; };
 		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordPage.storyboard; sourceTree = "<group>"; };
 		19789EDB225A3B010028029C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
 		19B58DB8223D298500B081FD /* Tau-Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tau-Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,13 +85,53 @@
 		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		76A02D63225E267B00205B71 /* BezahlenPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BezahlenPage.storyboard; sourceTree = "<group>"; };
+		19E9CF34227F5A56006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		19E9CF35227F5A5D006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		19E9CF37227F5A64006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		19E9CF42227F5D83006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19E9CF44227F5D88006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19E9CF45227F5D89006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19E9CF47227F5DC1006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BagisStoryboard.storyboard; sourceTree = "<group>"; };
+		19E9CF4A227F5DCA006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BagisStoryboard.strings; sourceTree = "<group>"; };
+		19E9CF4C227F5DCF006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/BagisStoryboard.strings; sourceTree = "<group>"; };
+		19E9CF4E227F5DD0006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BagisStoryboard.strings; sourceTree = "<group>"; };
+		19E9CF50227F5E6E006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BezahlenPage.storyboard; sourceTree = "<group>"; };
+		19E9CF53227F5E74006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BezahlenPage.strings; sourceTree = "<group>"; };
+		19E9CF55227F5E75006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/BezahlenPage.strings; sourceTree = "<group>"; };
+		19E9CF57227F5E76006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BezahlenPage.strings; sourceTree = "<group>"; };
+		19E9CF59227F5E7C006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChangePasswordPage.storyboard; sourceTree = "<group>"; };
+		19E9CF5C227F5E83006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FeedbackPage.storyboard; sourceTree = "<group>"; };
+		19E9CF5F227F5E87006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FirstLoginPage.storyboard; sourceTree = "<group>"; };
+		19E9CF62227F5E8D006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ForgotPasswordPage.storyboard; sourceTree = "<group>"; };
+		19E9CF65227F5E91006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProfilePage.storyboard; sourceTree = "<group>"; };
+		19E9CF68227F5E95006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RecommendPage.storyboard; sourceTree = "<group>"; };
+		19E9CF6B227F5E9A006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingsPage.storyboard; sourceTree = "<group>"; };
+		19E9CF6E227F5E9D006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TransferPage.storyboard; sourceTree = "<group>"; };
+		19E9CF71227F5EA7006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ChangePasswordPage.strings; sourceTree = "<group>"; };
+		19E9CF73227F5EA8006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ChangePasswordPage.strings; sourceTree = "<group>"; };
+		19E9CF75227F5EA8006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ChangePasswordPage.strings; sourceTree = "<group>"; };
+		19E9CF77227F5EAC006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FeedbackPage.strings; sourceTree = "<group>"; };
+		19E9CF79227F5EAC006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FeedbackPage.strings; sourceTree = "<group>"; };
+		19E9CF7B227F5EAD006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FeedbackPage.strings; sourceTree = "<group>"; };
+		19E9CF7D227F5EB0006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FirstLoginPage.strings; sourceTree = "<group>"; };
+		19E9CF7F227F5EB0006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FirstLoginPage.strings; sourceTree = "<group>"; };
+		19E9CF81227F5EB1006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FirstLoginPage.strings; sourceTree = "<group>"; };
+		19E9CF83227F5EB4006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ForgotPasswordPage.strings; sourceTree = "<group>"; };
+		19E9CF85227F5EB4006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ForgotPasswordPage.strings; sourceTree = "<group>"; };
+		19E9CF87227F5EB5006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ForgotPasswordPage.strings; sourceTree = "<group>"; };
+		19E9CF89227F5EB8006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ProfilePage.strings; sourceTree = "<group>"; };
+		19E9CF8B227F5EB9006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ProfilePage.strings; sourceTree = "<group>"; };
+		19E9CF8D227F5EBD006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProfilePage.strings; sourceTree = "<group>"; };
+		19E9CF8F227F5EC1006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RecommendPage.strings; sourceTree = "<group>"; };
+		19E9CF91227F5EC4006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/RecommendPage.strings; sourceTree = "<group>"; };
+		19E9CF93227F5EC5006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/RecommendPage.strings; sourceTree = "<group>"; };
+		19E9CF95227F5ECB006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingsPage.strings; sourceTree = "<group>"; };
+		19E9CF97227F5ECB006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/SettingsPage.strings; sourceTree = "<group>"; };
+		19E9CF99227F5ECD006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SettingsPage.strings; sourceTree = "<group>"; };
+		19E9CF9B227F5ED1006E6EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TransferPage.strings; sourceTree = "<group>"; };
+		19E9CF9D227F5ED2006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/TransferPage.strings; sourceTree = "<group>"; };
+		19E9CF9F227F5ED3006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TransferPage.strings; sourceTree = "<group>"; };
 		76B467EB225E25B300DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
-		AC392246224CF0EA00F1765E /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
-		AC392248224CF10000F1765E /* RecommendPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendPage.storyboard; sourceTree = "<group>"; };
-		AC39224A224CF11700F1765E /* TransferPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferPage.storyboard; sourceTree = "<group>"; };
-		AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLoginPage.storyboard; sourceTree = "<group>"; };
-		AC392250224CF28200F1765E /* FeedbackPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,16 +186,16 @@
 				195D78282269CB140041B1CF /* TauPay.png */,
 				19B58DC9223D298600B081FD /* Info.plist */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
-				1967EFBC224CE0FB00E0173F /* BagisStoryboard.storyboard */,
-				76A02D63225E267B00205B71 /* BezahlenPage.storyboard */,
-				19789ED9225A39AD0028029C /* ChangePasswordPage.storyboard */,
-				AC392250224CF28200F1765E /* FeedbackPage.storyboard */,
-				AC39224E224CF19800F1765E /* FirstLoginPage.storyboard */,
-				1965F06F225E24E300C8427D /* ForgotPasswordPage.storyboard */,
-				AC392246224CF0EA00F1765E /* ProfilePage.storyboard */,
-				AC392248224CF10000F1765E /* RecommendPage.storyboard */,
-				1915D4E722707CA500BBC463 /* SettingsPage.storyboard */,
-				AC39224A224CF11700F1765E /* TransferPage.storyboard */,
+				19E9CF48227F5DC1006E6EE5 /* BagisStoryboard.storyboard */,
+				19E9CF51227F5E6E006E6EE5 /* BezahlenPage.storyboard */,
+				19E9CF5A227F5E7C006E6EE5 /* ChangePasswordPage.storyboard */,
+				19E9CF5D227F5E83006E6EE5 /* FeedbackPage.storyboard */,
+				19E9CF60227F5E87006E6EE5 /* FirstLoginPage.storyboard */,
+				19E9CF63227F5E8D006E6EE5 /* ForgotPasswordPage.storyboard */,
+				19E9CF66227F5E91006E6EE5 /* ProfilePage.storyboard */,
+				19E9CF69227F5E95006E6EE5 /* RecommendPage.storyboard */,
+				19E9CF6C227F5E9A006E6EE5 /* SettingsPage.storyboard */,
+				19E9CF6F227F5E9D006E6EE5 /* TransferPage.storyboard */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
 				19B58DBD223D298500B081FD /* Bagis.swift */,
 				76B467EB225E25B300DD2E25 /* Bezahlen.swift */,
@@ -175,6 +212,7 @@
 				1915D4E92270D04E00BBC463 /* SettingsController.swift */,
 				1915D4DB226E19FF00BBC463 /* TabbarViewController.swift */,
 				197DFBE3225FAD8000F84A18 /* NotificationCenterExtension.swift */,
+				19E9CF43227F5D83006E6EE5 /* Localizable.strings */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -286,6 +324,8 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
+				de,
 			);
 			mainGroup = 19B58DAF223D298500B081FD;
 			productRefGroup = 19B58DB9223D298500B081FD /* Products */;
@@ -304,19 +344,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC392251224CF28200F1765E /* FeedbackPage.storyboard in Resources */,
-				1967EFBD224CE0FB00E0173F /* BagisStoryboard.storyboard in Resources */,
-				AC392249224CF10000F1765E /* RecommendPage.storyboard in Resources */,
+				19E9CF5B227F5E83006E6EE5 /* FeedbackPage.storyboard in Resources */,
+				19E9CF46227F5DC1006E6EE5 /* BagisStoryboard.storyboard in Resources */,
+				19E9CF67227F5E95006E6EE5 /* RecommendPage.storyboard in Resources */,
+				19E9CF41227F5D83006E6EE5 /* Localizable.strings in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
-				1965F070225E24E300C8427D /* ForgotPasswordPage.storyboard in Resources */,
-				AC392247224CF0EA00F1765E /* ProfilePage.storyboard in Resources */,
-				76A02D64225E267B00205B71 /* BezahlenPage.storyboard in Resources */,
+				19E9CF61227F5E8D006E6EE5 /* ForgotPasswordPage.storyboard in Resources */,
+				19E9CF64227F5E91006E6EE5 /* ProfilePage.storyboard in Resources */,
+				19E9CF4F227F5E6E006E6EE5 /* BezahlenPage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
-				AC39224F224CF19800F1765E /* FirstLoginPage.storyboard in Resources */,
+				19E9CF5E227F5E87006E6EE5 /* FirstLoginPage.storyboard in Resources */,
 				195D78292269CB140041B1CF /* TauPay.png in Resources */,
-				1915D4E822707CA500BBC463 /* SettingsPage.storyboard in Resources */,
-				19789EDA225A39AD0028029C /* ChangePasswordPage.storyboard in Resources */,
-				AC39224B224CF11700F1765E /* TransferPage.storyboard in Resources */,
+				19E9CF6A227F5E9A006E6EE5 /* SettingsPage.storyboard in Resources */,
+				19E9CF58227F5E7C006E6EE5 /* ChangePasswordPage.storyboard in Resources */,
+				19E9CF6D227F5E9D006E6EE5 /* TransferPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +437,131 @@
 			isa = PBXVariantGroup;
 			children = (
 				19B58DC2223D298500B081FD /* Base */,
+				19E9CF34227F5A56006E6EE5 /* tr */,
+				19E9CF35227F5A5D006E6EE5 /* de */,
+				19E9CF37227F5A64006E6EE5 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF43227F5D83006E6EE5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF42227F5D83006E6EE5 /* en */,
+				19E9CF44227F5D88006E6EE5 /* tr */,
+				19E9CF45227F5D89006E6EE5 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		19E9CF48227F5DC1006E6EE5 /* BagisStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF47227F5DC1006E6EE5 /* Base */,
+				19E9CF4A227F5DCA006E6EE5 /* en */,
+				19E9CF4C227F5DCF006E6EE5 /* tr */,
+				19E9CF4E227F5DD0006E6EE5 /* de */,
+			);
+			name = BagisStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF51227F5E6E006E6EE5 /* BezahlenPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF50227F5E6E006E6EE5 /* Base */,
+				19E9CF53227F5E74006E6EE5 /* en */,
+				19E9CF55227F5E75006E6EE5 /* tr */,
+				19E9CF57227F5E76006E6EE5 /* de */,
+			);
+			name = BezahlenPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF5A227F5E7C006E6EE5 /* ChangePasswordPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF59227F5E7C006E6EE5 /* Base */,
+				19E9CF71227F5EA7006E6EE5 /* en */,
+				19E9CF73227F5EA8006E6EE5 /* tr */,
+				19E9CF75227F5EA8006E6EE5 /* de */,
+			);
+			name = ChangePasswordPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF5D227F5E83006E6EE5 /* FeedbackPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF5C227F5E83006E6EE5 /* Base */,
+				19E9CF77227F5EAC006E6EE5 /* en */,
+				19E9CF79227F5EAC006E6EE5 /* tr */,
+				19E9CF7B227F5EAD006E6EE5 /* de */,
+			);
+			name = FeedbackPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF60227F5E87006E6EE5 /* FirstLoginPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF5F227F5E87006E6EE5 /* Base */,
+				19E9CF7D227F5EB0006E6EE5 /* en */,
+				19E9CF7F227F5EB0006E6EE5 /* tr */,
+				19E9CF81227F5EB1006E6EE5 /* de */,
+			);
+			name = FirstLoginPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF63227F5E8D006E6EE5 /* ForgotPasswordPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF62227F5E8D006E6EE5 /* Base */,
+				19E9CF83227F5EB4006E6EE5 /* en */,
+				19E9CF85227F5EB4006E6EE5 /* tr */,
+				19E9CF87227F5EB5006E6EE5 /* de */,
+			);
+			name = ForgotPasswordPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF66227F5E91006E6EE5 /* ProfilePage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF65227F5E91006E6EE5 /* Base */,
+				19E9CF89227F5EB8006E6EE5 /* en */,
+				19E9CF8B227F5EB9006E6EE5 /* tr */,
+				19E9CF8D227F5EBD006E6EE5 /* de */,
+			);
+			name = ProfilePage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF69227F5E95006E6EE5 /* RecommendPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF68227F5E95006E6EE5 /* Base */,
+				19E9CF8F227F5EC1006E6EE5 /* en */,
+				19E9CF91227F5EC4006E6EE5 /* tr */,
+				19E9CF93227F5EC5006E6EE5 /* de */,
+			);
+			name = RecommendPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF6C227F5E9A006E6EE5 /* SettingsPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF6B227F5E9A006E6EE5 /* Base */,
+				19E9CF95227F5ECB006E6EE5 /* en */,
+				19E9CF97227F5ECB006E6EE5 /* tr */,
+				19E9CF99227F5ECD006E6EE5 /* de */,
+			);
+			name = SettingsPage.storyboard;
+			sourceTree = "<group>";
+		};
+		19E9CF6F227F5E9D006E6EE5 /* TransferPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19E9CF6E227F5E9D006E6EE5 /* Base */,
+				19E9CF9B227F5ED1006E6EE5 /* en */,
+				19E9CF9D227F5ED2006E6EE5 /* tr */,
+				19E9CF9F227F5ED3006E6EE5 /* de */,
+			);
+			name = TransferPage.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -407,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -468,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
