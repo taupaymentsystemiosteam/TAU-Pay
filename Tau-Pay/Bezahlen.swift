@@ -10,6 +10,8 @@ import UIKit
 
 class Bezahlen: UIViewController {
     
+    var timer = Timer()
+    var isTimerStarted = false
     static var qrString = ""
     
     @IBOutlet weak var infotext: UILabel!
@@ -63,9 +65,16 @@ class Bezahlen: UIViewController {
                 qrCodeImage.image = UIImage(ciImage: output)
             }
         }
-        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+     //   self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        
+        if !isTimerStarted
+        {
+            timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+            isTimerStarted = true
+        }
         
         //QrCodeController.setString(qr: response.info!)
+        
         
         
     }
@@ -76,20 +85,25 @@ class Bezahlen: UIViewController {
     @objc func updateProgress() {
         progressValue = progressValue - 0.01
         self.progressBar.progress = Float(progressValue)
-        if progressValue != 0.0 {
-            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
-        }
-        if progressBar.progress == 0    {        infotext.isHidden = false
+       
+        if progressBar.progress == 0    {
+            infotext.isHidden = false
             progressBar.isHidden = true
             qrCodeImage.isHidden = true
+            progressValue = 1.0
+            isTimerStarted = false
+            timer.invalidate()
         }
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         progressBar.isHidden = true
         infotext.text = "Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız."
+        
+        
+        
+        
         
     }
     
