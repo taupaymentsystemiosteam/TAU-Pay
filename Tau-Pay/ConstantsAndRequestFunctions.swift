@@ -30,6 +30,7 @@ class Constants
             var response: [String: Any?] = [:]
             response["connectionError"] = String(responseLocal.connectionError)
             response["error"] = responseLocal.error
+            NotificationCenter.default.post(name: .failedUpdateInfo, object: self, userInfo: response)
         }
         else {
             NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: responseLocal.info)

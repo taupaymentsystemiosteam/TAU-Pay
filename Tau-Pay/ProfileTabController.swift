@@ -50,11 +50,11 @@ class ProfileTabController: UIViewController {
             if response["error"] != nil {
                 // Handle improper connection
                 
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş, başka bir yerden giriş yapılmıştır, lüften buradan çıkınız")
                 return
             }
         } else {
-            print("Something went wront")
+            print("Something went wrong")
         }
     }
     
