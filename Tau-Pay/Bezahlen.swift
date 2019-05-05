@@ -17,6 +17,8 @@ class Bezahlen: UIViewController {
     @IBOutlet weak var infotext: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var qrCodeImage: UIImageView!
+    @IBOutlet weak var PayButton: UIButton!
+    
     var progressValue = 1.0
     
     static func setString(qr: String){
@@ -34,50 +36,139 @@ class Bezahlen: UIViewController {
         return
     }
     
-    @IBAction func paybutton(_ sender: Any) {
-        if qrCodeImage.isHidden {
-            progressBar.isHidden = false
-            infotext.isHidden = true
-            qrCodeImage.isHidden = false
-            NSObject.cancelPreviousPerformRequests(withTarget: self)
-            
-            let dict: [String: String] = [:]
-            
-            let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
+    func Pay()
+    {
+        progressBar.isHidden = false
+        infotext.isHidden = true
+        qrCodeImage.isHidden = false
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        
+        let dict: [String: String] = [:]
+        
+        let response = Constants.SendRequestGetString(requestType: "/customers/request-qr-code", json: dict)
         
         
-            if response.connectionError {
-                // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
-                return
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        
+        Bezahlen.setString(qr: response.info!)
+        
+        
+        let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
+        
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 20, y: 20)
+            //print("bob")
+            if let output = filter.outputImage?.transformed(by: transform) {
+                qrCodeImage.image = UIImage(ciImage: output)
             }
-            if response.error != nil {
-                // Handle improper connection
-
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
-                return
-            }
-            
-            let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
-            
-            if let filter = CIFilter(name: "CIQRCodeGenerator") {
-                filter.setValue(data, forKey: "inputMessage")
-                let transform = CGAffineTransform(scaleX: 20, y: 20)
-                //print("bob")
-                if let output = filter.outputImage?.transformed(by: transform) {
-                    qrCodeImage.image = UIImage(ciImage: output)
-                }
-            }
-            self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        }
+        self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
+        PayButton.setTitle("Iptal", for: UIControl.State.normal)
         
-            //QrCodeController.setString(qr: response.info!)
-        
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.Ispaid()
         }
     }
     
-    @objc func Ispaid(){
+    func Cancel()
+    {
+        let alert = UIAlertController(title: "Emin misin", message: "Iptal etmek istediginize emin misiniz?", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Eminim", style: UIAlertAction.Style.default, handler: {(action) in
+            self.infotext.isHidden = false
+            self.progressBar.isHidden = true
+            self.qrCodeImage.isHidden = true
+            self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Iptal", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
+    
+    
+    
+    
+    @IBAction func paybutton(_ sender: Any) {
+        if PayButton.currentTitle == "Ödeme" {
+            Pay()
+        }else
+        {
+            Cancel()
+        }
+
+    }
+    
+    @objc func Ispaid()
+    {
+        let dict: [String: String] = ["qrCode": Bezahlen.qrString]
+        
+        let response = Constants.SendRequestGetString(requestType: "/customers/is-paid", json: dict)
+        
+        
+        if response.connectionError {
+            // Handle connection error
+            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            return
+        }
+        if response.error != nil {
+            // Handle improper connection
+            
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            return
+        }
+        
+        if response.info! == "not paid"
+        {
+            Ispaid()
+        }
+        else if response.info! == "qr code not found"
+        {
+            print("opss bad news qr kod not found")
+            
+        }
+        else if response.info! == "insufficient balance"
+        {
+            print("more bad news we are poor! Show dialog!")
+            DispatchQueue.main.async {
+                self.infotext.isHidden = false
+                self.progressBar.isHidden = true
+                self.qrCodeImage.isHidden = true
+                self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+                self.createAnimatedPopUp(title: "Odeme", message: "fakirsin galiba!")
+            }
+        }
+        else
+        {
+            print("Yeeey we are not broke! Paid succesfully!")
+            DispatchQueue.main.async {
+                self.infotext.isHidden = false
+                self.progressBar.isHidden = true
+                self.qrCodeImage.isHidden = true
+                self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+                self.createAnimatedPopUp(title: "Odeme", message: "Odeme Basarili!")
+            }
+        }
+        
+        
+    }
+    
+    
     @objc func updateProgress() {
         progressValue = progressValue - 0.01
         self.progressBar.progress = Float(progressValue)
@@ -88,6 +179,7 @@ class Bezahlen: UIViewController {
             infotext.isHidden = false
             progressBar.isHidden = true
             qrCodeImage.isHidden = true
+            self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
             progressValue = 1
             NSObject.cancelPreviousPerformRequests(withTarget: self)
         }
@@ -97,15 +189,8 @@ class Bezahlen: UIViewController {
         super.viewDidLoad()
         progressBar.isHidden = true
         qrCodeImage.isHidden = true
-        infotext.text = "Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız."
         
     }
     
-    //override func NewviewDidLoad(){
-    //    super.viewDidLoad()
-        
-    //}
-    
-
     
 }
