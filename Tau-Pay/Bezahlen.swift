@@ -135,7 +135,9 @@ class Bezahlen: UIViewController {
         }
         
         if response.info! == "not paid" {
-            Ispaid()
+            if !qrCodeImage.isHidden {
+                Ispaid()
+            }
         }
         else if response.info! == "qr code not found" {
             print("opss bad news qr kod not found")
@@ -163,16 +165,11 @@ class Bezahlen: UIViewController {
     @objc func updateProgress() {
         progressValue = progressValue - 0.005
         self.progressBar.progress = Float(progressValue)
-        if progressValue != 0.0 {
+        if progressValue > 0.0 {
             self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         }
-        if progressBar.progress == 0    {
-            infotext.isHidden = false
-            progressBar.isHidden = true
-            qrCodeImage.isHidden = true
-            self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
-            progressValue = 1
-            NSObject.cancelPreviousPerformRequests(withTarget: self)
+        else {
+            turnToDefault()
         }
     }
 
@@ -189,6 +186,7 @@ class Bezahlen: UIViewController {
         self.progressBar.isHidden = true
         self.qrCodeImage.isHidden = true
         self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
         progressValue = 1
     }
     
