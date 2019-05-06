@@ -130,38 +130,33 @@ class Bezahlen: UIViewController {
         }
         if response.error != nil {
             // Handle improper connection
-            
             createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
             return
         }
         
-        if response.info! == "not paid"
-        {
+        if response.info! == "not paid" {
             Ispaid()
         }
-        else if response.info! == "qr code not found"
-        {
+        else if response.info! == "qr code not found" {
             print("opss bad news qr kod not found")
-            
         }
-        else if response.info! == "insufficient balance"
-        {
+        else if response.info! == "insufficient balance" {
             print("more bad news we are poor! Show dialog!")
             DispatchQueue.main.async {
                        self.turnToDefault()
-                self.createAnimatedPopUp(title: "Odeme", message: "fakirsin galiba!")
+                self.createAnimatedPopUp(title: "Odeme", message: "Yetersiz Bakiye!")
             }
         }
-        else
-        {
+        else if response.info! == "paid successfully" {
             print("Yeeey we are not broke! Paid succesfully!")
             DispatchQueue.main.async {
                 self.turnToDefault()
-                self.createAnimatedPopUp(title: "Odeme", message: "Odeme Basarili!")
+                self.createAnimatedPopUp(title: "Odeme", message: "Ödeme Başarılı")
             }
         }
-        
-        
+        else {
+            print("A problem has occurred while reading qr-code: \(response.info!)")
+        }
     }
     
     
