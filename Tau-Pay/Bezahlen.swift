@@ -53,6 +53,12 @@ class Bezahlen: UIViewController {
             createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
             return
         }
+        
+        if(response.error == "403"){
+            createAnimatedPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.")
+            performSegue(withIdentifier:"loginPage", sender: nil)
+        }
+        
         if response.error != nil {
             // Handle improper connection
             
@@ -160,7 +166,7 @@ class Bezahlen: UIViewController {
     
     
     @objc func updateProgress() {
-        progressValue = progressValue - 0.01
+        progressValue = progressValue - 0.005
         self.progressBar.progress = Float(progressValue)
         if progressValue != 0.0 {
             self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
