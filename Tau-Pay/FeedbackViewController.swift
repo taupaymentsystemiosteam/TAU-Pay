@@ -112,28 +112,31 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
         let Feedback: String = FeedbackText.text
         print(Feedback)
         
-        let infos = [
-            "star" : star,
-            "type" :MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex) as Any,
-            "text" : Feedback] as [String : Any]
-        
-        let response = Constants.SendRequestGetString(requestType: "/customers/feedback", json: infos)
-        
-        if response.connectionError {
-            // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
-            return
+        let queue = DispatchQueue(label: "request")
+        queue.async {
+            let infos = [
+                "star" : self.star,
+                "type" :self.MensaShutteSelect.titleForSegment(at: self.MensaShutteSelect.selectedSegmentIndex) as Any,
+                "text" : Feedback] as [String : Any]
+            
+            let response = Constants.SendRequestGetString(requestType: "/customers/feedback", json: infos)
+            
+            DispatchQueue.main.sync {
+                if response.connectionError {
+                    // Handle connection error
+                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
+                    return
+                }
+                if response.error != nil {
+                    // Handle improper connection
+                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+                    return
+                }
+                
+                
+                self.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Yorumunuz iletilmiştir", comment: " "))
+            }
         }
-        if response.error != nil {
-            // Handle improper connection
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
-            return
-        }
-        
-        
-        createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Yorumunuz iletilmiştir", comment: " "))
-        
-
     }
     
     func createAnimatedPopUp(title: String, message: String) {
