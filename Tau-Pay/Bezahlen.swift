@@ -53,6 +53,12 @@ class Bezahlen: UIViewController {
             createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Baglantı Hatası", comment: " "))
             return
         }
+        
+        if(response.error == "403"){
+            createAnimatedPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.")
+            performSegue(withIdentifier:"loginPage", sender: nil)
+        }
+        
         if response.error != nil {
             // Handle improper connection
             
@@ -122,54 +128,48 @@ class Bezahlen: UIViewController {
         }
         if response.error != nil {
             // Handle improper connection
+            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
             
             createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
             return
         }
         
-        if response.info! == "not paid"
-        {
-            Ispaid()
+        if response.info! == "not paid" {
+            if !qrCodeImage.isHidden {
+                Ispaid()
+            }
         }
-        else if response.info! == "qr code not found"
-        {
+        else if response.info! == "qr code not found" {
             print("opss bad news qr kod not found")
-            
         }
-        else if response.info! == "insufficient balance"
-        {
+        else if response.info! == "insufficient balance" {
             print("more bad news we are poor! Show dialog!")
             DispatchQueue.main.async {
                        self.turnToDefault()
                 self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: "fakirsin galiba!")
             }
         }
-        else
-        {
+        else if response.info! == "paid successfully" {
             print("Yeeey we are not broke! Paid succesfully!")
             DispatchQueue.main.async {
                 self.turnToDefault()
-                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: "Odeme Basarili!")
+                self.createAnimatedPopUp(title: "Odeme", message: "Ödeme Başarılı")
             }
         }
-        
-        
+        else {
+            print("A problem has occurred while reading qr-code: \(response.info!)")
+        }
     }
     
     
     @objc func updateProgress() {
-        progressValue = progressValue - 0.01
+        progressValue = progressValue - 0.005
         self.progressBar.progress = Float(progressValue)
-        if progressValue != 0.0 {
+        if progressValue > 0.0 {
             self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
         }
-        if progressBar.progress == 0    {
-            infotext.isHidden = false
-            progressBar.isHidden = true
-            qrCodeImage.isHidden = true
-            self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
-            progressValue = 1
-            NSObject.cancelPreviousPerformRequests(withTarget: self)
+        else {
+            turnToDefault()
         }
     }
 
@@ -187,6 +187,7 @@ class Bezahlen: UIViewController {
         self.progressBar.isHidden = true
         self.qrCodeImage.isHidden = true
         self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
         progressValue = 1
     }
     

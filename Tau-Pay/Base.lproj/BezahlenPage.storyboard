@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,40 +19,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cRs-u3-mC8">
-                                <rect key="frame" x="16" y="154" width="288" height="243"/>
+                                <rect key="frame" x="16" y="150" width="288" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cRs-u3-mC8" secondAttribute="height" multiplier="96:79" id="I9Y-1a-452"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOi-1i-AVH">
-                                <rect key="frame" x="112" y="422" width="96" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="121.5" y="417" width="77" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Ödeme"/>
                                 <connections>
                                     <action selector="paybutton:" destination="qs8-HQ-vC5" eventType="touchUpInside" id="RNE-W0-RWg"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Drg-x5-JvX">
-                                <rect key="frame" x="16" y="133" width="288" height="2"/>
+                            <progressView opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Drg-x5-JvX">
+                                <rect key="frame" x="16" y="117" width="288" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="5Qa-dU-Xk7"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vE0-dj-y5l">
-                                <rect key="frame" x="16" y="80" width="288" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="16" y="80" width="288" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cRs-u3-mC8" firstAttribute="leading" secondItem="clE-kq-ttY" secondAttribute="leading" constant="16" id="2Ti-aZ-cTq"/>
                             <constraint firstItem="cRs-u3-mC8" firstAttribute="leading" secondItem="wDy-Am-C7Q" secondAttribute="leadingMargin" id="6Ls-uX-p4v"/>
-                            <constraint firstItem="aOi-1i-AVH" firstAttribute="top" secondItem="cRs-u3-mC8" secondAttribute="bottom" constant="25" id="75z-Ra-gdK"/>
                             <constraint firstItem="cRs-u3-mC8" firstAttribute="trailing" secondItem="Drg-x5-JvX" secondAttribute="trailing" id="85F-JI-9xJ"/>
                             <constraint firstItem="aOi-1i-AVH" firstAttribute="centerX" secondItem="wDy-Am-C7Q" secondAttribute="centerX" id="9Gs-Gg-aiE"/>
                             <constraint firstItem="cRs-u3-mC8" firstAttribute="trailing" secondItem="vE0-dj-y5l" secondAttribute="trailing" id="Chu-zy-Bgh"/>
                             <constraint firstItem="aOi-1i-AVH" firstAttribute="centerX" secondItem="cRs-u3-mC8" secondAttribute="centerX" id="FJl-08-4CY"/>
-                            <constraint firstItem="cRs-u3-mC8" firstAttribute="top" secondItem="wDy-Am-C7Q" secondAttribute="top" constant="154" id="LEk-ff-m5D"/>
+                            <constraint firstItem="cRs-u3-mC8" firstAttribute="top" secondItem="wDy-Am-C7Q" secondAttribute="top" constant="150" id="LEk-ff-m5D"/>
+                            <constraint firstItem="clE-kq-ttY" firstAttribute="trailing" secondItem="aOi-1i-AVH" secondAttribute="trailing" constant="121.5" id="NCl-6w-S3F"/>
+                            <constraint firstItem="clE-kq-ttY" firstAttribute="trailing" secondItem="cRs-u3-mC8" secondAttribute="trailing" constant="16" id="Nm4-RV-gHh"/>
+                            <constraint firstItem="clE-kq-ttY" firstAttribute="bottom" secondItem="aOi-1i-AVH" secondAttribute="bottom" constant="22" id="Ocp-yh-NuI"/>
                             <constraint firstItem="cRs-u3-mC8" firstAttribute="leading" secondItem="Drg-x5-JvX" secondAttribute="leading" id="V4b-kj-6zd"/>
                             <constraint firstItem="vE0-dj-y5l" firstAttribute="top" secondItem="clE-kq-ttY" secondAttribute="top" constant="60" id="ZWp-OD-BiL"/>
-                            <constraint firstItem="aOi-1i-AVH" firstAttribute="leading" secondItem="clE-kq-ttY" secondAttribute="leading" constant="112" id="cl8-xo-X5r"/>
-                            <constraint firstItem="clE-kq-ttY" firstAttribute="bottom" secondItem="aOi-1i-AVH" secondAttribute="bottom" constant="22" id="lIa-fn-XpA"/>
-                            <constraint firstItem="cRs-u3-mC8" firstAttribute="top" secondItem="Drg-x5-JvX" secondAttribute="bottom" constant="19" id="mMJ-O1-GDS"/>
+                            <constraint firstItem="aOi-1i-AVH" firstAttribute="leading" secondItem="clE-kq-ttY" secondAttribute="leading" constant="121.5" id="kFK-kn-e0D"/>
+                            <constraint firstItem="cRs-u3-mC8" firstAttribute="top" secondItem="Drg-x5-JvX" secondAttribute="bottom" constant="22" id="mMJ-O1-GDS"/>
                             <constraint firstItem="cRs-u3-mC8" firstAttribute="leading" secondItem="vE0-dj-y5l" secondAttribute="leading" id="yaO-Pw-n2a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="clE-kq-ttY"/>
@@ -69,4 +79,5 @@
             <point key="canvasLocation" x="-1254.375" y="-358.75"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
