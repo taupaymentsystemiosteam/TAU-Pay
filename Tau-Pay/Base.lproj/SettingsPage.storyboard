@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings Controller-->
+        <!--Ayarlar-->
         <scene sceneID="r78-kz-Cr4">
             <objects>
-                <viewController storyboardIdentifier="settingsPage" id="l42-9U-hQs" customClass="SettingsController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsPage" title="Ayarlar" id="l42-9U-hQs" customClass="SettingsController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xYR-4t-mft">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,8 +75,8 @@
         <!--ChangePass-->
         <scene sceneID="y1l-bo-Iod">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MS3-QZ-A2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ChangePasswordPage" referencedIdentifier="ChangePass" id="0lf-0R-z6V" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MS3-QZ-A2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="-281"/>
         </scene>

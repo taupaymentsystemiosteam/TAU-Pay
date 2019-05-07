@@ -19,37 +19,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miktar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-6V-4R4">
-                                <rect key="frame" x="16" y="341.33333333333331" width="147" height="21"/>
+                                <rect key="frame" x="16" y="297.33333333333331" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srK-s8-hil">
-                                <rect key="frame" x="16" y="370.33333333333331" width="382" height="30"/>
+                                <rect key="frame" x="16" y="326.33333333333331" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VpO-vw-uKL">
-                                <rect key="frame" x="16" y="268.33333333333331" width="263" height="29"/>
+                                <rect key="frame" x="16" y="224.33333333333334" width="263" height="29"/>
                                 <segments>
                                     <segment title="Shuttle"/>
                                     <segment title="Yemekhane"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Askıya yemek / shuttle seyahati bırakabilirsiniz." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wca-H1-jhf">
-                                <rect key="frame" x="16" y="203" width="382" height="20.333333333333343"/>
+                                <rect key="frame" x="16" y="159" width="382" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzh-Iu-xpG">
-                                <rect key="frame" x="347" y="408.33333333333331" width="51" height="30"/>
+                                <rect key="frame" x="347" y="364.33333333333331" width="51" height="30"/>
                                 <state key="normal" title="Gönder"/>
                                 <connections>
                                     <action selector="sendButton:" destination="xve-zS-lcr" eventType="touchUpInside" id="QoW-to-gyB"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpD-wg-Fas">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Bağış" id="nsL-U5-wDo"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,15 +72,17 @@
                             <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="s5s-6V-4R4" secondAttribute="trailing" constant="251" id="ZjB-fO-BjN"/>
                             <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="Wca-H1-jhf" secondAttribute="trailing" constant="16" id="aPR-Za-LaP"/>
                             <constraint firstItem="VpO-vw-uKL" firstAttribute="top" secondItem="Wca-H1-jhf" secondAttribute="bottom" constant="45" id="aec-gS-fll"/>
+                            <constraint firstItem="RpD-wg-Fas" firstAttribute="trailing" secondItem="UH8-o1-LVg" secondAttribute="trailing" id="ejk-Xt-DTm"/>
                             <constraint firstItem="srK-s8-hil" firstAttribute="top" secondItem="s5s-6V-4R4" secondAttribute="bottom" constant="8" id="gio-cu-grh"/>
                             <constraint firstItem="Wca-H1-jhf" firstAttribute="top" secondItem="UH8-o1-LVg" secondAttribute="top" constant="115" id="hbK-eO-WlD"/>
                             <constraint firstItem="Wca-H1-jhf" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="kLQ-Fb-Y5Q"/>
                             <constraint firstItem="VpO-vw-uKL" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="noE-ZC-FDP"/>
+                            <constraint firstItem="RpD-wg-Fas" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" id="qdZ-mB-kf2"/>
+                            <constraint firstItem="RpD-wg-Fas" firstAttribute="top" secondItem="UH8-o1-LVg" secondAttribute="top" id="ytg-Yu-wDk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Askıda" image="Aski" landscapeImage="Aski" largeContentSizeImage="Aski" id="vx8-96-o0h"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="amountBox" destination="srK-s8-hil" id="ECm-UV-HNE"/>
                         <outlet property="selection" destination="VpO-vw-uKL" id="zOH-hz-zLm"/>

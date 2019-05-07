@@ -13,43 +13,43 @@
         <!--FirstTimeLogin-->
         <scene sceneID="jmx-43-IBu">
             <objects>
-                <viewController storyboardIdentifier="FirstLoginPage" id="jIn-tw-n0f" userLabel="FirstTimeLogin" customClass="FirstLogin" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLoginPage" title="Hoşgeldiniz" id="jIn-tw-n0f" userLabel="FirstTimeLogin" customClass="FirstLogin" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ir0-mM-XXF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You know this is your first Login. Change that ducking Pass!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3T-mv-eur">
-                                <rect key="frame" x="16" y="65" width="382" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You know this is your first Login. Change that ducking Pass!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3T-mv-eur">
+                                <rect key="frame" x="16" y="104" width="382" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOx-FQ-7jk">
-                                <rect key="frame" x="16" y="165" width="382" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOx-FQ-7jk">
+                                <rect key="frame" x="16" y="204" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-Ey-sao">
-                                <rect key="frame" x="16" y="242.5" width="382" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-Ey-sao">
+                                <rect key="frame" x="16" y="281.5" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Pass:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGx-ey-w5u">
-                                <rect key="frame" x="16" y="136.5" width="125" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New Pass:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGx-ey-w5u">
+                                <rect key="frame" x="16" y="175.5" width="125" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Pass: Again!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l8-IY-btJ">
-                                <rect key="frame" x="16" y="214" width="184" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New Pass: Again!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l8-IY-btJ">
+                                <rect key="frame" x="16" y="253" width="184" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAk-Oe-LLO">
-                                <rect key="frame" x="239" y="302.5" width="159" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAk-Oe-LLO">
+                                <rect key="frame" x="239" y="341.5" width="159" height="30"/>
                                 <state key="normal" title="Change my mind!"/>
                                 <connections>
                                     <action selector="changePassword:" destination="jIn-tw-n0f" eventType="touchUpInside" id="SRj-Kt-JvJ"/>
@@ -62,7 +62,6 @@
                             <constraint firstItem="eNw-Ey-sao" firstAttribute="leading" secondItem="x0Q-dj-rZh" secondAttribute="leading" constant="16" id="DHf-AJ-vi2"/>
                             <constraint firstItem="zOx-FQ-7jk" firstAttribute="leading" secondItem="x0Q-dj-rZh" secondAttribute="leading" constant="16" id="Fxb-Wf-0ZO"/>
                             <constraint firstItem="x0Q-dj-rZh" firstAttribute="trailing" secondItem="eNw-Ey-sao" secondAttribute="trailing" constant="16" id="K78-Er-jyn"/>
-                            <constraint firstItem="Z3T-mv-eur" firstAttribute="top" secondItem="x0Q-dj-rZh" secondAttribute="top" constant="21" id="SR9-24-vEL"/>
                             <constraint firstItem="x0Q-dj-rZh" firstAttribute="trailing" secondItem="RAk-Oe-LLO" secondAttribute="trailing" constant="16" id="Ugw-gx-WtW"/>
                             <constraint firstItem="x0Q-dj-rZh" firstAttribute="trailing" secondItem="7l8-IY-btJ" secondAttribute="trailing" constant="214" id="VPK-Rc-Ygh"/>
                             <constraint firstItem="zOx-FQ-7jk" firstAttribute="top" secondItem="KGx-ey-w5u" secondAttribute="bottom" constant="8" id="WeX-cb-157"/>
