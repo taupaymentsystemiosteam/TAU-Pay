@@ -58,42 +58,50 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func login_button(_ sender: Any) {
-        let user = matrikelnummer_.text!
-        let pass = passwort_.text!
         
-        if (user == "" || pass == "") {
-            return
-        }
-        
-        let dict: [String: String] = [
-            "id": user,
-            "password": pass
+        let queue = DispatchQueue(label: "request")
+        queue.async {
+            let user = self.matrikelnummer_.text!
+            let pass = self.passwort_.text!
             
-        ]
-        
-        let response = Constants.SendRequestGetString(requestType: "/login", json: dict)
-        
-        if(response.connectionError){
-            //fehlende Internetverbindung
-        }
+            if (user == "" || pass == "") {
+                return
+            }
             
-        else if(response.error != nil){
-            if(response.error == "403"){
-                createAnimatedPopUp(title: "Giriş yapılamadı", message: "Öğrenci numarası veya parola yanlış", actionTitle: "Tekrar Dene")
+            let dict: [String: String] = [
+                "id": user,
+                "password": pass
+                
+            ]
+            
+            let response = Constants.SendRequestGetString(requestType: "/login", json: dict)
+            
+            if(response.connectionError){
+                //fehlende Internetverbindung
+            }
+            
+            else if(response.error != nil) {
+                DispatchQueue.main.sync {
+                    if(response.error == "403"){
+                        self.createAnimatedPopUp(title: "Giriş yapılamadı", message: "Öğrenci numarası veya parola yanlış", actionTitle: "Tekrar Dene")
+                    }
+                    else {
+                        self.createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", actionTitle: "Tekrar Dene")
+                    }
+                }
+                
             }
             else {
-                createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", actionTitle: "Tekrar Dene")
+                DispatchQueue.main.sync {
+                    Constants.setToken(token: response.info!)
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "navController") as UIViewController
+                    self.present(vc, animated: true, completion: nil)
+                }
             }
         }
-            
-            
-        else {
-            Constants.setToken(token: response.info!)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "navController") as UIViewController
-            present(vc, animated: true, completion: nil)
-        }
+        
         
         
     }
