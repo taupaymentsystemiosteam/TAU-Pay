@@ -1,6 +1,6 @@
 
 /* Class = "UITextView"; text = "Yorumlarınız"; ObjectID = "0qG-QY-WYu"; */
-"0qG-QY-WYu.text" = "Yorumlarınız";
+"0qG-QY-WYu.text" = "Kommentar";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JcJ-Cd-PSY"; */
 "JcJ-Cd-PSY.normalTitle" = "Button";
@@ -15,19 +15,19 @@
 "Mnc-GO-dG3.normalTitle" = "Button";
 
 /* Class = "UIButton"; normalTitle = "Gönder"; ObjectID = "NNZ-PE-KbG"; */
-"NNZ-PE-KbG.normalTitle" = "Gönder";
+"NNZ-PE-KbG.normalTitle" = "Senden";
 
 /* Class = "UISegmentedControl"; RdN-6p-Czg.segmentTitles[0] = "Shuttle"; ObjectID = "RdN-6p-Czg"; */
 "RdN-6p-Czg.segmentTitles[0]" = "Shuttle";
 
 /* Class = "UISegmentedControl"; RdN-6p-Czg.segmentTitles[1] = "Yemekhane"; ObjectID = "RdN-6p-Czg"; */
-"RdN-6p-Czg.segmentTitles[1]" = "Yemekhane";
+"RdN-6p-Czg.segmentTitles[1]" = "Mensa";
 
 /* Class = "UILabel"; text = "Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz."; ObjectID = "Wkt-Dd-38O"; */
-"Wkt-Dd-38O.text" = "Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz.";
+"Wkt-Dd-38O.text" = "Sie können den Shuttle und die Mensa bewerten und ein Kommentar darlassen;
 
 /* Class = "UIViewController"; title = "FeedBack"; ObjectID = "pPF-2m-Pkg"; */
-"pPF-2m-Pkg.title" = "FeedBack";
+"pPF-2m-Pkg.title" = "Feedback";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sbS-R0-m4A"; */
 "sbS-R0-m4A.normalTitle" = "Button";

@@ -28,7 +28,7 @@ class Bezahlen: UIViewController {
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -50,13 +50,13 @@ class Bezahlen: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Baglantı Hatası", comment: " "))
             return
         }
         if response.error != nil {
             // Handle improper connection
             
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: ""))
             return
         }
         
@@ -83,13 +83,13 @@ class Bezahlen: UIViewController {
     
     func Cancel()
     {
-        let alert = UIAlertController(title: "Emin misin", message: "Iptal etmek istediginize emin misiniz?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: NSLocalizedString("Emin Misin?", comment: " "), message: NSLocalizedString("Iptal etmek istediğinize emin misiniz?", comment: " "), preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Eminim", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Eminim", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
                    self.turnToDefault()
         }))
         
-        alert.addAction(UIAlertAction(title: "Iptal", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Vazgeç", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         
@@ -98,10 +98,8 @@ class Bezahlen: UIViewController {
     }
     
     
-    
-    
     @IBAction func paybutton(_ sender: Any) {
-        if PayButton.currentTitle == "Ödeme" {
+        if PayButton.currentTitle == NSLocalizedString("Ödeme", comment: " ") {
             Pay()
         }else
         {
@@ -119,13 +117,13 @@ class Bezahlen: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
             return
         }
         if response.error != nil {
             // Handle improper connection
             
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
             return
         }
         
@@ -143,7 +141,7 @@ class Bezahlen: UIViewController {
             print("more bad news we are poor! Show dialog!")
             DispatchQueue.main.async {
                        self.turnToDefault()
-                self.createAnimatedPopUp(title: "Odeme", message: "fakirsin galiba!")
+                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: "fakirsin galiba!")
             }
         }
         else
@@ -151,7 +149,7 @@ class Bezahlen: UIViewController {
             print("Yeeey we are not broke! Paid succesfully!")
             DispatchQueue.main.async {
                 self.turnToDefault()
-                self.createAnimatedPopUp(title: "Odeme", message: "Odeme Basarili!")
+                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: "Odeme Basarili!")
             }
         }
         
@@ -179,6 +177,7 @@ class Bezahlen: UIViewController {
         super.viewDidLoad()
         progressBar.isHidden = true
         qrCodeImage.isHidden = true
+        infotext.text = infotext.text?.localized()
         
     }
     

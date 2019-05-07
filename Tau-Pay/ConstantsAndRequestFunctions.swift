@@ -7,15 +7,31 @@
 //
 
 import Foundation
+
+
 class Constants
 {
+    
+
+    
+    
     
     static let IP = "http://45.77.214.216:8080"
     static var TOKEN = ""
     static var language = 0 // 0 for Turkish 1 for German
     
     static func setLanguage(newLanguage: Int) {
+        
         language = newLanguage
+        if language == 0 {
+            Bundle.setLanguage(lang: "tr")
+        }else
+        {
+            Bundle.setLanguage(lang: "de")
+        }
+        
+        NotificationCenter.default.post(name: .changeLanguage, object: self)
+      
     }
     
     static func setToken(token: String){

@@ -44,13 +44,13 @@ class ProfileTabController: UIViewController {
         if let response = notification.userInfo as? [String: Any?] {
             if (response["connectionError"] as? String == "true") {
                 // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyeniz")
+                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Baglantı hatası", comment: " "))
                 return
             }
             if response["error"] != nil {
                 // Handle improper connection
                 
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş, başka bir yerden giriş yapılmıştır, lüften buradan çıkınız")
+                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Hatalı Giriş", comment: <#T##String#>))
                 return
             }
         } else {
@@ -73,7 +73,15 @@ class ProfileTabController: UIViewController {
         
          NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+        
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
+    }
+    
+    @objc func updateLanguage()
+    {
+        
         
     }
     

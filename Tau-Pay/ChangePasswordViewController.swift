@@ -16,6 +16,7 @@ class ChangePasswordViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,6 +66,7 @@ class ChangePasswordViewController: UIViewController {
             
         } else {
             createAnimatedPopUp(title: "Sonuç", message: "Şifreler uyuşmuyor.")
+            
         }
     }
     

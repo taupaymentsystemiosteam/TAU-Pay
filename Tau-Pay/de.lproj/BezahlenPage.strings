@@ -1,9 +1,11 @@
 
 /* Class = "UIButton"; normalTitle = "Ödeme"; ObjectID = "aOi-1i-AVH"; */
-"aOi-1i-AVH.normalTitle" = "Ödeme";
+"aOi-1i-AVH.normalTitle" = "Zahlen";
 
 /* Class = "UIViewController"; title = "Bezahlen"; ObjectID = "qs8-HQ-vC5"; */
 "qs8-HQ-vC5.title" = "Bezahlen";
 
 /* Class = "UILabel"; text = "Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız."; ObjectID = "vE0-dj-y5l"; */
-"vE0-dj-y5l.text" = "Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız.";
+"vE0-dj-y5l.text" = "Für die Bezahlung scannen Sie den QR - Code und drücken sie Zahlenbutton.";
+
+

@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -27,14 +27,14 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func sendButton(_ sender: Any) {
-        var amount = amountBox.text!
+        let amount = amountBox.text!
         
         if (amount == "") {
-            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
             return
         }
         let type = selection.titleForSegment(at: selection.selectedSegmentIndex)!
-        var json: [String: String] = [
+        let json: [String: String] = [
             "type": type,
             "amount": amountBox.text!
         ]
@@ -43,16 +43,16 @@ class FirstViewController: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Baglantı Hatası", comment: " "))
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: "Hatalı giriş")
             return
         }
         
-        createAnimatedPopUp(title: "Başarılı", message: "Bağışınız kabul edilmiştir, Allah razı olsun!")
+        createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Bağışınız kabul edilmiştir, Allah razı olsun!", comment: " "))
         
     }
     override func viewDidLoad() {
