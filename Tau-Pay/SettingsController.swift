@@ -18,6 +18,7 @@ class SettingsController: UIViewController {
         // Changes the selected language based off the index
         // 0 for Turkish, 1 for German
         Constants.setLanguage(newLanguage: languageSelector.selectedSegmentIndex)
+        print("Chaaaaneeeee")
     }
     
     override func viewDidLoad() {

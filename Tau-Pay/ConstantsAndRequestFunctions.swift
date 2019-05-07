@@ -11,10 +11,7 @@ import Foundation
 
 class Constants
 {
-    
 
-    
-    
     
     static let IP = "http://45.77.214.216:8080"
     static var TOKEN = ""

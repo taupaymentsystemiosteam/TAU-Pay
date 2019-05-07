@@ -13,7 +13,7 @@ class ForgotPassword: UIViewController {
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -26,7 +26,7 @@ class ForgotPassword: UIViewController {
         let number = numberBox.text
         
         if number == "" {
-            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
             return
         }
         let json: [String: String] = [
@@ -37,15 +37,15 @@ class ForgotPassword: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
             return
         }
-        createAnimatedPopUp(title: "Başarı", message: "Mailinizi kontrol edebilirsiniz")
+        createAnimatedPopUp(title: NSLocalizedString("Başarı", comment: " "), message: NSLocalizedString("Mailinizi kontrol edebilirsiniz", comment: " "))
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "loginPage") as UIViewController

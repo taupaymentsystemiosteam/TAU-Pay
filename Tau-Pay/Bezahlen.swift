@@ -28,7 +28,7 @@ class Bezahlen: UIViewController {
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -50,7 +50,7 @@ class Bezahlen: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Baglantı Hatası", comment: " "))
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
             return
         }
         
@@ -62,7 +62,7 @@ class Bezahlen: UIViewController {
         if response.error != nil {
             // Handle improper connection
             
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: ""))
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: "").localized())
             return
         }
         
@@ -80,7 +80,7 @@ class Bezahlen: UIViewController {
             }
         }
         self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)
-        PayButton.setTitle("Iptal", for: UIControl.State.normal)
+        PayButton.setTitle(NSLocalizedString("İptal", comment: " ").localized(), for: UIControl.State.normal)
         
         DispatchQueue.global(qos: .userInitiated).async {
             self.Ispaid()
@@ -89,13 +89,13 @@ class Bezahlen: UIViewController {
     
     func Cancel()
     {
-        let alert = UIAlertController(title: NSLocalizedString("Emin Misin?", comment: " "), message: NSLocalizedString("Iptal etmek istediğinize emin misiniz?", comment: " "), preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: NSLocalizedString("Emin Misin?", comment: " ").localized(), message: NSLocalizedString("Iptal etmek istediğinize emin misiniz?", comment: " ").localized(), preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Eminim", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Eminim", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
                    self.turnToDefault()
         }))
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Vazgeç", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Vazgeç", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         
@@ -105,7 +105,7 @@ class Bezahlen: UIViewController {
     
     
     @IBAction func paybutton(_ sender: Any) {
-        if PayButton.currentTitle == NSLocalizedString("Ödeme", comment: " ") {
+        if PayButton.currentTitle == NSLocalizedString("Ödeme", comment: " ").localized() {
             Pay()
         }else
         {
@@ -123,14 +123,14 @@ class Bezahlen: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: "Hata".localized(), message: "Hatalı Giriş".localized())
             
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+            createAnimatedPopUp(title: NSLocalizedString("Hata".localized(), comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized())
             return
         }
         
@@ -146,14 +146,14 @@ class Bezahlen: UIViewController {
             print("more bad news we are poor! Show dialog!")
             DispatchQueue.main.async {
                        self.turnToDefault()
-                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: "fakirsin galiba!")
+                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Insufficent balance", comment: " "))
             }
         }
         else if response.info! == "paid successfully" {
             print("Yeeey we are not broke! Paid succesfully!")
             DispatchQueue.main.async {
                 self.turnToDefault()
-                self.createAnimatedPopUp(title: "Odeme", message: "Ödeme Başarılı")
+                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Ödeme başarılı", comment: " "))
             }
         }
         else {
@@ -186,7 +186,7 @@ class Bezahlen: UIViewController {
         self.infotext.isHidden = false
         self.progressBar.isHidden = true
         self.qrCodeImage.isHidden = true
-        self.PayButton.setTitle("Ödeme", for: UIControl.State.normal)
+        self.PayButton.setTitle(NSLocalizedString("Ödeme", comment: " "), for: UIControl.State.normal)
         NSObject.cancelPreviousPerformRequests(withTarget: self)
         progressValue = 1
     }

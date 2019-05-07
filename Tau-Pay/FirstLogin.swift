@@ -44,16 +44,16 @@ class FirstLogin: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
             return
         }
         if let responseInfo = response.info {
-            createAnimatedPopUp(title: "Sonuç", message: "Şifreniz başarıyla gönderildi. \(String(describing: responseInfo))")
+            createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "\(NSLocalizedString("Şifreniz başarıyla gönderildi.", comment: " ")) \(String(describing: responseInfo))")
         }
         
     }
@@ -61,14 +61,14 @@ class FirstLogin: UIViewController {
     @IBAction func changePassword(_ sender: Any) {
         
         if newPassBox.text == "" || newPassRepeatedBox.text == "" {
-            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
             return
         }
         if newPassBox.text != newPassRepeatedBox.text {
-            createAnimatedPopUp(title: "Sonuç", message: "Şifreler uyuşmuyor AQ.")
+            createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: NSLocalizedString("Şifreler uyuşmuyor", comment: " "))
         }
         
-        createYesNoPopUp(title: "Emin Misiniz?", message: "Şifrenizin bu olmasını istediğinizden emin misiniz?")
+        createYesNoPopUp(title: NSLocalizedString("Emin Misin?", comment: " "), message: NSLocalizedString("Şifrenizin bu olmasını istediğinizden emin misiniz?", comment: " "))
         
         
         

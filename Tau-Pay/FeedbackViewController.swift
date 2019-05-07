@@ -121,17 +121,17 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
             return
         }
         
         
-        createAnimatedPopUp(title: "Başarılı", message: "Yorumunuz iletilmiştir")
+        createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Yorumunuz iletilmiştir", comment: " "))
         
 
     }
@@ -139,7 +139,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)

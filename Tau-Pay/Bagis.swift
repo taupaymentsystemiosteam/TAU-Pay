@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -30,7 +30,7 @@ class FirstViewController: UIViewController {
         let amount = amountBox.text!
         
         if (amount == "") {
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized())
             return
         }
         let type = selection.titleForSegment(at: selection.selectedSegmentIndex)!
@@ -43,16 +43,16 @@ class FirstViewController: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Baglantı Hatası", comment: " "))
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: "Hatalı giriş")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized())
             return
         }
         
-        createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Bağışınız kabul edilmiştir, Allah razı olsun!", comment: " "))
+        createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir, Allah razı olsun!", comment: " ").localized())
         
     }
     override func viewDidLoad() {

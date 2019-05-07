@@ -26,7 +26,7 @@ class ChangePasswordViewController: UIViewController {
     func createAnimatedPopUp(title: String, message: String) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -37,7 +37,7 @@ class ChangePasswordViewController: UIViewController {
     @IBAction func ChangePassword(_ sender: Any)
     {
         if oldPass.text == "" || newPass.text == "" || newPassRepeated.text == "" {
-            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
             return
         }
         
@@ -51,21 +51,21 @@ class ChangePasswordViewController: UIViewController {
             
             if response.connectionError {
                 // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+                createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message:NSLocalizedString("Bağlantı Hatası", comment: " "))
                 return
             }
             if response.error != nil {
                 // Handle improper connection
-                createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
                 return
             }
             
             if let responseInfo = response.info {
-                createAnimatedPopUp(title: "Sonuç", message: "Şifre başarı ile değiştirildi. \(String(describing: responseInfo))")
+                createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "Şifre başarı ile değiştirildi. \(String(describing: responseInfo))")
             }
             
         } else {
-            createAnimatedPopUp(title: "Sonuç", message: "Şifreler uyuşmuyor.")
+            createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "Şifreler uyuşmuyor.")
             
         }
     }

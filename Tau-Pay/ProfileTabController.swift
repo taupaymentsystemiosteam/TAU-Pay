@@ -44,13 +44,13 @@ class ProfileTabController: UIViewController {
         if let response = notification.userInfo as? [String: Any?] {
             if (response["connectionError"] as? String == "true") {
                 // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Baglantı hatası", comment: " "))
+                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Bağlantı Hatası", comment: " "))
                 return
             }
             if response["error"] != nil {
                 // Handle improper connection
                 
-                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Hatalı Giriş", comment: <#T##String#>))
+                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Hatalı Giriş", comment: " "))
                 return
             }
         } else {
