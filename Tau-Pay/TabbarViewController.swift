@@ -13,7 +13,15 @@ class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      for controllers in viewControllers!
+      {
+      //  let view = UIStoryboard(name: "ProfilePage", bundle: nil).instantiateViewController(withIdentifier: "profiil").view
+        
       
+    
+        //controllers.view.addSubview(view!)
+        
+        }
     }
     
 
