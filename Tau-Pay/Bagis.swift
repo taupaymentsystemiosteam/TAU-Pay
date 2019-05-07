@@ -27,33 +27,39 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func sendButton(_ sender: Any) {
-        let amount = amountBox.text!
         
-        if (amount == "") {
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized())
-            return
-        }
-        let type = selection.titleForSegment(at: selection.selectedSegmentIndex)!
-        let json: [String: String] = [
-            "type": type,
-            "amount": amountBox.text!
-        ]
         
-        let response = Constants.SendRequestGetString(requestType: "/customers/donate", json: json)
+        let queue = DispatchQueue(label: "request")
         
-        if response.connectionError {
-            // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
-            return
-        }
-        if response.error != nil {
-            // Handle improper connection
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized())
-            return
-        }
-        
-        createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir, Allah razı olsun!", comment: " ").localized())
-        
+        queue.async {
+            let amount = self.amountBox.text!
+            DispatchQueue.main.sync {
+                if (amount == "") {
+                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized())
+                    return
+                }
+                let type = self.selection.titleForSegment(at: self.selection.selectedSegmentIndex)!
+                let json: [String: String] = [
+                    "type": type,
+                    "amount": self.amountBox.text!
+                ]
+                
+                let response = Constants.SendRequestGetString(requestType: "/customers/donate", json: json)
+                
+                if response.connectionError {
+                    // Handle connection error
+                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
+                    return
+                }
+                if response.error != nil {
+                    // Handle improper connection
+                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized())
+                    return
+                }
+                
+                self.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir, Allah razı olsun!", comment: " ").localized())
+            }
+            }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
