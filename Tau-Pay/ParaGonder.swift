@@ -123,9 +123,10 @@ class ParaGonder: UIViewController {
         
         if response.info == "balance not found" {
             createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
+            return
         }
         
-        createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi. \(String(describing: response.info!))")
+        createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi.")
         Constants.getInfo()
     }
 }

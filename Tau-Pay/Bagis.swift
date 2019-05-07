@@ -66,7 +66,7 @@ class FirstViewController: UIViewController {
                     return
                 }
                 
-                self.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir, Allah razı olsun!", comment: " ").localized())
+                self.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir", comment: " ").localized())
             }
             }
     }
