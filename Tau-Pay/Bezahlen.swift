@@ -54,16 +54,9 @@ class Bezahlen: UIViewController {
             return
         }
         
-        if(response.error == "403"){
-            let alert =  UIAlertController(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.", preferredStyle: UIAlertController.Style.alert)
-            
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
-                alert.dismiss(animated: true, completion: nil)
-                self.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
-            
-            //performSegue(withIdentifier:"initialScreen", sender: nil)
+        if(response.error == "403") {
+            ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+            return
         }
         
         if response.error != nil {

@@ -44,7 +44,6 @@ class SecondViewController: UIViewController {
         The hamburger menu works by sliding a view tab controller from the side
         into the correct position
      
-     
     */
     
     func openHamburger() {              

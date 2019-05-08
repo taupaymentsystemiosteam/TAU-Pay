@@ -80,6 +80,10 @@ class ParaGonder: UIViewController {
                     self.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
                 }
                 else if getname.error != nil {
+                    if(getname.error == "403") {
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        return
+                    }
                     self.createAnimatedPopUp(title: "Hata", message: "Hata: \(getname.error!) tekrar deneyiniz")
                 }
                 else if getname.info == "user not found" {

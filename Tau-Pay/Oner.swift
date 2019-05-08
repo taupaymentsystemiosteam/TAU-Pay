@@ -45,6 +45,10 @@ class ThirdViewController: UIViewController {
                     
                 else if response.error != nil {
                     // Handle improper connection
+                    if(response.error == "403") {
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        return
+                    }
                     self.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
                     return
                 } else {

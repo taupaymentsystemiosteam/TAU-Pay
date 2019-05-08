@@ -56,19 +56,12 @@ class ChangePasswordViewController: UIViewController {
             }
             if response.error != nil {
                 // Handle improper connection
-                if response.error == "403" {
-                    let alert =  UIAlertController(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.", preferredStyle: UIAlertController.Style.alert)
-                    
-                    alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
-                        alert.dismiss(animated: true, completion: nil)
-                        self.dismiss(animated: true, completion: nil)
-                    }))
-                    self.present(alert, animated: true, completion: nil)
-                }
-                else {
-                    createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+                if(response.error == "403") {
+                    ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                     return
                 }
+                createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+                return
             }
             
             if let responseInfo = response.info {

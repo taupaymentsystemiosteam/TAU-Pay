@@ -44,7 +44,9 @@ class Constants
                 var response: [String: Any?] = [:]
                 response["connectionError"] = String(responseLocal.connectionError)
                 response["error"] = responseLocal.error?.suffix(3)
-                NotificationCenter.default.post(name: .failedUpdateInfo, object: self, userInfo: response)
+                DispatchQueue.main.sync {
+                    NotificationCenter.default.post(name: .failedUpdateInfo, object: self, userInfo: response)
+                }
             }
             else {
                 DispatchQueue.main.sync {

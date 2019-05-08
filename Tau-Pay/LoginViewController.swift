@@ -82,8 +82,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             
             else if(response.error != nil) {
                 DispatchQueue.main.sync {
-                    if(response.error == "403"){
-                        self.createAnimatedPopUp(title: "Giriş yapılamadı", message: "Öğrenci numarası veya parola yanlış", actionTitle: "Tekrar Dene")
+                    if(response.error == "403") {
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                     }
                     else {
                         self.createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", actionTitle: "Tekrar Dene")

@@ -27,6 +27,7 @@
 		19B58DEC223D2D4C00B081FD /* Oner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DEB223D2D4C00B081FD /* Oner.swift */; };
 		19B58DEE223D323800B081FD /* ParaGonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B58DED223D323800B081FD /* ParaGonder.swift */; };
 		19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */; };
+		19E446F72282FD79005D12A5 /* ConstantViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E446F62282FD79005D12A5 /* ConstantViewFunctions.swift */; };
 		19E9CF41227F5D83006E6EE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF43227F5D83006E6EE5 /* Localizable.strings */; };
 		19E9CF46227F5DC1006E6EE5 /* BagisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF48227F5DC1006E6EE5 /* BagisStoryboard.storyboard */; };
 		19E9CF4F227F5E6E006E6EE5 /* BezahlenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF51227F5E6E006E6EE5 /* BezahlenPage.storyboard */; };
@@ -87,6 +88,7 @@
 		19B58DEB223D2D4C00B081FD /* Oner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oner.swift; sourceTree = "<group>"; };
 		19B58DED223D323800B081FD /* ParaGonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaGonder.swift; sourceTree = "<group>"; };
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		19E446F62282FD79005D12A5 /* ConstantViewFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewFunctions.swift; sourceTree = "<group>"; };
 		19E9CF34227F5A56006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		19E9CF35227F5A5D006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		19E9CF44227F5D88006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				76B467EB225E25B300DD2E25 /* Bezahlen.swift */,
 				19789EDB225A3B010028029C /* ChangePasswordViewController.swift */,
 				192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */,
+				19E446F62282FD79005D12A5 /* ConstantViewFunctions.swift */,
 				1967EFBE224E355200E0173F /* FeedbackViewController.swift */,
 				1965F071225E717500C8427D /* FirstLogin.swift */,
 				1965F06D225E24C700C8427D /* ForgotPassword.swift */,
@@ -385,6 +388,7 @@
 				76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */,
 				192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */,
 				1965F072225E717500C8427D /* FirstLogin.swift in Sources */,
+				19E446F72282FD79005D12A5 /* ConstantViewFunctions.swift in Sources */,
 				1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */,
 				19298635225F406000765D3A /* ProfileTabController.swift in Sources */,
 				197DFBE4225FAD8000F84A18 /* NotificationCenterExtension.swift in Sources */,

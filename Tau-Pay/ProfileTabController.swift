@@ -40,7 +40,7 @@ class ProfileTabController: UIViewController {
     
     
     @objc func failedUpdateInfo(_ notification: Notification) {
-        //print("updated")
+        print("rip")
         if let response = notification.userInfo as? [String: Any?] {
             if (response["connectionError"] as? String == "true") {
                 // Handle connection error
@@ -49,7 +49,10 @@ class ProfileTabController: UIViewController {
             }
             if response["error"] != nil {
                 // Handle improper connection
-                
+                if(response["error"] as? String == "403") {
+                    ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                    return
+                }
                 createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Hatalı Giriş", comment: " "))
                 return
             }
