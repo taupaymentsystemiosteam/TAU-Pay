@@ -120,45 +120,48 @@ class Bezahlen: UIViewController {
         
         let response = Constants.SendRequestGetString(requestType: "/customers/is-paid", json: dict)
         
-        
-        if response.connectionError {
-            // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
-            return
-        }
-        if response.error != nil {
-            // Handle improper connection
-            createAnimatedPopUp(title: "Hata".localized(), message: "Hatalı Giriş".localized())
+        DispatchQueue.main.async {
+            if response.connectionError {
+                // Handle connection error
+                self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
+                return
+            }
+            if response.error != nil {
+                // Handle improper connection
+                self.createAnimatedPopUp(title: "Hata".localized(), message: "Hatalı Giriş".localized())
+                
+                self.createAnimatedPopUp(title: NSLocalizedString("Hata".localized(), comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized())
+                return
+            }
             
-            createAnimatedPopUp(title: NSLocalizedString("Hata".localized(), comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized())
-            return
+            if response.info! == "not paid" {
+                if !self.qrCodeImage.isHidden {
+                    self.Ispaid()
+                }
+            }
+            else if response.info! == "qr code not found" {
+                print("opss bad news qr kod not found")
+            }
+            else if response.info! == "insufficient balance" {
+                print("more bad news we are poor! Show dialog!")
+                self.turnToDefault()
+                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Insufficent balance", comment: " "))
+                
+            }
+            else if response.info! == "received free item" {
+                self.turnToDefault()
+                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Bedava yemek aldınız", comment: " "))
+            }
+            else if response.info! == "paid successfully" {
+                print("Yeeey we are not broke! Paid succesfully!")
+                    self.turnToDefault()
+                    self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Ödeme başarılı", comment: " "))
+            }
+            else {
+                print("A problem has occurred while reading qr-code: \(response.info!)")
+            }
         }
         
-        if response.info! == "not paid" {
-            if !qrCodeImage.isHidden {
-                Ispaid()
-            }
-        }
-        else if response.info! == "qr code not found" {
-            print("opss bad news qr kod not found")
-        }
-        else if response.info! == "insufficient balance" {
-            print("more bad news we are poor! Show dialog!")
-            DispatchQueue.main.async {
-                       self.turnToDefault()
-                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Insufficent balance", comment: " "))
-            }
-        }
-        else if response.info! == "paid successfully" {
-            print("Yeeey we are not broke! Paid succesfully!")
-            DispatchQueue.main.async {
-                self.turnToDefault()
-                self.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Ödeme başarılı", comment: " "))
-            }
-        }
-        else {
-            print("A problem has occurred while reading qr-code: \(response.info!)")
-        }
     }
     
     
