@@ -47,9 +47,7 @@ class SecondViewController: UIViewController {
      
     */
     
-    func openHamburger() {      
-        let queue = DispatchQueue(label: "request")
-        
+    func openHamburger() {              
         Constants.getInfo()
         leadingConstraint.constant = 0
         UIView.animate(withDuration: 0.3, animations: self.view.layoutIfNeeded)
