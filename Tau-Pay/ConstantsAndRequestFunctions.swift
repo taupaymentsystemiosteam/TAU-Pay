@@ -36,17 +36,21 @@ class Constants
     }
     
     static func getInfo() {
-        
-        let responseLocal = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
-        
-        if responseLocal.error != nil || responseLocal.connectionError {
-            var response: [String: Any?] = [:]
-            response["connectionError"] = String(responseLocal.connectionError)
-            response["error"] = responseLocal.error
-            NotificationCenter.default.post(name: .failedUpdateInfo, object: self, userInfo: response)
-        }
-        else {
-            NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: responseLocal.info)
+        let queue = DispatchQueue(label: "request")
+        queue.async {
+            let responseLocal = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
+            if responseLocal.error != nil || responseLocal.connectionError {
+                var response: [String: Any?] = [:]
+                response["connectionError"] = String(responseLocal.connectionError)
+                response["error"] = responseLocal.error
+                NotificationCenter.default.post(name: .failedUpdateInfo, object: self, userInfo: response)
+            }
+            else {
+                DispatchQueue.main.sync {
+                    NotificationCenter.default.post(name: .updateInfo, object: self, userInfo: responseLocal.info)
+                }
+                
+            }
         }
     }
     
