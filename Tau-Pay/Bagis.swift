@@ -62,6 +62,16 @@ class FirstViewController: UIViewController {
                 }
                 if response.error != nil {
                     // Handle improper connection
+                    if response.error == "403" {
+                        let alert =  UIAlertController(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.", preferredStyle: UIAlertController.Style.alert)
+                        
+                        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
+                            alert.dismiss(animated: true, completion: nil)
+                            self.dismiss(animated: true, completion: nil)
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+                    }
                     self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized())
                     return
                 }
