@@ -33,28 +33,28 @@ class FirstViewController: UIViewController {
         
         queue.async {
             let amount = self.amountBox.text!
+            
+            if (amount == "") {
+                self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized())
+                return
+            }
+            let type = self.selection.selectedSegmentIndex
+            var typeString: String
+            
+            if type == 0 {
+                typeString = "shuttle"
+            }
+            else {
+                typeString = "mensa"
+            }
+            
+            let json: [String: String] = [
+                "priceId": typeString,
+                "amount": self.amountBox.text!
+            ]
+            
+            let response = Constants.SendRequestGetString(requestType: "/customers/donate-item", json: json)
             DispatchQueue.main.sync {
-                if (amount == "") {
-                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized())
-                    return
-                }
-                let type = self.selection.selectedSegmentIndex
-                var typeString: String
-                
-                if type == 0 {
-                    typeString = "shuttle"
-                }
-                else {
-                    typeString = "mensa"
-                }
-                
-                let json: [String: String] = [
-                    "priceId": typeString,
-                    "amount": self.amountBox.text!
-                ]
-                
-                let response = Constants.SendRequestGetString(requestType: "/customers/donate-item", json: json)
-                
                 if response.connectionError {
                     // Handle connection error
                     self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
