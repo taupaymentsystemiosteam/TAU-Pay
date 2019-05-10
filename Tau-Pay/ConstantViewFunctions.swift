@@ -26,11 +26,16 @@ class ConstantViewFunctions: UIViewController {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-            view.dismiss(animated: true, completion: nil)
+            logout(view: view)
+            //view.dismiss(animated: true, completion: nil)
         }))
         view.present(alert, animated: true, completion: nil)
         
+    }
+    
+    static func logout(view: UIViewController) {
+        Constants.TOKEN = ""
+        view.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {

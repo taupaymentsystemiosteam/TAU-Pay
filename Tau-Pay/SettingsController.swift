@@ -13,6 +13,19 @@ import UIKit
 class SettingsController: UIViewController {
     @IBOutlet weak var languageSelector: UISegmentedControl!
     
+    @IBAction func logoutButton(_ sender: Any) {
+        let alert =  UIAlertController(title: "title", message: "Çıkış yapmak istediğinize emin misiniz", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Evet", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+            ConstantViewFunctions.logout(view: self)
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Hayır", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     @IBAction func onLanguageChange(_ sender: Any) {
         
         // Changes the selected language based off the index

@@ -29,6 +29,7 @@
                                 <rect key="frame" x="16" y="212" width="63" height="30"/>
                                 <state key="normal" title="Çıkış Yap"/>
                                 <connections>
+                                    <action selector="logoutButton:" destination="l42-9U-hQs" eventType="touchUpInside" id="7KR-BM-OAC"/>
                                     <segue destination="7R5-QH-gq6" kind="presentation" id="R7d-gj-xQQ"/>
                                 </connections>
                             </button>
