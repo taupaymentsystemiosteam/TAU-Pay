@@ -12,14 +12,14 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var matrikelnummer_: UITextField!
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
-    
+    /*
     func createAnimatedPopUp(title: String, message: String, actionTitle: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: actionTitle,style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
         self.present(alert, animated: true, completion: nil)
         return
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,9 +84,10 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 DispatchQueue.main.sync {
                     if(response.error == "403") {
                         ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        return
                     }
                     else {
-                        self.createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", actionTitle: "Tekrar Dene")
+                        ConstantViewFunctions.createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", view: self, buttons: "Tekrar Dene")
                     }
                 }
                 

@@ -10,12 +10,14 @@ import UIKit
 
 class ConstantViewFunctions: UIViewController {
     
-    static func createAnimatedPopUp(title: String, message: String, view: UIViewController) {
+    static func createAnimatedPopUp(title: String, message: String, view: UIViewController, buttons: String...) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        for i in buttons {
+            alert.addAction(UIAlertAction(title: NSLocalizedString(i, comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+        }
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
         view.present(alert, animated: true, completion: nil)
         return
     }

@@ -23,16 +23,6 @@ class FirstLogin: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        return
-    }
 
     func sendChangeRequest() {
     
@@ -44,7 +34,7 @@ class FirstLogin: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
             return
         }
         if response.error != nil {
@@ -53,11 +43,11 @@ class FirstLogin: UIViewController {
                 ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                 return
             }
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
             return
         }
         if let responseInfo = response.info {
-            createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "\(NSLocalizedString("Şifreniz başarıyla gönderildi.", comment: " ")) \(String(describing: responseInfo))")
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "\(NSLocalizedString("Şifreniz başarıyla gönderildi.", comment: " ")) \(String(describing: responseInfo))", view: self, buttons: "Tamam")
         }
         
     }
@@ -65,11 +55,11 @@ class FirstLogin: UIViewController {
     @IBAction func changePassword(_ sender: Any) {
         
         if newPassBox.text == "" || newPassRepeatedBox.text == "" {
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "), view: self, buttons: "Tamam")
             return
         }
         if newPassBox.text != newPassRepeatedBox.text {
-            createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: NSLocalizedString("Şifreler uyuşmuyor", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: NSLocalizedString("Şifreler uyuşmuyor", comment: " "), view: self, buttons: "Tamam")
         }
         
         createYesNoPopUp(title: NSLocalizedString("Emin Misin?", comment: " "), message: NSLocalizedString("Şifrenizin bu olmasını istediğinizden emin misiniz?", comment: " "))

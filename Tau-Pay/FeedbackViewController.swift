@@ -124,7 +124,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
             DispatchQueue.main.sync {
                 if response.connectionError {
                     // Handle connection error
-                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
                     return
                 }
                 if response.error != nil {
@@ -133,28 +133,16 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
                     }
                     else {
                         // Handle improper connection
-                        self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+                        ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
                         return
                     }
                 }
                 
                 
-                self.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Yorumunuz iletilmiştir", comment: " "))
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Yorumunuz iletilmiştir", comment: " "), view: self, buttons: "Tamam")
             }
         }
     }
-    
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        return
-    }
-    
-    
     
     
     

@@ -9,16 +9,7 @@
 import UIKit
 
 class ForgotPassword: UIViewController {
-    
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " "), style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        return
-    }
+
 
 
     @IBAction func sendButton(_ sender: Any) {
@@ -26,7 +17,7 @@ class ForgotPassword: UIViewController {
         let number = numberBox.text
         
         if number == "" {
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "), view: self, buttons: "Tamam")
             return
         }
         let json: [String: String] = [
@@ -37,15 +28,15 @@ class ForgotPassword: UIViewController {
         
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
             return
         }
         if response.error != nil {
             // Handle improper connection
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "))
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
             return
         }
-        createAnimatedPopUp(title: NSLocalizedString("Başarı", comment: " "), message: NSLocalizedString("Mailinizi kontrol edebilirsiniz", comment: " "))
+        ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarı", comment: " "), message: NSLocalizedString("Mailinizi kontrol edebilirsiniz", comment: " "), view: self, buttons: "Tamam")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "loginPage") as UIViewController

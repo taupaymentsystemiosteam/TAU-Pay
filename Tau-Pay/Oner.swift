@@ -16,7 +16,7 @@ class ThirdViewController: UIViewController {
     @IBAction func Oner(_ sender: Any) {
         
         if recommendText.text == nil{
-            createAnimatedPopUp(title: "Hata", message: "Öğrenci numarası girmediniz.")
+            ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Öğrenci numarası girmediniz.", view: self, buttons: "Tamam")
             return
         }
         
@@ -39,7 +39,7 @@ class ThirdViewController: UIViewController {
             DispatchQueue.main.async {
                 if response.connectionError {
                     // Handle connection error
-                    self.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve tekrar deneyiniz.")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve tekrar deneyiniz.", view: self, buttons: "Tamam")
                     return
                 }
                     
@@ -49,20 +49,14 @@ class ThirdViewController: UIViewController {
                         ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                         return
                     }
-                    self.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş", view: self, buttons: "Tamam")
                     return
                 } else {
-                    self.createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.", view: self, buttons: "Tamam")
                 }
             }
         }
         
-    }
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Tamam",style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
-        self.present(alert, animated: true, completion: nil)
-        return
     }
     
 }
