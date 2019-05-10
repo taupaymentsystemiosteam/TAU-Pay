@@ -83,7 +83,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             else if(response.error != nil) {
                 DispatchQueue.main.sync {
                     if(response.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Hata!", message: "Kullanıcı adı veya şifre yanlış", view: self)
                         return
                     }
                     else {
