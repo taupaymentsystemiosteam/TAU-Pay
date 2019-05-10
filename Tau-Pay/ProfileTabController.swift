@@ -14,17 +14,6 @@ class ProfileTabController: UIViewController {
     @IBOutlet weak var shuttleBox: UILabel!
     @IBOutlet weak var cafeteriaBox: UILabel!
     
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        
-        return
-    }
-    
     @objc func updateInfo(_ notification: Notification) {
         if let response = (notification.userInfo as? [String: Any]) {
             helloBox.text = "Merhaba \(String(describing: response["name"]!))"
@@ -44,7 +33,7 @@ class ProfileTabController: UIViewController {
         if let response = notification.userInfo as? [String: Any?] {
             if (response["connectionError"] as? String == "true") {
                 // Handle connection error
-                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Bağlantı Hatası", comment: " "))
+                ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
                 return
             }
             if response["error"] != nil {
@@ -53,7 +42,7 @@ class ProfileTabController: UIViewController {
                     ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                     return
                 }
-                createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Hatalı Giriş", comment: " "))
+                ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
                 return
             }
         } else {
