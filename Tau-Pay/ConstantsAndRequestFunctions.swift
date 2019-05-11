@@ -13,7 +13,7 @@ class Constants
 {
 
     
-    static let IP = "http://45.77.214.216:8080"
+    static let IP = "https://workshop-omercem.com:8443
     static var TOKEN = ""
     static var language = 0 // 0 for Turkish 1 for German
     
