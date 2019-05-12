@@ -71,7 +71,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5l4-Tt-p4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87319" y="-440"/>
+            <point key="canvasLocation" x="-87799" y="-250"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PWK-R8-5U0">
@@ -91,7 +91,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pv9-Ng-lrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88374" y="-38"/>
+            <point key="canvasLocation" x="-88438" y="-158"/>
         </scene>
         <!--settingsPage-->
         <scene sceneID="P35-FW-TOQ">
@@ -99,7 +99,7 @@
                 <viewControllerPlaceholder storyboardName="SettingsPage" referencedIdentifier="settingsPage" id="OT8-hk-cj1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNg-po-4Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89033" y="569"/>
+            <point key="canvasLocation" x="-88710" y="653"/>
         </scene>
         <!--FeedbackPage-->
         <scene sceneID="R3U-HC-h8q">
@@ -107,7 +107,7 @@
                 <viewControllerPlaceholder storyboardName="FeedbackPage" referencedIdentifier="FeedbackPage" id="gNQ-cE-Ei7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM4-Va-bYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89040" y="522"/>
+            <point key="canvasLocation" x="-88702" y="590"/>
         </scene>
         <!--Ödeme-->
         <scene sceneID="Hrd-LC-0DE">
@@ -240,7 +240,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-89707.5" y="537.5"/>
+            <point key="canvasLocation" x="-89351" y="619"/>
         </scene>
         <!--bagis_screen-->
         <scene sceneID="1Jt-nE-1hv">
@@ -250,7 +250,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZC-gM-Ap5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87297" y="-255"/>
+            <point key="canvasLocation" x="-87775" y="-65"/>
         </scene>
         <!--GeldTransfer-->
         <scene sceneID="P4r-QS-L7X">
@@ -260,7 +260,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNx-Ee-chb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87297" y="-380"/>
+            <point key="canvasLocation" x="-87775" y="-190"/>
         </scene>
         <!--RecommendPage-->
         <scene sceneID="SLd-25-yd5">
@@ -270,7 +270,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1x-G4-DJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87275" y="-315"/>
+            <point key="canvasLocation" x="-87755" y="-125"/>
         </scene>
     </scenes>
     <resources>
