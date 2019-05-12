@@ -39,11 +39,11 @@
                         <constraints>
                             <constraint firstItem="DAC-Bn-ahK" firstAttribute="leading" secondItem="c1Q-iz-tkE" secondAttribute="trailing" id="BdO-Ea-5UV"/>
                             <constraint firstItem="c1Q-iz-tkE" firstAttribute="top" secondItem="9NA-tP-ZeJ" secondAttribute="top" id="Dag-zk-L4z"/>
+                            <constraint firstItem="DAC-Bn-ahK" firstAttribute="width" secondItem="pqv-mt-ZgS" secondAttribute="width" id="EiZ-zi-RGd"/>
                             <constraint firstItem="c1Q-iz-tkE" firstAttribute="leading" secondItem="pqv-mt-ZgS" secondAttribute="leading" constant="-330" id="FKB-G6-zYl"/>
-                            <constraint firstAttribute="bottom" secondItem="DAC-Bn-ahK" secondAttribute="bottom" id="G6w-TA-FPo"/>
+                            <constraint firstAttribute="bottom" secondItem="DAC-Bn-ahK" secondAttribute="bottom" id="M2q-EY-w81"/>
                             <constraint firstAttribute="bottom" secondItem="c1Q-iz-tkE" secondAttribute="bottom" id="O6P-iK-HFT"/>
                             <constraint firstItem="DAC-Bn-ahK" firstAttribute="top" secondItem="9NA-tP-ZeJ" secondAttribute="top" id="OsM-38-cAM"/>
-                            <constraint firstAttribute="trailing" secondItem="DAC-Bn-ahK" secondAttribute="trailing" id="t03-24-JvW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9NA-tP-ZeJ"/>
                     </view>
