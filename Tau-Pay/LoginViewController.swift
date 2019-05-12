@@ -96,8 +96,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 DispatchQueue.main.sync {
                     Constants.setToken(token: response.info!)
                     
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "navController") as UIViewController
+                    let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController
                     self.present(vc, animated: true, completion: nil)
                 }
             }

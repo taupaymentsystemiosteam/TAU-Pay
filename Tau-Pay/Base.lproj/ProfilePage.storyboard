@@ -31,7 +31,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAC-Bn-ahK">
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <connections>
-                                    <segue destination="lcG-21-YvS" kind="embed" id="af8-sc-4yP"/>
+                                    <segue destination="C5y-zX-cbx" kind="embed" id="95I-U2-UgC"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -66,10 +66,32 @@
         <!--Bezahlen-->
         <scene sceneID="q0e-66-Pmw">
             <objects>
-                <viewControllerPlaceholder storyboardName="BezahlenPage" referencedIdentifier="Bezahlen" id="lcG-21-YvS" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="BezahlenPage" referencedIdentifier="Bezahlen" id="lcG-21-YvS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Kqs-16-dTT"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5l4-Tt-p4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88291" y="-391"/>
+            <point key="canvasLocation" x="-87319" y="-440"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PWK-R8-5U0">
+            <objects>
+                <tabBarController id="C5y-zX-cbx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oYZ-4d-RDL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lcG-21-YvS" kind="relationship" relationship="viewControllers" id="Mz7-I5-wnD"/>
+                        <segue destination="B9t-qx-q1b" kind="relationship" relationship="viewControllers" id="0x4-Js-4zl"/>
+                        <segue destination="Jsb-ve-sLB" kind="relationship" relationship="viewControllers" id="5o7-tN-E2a"/>
+                        <segue destination="X4f-lc-lCl" kind="relationship" relationship="viewControllers" id="h4g-PI-byl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pv9-Ng-lrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88374" y="-38"/>
         </scene>
         <!--settingsPage-->
         <scene sceneID="P35-FW-TOQ">
@@ -219,6 +241,36 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-89707.5" y="537.5"/>
+        </scene>
+        <!--bagis_screen-->
+        <scene sceneID="1Jt-nE-1hv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BagisStoryboard" referencedIdentifier="bagis_screen" id="X4f-lc-lCl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="qPe-ls-vHf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZC-gM-Ap5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87297" y="-255"/>
+        </scene>
+        <!--GeldTransfer-->
+        <scene sceneID="P4r-QS-L7X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TransferPage" referencedIdentifier="GeldTransfer" id="B9t-qx-q1b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="5Qy-1N-sR9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNx-Ee-chb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87297" y="-380"/>
+        </scene>
+        <!--RecommendPage-->
+        <scene sceneID="SLd-25-yd5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecommendPage" referencedIdentifier="RecommendPage" id="Jsb-ve-sLB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="35q-9z-0w7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1x-G4-DJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87275" y="-315"/>
         </scene>
     </scenes>
     <resources>

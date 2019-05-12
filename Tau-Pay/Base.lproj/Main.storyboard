@@ -122,7 +122,7 @@
                                 <rect key="frame" x="16" y="623" width="91" height="30"/>
                                 <state key="normal" title="Bypass Login"/>
                                 <connections>
-                                    <segue destination="LX9-io-Qsv" kind="showDetail" id="XRw-xo-rAj"/>
+                                    <segue destination="xap-PB-Kj7" kind="show" id="WpE-7p-SwO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -170,10 +170,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTE-aW-f9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1121" y="-296"/>
+            <point key="canvasLocation" x="-948" y="-188"/>
         </scene>
     </scenes>
     <resources>
         <image name="00" width="702" height="544"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xqk-W9-JS4"/>
+    </inferredMetricsTieBreakers>
 </document>
