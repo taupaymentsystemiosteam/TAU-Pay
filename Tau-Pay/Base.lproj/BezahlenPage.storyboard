@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOi-1i-AVH">
-                                <rect key="frame" x="121.5" y="417" width="77" height="41"/>
+                                <rect key="frame" x="121.5" y="368" width="77" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Ödeme"/>
                                 <connections>
@@ -65,6 +65,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="clE-kq-ttY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Odeme" image="Odeme" landscapeImage="Odeme" largeContentSizeImage="Odeme" id="1kw-FG-Vqe"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="PayButton" destination="aOi-1i-AVH" id="9Op-LH-pAQ"/>
                         <outlet property="infotext" destination="vE0-dj-y5l" id="p9n-Fb-WWh"/>
@@ -77,5 +79,8 @@
             <point key="canvasLocation" x="-1254.375" y="-358.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Odeme" width="30" height="30"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
