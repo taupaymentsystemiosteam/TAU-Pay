@@ -16,8 +16,6 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
- 
-    
     @IBAction func hamburgerAction(_ sender: Any) {
         if hamburgerIsOpen {
             closeHamburger()
@@ -36,6 +34,9 @@ class SecondViewController: UIViewController {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
         rightSwipe.direction = .right
         self.view.addGestureRecognizer(rightSwipe)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(closeHamburger), name: .closeHamburger, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(openHamburger), name: .openHamburger, object: nil)
 
         
     }
@@ -46,7 +47,7 @@ class SecondViewController: UIViewController {
      
     */
     
-    func openHamburger() {              
+    @objc func openHamburger() {
         Constants.getInfo()
         leadingConstraint.constant = 0
         UIView.animate(withDuration: 0.3, animations: self.view.layoutIfNeeded)
@@ -55,7 +56,7 @@ class SecondViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    func closeHamburger() {
+    @objc func closeHamburger() {
         leadingConstraint.constant = -330
         UIView.animate(withDuration: 0.3, animations: self.view.layoutIfNeeded)
         hamburgerIsOpen = false
@@ -71,8 +72,4 @@ class SecondViewController: UIViewController {
             openHamburger()
         }
     }
-    
-    
-  
-
 }

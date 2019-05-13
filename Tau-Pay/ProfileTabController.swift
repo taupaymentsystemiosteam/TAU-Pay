@@ -71,6 +71,12 @@ class ProfileTabController: UIViewController {
         
     }
     
+    @IBAction func feedbackOnClick(_ sender: Any) {
+        NotificationCenter.default.post(name: .closeHamburger, object: self)
+    }
+    @IBAction func settingsOnClick(_ sender: Any) {
+        NotificationCenter.default.post(name: .closeHamburger, object: self)
+    }
     @objc func updateLanguage()
     {
         
