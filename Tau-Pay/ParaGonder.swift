@@ -39,36 +39,18 @@ class ParaGonder: UIViewController {
         
     }
     
-    
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        return
-    }
-    
-    
     @IBAction func SendMoney(_ sender: Any)
     {
         
         if studentNumber.text == ""  || moneyAmount.text == "" {
-            createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz")
+            ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz", view: self, buttons: "Tamam")
             return
         }
         
         let queue = DispatchQueue(label: "request")
         queue.async {
             let money : Int? = Int(self.moneyAmount.text!)
-            
-            /*
-             if money! < 0 {
-             createAnimatedPopUp(title: "Çok zekisin ", message: "Para çalmaya çalışma artık Alp bitte!")
-             return
-             }
-             */
+
             let json = [
                 "id":self.studentNumber.text!
             ]
@@ -77,17 +59,17 @@ class ParaGonder: UIViewController {
             
             DispatchQueue.main.async {
                 if getname.connectionError {
-                    self.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz", view: self, buttons: "Tamam")
                 }
                 else if getname.error != nil {
                     if(getname.error == "403") {
                         ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                         return
                     }
-                    self.createAnimatedPopUp(title: "Hata", message: "Hata: \(getname.error!) tekrar deneyiniz")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hata: \(getname.error!) tekrar deneyiniz", view: self, buttons: "Tamam")
                 }
                 else if getname.info == "user not found" {
-                    self.createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası", view: self, buttons: "Tamam")
                 }
                 else {
                     let name = getname.info
@@ -124,23 +106,23 @@ class ParaGonder: UIViewController {
                 DispatchQueue.main.sync {
                 if response.connectionError {
                     // Handle connection error
-                    self.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz", view: self, buttons: "Tamam")
                 }
                 else if response.error != nil {
                     // Handle improper connection
-                    self.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş", view: self, buttons: "Tamam")
                 }
                 else if response.info == "user not found" {
-                    self.createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası", view: self, buttons: "Tamam")
                 }
                 else if response.info == "balance not found" {
-                    self.createAnimatedPopUp(title: "Hata", message: "bakiye bulunamadı")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "bakiye bulunamadı", view: self, buttons: "Tamam")
                 }
                 else if response.info == "insufficient balance" {
-                    self.createAnimatedPopUp(title: "Sonuç", message: "Yetersiz bakiye")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Sonuç", message: "Yetersiz bakiye", view: self, buttons: "Tamam")
                 }
                 else if response.info == "transfered successfully" {
-                    self.createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi.")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi.", view: self, buttons: "Tamam")
                 }
                 else {
                     print(response.info!)

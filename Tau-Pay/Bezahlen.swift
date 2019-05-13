@@ -25,19 +25,7 @@ class Bezahlen: UIViewController {
         qrString = qr
     }
     
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        
-        return
-    }
-    
-    func Pay()
-    {
+    func Pay() {
         progressBar.isHidden = false
         infotext.isHidden = true
         qrCodeImage.isHidden = false
@@ -54,7 +42,7 @@ class Bezahlen: UIViewController {
             return
         }
         
-        if(response.error == "403"){
+        if(response.error == "403") {
             let alert =  UIAlertController(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.", preferredStyle: UIAlertController.Style.alert)
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
@@ -75,7 +63,6 @@ class Bezahlen: UIViewController {
         
         Bezahlen.setString(qr: response.info!)
         
-        
         let data = Bezahlen.qrString.data(using:String.Encoding.ascii)
         
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
@@ -94,8 +81,7 @@ class Bezahlen: UIViewController {
         }
     }
     
-    func Cancel()
-    {
+    func Cancel() {
         let alert = UIAlertController(title: NSLocalizedString("Emin Misin?", comment: " ").localized(), message: NSLocalizedString("Iptal etmek istediğinize emin misiniz?", comment: " ").localized(), preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Eminim", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
@@ -114,11 +100,9 @@ class Bezahlen: UIViewController {
     @IBAction func paybutton(_ sender: Any) {
         if PayButton.currentTitle == NSLocalizedString("Ödeme", comment: " ").localized() {
             Pay()
-        }else
-        {
+        } else {
             Cancel()
         }
-
     }
     
     @objc func Ispaid()
@@ -127,10 +111,9 @@ class Bezahlen: UIViewController {
         
         let response = Constants.SendRequestGetString(requestType: "/customers/is-paid", json: dict)
         
-        
         if response.connectionError {
             // Handle connection error
-            createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized(), view: self, buttons: "Tamam")
             return
         }
         if response.error != nil {
@@ -190,15 +173,13 @@ class Bezahlen: UIViewController {
         
         }
     
-    @objc func updateLanguage()
-    {
+    @objc func updateLanguage() {
          infotext.text = "infoText".localized()
          PayButton.setTitle("Ödeme".localized(), for: UIControl.State.normal)
         
     }
     
-    func turnToDefault()
-    {
+    func turnToDefault() {
         self.infotext.isHidden = false
         self.progressBar.isHidden = true
         self.qrCodeImage.isHidden = true

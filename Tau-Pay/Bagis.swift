@@ -16,16 +16,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var selection: UISegmentedControl!
     
-    func createAnimatedPopUp(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-        return
-    }
-    
     @IBAction func sendButton(_ sender: Any) {
         
         
@@ -35,7 +25,7 @@ class FirstViewController: UIViewController {
             let amount = self.amountBox.text!
             
             if (amount == "") {
-                self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized())
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized(), view: self, buttons: "Tamam")
                 return
             }
             let type = self.selection.selectedSegmentIndex
@@ -57,7 +47,7 @@ class FirstViewController: UIViewController {
             DispatchQueue.main.sync {
                 if response.connectionError {
                     // Handle connection error
-                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized())
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized(), view: self, buttons: "Tamam")
                     return
                 }
                 if response.error != nil {
@@ -66,11 +56,11 @@ class FirstViewController: UIViewController {
                         ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                         return
                     }
-                    self.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized())
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized(), view: self, buttons: "Tamam")
                     return
                 }
                 
-                self.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir", comment: " ").localized())
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir", comment: " ").localized(), view: self, buttons: "Tamam")
             }
             }
     }

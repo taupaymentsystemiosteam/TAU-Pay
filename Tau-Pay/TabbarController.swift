@@ -22,7 +22,6 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        print(self.selectedViewController?.title)
     }
     
     override func viewDidAppear(_ animated: Bool) {
