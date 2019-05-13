@@ -24,8 +24,21 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let lang = UserDefaults.standard.string(forKey: "Language")
+        {
+            Bundle.setLanguage(lang: lang)
+        }else
+        {
+           if Locale.current.languageCode == "tr" || Locale.current.languageCode == "de"
+           {
+            Bundle.setLanguage(lang: Locale.current.languageCode!)
+            }else
+           {
+            Bundle.setLanguage(lang: "tr")
+            }
+        }
         
-        var text = NSLocalizedString("Giriş", comment: "Giriş Yapmak için")
+        var text = "Giriş".localized()
         anmelden_.setTitle(text, for: UIControl.State.normal)
         
         let matrikelnummerImage = UIImage(named: "user_male")
