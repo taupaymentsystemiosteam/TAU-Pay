@@ -14,7 +14,7 @@ class SettingsController: UIViewController {
     @IBOutlet weak var languageSelector: UISegmentedControl!
     
     @IBAction func logoutButton(_ sender: Any) {
-        let alert =  UIAlertController(title: "title", message: "Çıkış yapmak istediğinize emin misiniz", preferredStyle: UIAlertController.Style.alert)
+        let alert =  UIAlertController(title: "Çıkış", message: "Çıkış yapmak istediğinize emin misiniz", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Evet", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
