@@ -39,15 +39,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         if UserDefaults.standard.bool(forKey: "loggedin") == true {
-//            DispatchQueue.main.sync {
-//                Constants.setToken(token: UserDefaults.standard.string(forKey: "TOKEN")!)
-//
-//                let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController
-//                self.present(vc, animated: true, completion: nil)
-//            }
             
-             Constants.setToken(token: UserDefaults.standard.string(forKey: "TOKEN")!)
+            Constants.setToken(token: UserDefaults.standard.string(forKey: "TOKEN")!)
             
             let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController
