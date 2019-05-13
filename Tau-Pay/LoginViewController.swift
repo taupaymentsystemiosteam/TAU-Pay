@@ -12,6 +12,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var matrikelnummer_: UITextField!
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
+    @IBOutlet var PasswortVergessen: [UIButton]!
     /*
     func createAnimatedPopUp(title: String, message: String, actionTitle: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
