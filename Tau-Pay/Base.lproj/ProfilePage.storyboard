@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profle-->
+        <!--Profile-->
         <scene sceneID="upO-Ez-KOB">
             <objects>
-                <viewController storyboardIdentifier="ProfilePage" title="Profle" id="tar-ev-gJV" customClass="SecondViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfilePage" title="Profile" id="tar-ev-gJV" customClass="SecondViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqv-mt-ZgS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-87799" y="-250"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="PWK-R8-5U0">
             <objects>
-                <tabBarController id="C5y-zX-cbx" sceneMemberID="viewController">
+                <tabBarController id="C5y-zX-cbx" customClass="TabbarController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oYZ-4d-RDL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -116,7 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Ödeme" image="Odeme" landscapeImage="Odeme" largeContentSizeImage="Odeme" id="6Jt-Me-ary"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VVX-eD-kj4">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

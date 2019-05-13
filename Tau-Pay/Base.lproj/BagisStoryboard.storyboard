@@ -50,12 +50,6 @@
                                     <action selector="sendButton:" destination="xve-zS-lcr" eventType="touchUpInside" id="QoW-to-gyB"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpD-wg-Fas">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Bağış" id="nsL-U5-wDo"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,17 +66,15 @@
                             <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="s5s-6V-4R4" secondAttribute="trailing" constant="251" id="ZjB-fO-BjN"/>
                             <constraint firstItem="UH8-o1-LVg" firstAttribute="trailing" secondItem="Wca-H1-jhf" secondAttribute="trailing" constant="16" id="aPR-Za-LaP"/>
                             <constraint firstItem="VpO-vw-uKL" firstAttribute="top" secondItem="Wca-H1-jhf" secondAttribute="bottom" constant="45" id="aec-gS-fll"/>
-                            <constraint firstItem="RpD-wg-Fas" firstAttribute="trailing" secondItem="UH8-o1-LVg" secondAttribute="trailing" id="ejk-Xt-DTm"/>
                             <constraint firstItem="srK-s8-hil" firstAttribute="top" secondItem="s5s-6V-4R4" secondAttribute="bottom" constant="8" id="gio-cu-grh"/>
                             <constraint firstItem="Wca-H1-jhf" firstAttribute="top" secondItem="UH8-o1-LVg" secondAttribute="top" constant="115" id="hbK-eO-WlD"/>
                             <constraint firstItem="Wca-H1-jhf" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="kLQ-Fb-Y5Q"/>
                             <constraint firstItem="VpO-vw-uKL" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" constant="16" id="noE-ZC-FDP"/>
-                            <constraint firstItem="RpD-wg-Fas" firstAttribute="leading" secondItem="UH8-o1-LVg" secondAttribute="leading" id="qdZ-mB-kf2"/>
-                            <constraint firstItem="RpD-wg-Fas" firstAttribute="top" secondItem="UH8-o1-LVg" secondAttribute="top" id="ytg-Yu-wDk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Askıda" image="Aski" landscapeImage="Aski" largeContentSizeImage="Aski" id="vx8-96-o0h"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="amountBox" destination="srK-s8-hil" id="ECm-UV-HNE"/>
                         <outlet property="selection" destination="VpO-vw-uKL" id="zOH-hz-zLm"/>

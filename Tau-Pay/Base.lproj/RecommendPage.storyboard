@@ -44,25 +44,16 @@
                                     <action selector="Oner:" destination="BAA-MA-DoZ" eventType="touchUpInside" id="k74-FK-vNv"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMf-Iu-AaJ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Öner" id="xSk-hb-aZh"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FOZ-g6-V1O" firstAttribute="leading" secondItem="XCr-Ke-l6N" secondAttribute="leading" constant="16" id="1Ea-AX-lmy"/>
                             <constraint firstItem="XCr-Ke-l6N" firstAttribute="trailing" secondItem="Rjt-YR-kTA" secondAttribute="trailing" constant="16" id="1vX-yF-nEJ"/>
-                            <constraint firstItem="wMf-Iu-AaJ" firstAttribute="leading" secondItem="XCr-Ke-l6N" secondAttribute="leading" id="CKf-hn-NWO"/>
                             <constraint firstItem="CLf-Mn-qJd" firstAttribute="leading" secondItem="XCr-Ke-l6N" secondAttribute="leading" constant="16" id="CMt-2N-pqw"/>
                             <constraint firstItem="rwg-F7-itm" firstAttribute="leading" secondItem="XCr-Ke-l6N" secondAttribute="leading" constant="16" id="KCh-Q0-hy1"/>
-                            <constraint firstItem="wMf-Iu-AaJ" firstAttribute="trailing" secondItem="XCr-Ke-l6N" secondAttribute="trailing" id="KEF-GK-lg9"/>
                             <constraint firstItem="CLf-Mn-qJd" firstAttribute="top" secondItem="rwg-F7-itm" secondAttribute="bottom" constant="25" id="LML-HB-Quk"/>
                             <constraint firstItem="XCr-Ke-l6N" firstAttribute="trailing" secondItem="rwg-F7-itm" secondAttribute="trailing" constant="16" id="PZB-oM-bIu"/>
                             <constraint firstItem="Rjt-YR-kTA" firstAttribute="top" secondItem="FOZ-g6-V1O" secondAttribute="bottom" constant="8" id="bzs-oF-8Qm"/>
-                            <constraint firstItem="wMf-Iu-AaJ" firstAttribute="top" secondItem="XCr-Ke-l6N" secondAttribute="top" id="ctr-dv-e3a"/>
                             <constraint firstItem="FOZ-g6-V1O" firstAttribute="top" secondItem="CLf-Mn-qJd" secondAttribute="bottom" constant="8" id="jV4-Gy-gPm"/>
                             <constraint firstItem="XCr-Ke-l6N" firstAttribute="trailing" secondItem="FOZ-g6-V1O" secondAttribute="trailing" constant="16" id="l5Q-6N-y1v"/>
                             <constraint firstItem="rwg-F7-itm" firstAttribute="top" secondItem="XCr-Ke-l6N" secondAttribute="top" constant="115" id="ytu-Cb-aSV"/>

@@ -188,6 +188,8 @@ class Bezahlen: UIViewController {
         PayButton.setTitle("Ödeme".localized(), for: UIControl.State.normal)
         NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
         
+        
+        self.parent?.parent?.navigationItem.title = self.title
     }
     
     @objc func updateLanguage()
