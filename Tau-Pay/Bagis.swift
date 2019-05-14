@@ -53,14 +53,14 @@ class FirstViewController: UIViewController {
                 if response.error != nil {
                     // Handle improper connection
                     if(response.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: NSLocalizedString("Dikkat!", comment: " "), message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                         return
                     }
                     ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized(), view: self, buttons: "Tamam")
                     return
                 }
                 
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir", comment: " ").localized(), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " ").localized(), message: NSLocalizedString("Bağışınız kabul edilmiştir", comment: " ").localized(), view: self, buttons: "Tamam".localized())
             }
             }
     }

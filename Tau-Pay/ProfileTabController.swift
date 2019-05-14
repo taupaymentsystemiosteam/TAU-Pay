@@ -33,12 +33,15 @@ class ProfileTabController: UIViewController {
         if let response = notification.userInfo as? [String: Any?] {
             if (response["connectionError"] as? String == "true") {
                 // Handle connection error
-                ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam".localized())
                 return
             }
             if response["error"] != nil {
                 // Handle improper connection
-                if(response["error"] as? String == "403") {
+                print("here")
+                print(response["error"] as! Substring)
+                if(response["error"] as! Substring == "403") {
+                
                     ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
                     return
                 }
@@ -58,12 +61,11 @@ class ProfileTabController: UIViewController {
     
         if Constants.TOKEN == "" {
             print("No Token Entry")
-            return
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateInfo), name: .updateInfo, object: nil)
         
-         NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo(_:)), name: .failedUpdateInfo, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(failedUpdateInfo), name: .failedUpdateInfo, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
         

@@ -41,10 +41,13 @@ class Constants
         queue.async {
             let responseLocal = Constants.SendRequestGetDictionary(request: "/customers/get-info", json: [:])
             if responseLocal.error != nil || responseLocal.connectionError {
+                print("hallo")
                 var response: [String: Any?] = [:]
                 response["connectionError"] = String(responseLocal.connectionError)
                 response["error"] = responseLocal.error?.suffix(3)
+                print("hallo2")
                 DispatchQueue.main.sync {
+                    print("hallo3")
                     NotificationCenter.default.post(name: .failedUpdateInfo, object: self, userInfo: response)
                 }
             }
