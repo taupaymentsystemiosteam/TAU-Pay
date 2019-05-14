@@ -11,4 +11,7 @@ extension Notification.Name {
     static let updateInfo = Notification.Name("updateInfo")
     static let failedUpdateInfo = Notification.Name("failedUpdateInfo")
     static let changeLanguage = Notification.Name("updateLanguage")
+    static let closeHamburger = Notification.Name("closeHamburger")
+    static let openHamburger = Notification.Name("openHamburger")
+
 }

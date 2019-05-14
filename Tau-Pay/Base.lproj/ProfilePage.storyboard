@@ -116,7 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Ödeme" image="Odeme" landscapeImage="Odeme" largeContentSizeImage="Odeme" id="6Jt-Me-ary"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VVX-eD-kj4">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -177,18 +177,11 @@
                                     <constraint firstAttribute="height" constant="103" id="PqJ-9h-L4o"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cna-Zd-rhb">
-                                <rect key="frame" x="192" y="316" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update"/>
-                                <connections>
-                                    <action selector="update:" destination="hO6-oZ-1rm" eventType="touchUpInside" id="FPZ-wq-6d2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP6-Ha-xz3">
                                 <rect key="frame" x="16" y="339" width="48" height="30"/>
                                 <state key="normal" title="Ayarlar"/>
                                 <connections>
+                                    <action selector="settingsOnClick:" destination="hO6-oZ-1rm" eventType="touchUpInside" id="oeE-En-xuR"/>
                                     <segue destination="OT8-hk-cj1" kind="show" id="Z3n-bs-zGg"/>
                                 </connections>
                             </button>
@@ -196,6 +189,7 @@
                                 <rect key="frame" x="16" y="301" width="68" height="30"/>
                                 <state key="normal" title="Feedback"/>
                                 <connections>
+                                    <action selector="feedbackOnClick:" destination="hO6-oZ-1rm" eventType="touchUpInside" id="555-gV-XKg"/>
                                     <segue destination="gNQ-cE-Ei7" kind="show" id="Pu2-sj-5QS"/>
                                 </connections>
                             </button>
