@@ -153,7 +153,7 @@ class Bezahlen: UIViewController {
     
     
     @objc func updateProgress() {
-        progressValue = progressValue - 0.005
+        progressValue = progressValue - 0.00134
         self.progressBar.progress = Float(progressValue)
         if progressValue > 0.0 {
             self.perform(#selector(updateProgress), with: nil, afterDelay: 0.2)

@@ -23,6 +23,10 @@ class SettingsController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("Hayır", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
         }))
+        
+        UserDefaults.standard.set("", forKey: "TOKEN")
+        UserDefaults.standard.set(false, forKey: "loggedin")
+        
         self.present(alert, animated: true, completion: nil)
         
     }

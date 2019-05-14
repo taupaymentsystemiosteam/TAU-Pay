@@ -12,6 +12,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var matrikelnummer_: UITextField!
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
+    @IBOutlet var PasswortVergessen: [UIButton]!
     /*
     func createAnimatedPopUp(title: String, message: String, actionTitle: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -23,8 +24,21 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let lang = UserDefaults.standard.string(forKey: "Language")
+        {
+            Bundle.setLanguage(lang: lang)
+        }else
+        {
+           if Locale.current.languageCode == "tr" || Locale.current.languageCode == "de"
+           {
+            Bundle.setLanguage(lang: Locale.current.languageCode!)
+            }else
+           {
+            Bundle.setLanguage(lang: "tr")
+            }
+        }
         
-        var text = NSLocalizedString("Giriş", comment: "Giriş Yapmak için")
+        var text = "Giriş".localized()
         anmelden_.setTitle(text, for: UIControl.State.normal)
         
         let matrikelnummerImage = UIImage(named: "user_male")
@@ -37,6 +51,15 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
+        if UserDefaults.standard.bool(forKey: "loggedin") == true {
+            
+            Constants.setToken(token: UserDefaults.standard.string(forKey: "TOKEN")!)
+            
+            let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController
+            self.present(vc, animated: true, completion: nil)
+        }
         
         // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
         // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
@@ -76,6 +99,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             
             let response = Constants.SendRequestGetString(requestType: "/login", json: dict)
             
+            
+            
             if(response.connectionError){
                 //fehlende Internetverbindung
             }
@@ -95,6 +120,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             else {
                 DispatchQueue.main.sync {
                     Constants.setToken(token: response.info!)
+                    UserDefaults.standard.set(response.info!, forKey: "TOKEN")
+                    UserDefaults.standard.set(true, forKey: "loggedin")
                     
                     let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController

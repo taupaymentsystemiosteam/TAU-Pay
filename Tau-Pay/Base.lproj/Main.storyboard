@@ -108,6 +108,7 @@
                         <outlet property="anmelden_" destination="b8O-GE-AFd" id="Bes-hP-2yz"/>
                         <outlet property="matrikelnummer_" destination="AVC-ec-khd" id="VZL-ny-XlY"/>
                         <outlet property="passwort_" destination="rV4-vG-eJ0" id="FCd-1I-y4u"/>
+                        <outletCollection property="PasswortVergessen" destination="JuK-G5-XU9" collectionClass="NSMutableArray" id="cHV-GP-dHv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfQ-gn-p5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
