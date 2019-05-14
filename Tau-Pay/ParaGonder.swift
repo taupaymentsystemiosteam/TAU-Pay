@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParaGonder: UIViewController {
+class ParaGonder: UIViewController, UITextFieldDelegate {
     
     
     var selectedValue = "shuttle"
@@ -32,11 +32,22 @@ class ParaGonder: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.studentNumber.delegate = self;
+        self.moneyAmount.delegate = self;
         
         
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == moneyAmount || (studentNumber != nil) {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
     }
     
     @IBAction func SendMoney(_ sender: Any)

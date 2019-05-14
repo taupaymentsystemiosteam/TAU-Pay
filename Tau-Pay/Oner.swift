@@ -1,6 +1,6 @@
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var recommendText: UITextField!
@@ -9,6 +9,8 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.recommendText.delegate = self;
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
@@ -30,6 +32,16 @@ class ThirdViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == recommendText {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
+    
     func recommendRequest() {
         let queue = DispatchQueue(label: "request")
         queue.async {

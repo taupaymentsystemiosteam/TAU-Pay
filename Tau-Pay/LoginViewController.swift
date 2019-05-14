@@ -13,6 +13,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
     @IBOutlet var PasswortVergessen: [UIButton]!
+
     /*
     func createAnimatedPopUp(title: String, message: String, actionTitle: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -49,6 +50,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         matrikelnummer_.layer.cornerRadius = 15.0
         
+        self.matrikelnummer_.delegate = self;
+        
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
@@ -61,13 +64,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             self.present(vc, animated: true, completion: nil)
         }
         
-        // let matrikelnummerImage = UIImage(named: "matrikelnummer_")
-        // addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
-        
-        //let passwortImage = UIImage(named: "passwort_")
-        //addLeftImageTo(txtField: passwort_, andImage: passwortImage!)
-        
-        //matrikelnummer_.layer.cornerRadius = 15.0
         
     }
     
@@ -78,6 +74,15 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         leftImageView.image = img
         txtField.leftView = leftImageView
         txtField.leftViewMode = .always
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == matrikelnummer_ {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
     }
     
     @IBAction func login_button(_ sender: Any) {
