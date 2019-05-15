@@ -167,14 +167,13 @@ class Bezahlen: UIViewController {
         super.viewDidLoad()
         progressBar.isHidden = true
         qrCodeImage.isHidden = true
-        infotext.text = "infoText".localized()
-        PayButton.setTitle("Ödeme".localized(), for: UIControl.State.normal)
+        updateLanguage()
         NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
         
         }
     
     @objc func updateLanguage() {
-         infotext.text = "infoText".localized()
+         infotext.text = NSLocalizedString("Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız.", comment: "")
          PayButton.setTitle("Ödeme".localized(), for: UIControl.State.normal)
         
     }

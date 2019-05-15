@@ -26,7 +26,7 @@ class Constants
         }else
         {
             Bundle.setLanguage(lang: "de")
-            UserDefaults.standard.set("tr", forKey: "Language")
+            UserDefaults.standard.set("de", forKey: "Language")
         }
         
         NotificationCenter.default.post(name: .changeLanguage, object: self)

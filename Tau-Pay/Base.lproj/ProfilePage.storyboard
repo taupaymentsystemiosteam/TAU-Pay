@@ -221,9 +221,13 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="AyarlarButton" destination="OP6-Ha-xz3" id="co9-gF-WUe"/>
                         <outlet property="cafeteriaBox" destination="llO-Zj-fXY" id="UAy-4T-FFI"/>
+                        <outlet property="feedbackButton" destination="2y3-gi-4WX" id="8cM-MG-WQe"/>
                         <outlet property="helloBox" destination="O14-jS-oSm" id="Dlv-W4-sTl"/>
                         <outlet property="shuttleBox" destination="Sy7-CG-Rbg" id="lfg-jk-WB2"/>
+                        <outlet property="shuttleLAbel" destination="1BB-vu-4Wj" id="RbS-Fg-FiL"/>
+                        <outlet property="yemekhaneLabel" destination="jpk-uc-N1w" id="6LU-nH-Kjt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpq-B1-aWW" userLabel="First Responder" sceneMemberID="firstResponder"/>

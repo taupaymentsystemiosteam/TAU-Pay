@@ -39,9 +39,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             }
         }
         
-        var text = "Giriş".localized()
-        anmelden_.setTitle(text, for: UIControl.State.normal)
+       updateLanguage()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+        
+      
         let matrikelnummerImage = UIImage(named: "user_male")
         addLeftImageTo(txtField: matrikelnummer_, andImage: matrikelnummerImage!)
         
@@ -64,6 +66,16 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             self.present(vc, animated: true, completion: nil)
         }
         
+        
+    }
+    
+    @objc func updateLanguage() {
+        var text = "Giriş".localized()
+        anmelden_.setTitle(text, for: UIControl.State.normal)
+        
+        matrikelnummer_.placeholder = NSLocalizedString("Okul Numarasi", comment: " ")
+        
+        passwort_.placeholder = NSLocalizedString("Parola", comment: " ")
         
     }
     

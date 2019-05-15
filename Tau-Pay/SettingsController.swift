@@ -40,6 +40,13 @@ class SettingsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserDefaults.standard.string(forKey: "Language") == "de"
+        {
+            languageSelector.selectedSegmentIndex = 1
+        }else{
+            languageSelector.selectedSegmentIndex = 0
+        }
+        
     }
     
 

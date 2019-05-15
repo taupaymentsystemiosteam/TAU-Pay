@@ -13,10 +13,17 @@ class ProfileTabController: UIViewController {
     @IBOutlet weak var helloBox: UILabel!
     @IBOutlet weak var shuttleBox: UILabel!
     @IBOutlet weak var cafeteriaBox: UILabel!
+    @IBOutlet weak var feedbackButton: UIButton!
+    @IBOutlet weak var AyarlarButton: UIButton!
+    
+    @IBOutlet weak var shuttleLAbel: UILabel!
+    @IBOutlet weak var yemekhaneLabel: UILabel!
+    
+    
     
     @objc func updateInfo(_ notification: Notification) {
         if let response = (notification.userInfo as? [String: Any]) {
-            helloBox.text = "Merhaba \(String(describing: response["name"]!))"
+            helloBox.text = NSLocalizedString("Merhaba", comment: "") + " \(String(describing: response["name"]!))"
             shuttleBox.text = "\(String(describing: response["balanceShuttle"]!)) TL"
             cafeteriaBox.text = "\(String(describing: response["balanceMensa"]!)) TL"
             print("updated")
@@ -57,7 +64,7 @@ class ProfileTabController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLanguage()
     
         if Constants.TOKEN == "" {
             print("No Token Entry")
@@ -81,7 +88,13 @@ class ProfileTabController: UIViewController {
     }
     @objc func updateLanguage()
     {
+        shuttleLAbel.text = NSLocalizedString("Shuttle Bakiye", comment: "")
+        yemekhaneLabel.text = NSLocalizedString("Yemekhane Bakiye", comment: "")
+        let feedback = NSLocalizedString("FeedBack", comment: " ")
+        let ayarlar = NSLocalizedString("Ayarlar", comment: " ")
         
+        feedbackButton.setTitle(feedback, for: UIControl.State.normal)
+        AyarlarButton.setTitle(ayarlar, for: UIControl.State.normal)
         
     }
     

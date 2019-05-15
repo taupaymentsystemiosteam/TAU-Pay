@@ -79,8 +79,12 @@
                         <viewLayoutGuide key="safeArea" id="x0Q-dj-rZh"/>
                     </view>
                     <connections>
+                        <outlet property="chagePassButton" destination="RAk-Oe-LLO" id="EX0-af-vyR"/>
+                        <outlet property="info" destination="Z3T-mv-eur" id="k1g-ct-waS"/>
                         <outlet property="newPassBox" destination="zOx-FQ-7jk" id="qOi-c6-uYv"/>
                         <outlet property="newPassRepeatedBox" destination="eNw-Ey-sao" id="tDw-HN-Wbn"/>
+                        <outlet property="newPassTekrat" destination="7l8-IY-btJ" id="cQm-sV-qpI"/>
+                        <outlet property="newpass" destination="KGx-ey-w5u" id="VVc-gX-qnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAr-P2-OXG" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -46,12 +46,21 @@ class ForgotPassword: UIViewController {
     }
 
     @IBOutlet weak var numberBox: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var okulNo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
+       updateLanguage()
+    NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func updateLanguage()
+    {
+        okulNo.text = "Okul Numarasi".localized() + ":"
+        sendButton.setTitle("Gonder".localized(), for: UIControl.State.normal)
     }
     
 

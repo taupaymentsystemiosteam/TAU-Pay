@@ -25,7 +25,7 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.parent?.navigationItem.title = self.selectedViewController?.title
+        self.parent?.navigationItem.title = self.selectedViewController?.title?.localized()
     }
 
     /*

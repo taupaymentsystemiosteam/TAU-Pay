@@ -64,6 +64,7 @@
                     <connections>
                         <outlet property="Oner" destination="Rjt-YR-kTA" id="vFO-7q-HHU"/>
                         <outlet property="recommendText" destination="FOZ-g6-V1O" id="BRK-ZN-cd5"/>
+                        <outlet property="studentNumberText" destination="CLf-Mn-qJd" id="jhV-Dl-CIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF4-3g-E7n" userLabel="First Responder" sceneMemberID="firstResponder"/>

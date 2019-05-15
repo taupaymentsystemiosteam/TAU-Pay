@@ -5,14 +5,26 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var recommendText: UITextField!
     @IBOutlet var Oner: UIButton!
+    @IBOutlet weak var studentNumberText: UILabel!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+      
         self.recommendText.delegate = self;
-        
+          updateLanguage()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+          NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+    }
+    
+    @objc func updateLanguage()
+    {
+        DikkatText.text = NSLocalizedString("Bu sayfada yardıma ihtiyacı olanlar listesine girmesi için bir öğrenci önerebilirsiniz. Bu öğrencinin listeye girip girmemesi için karar verilecektir.", comment: " ")
+        
+        let onerText = NSLocalizedString("Oner", comment: "")
+        
+        studentNumberText.text = "Okul Numarasi" + ":"
+        Oner.setTitle(onerText, for: UIControl.State.normal)
     }
     
     @IBAction func Oner(_ sender: Any) {

@@ -53,9 +53,26 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
         FeedbackText.delegate = self
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
-        
+       updateLanguage()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+        // Do any additional setup after loading the view.
     }
     
+    @objc func updateLanguage()
+    {
+        let info = NSLocalizedString("Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz.", comment: "")
+        let shuttle = NSLocalizedString("Shuttle", comment: " ")
+        let yemekhane = NSLocalizedString("Yemekhane", comment: " ")
+        let yorumlar = NSLocalizedString("Yorumlar", comment: " ")
+        
+        MensaShutteSelect.setTitle(shuttle, forSegmentAt: 0)
+        MensaShutteSelect.setTitle(yemekhane, forSegmentAt: 1)
+        AcıklamaText.text = info
+        FeedbackText.text = yorumlar
+        
+        GonderButton.setTitle("Gonder".localized(), for: UIControl.State.normal)
+       
+    }
     
     
     @IBAction func textViewDidBeginEditing (_ FeedbackText: UITextView) {

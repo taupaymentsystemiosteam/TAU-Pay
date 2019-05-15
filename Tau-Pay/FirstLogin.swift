@@ -67,26 +67,33 @@ class FirstLogin: UIViewController {
         
         
     }
+    
     @IBOutlet weak var newPassBox: UITextField!
     @IBOutlet weak var newPassRepeatedBox: UITextField!
+    @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var newpass: UILabel!
+    @IBOutlet weak var newPassTekrat: UILabel!
+    @IBOutlet weak var chagePassButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLanguage()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+      
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func updateLanguage()
+    {
+        let infoText = NSLocalizedString("Bu sizin ilk girisiniz , sifrenizi degistirmeniz gerekmektedir.", comment: " ")
+        info.text = infoText
+        
+        newpass.text = "Yeni Sifre".localized()
+        newPassTekrat.text = "Yeni Sifre (Tekrar)".localized()
+        chagePassButton.setTitle("Degistir".localized(), for: UIControl.State.normal)
+    
     }
-    */
 
 }

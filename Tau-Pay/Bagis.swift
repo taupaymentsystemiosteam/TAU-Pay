@@ -13,6 +13,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var DikkatText: UITextView!
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var selection: UISegmentedControl!
+    @IBOutlet weak var miktarLabel: UILabel!
+    @IBOutlet weak var gonder: UIButton!
     
     @IBAction func sendButton(_ sender: Any) {
         
@@ -66,10 +68,29 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        updateLanguage()
         self.amountBox.delegate = self;
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+     
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+    }
     
+    @objc func updateLanguage()
+    {
+        DikkatText.text = NSLocalizedString("Askıya yemek / shuttle seyahati bırakabilirsiniz.", comment: " ")
+        
+        let shuttle = NSLocalizedString("Shuttle", comment: " ")
+        let yemekhane = NSLocalizedString("Yemekhane", comment: " ")
+        let miktar = NSLocalizedString("Miktar", comment: " ")
+        let gonderme = NSLocalizedString("Gonder", comment: " ")
+        
+        gonder.setTitle(gonderme, for: UIControl.State.normal)
+        miktarLabel.text = miktar
+        selection.setTitle(shuttle, forSegmentAt: 0)
+        selection.setTitle(yemekhane, forSegmentAt: 1)
+        
+        
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

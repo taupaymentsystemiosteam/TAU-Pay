@@ -14,13 +14,29 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var newPass: UITextField!
     @IBOutlet weak var oldPass: UITextField!
     
-    
-    
+    @IBOutlet weak var oldPassLabel: UILabel!
+    @IBOutlet weak var NewPassLabel: UILabel!
+    @IBOutlet weak var newAgain: UILabel!
+    @IBOutlet weak var change: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLanguage()
+         NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func updateLanguage()
+    {
+        let old = NSLocalizedString("Eski Sifre", comment: "")
+        let new = NSLocalizedString("Yeni Sifre", comment: "")
+        let newagain = NSLocalizedString("Yeni Sifre (Tekrar)", comment: "")
+        let changeBut = NSLocalizedString("Degistir", comment: " ")
+        
+        oldPassLabel.text = old
+        NewPassLabel.text = new
+        newAgain.text = newagain
+        change.setTitle(changeBut, for: UIControl.State.normal)
     }
     
     @IBAction func ChangePassword(_ sender: Any)
