@@ -23,7 +23,7 @@ class Constants
         if language == 0 {
             Bundle.setLanguage(lang: "tr")
             UserDefaults.standard.set("tr", forKey: "Language")
-        }else
+        }else if language == 1
         {
             Bundle.setLanguage(lang: "de")
             UserDefaults.standard.set("de", forKey: "Language")
