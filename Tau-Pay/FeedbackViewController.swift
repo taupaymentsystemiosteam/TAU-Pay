@@ -60,10 +60,10 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
     
     @objc func updateLanguage()
     {
-        let info = NSLocalizedString("Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz.", comment: "")
-        let shuttle = NSLocalizedString("Shuttle", comment: " ")
-        let yemekhane = NSLocalizedString("Yemekhane", comment: " ")
-        let yorumlar = NSLocalizedString("Yorumlar", comment: " ")
+        let info = NSLocalizedString("Yemekhane veya shuttle için puan verebilir ek olarak da yorum yapabilirsiniz.", comment: "").localized()
+        let shuttle = NSLocalizedString("Shuttle", comment: " ").localized()
+        let yemekhane = NSLocalizedString("Yemekhane", comment: " ").localized()
+        let yorumlar = NSLocalizedString("Yorumlar", comment: " ").localized()
         
         MensaShutteSelect.setTitle(shuttle, forSegmentAt: 0)
         MensaShutteSelect.setTitle(yemekhane, forSegmentAt: 1)
@@ -141,18 +141,17 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
             DispatchQueue.main.sync {
                 if response.connectionError {
                     // Handle connection error
-                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Bağlantı Hatası", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                     return
                 }
                 if response.error != nil {
+                    // Handle improper connection
                     if(response.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
-                    }
-                    else {
-                        // Handle improper connection
-                        ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat".localized(), message: "Hesabınıza başka bir cihazdan giriş yapıldı".localized(), view: self)
                         return
                     }
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized(), view: self, buttons: "Tamam".localized())
+                    return
                 }
                 
                 

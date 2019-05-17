@@ -33,7 +33,11 @@ class ForgotPassword: UIViewController {
         }
         if response.error != nil {
             // Handle improper connection
-            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
+            if(response.error == "403") {
+                ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat".localized(), message: "Hesabınıza başka bir cihazdan giriş yapıldı".localized(), view: self)
+                return
+            }
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized(), view: self, buttons: "Tamam".localized())
             return
         }
         ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarı", comment: " "), message: NSLocalizedString("Mailinizi kontrol edebilirsiniz", comment: " "), view: self, buttons: "Tamam")

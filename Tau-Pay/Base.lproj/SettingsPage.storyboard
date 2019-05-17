@@ -66,6 +66,9 @@
                         <viewLayoutGuide key="safeArea" id="gvM-x7-jU6"/>
                     </view>
                     <connections>
+                        <outlet property="changePass" destination="5uu-Xh-d1B" id="baf-yo-PCL"/>
+                        <outlet property="exit" destination="Mrd-od-zbg" id="WcH-W5-rga"/>
+                        <outlet property="language" destination="9xL-Tt-m9F" id="gyN-j2-zJO"/>
                         <outlet property="languageSelector" destination="SlS-BN-tA2" id="KxE-A9-oTA"/>
                     </connections>
                 </viewController>

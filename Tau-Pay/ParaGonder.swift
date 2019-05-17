@@ -13,14 +13,13 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
     
     var selectedValue = "shuttle"
     
-   
-    
-   
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet var OkulNoLabel: UILabel!
     @IBOutlet var MiktarLabel: UILabel!
     @IBOutlet weak var moneyAmount: UITextField!
     @IBOutlet weak var studentNumber: UITextField!
-
+    @IBOutlet weak var gonderButton: UIButton!
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     @IBAction func onTransferTypeSelected(_ sender: Any)
@@ -35,12 +34,29 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
         self.studentNumber.delegate = self;
         self.moneyAmount.delegate = self;
         
-        
+        updateLanguage()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+        
     }
     
+    @objc func updateLanguage()
+    {
+      
+        infoLabel.text = "ParaTransferiInfo".localized()
+        OkulNoLabel.text = "Okul Numarasi".localized() + ":"
+        MiktarLabel.text = "Miktar".localized()
+        
+        segmentedControl.setTitle("Shuttle".localized(), forSegmentAt: 0)
+        segmentedControl.setTitle("Yemekhane".localized(), forSegmentAt: 1)
+        
+        gonderButton.setTitle("Gonder".localized(), for: UIControl.State.normal)
+        
+    }
+    
+    //Redundant change keyboard type
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == moneyAmount || (studentNumber != nil) {
             let allowedCharacters = CharacterSet(charactersIn:"0123456789")
@@ -54,7 +70,7 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
     {
         
         if studentNumber.text == ""  || moneyAmount.text == "" {
-            ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Kutuların içi boş olamaz", view: self, buttons: "Tamam")
+            ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Kutuların içi boş olamaz".localized(), view: self, buttons: "Tamam".localized())
             return
         }
         
@@ -70,27 +86,27 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
             
             DispatchQueue.main.async {
                 if getname.connectionError {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Bağlantı Hatası".localized(), view: self, buttons: "Tamam")
                 }
                 else if getname.error != nil {
                     if(getname.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!".localized(), message: "Hesabınıza başka bir cihazdan giriş yapıldı".localized(), view: self)
                         return
                     }
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hata: \(getname.error!) tekrar deneyiniz", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Hata: \(getname.error!) tekrar deneyiniz", view: self, buttons: "Tamam".localized())
                 }
                 else if getname.info == "user not found" {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: NSLocalizedString("Hatalı Öğrenci Numarası", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                 }
                 else {
                     let name = getname.info
-                    let alert = UIAlertController(title: "Emin misin", message: "\(name ?? "Bulunamadı") adli ogrenciye \(self.moneyAmount.text!) TL para gonderilecek emin misiniz ?", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: name!, message: "\(String(describing: self.moneyAmount.text)) TL" + NSLocalizedString("Para gonderilecek", comment: "").localized(), preferredStyle: UIAlertController.Style.alert)
                     
-                    alert.addAction(UIAlertAction(title: "Eminim", style: UIAlertAction.Style.default, handler: {(action) in
+                    alert.addAction(UIAlertAction(title: "Eminim".localized(), style: UIAlertAction.Style.default, handler: {(action) in
                         self.sendMoneyRequest()
                     }))
                     
-                    alert.addAction(UIAlertAction(title: "Iptal", style: UIAlertAction.Style.default, handler: {(action) in
+                    alert.addAction(UIAlertAction(title: "Iptal".localized(), style: UIAlertAction.Style.default, handler: {(action) in
                         alert.dismiss(animated: true, completion: nil)
                     }))
                     
@@ -117,23 +133,23 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
                 DispatchQueue.main.sync {
                 if response.connectionError {
                     // Handle connection error
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve birazdan tekrar deneyiniz", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Bağlantı Hatası".localized(), view: self, buttons: "Tamam".localized())
                 }
                 else if response.error != nil {
                     // Handle improper connection
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: NSLocalizedString("Hatalı giriş", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                 }
                 else if response.info == "user not found" {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı Öğrenci Numarası", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: NSLocalizedString("Hatalı Öğrenci Numarası", comment: " "), view: self, buttons: "Tamam".localized())
                 }
                 else if response.info == "balance not found" {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "bakiye bulunamadı", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: NSLocalizedString("bakiye bulunamadı", comment: " "), view: self, buttons: "Tamam".localized())
                 }
                 else if response.info == "insufficient balance" {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Sonuç", message: "Yetersiz bakiye", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Sonuç".localized(), message: NSLocalizedString("Yetersiz bakiye", comment: " "), view: self, buttons: "Tamam".localized())
                 }
                 else if response.info == "transfered successfully" {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Sonuç", message: "Para başarıyla gönderildi.", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Sonuç".localized(), message: NSLocalizedString("Para başarıyla gönderildi.", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                 }
                 else {
                     print(response.info!)

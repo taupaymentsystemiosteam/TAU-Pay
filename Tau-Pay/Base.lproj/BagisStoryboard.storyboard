@@ -78,13 +78,14 @@
                     <connections>
                         <outlet property="amountBox" destination="srK-s8-hil" id="ECm-UV-HNE"/>
                         <outlet property="gonder" destination="Pzh-Iu-xpG" id="rhc-36-noJ"/>
+                        <outlet property="infoText" destination="Wca-H1-jhf" id="0Wz-kC-2xj"/>
                         <outlet property="miktarLabel" destination="s5s-6V-4R4" id="beT-9p-fi0"/>
                         <outlet property="selection" destination="VpO-vw-uKL" id="zOH-hz-zLm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1t3-RR-iNz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748.125" y="-1033.75"/>
+            <point key="canvasLocation" x="517" y="-1041"/>
         </scene>
     </scenes>
     <resources>

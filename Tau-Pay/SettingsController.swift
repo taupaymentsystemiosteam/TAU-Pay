@@ -13,6 +13,10 @@ import UIKit
 class SettingsController: UIViewController {
     @IBOutlet weak var languageSelector: UISegmentedControl!
     
+    @IBOutlet weak var changePass: UIButton!
+    @IBOutlet weak var exit: UIButton!
+    
+    
     @IBAction func logoutButton(_ sender: Any) {
         let alert =  UIAlertController(title: "Çıkış", message: "Çıkış yapmak istediğinize emin misiniz", preferredStyle: UIAlertController.Style.alert)
         
@@ -37,27 +41,34 @@ class SettingsController: UIViewController {
         Constants.setLanguage(newLanguage: languageSelector.selectedSegmentIndex)
         print("Chaaaaneeeee")
     }
+    @IBOutlet weak var language: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "Language") == "de"
         {
             languageSelector.selectedSegmentIndex = 1
-        }else{
+        }else
+        {
             languageSelector.selectedSegmentIndex = 0
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+       
+        updateLanguage()
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func updateLanguage()
+    {
+        let lang = NSLocalizedString("Dil", comment: " ").localized()
+        let pass = NSLocalizedString("Sifre Degistir", comment: " ").localized()
+        let cikis = NSLocalizedString("Cikis", comment: " ").localized()
+        
+        language.text = lang
+        changePass.setTitle(pass, for: UIControl.State.normal)
+        exit.setTitle(cikis, for: UIControl.State.normal)
     }
-    */
 
 }

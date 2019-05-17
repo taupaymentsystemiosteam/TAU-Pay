@@ -2,7 +2,8 @@ import UIKit
 
 class ThirdViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var DikkatText: UITextView!
+
+    @IBOutlet weak var DikkatText: UILabel!
     @IBOutlet weak var recommendText: UITextField!
     @IBOutlet var Oner: UIButton!
     @IBOutlet weak var studentNumberText: UILabel!
@@ -19,11 +20,11 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     @objc func updateLanguage()
     {
-        DikkatText.text = NSLocalizedString("Bu sayfada yardıma ihtiyacı olanlar listesine girmesi için bir öğrenci önerebilirsiniz. Bu öğrencinin listeye girip girmemesi için karar verilecektir.", comment: " ")
+        DikkatText.text = NSLocalizedString("Bu sayfada yardıma ihtiyacı olanlar listesine girmesi için bir öğrenci önerebilirsiniz. Bu öğrencinin listeye girip girmemesi için karar verilecektir.", comment: " ").localized()
         
-        let onerText = NSLocalizedString("Oner", comment: "")
+        let onerText = NSLocalizedString("Oner", comment: "").localized()
         
-        studentNumberText.text = "Okul Numarasi" + ":"
+        studentNumberText.text = "Okul Numarasi".localized() + ":"
         Oner.setTitle(onerText, for: UIControl.State.normal)
     }
     
@@ -70,11 +71,12 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
                 else if response.error != nil {
                     // Handle improper connection
                     if(response.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat".localized(), message: "Hesabınıza başka bir cihazdan giriş yapıldı".localized(), view: self)
                         return
                     }
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Hatalı giriş", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                     return
+                
                 } else {
                     ConstantViewFunctions.createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.", view: self, buttons: "Tamam")
                 }

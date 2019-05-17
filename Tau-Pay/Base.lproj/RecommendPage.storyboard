@@ -62,6 +62,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Öner" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="fp3-me-2A5"/>
                     <connections>
+                        <outlet property="DikkatText" destination="rwg-F7-itm" id="2Xv-Bt-fkR"/>
                         <outlet property="Oner" destination="Rjt-YR-kTA" id="vFO-7q-HHU"/>
                         <outlet property="recommendText" destination="FOZ-g6-V1O" id="BRK-ZN-cd5"/>
                         <outlet property="studentNumberText" destination="CLf-Mn-qJd" id="jhV-Dl-CIr"/>

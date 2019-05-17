@@ -43,7 +43,7 @@ class Bezahlen: UIViewController {
         }
         
         if(response.error == "403") {
-            let alert =  UIAlertController(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı.", preferredStyle: UIAlertController.Style.alert)
+            let alert =  UIAlertController(title: NSLocalizedString("Dikkat", comment: " ").localized(), message: NSLocalizedString("Hesabınıza başka bir cihazdan giriş yapıldı.", comment: " ").localized(), preferredStyle: UIAlertController.Style.alert)
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("Tamam", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
                 alert.dismiss(animated: true, completion: nil)
@@ -57,7 +57,7 @@ class Bezahlen: UIViewController {
         if response.error != nil {
             // Handle improper connection
             
-            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: "").localized(), view: self, buttons: "Tamam")
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: "").localized(), view: self, buttons: "Tamam".localized())
             return
         }
         
@@ -120,7 +120,7 @@ class Bezahlen: UIViewController {
             // Handle improper connection
             ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Hatalı Giriş".localized(), view: self, buttons: "Tamam")
             
-            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata".localized(), comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized(), view: self, buttons: "Tamam")
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata".localized(), comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized(), view: self, buttons: "Tamam".localized())
             return
         }
         
@@ -136,14 +136,14 @@ class Bezahlen: UIViewController {
             print("more bad news we are poor! Show dialog!")
             DispatchQueue.main.async {
                        self.turnToDefault()
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Insufficent balance", comment: " "), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " ").localized(), message: NSLocalizedString("Insufficent balance", comment: " ").localized(), view: self, buttons: "Tamam".localized())
             }
         }
         else if response.info! == "paid successfully" {
             print("Yeeey we are not broke! Paid succesfully!")
             DispatchQueue.main.async {
                 self.turnToDefault()
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " "), message: NSLocalizedString("Ödeme başarılı", comment: " "), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Ödeme", comment: " ").localized(), message: NSLocalizedString("Ödeme başarılı", comment: " ").localized(), view: self, buttons: "Tamam".localized())
             }
         }
         else {
@@ -173,7 +173,7 @@ class Bezahlen: UIViewController {
         }
     
     @objc func updateLanguage() {
-         infotext.text = NSLocalizedString("Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız.", comment: "")
+         infotext.text = NSLocalizedString("Ödeme yapmak için gerekli olan QR kodu oluşturmak için Ödeme tuşuna basınız.", comment: "").localized()
          PayButton.setTitle("Ödeme".localized(), for: UIControl.State.normal)
         
     }
@@ -182,7 +182,7 @@ class Bezahlen: UIViewController {
         self.infotext.isHidden = false
         self.progressBar.isHidden = true
         self.qrCodeImage.isHidden = true
-        self.PayButton.setTitle(NSLocalizedString("Ödeme", comment: " "), for: UIControl.State.normal)
+        self.PayButton.setTitle(NSLocalizedString("Ödeme", comment: " ").localized(), for: UIControl.State.normal)
         NSObject.cancelPreviousPerformRequests(withTarget: self)
         progressValue = 1
     }

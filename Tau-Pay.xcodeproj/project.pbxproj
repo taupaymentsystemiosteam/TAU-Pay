@@ -89,16 +89,10 @@
 		19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		19E446F62282FD79005D12A5 /* ConstantViewFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewFunctions.swift; sourceTree = "<group>"; };
 		19E446F822893DE5005D12A5 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
-		19E9CF34227F5A56006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
-		19E9CF35227F5A5D006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		19E9CF44227F5D88006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19E9CF45227F5D89006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19E9CF47227F5DC1006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BagisStoryboard.storyboard; sourceTree = "<group>"; };
-		19E9CF4C227F5DCF006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/BagisStoryboard.strings; sourceTree = "<group>"; };
-		19E9CF4E227F5DD0006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BagisStoryboard.strings; sourceTree = "<group>"; };
 		19E9CF50227F5E6E006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BezahlenPage.storyboard; sourceTree = "<group>"; };
-		19E9CF55227F5E75006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/BezahlenPage.strings; sourceTree = "<group>"; };
-		19E9CF57227F5E76006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BezahlenPage.strings; sourceTree = "<group>"; };
 		19E9CF59227F5E7C006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChangePasswordPage.storyboard; sourceTree = "<group>"; };
 		19E9CF5C227F5E83006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FeedbackPage.storyboard; sourceTree = "<group>"; };
 		19E9CF5F227F5E87006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FirstLoginPage.storyboard; sourceTree = "<group>"; };
@@ -107,22 +101,6 @@
 		19E9CF68227F5E95006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RecommendPage.storyboard; sourceTree = "<group>"; };
 		19E9CF6B227F5E9A006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingsPage.storyboard; sourceTree = "<group>"; };
 		19E9CF6E227F5E9D006E6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TransferPage.storyboard; sourceTree = "<group>"; };
-		19E9CF73227F5EA8006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ChangePasswordPage.strings; sourceTree = "<group>"; };
-		19E9CF75227F5EA8006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ChangePasswordPage.strings; sourceTree = "<group>"; };
-		19E9CF79227F5EAC006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FeedbackPage.strings; sourceTree = "<group>"; };
-		19E9CF7B227F5EAD006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FeedbackPage.strings; sourceTree = "<group>"; };
-		19E9CF7F227F5EB0006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FirstLoginPage.strings; sourceTree = "<group>"; };
-		19E9CF81227F5EB1006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FirstLoginPage.strings; sourceTree = "<group>"; };
-		19E9CF85227F5EB4006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ForgotPasswordPage.strings; sourceTree = "<group>"; };
-		19E9CF87227F5EB5006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ForgotPasswordPage.strings; sourceTree = "<group>"; };
-		19E9CF8B227F5EB9006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ProfilePage.strings; sourceTree = "<group>"; };
-		19E9CF8D227F5EBD006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProfilePage.strings; sourceTree = "<group>"; };
-		19E9CF91227F5EC4006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/RecommendPage.strings; sourceTree = "<group>"; };
-		19E9CF93227F5EC5006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/RecommendPage.strings; sourceTree = "<group>"; };
-		19E9CF97227F5ECB006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/SettingsPage.strings; sourceTree = "<group>"; };
-		19E9CF99227F5ECD006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SettingsPage.strings; sourceTree = "<group>"; };
-		19E9CF9D227F5ED2006E6EE5 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/TransferPage.strings; sourceTree = "<group>"; };
-		19E9CF9F227F5ED3006E6EE5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TransferPage.strings; sourceTree = "<group>"; };
 		19E9CFA022802BFE006E6EE5 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		19E9CFA222802D60006E6EE5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		76B467EB225E25B300DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
@@ -437,8 +415,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19B58DC2223D298500B081FD /* Base */,
-				19E9CF34227F5A56006E6EE5 /* tr */,
-				19E9CF35227F5A5D006E6EE5 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -456,8 +432,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF47227F5DC1006E6EE5 /* Base */,
-				19E9CF4C227F5DCF006E6EE5 /* tr */,
-				19E9CF4E227F5DD0006E6EE5 /* de */,
 			);
 			name = BagisStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -466,8 +440,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF50227F5E6E006E6EE5 /* Base */,
-				19E9CF55227F5E75006E6EE5 /* tr */,
-				19E9CF57227F5E76006E6EE5 /* de */,
 			);
 			name = BezahlenPage.storyboard;
 			sourceTree = "<group>";
@@ -476,8 +448,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF59227F5E7C006E6EE5 /* Base */,
-				19E9CF73227F5EA8006E6EE5 /* tr */,
-				19E9CF75227F5EA8006E6EE5 /* de */,
 			);
 			name = ChangePasswordPage.storyboard;
 			sourceTree = "<group>";
@@ -486,8 +456,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF5C227F5E83006E6EE5 /* Base */,
-				19E9CF79227F5EAC006E6EE5 /* tr */,
-				19E9CF7B227F5EAD006E6EE5 /* de */,
 			);
 			name = FeedbackPage.storyboard;
 			sourceTree = "<group>";
@@ -496,8 +464,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF5F227F5E87006E6EE5 /* Base */,
-				19E9CF7F227F5EB0006E6EE5 /* tr */,
-				19E9CF81227F5EB1006E6EE5 /* de */,
 			);
 			name = FirstLoginPage.storyboard;
 			sourceTree = "<group>";
@@ -506,8 +472,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF62227F5E8D006E6EE5 /* Base */,
-				19E9CF85227F5EB4006E6EE5 /* tr */,
-				19E9CF87227F5EB5006E6EE5 /* de */,
 			);
 			name = ForgotPasswordPage.storyboard;
 			sourceTree = "<group>";
@@ -516,8 +480,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF65227F5E91006E6EE5 /* Base */,
-				19E9CF8B227F5EB9006E6EE5 /* tr */,
-				19E9CF8D227F5EBD006E6EE5 /* de */,
 			);
 			name = ProfilePage.storyboard;
 			sourceTree = "<group>";
@@ -526,8 +488,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF68227F5E95006E6EE5 /* Base */,
-				19E9CF91227F5EC4006E6EE5 /* tr */,
-				19E9CF93227F5EC5006E6EE5 /* de */,
 			);
 			name = RecommendPage.storyboard;
 			sourceTree = "<group>";
@@ -536,8 +496,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF6B227F5E9A006E6EE5 /* Base */,
-				19E9CF97227F5ECB006E6EE5 /* tr */,
-				19E9CF99227F5ECD006E6EE5 /* de */,
 			);
 			name = SettingsPage.storyboard;
 			sourceTree = "<group>";
@@ -546,8 +504,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19E9CF6E227F5E9D006E6EE5 /* Base */,
-				19E9CF9D227F5ED2006E6EE5 /* tr */,
-				19E9CF9F227F5ED3006E6EE5 /* de */,
 			);
 			name = TransferPage.storyboard;
 			sourceTree = "<group>";

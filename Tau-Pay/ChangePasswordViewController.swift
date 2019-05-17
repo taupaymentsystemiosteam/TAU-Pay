@@ -28,10 +28,10 @@ class ChangePasswordViewController: UIViewController {
     
     @objc func updateLanguage()
     {
-        let old = NSLocalizedString("Eski Sifre", comment: "")
-        let new = NSLocalizedString("Yeni Sifre", comment: "")
-        let newagain = NSLocalizedString("Yeni Sifre (Tekrar)", comment: "")
-        let changeBut = NSLocalizedString("Degistir", comment: " ")
+        let old = NSLocalizedString("Eski Sifre", comment: "").localized()
+        let new = NSLocalizedString("Yeni Sifre", comment: "").localized()
+        let newagain = NSLocalizedString("Yeni Sifre (Tekrar)", comment: "").localized()
+        let changeBut = NSLocalizedString("Degistir", comment: " ").localized()
         
         oldPassLabel.text = old
         NewPassLabel.text = new
@@ -42,7 +42,7 @@ class ChangePasswordViewController: UIViewController {
     @IBAction func ChangePassword(_ sender: Any)
     {
         if oldPass.text == "" || newPass.text == "" || newPassRepeated.text == "" {
-            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " "), view: self, buttons: "Tamam")
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Kutuların içi boş olamaz", comment: " ").localized(), view: self, buttons: "Tamam".localized())
             return
         }
         
@@ -56,25 +56,25 @@ class ChangePasswordViewController: UIViewController {
             
             if response.connectionError {
                 // Handle connection error
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message:NSLocalizedString("Bağlantı Hatası", comment: " "), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message:NSLocalizedString("Bağlantı Hatası", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                 return
             }
             if response.error != nil {
                 // Handle improper connection
                 if(response.error == "403") {
-                    ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat!", message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                    ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Dikkat".localized(), message: "Hesabınıza başka bir cihazdan giriş yapıldı".localized(), view: self)
                     return
                 }
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " "), message: NSLocalizedString("Hatalı Giriş", comment: " "), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: NSLocalizedString("Hatalı Giriş", comment: " ").localized(), view: self, buttons: "Tamam".localized())
                 return
             }
             
             if let responseInfo = response.info {
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "Şifre başarı ile değiştirildi. \(String(describing: responseInfo))", view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifre başarı ile değiştirildi.", comment: " ") + "\(String(describing: responseInfo))", view: self, buttons: "Tamam".localized())
             }
             
         } else {
-            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " "), message: "Şifreler uyuşmuyor.", view: self, buttons: "Tamam")
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifreler uyuşmuyor.", comment: ""), view: self, buttons: "Tamam".localized())
             
         }
     }

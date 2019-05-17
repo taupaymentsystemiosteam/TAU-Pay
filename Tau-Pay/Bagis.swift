@@ -9,8 +9,8 @@
 import UIKit
 
 class FirstViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet var DikkatText: UITextView!
+   
+    @IBOutlet weak var infoText: UILabel!
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var selection: UISegmentedControl!
     @IBOutlet weak var miktarLabel: UILabel!
@@ -52,10 +52,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                 if response.error != nil {
                     // Handle improper connection
                     if(response.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: NSLocalizedString("Dikkat!", comment: " "), message: "Hesabınıza başka bir cihazdan giriş yapıldı", view: self)
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: NSLocalizedString("Dikkat!", comment: " ").localized(), message: NSLocalizedString("Hesabınıza başka bir cihazdan giriş yapıldı", comment: ""), view: self)
                         return
                     }
-                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized(), view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Hata", comment: " ").localized(), message: "Hatalı giriş".localized(), view: self, buttons: "Tamam".localized())
                     return
                 }
                 
@@ -68,22 +68,23 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        updateLanguage()
+    
         self.amountBox.delegate = self;
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
      
         NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
+        updateLanguage()
     }
     
     @objc func updateLanguage()
     {
-        DikkatText.text = NSLocalizedString("Askıya yemek / shuttle seyahati bırakabilirsiniz.", comment: " ")
+        infoText.text = NSLocalizedString("Askıya yemek / shuttle seyahati bırakabilirsiniz.", comment: " ").localized()
         
-        let shuttle = NSLocalizedString("Shuttle", comment: " ")
-        let yemekhane = NSLocalizedString("Yemekhane", comment: " ")
-        let miktar = NSLocalizedString("Miktar", comment: " ")
-        let gonderme = NSLocalizedString("Gonder", comment: " ")
+        let shuttle = NSLocalizedString("Shuttle", comment: " ").localized()
+        let yemekhane = NSLocalizedString("Yemekhane", comment: " ").localized()
+        let miktar = NSLocalizedString("Miktar", comment: " ").localized()
+        let gonderme = NSLocalizedString("Gonder", comment: " ").localized()
         
         gonder.setTitle(gonderme, for: UIControl.State.normal)
         miktarLabel.text = miktar

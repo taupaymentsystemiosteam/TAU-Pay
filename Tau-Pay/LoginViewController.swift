@@ -73,9 +73,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         var text = "Giriş".localized()
         anmelden_.setTitle(text, for: UIControl.State.normal)
         
-        matrikelnummer_.placeholder = NSLocalizedString("Okul Numarasi", comment: " ")
+        matrikelnummer_.placeholder = NSLocalizedString("Okul Numarasi", comment: " ").localized()
         
-        passwort_.placeholder = NSLocalizedString("Parola", comment: " ")
+        passwort_.placeholder = NSLocalizedString("Parola", comment: " ").localized()
         
     }
     
@@ -125,11 +125,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             else if(response.error != nil) {
                 DispatchQueue.main.sync {
                     if(response.error == "403") {
-                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Hata!", message: "Kullanıcı adı veya şifre yanlış", view: self)
+                        ConstantViewFunctions.createAnimatedLogoutPopUp(title: "Hata".localized(), message: NSLocalizedString("Kullanıcı adı veya şifre yanlış", comment: " ").localized(), view: self)
                         return
                     }
                     else {
-                        ConstantViewFunctions.createAnimatedPopUp(title: "İnternet Bağlantısı yok", message: "Bağlantınızı kontrol edip tekrar deneyiniz", view: self, buttons: "Tekrar Dene")
+                        ConstantViewFunctions.createAnimatedPopUp(title: "İnternet Bağlantısı yok".localized(), message: NSLocalizedString("Bağlantınızı kontrol edip tekrar deneyiniz", comment: " ").localized(), view: self, buttons: NSLocalizedString("Tekrar Dene", comment: " "))
                     }
                 }
                 

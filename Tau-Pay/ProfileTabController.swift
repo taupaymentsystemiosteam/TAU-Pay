@@ -88,10 +88,10 @@ class ProfileTabController: UIViewController {
     }
     @objc func updateLanguage()
     {
-        shuttleLAbel.text = NSLocalizedString("Shuttle Bakiye", comment: "")
-        yemekhaneLabel.text = NSLocalizedString("Yemekhane Bakiye", comment: "")
-        let feedback = NSLocalizedString("FeedBack", comment: " ")
-        let ayarlar = NSLocalizedString("Ayarlar", comment: " ")
+        shuttleLAbel.text = NSLocalizedString("Shuttle Bakiye", comment: "").localized()
+        yemekhaneLabel.text = NSLocalizedString("Yemekhane Bakiye", comment: "").localized()
+        let feedback = NSLocalizedString("FeedBack", comment: " ").localized()
+        let ayarlar = NSLocalizedString("Ayarlar", comment: " ").localized()
         
         feedbackButton.setTitle(feedback, for: UIControl.State.normal)
         AyarlarButton.setTitle(ayarlar, for: UIControl.State.normal)
