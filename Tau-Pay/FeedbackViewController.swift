@@ -13,7 +13,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
 
     var stars = [UIButton]()
     
-    @IBOutlet var AcıklamaText: UITextView!
+    @IBOutlet weak var AcıklamaText: UILabel!
     @IBOutlet var Star1: UIButton!
     @IBOutlet var Star2: UIButton!
     @IBOutlet var Star3: UIButton!
@@ -115,13 +115,6 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
     
     //END
     
-    
-    @IBAction func MensaShuttleSelect(_ sender: Any) {
-        
-           let Type = MensaShutteSelect.titleForSegment(at: MensaShutteSelect.selectedSegmentIndex)
-        
-        
-    }
     
     
     @IBAction func GonderButton(_ sender: Any) {

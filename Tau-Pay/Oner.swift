@@ -21,26 +21,25 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     @objc func updateLanguage()
     {
         DikkatText.text = NSLocalizedString("Bu sayfada yardıma ihtiyacı olanlar listesine girmesi için bir öğrenci önerebilirsiniz. Bu öğrencinin listeye girip girmemesi için karar verilecektir.", comment: " ").localized()
-        
-        let onerText = NSLocalizedString("Oner", comment: "").localized()
+
         
         studentNumberText.text = "Okul Numarasi".localized() + ":"
-        Oner.setTitle(onerText, for: UIControl.State.normal)
+        Oner.setTitle("Oner".localized(), for: UIControl.State.normal)
     }
     
     @IBAction func Oner(_ sender: Any) {
         
-        if recommendText.text == nil{
-            ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Öğrenci numarası girmediniz.", view: self, buttons: "Tamam")
+        if recommendText.text == nil || recommendText.text == ""{
+            ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Öğrenci numarası girmediniz.".localized(), view: self, buttons: "Tamam")
             return
         }
         
-        let alert = UIAlertController(title: "Emin misiniz",message:"Bu öğrenciyi önermek istediğinize emin misiniz?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Emin Misin?".localized(),message:"Bu öğrenciyi önermek istediğinize emin misiniz?".localized(), preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title:"Eminim", style: UIAlertAction.Style.default, handler: {(action) in self.recommendRequest()
+        alert.addAction(UIAlertAction(title:"Eminim".localized(), style: UIAlertAction.Style.default, handler: {(action) in self.recommendRequest()
         }))
         
-        alert.addAction(UIAlertAction(title: "İptal", style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "İptal".localized(), style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
         
@@ -64,7 +63,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async {
                 if response.connectionError {
                     // Handle connection error
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata", message: "Bağlantı hatası, internete bağlantınızı kontrol ediniz ve tekrar deneyiniz.", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Hata".localized(), message: "Bağlantı Hatası".localized(), view: self, buttons: "Tamam".localized())
                     return
                 }
                     
@@ -78,7 +77,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
                     return
                 
                 } else {
-                    ConstantViewFunctions.createAnimatedPopUp(title: "Başarılı", message: "Öğrenci önerilmiştir.", view: self, buttons: "Tamam")
+                    ConstantViewFunctions.createAnimatedPopUp(title: "Başarılı".localized(), message: "Öğrenci önerilmiştir.".localized(), view: self, buttons: "Tamam".localized())
                 }
             }
         }

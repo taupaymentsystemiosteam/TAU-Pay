@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Geldubertrag-->
+        <!--ParaTransferi-->
         <scene sceneID="aXp-Oy-b2Q">
             <objects>
-                <viewController storyboardIdentifier="GeldTransfer" title="Geldubertrag" id="f8N-LP-vyg" customClass="ParaGonder" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GeldTransfer" title="ParaTransferi" id="f8N-LP-vyg" customClass="ParaGonder" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zeo-tk-KuR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Öner-->
+        <!--Oner-->
         <scene sceneID="drd-uV-l7l">
             <objects>
-                <viewController storyboardIdentifier="RecommendPage" title="Öner" id="BAA-MA-DoZ" customClass="ThirdViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommendPage" title="Oner" id="BAA-MA-DoZ" customClass="ThirdViewController" customModule="Tau_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v0j-Ke-Ncq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

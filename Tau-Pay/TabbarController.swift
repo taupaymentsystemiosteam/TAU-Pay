@@ -16,7 +16,7 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
             print("No title specified")
             return
         }
-        self.parent?.navigationItem.title = title
+        self.parent?.navigationItem.title = title?.localized()
     }
     
     override func viewDidLoad() {
@@ -26,16 +26,8 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         self.parent?.navigationItem.title = self.selectedViewController?.title?.localized()
+        
+     
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -47,9 +47,6 @@
                                     <segment title="Shuttle"/>
                                     <segment title="Yemekhane"/>
                                 </segments>
-                                <connections>
-                                    <action selector="MensaShuttleSelect:" destination="pPF-2m-Pkg" eventType="valueChanged" id="Ztf-no-cXh"/>
-                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Cd-PSY" userLabel="StarButton4">
                                 <rect key="frame" x="263" y="225" width="25" height="25"/>
@@ -133,6 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="qGX-MU-K9W"/>
                     </view>
                     <connections>
+                        <outlet property="AcıklamaText" destination="Wkt-Dd-38O" id="meI-gk-YoP"/>
                         <outlet property="FeedbackText" destination="0qG-QY-WYu" id="SVY-Hq-lSf"/>
                         <outlet property="GonderButton" destination="NNZ-PE-KbG" id="BWO-vx-5C5"/>
                         <outlet property="MensaShutteSelect" destination="RdN-6p-Czg" id="hss-0R-ghp"/>

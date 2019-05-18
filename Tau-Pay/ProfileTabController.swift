@@ -23,9 +23,9 @@ class ProfileTabController: UIViewController {
     
     @objc func updateInfo(_ notification: Notification) {
         if let response = (notification.userInfo as? [String: Any]) {
-            helloBox.text = NSLocalizedString("Merhaba", comment: "") + " \(String(describing: response["name"]!))"
-            shuttleBox.text = "\(String(describing: response["balanceShuttle"]!)) TL"
-            cafeteriaBox.text = "\(String(describing: response["balanceMensa"]!)) TL"
+            helloBox.text = NSLocalizedString("Merhaba", comment: "").localized() + " \(String(describing: response["name"]!))"
+            shuttleBox.text = "\(String(format :"%.2f" , response["balanceShuttle"]! as! Double)) TL"
+            cafeteriaBox.text = "\(String(format :"%.2f" , response["balanceMensa"]! as! Double)) TL"
             print("updated")
         }
     }
