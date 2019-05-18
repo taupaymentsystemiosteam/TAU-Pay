@@ -71,6 +71,8 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
         FeedbackText.text = yorumlar
         
         GonderButton.setTitle("Gonder".localized(), for: UIControl.State.normal)
+        
+        self.parent?.navigationItem.title = self.title!.localized()
        
     }
     

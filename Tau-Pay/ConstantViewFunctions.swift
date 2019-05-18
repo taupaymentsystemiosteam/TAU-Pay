@@ -35,6 +35,7 @@ class ConstantViewFunctions: UIViewController {
     
     static func logout(view: UIViewController) {
         Constants.TOKEN = ""
+       //  NotificationCenter.default.post(name: .changeLanguage, object: self)
         view.dismiss(animated: true, completion: nil)
     }
 

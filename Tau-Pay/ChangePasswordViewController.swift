@@ -28,15 +28,13 @@ class ChangePasswordViewController: UIViewController {
     
     @objc func updateLanguage()
     {
-        let old = NSLocalizedString("Eski Sifre", comment: "").localized()
-        let new = NSLocalizedString("Yeni Sifre", comment: "").localized()
-        let newagain = NSLocalizedString("Yeni Sifre (Tekrar)", comment: "").localized()
-        let changeBut = NSLocalizedString("Degistir", comment: " ").localized()
+        oldPassLabel.text = "Eski Sifre".localized()
+        NewPassLabel.text = "Yeni Sifre".localized()
+        newAgain.text = "Yeni Sifre (Tekrar)".localized()
+        change.setTitle("Degistir".localized(), for: UIControl.State.normal)
         
-        oldPassLabel.text = old
-        NewPassLabel.text = new
-        newAgain.text = newagain
-        change.setTitle(changeBut, for: UIControl.State.normal)
+         self.navigationItem.title! = self.title!.localized()
+        
     }
     
     @IBAction func ChangePassword(_ sender: Any)
@@ -69,12 +67,19 @@ class ChangePasswordViewController: UIViewController {
                 return
             }
             
-            if let responseInfo = response.info {
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifre başarı ile değiştirildi.", comment: " ") + "\(String(describing: responseInfo))", view: self, buttons: "Tamam".localized())
+            if let responseInfo = response.info
+            {
+                if responseInfo == "wrong password"
+                {
+                    ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: "Yanlis Sifre".localized(), view: self, buttons: "Tamam".localized())
+                }
+                
+                ConstantViewFunctions.createAnimatedLogoutPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifre başarı ile değiştirildi.", comment: " ").localized(), view: self)
             }
             
-        } else {
-            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifreler uyuşmuyor.", comment: ""), view: self, buttons: "Tamam".localized())
+        }
+        else {
+            ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifreler uyuşmuyor.", comment: "").localized(), view: self, buttons: "Tamam".localized())
             
         }
     }

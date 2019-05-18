@@ -62,13 +62,10 @@ class SettingsController: UIViewController {
     
     @objc func updateLanguage()
     {
-        let lang = NSLocalizedString("Dil", comment: " ").localized()
-        let pass = NSLocalizedString("Sifre Degistir", comment: " ").localized()
-        let cikis = NSLocalizedString("Cikis", comment: " ").localized()
-        
-        language.text = lang
-        changePass.setTitle(pass, for: UIControl.State.normal)
-        exit.setTitle(cikis, for: UIControl.State.normal)
+        language.text = "Dil".localized()
+        changePass.setTitle("Sifre Degistir".localized(), for: UIControl.State.normal)
+        exit.setTitle("Cikis".localized(), for: UIControl.State.normal)
+        self.navigationItem.title = self.title?.localized()
     }
 
 }

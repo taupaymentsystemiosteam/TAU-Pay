@@ -12,7 +12,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var matrikelnummer_: UITextField!
     @IBOutlet weak var passwort_: UITextField!
     @IBOutlet weak var anmelden_: UIButton!
-    @IBOutlet var PasswortVergessen: [UIButton]!
+    @IBOutlet weak var PasswortVergessen: UIButton!
+    
 
     /*
     func createAnimatedPopUp(title: String, message: String, actionTitle: String){
@@ -70,12 +71,14 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     @objc func updateLanguage() {
-        var text = "Giriş".localized()
+        let text = "Giriş".localized()
         anmelden_.setTitle(text, for: UIControl.State.normal)
         
-        matrikelnummer_.placeholder = NSLocalizedString("Okul Numarasi", comment: " ").localized()
+        matrikelnummer_.placeholder = "Okul Numarasi".localized()
         
         passwort_.placeholder = NSLocalizedString("Parola", comment: " ").localized()
+        
+        PasswortVergessen.setTitle("Şifremi Unuttum".localized(), for: UIControl.State.normal)
         
     }
     
