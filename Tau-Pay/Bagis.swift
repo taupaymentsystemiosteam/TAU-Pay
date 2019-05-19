@@ -84,9 +84,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         let shuttle = NSLocalizedString("Shuttle", comment: " ").localized()
         let yemekhane = NSLocalizedString("Yemekhane", comment: " ").localized()
         let miktar = NSLocalizedString("Miktar", comment: " ").localized()
-        let gonderme = NSLocalizedString("Gonder", comment: " ").localized()
         
-        gonder.setTitle(gonderme, for: UIControl.State.normal)
+        gonder.setTitle("Gonder".localized(), for: UIControl.State.normal)
         miktarLabel.text = miktar
         selection.setTitle(shuttle, forSegmentAt: 0)
         selection.setTitle(yemekhane, forSegmentAt: 1)
