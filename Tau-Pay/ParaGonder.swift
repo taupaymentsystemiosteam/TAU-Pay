@@ -106,7 +106,7 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
                         self.sendMoneyRequest()
                     }))
                     
-                    alert.addAction(UIAlertAction(title: "Iptal".localized(), style: UIAlertAction.Style.default, handler: {(action) in
+                    alert.addAction(UIAlertAction(title: "İptal".localized(), style: UIAlertAction.Style.default, handler: {(action) in
                         alert.dismiss(animated: true, completion: nil)
                     }))
                     
