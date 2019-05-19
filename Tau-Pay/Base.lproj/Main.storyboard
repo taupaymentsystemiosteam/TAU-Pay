@@ -88,19 +88,8 @@
                                     <segue destination="P6x-mA-nLu" kind="show" id="Qei-5t-8BT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-kt-7H9">
-                                <rect key="frame" x="16" y="623" width="91" height="30"/>
-                                <state key="normal" title="Bypass Login"/>
-                                <connections>
-                                    <segue destination="xap-PB-Kj7" kind="show" id="WpE-7p-SwO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91229027509689331" green="0.96138221025466919" blue="0.96934956312179565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="3sK-kt-7H9" firstAttribute="leading" secondItem="jbs-Iu-7ra" secondAttribute="leading" constant="16" id="EJ9-wo-st3"/>
-                            <constraint firstItem="jbs-Iu-7ra" firstAttribute="bottom" secondItem="3sK-kt-7H9" secondAttribute="bottom" constant="14" id="b1X-EQ-Ywc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jbs-Iu-7ra"/>
                     </view>
                     <navigationItem key="navigationItem" id="LAJ-uk-pPu"/>
