@@ -60,7 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XCr-Ke-l6N"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Öner" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="fp3-me-2A5"/>
+                    <tabBarItem key="tabBarItem" title="" image="Oner" landscapeImage="Oner" largeContentSizeImage="Oner" id="fp3-me-2A5"/>
                     <connections>
                         <outlet property="DikkatText" destination="rwg-F7-itm" id="2Xv-Bt-fkR"/>
                         <outlet property="Oner" destination="Rjt-YR-kTA" id="vFO-7q-HHU"/>

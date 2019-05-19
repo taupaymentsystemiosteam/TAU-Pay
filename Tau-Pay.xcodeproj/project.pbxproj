@@ -10,7 +10,6 @@
 		1915D4EA2270D04E00BBC463 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1915D4E92270D04E00BBC463 /* SettingsController.swift */; };
 		19298635225F406000765D3A /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298634225F406000765D3A /* ProfileTabController.swift */; };
 		192E33A42258C51500C63CEB /* ConstantsAndRequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */; };
-		195D78292269CB140041B1CF /* TauPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 195D78282269CB140041B1CF /* TauPay.png */; };
 		1965F06E225E24C700C8427D /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965F06D225E24C700C8427D /* ForgotPassword.swift */; };
 		1965F072225E717500C8427D /* FirstLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965F071225E717500C8427D /* FirstLogin.swift */; };
 		1967EFBF224E355200E0173F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967EFBE224E355200E0173F /* FeedbackViewController.swift */; };
@@ -65,7 +64,6 @@
 		1915D4E92270D04E00BBC463 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		19298634225F406000765D3A /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		192E33A32258C51500C63CEB /* ConstantsAndRequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndRequestFunctions.swift; sourceTree = "<group>"; };
-		195D78282269CB140041B1CF /* TauPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TauPay.png; sourceTree = "<group>"; };
 		1965F06D225E24C700C8427D /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		1965F071225E717500C8427D /* FirstLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLogin.swift; sourceTree = "<group>"; };
 		1967EFBE224E355200E0173F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				19B58DC4223D298600B081FD /* Assets.xcassets */,
-				195D78282269CB140041B1CF /* TauPay.png */,
 				19B58DC9223D298600B081FD /* Info.plist */,
 				19B58DC1223D298500B081FD /* Main.storyboard */,
 				19DA6AC6224B3D7500D1F3CF /* LoginViewController.swift */,
@@ -330,7 +327,6 @@
 				19E9CF4F227F5E6E006E6EE5 /* BezahlenPage.storyboard in Resources */,
 				19B58DC3223D298500B081FD /* Main.storyboard in Resources */,
 				19E9CF5E227F5E87006E6EE5 /* FirstLoginPage.storyboard in Resources */,
-				195D78292269CB140041B1CF /* TauPay.png in Resources */,
 				19E9CF6A227F5E9A006E6EE5 /* SettingsPage.storyboard in Resources */,
 				19E9CF58227F5E7C006E6EE5 /* ChangePasswordPage.storyboard in Resources */,
 				19E9CF6D227F5E9D006E6EE5 /* TransferPage.storyboard in Resources */,
@@ -636,13 +632,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4CD923965;
+				DEVELOPMENT_TEAM = S333QD72SQ;
 				INFOPLIST_FILE = "Tau-Pay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nusretozates.Tau-Pay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IOS.Tau-Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -654,13 +650,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4CD923965;
+				DEVELOPMENT_TEAM = S333QD72SQ;
 				INFOPLIST_FILE = "Tau-Pay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nusretozates.Tau-Pay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IOS.Tau-Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

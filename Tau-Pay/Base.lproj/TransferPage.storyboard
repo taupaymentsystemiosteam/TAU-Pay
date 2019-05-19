@@ -89,7 +89,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FRm-Dz-O2N"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Para Gönder" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="Y2N-86-2sw"/>
+                    <tabBarItem key="tabBarItem" title="" image="ParaGonder" landscapeImage="ParaGonder" largeContentSizeImage="ParaGonder" id="Y2N-86-2sw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MiktarLabel" destination="Jj1-20-xhr" id="JOT-kP-paQ"/>

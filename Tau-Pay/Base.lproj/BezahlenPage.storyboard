@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="clE-kq-ttY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Odeme" image="Odeme" landscapeImage="Odeme" largeContentSizeImage="Odeme" id="1kw-FG-Vqe"/>
+                    <tabBarItem key="tabBarItem" title="" image="Odeme" landscapeImage="Odeme" largeContentSizeImage="Odeme" id="1kw-FG-Vqe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="PayButton" destination="aOi-1i-AVH" id="9Op-LH-pAQ"/>

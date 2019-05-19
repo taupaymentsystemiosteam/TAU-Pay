@@ -73,7 +73,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UH8-o1-LVg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Askıda" image="Aski" landscapeImage="Aski" largeContentSizeImage="Aski" id="vx8-96-o0h"/>
+                    <tabBarItem key="tabBarItem" title="" image="Aski" landscapeImage="Aski" largeContentSizeImage="Aski" id="vx8-96-o0h"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="amountBox" destination="srK-s8-hil" id="ECm-UV-HNE"/>
