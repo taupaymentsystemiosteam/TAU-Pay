@@ -100,7 +100,7 @@ class ParaGonder: UIViewController, UITextFieldDelegate {
                 }
                 else {
                     let name = getname.info
-                    let alert = UIAlertController(title: name!, message: "\(String(describing: self.moneyAmount.text!)) TL " + NSLocalizedString("Para gonderilecek", comment: "").localized(), preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: name!, message: "\(String(describing: self.moneyAmount.text!)) TL " + "Para gonderilecek".localized(), preferredStyle: UIAlertController.Style.alert)
                     
                     alert.addAction(UIAlertAction(title: "Eminim".localized(), style: UIAlertAction.Style.default, handler: {(action) in
                         self.sendMoneyRequest()

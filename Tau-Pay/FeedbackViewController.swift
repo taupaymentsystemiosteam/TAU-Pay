@@ -150,7 +150,7 @@ class FeedbackViewController: UIViewController , UITextViewDelegate , UITextFiel
                 }
                 
                 
-                ConstantViewFunctions.createAnimatedPopUp(title: NSLocalizedString("Başarılı", comment: " "), message: NSLocalizedString("Yorumunuz iletilmiştir", comment: " "), view: self, buttons: "Tamam")
+                ConstantViewFunctions.createAnimatedPopUp(title: "Başarılı".localized(), message: "Yorumunuz iletilmiştir".localized(), view: self, buttons: "Tamam".localized())
             }
         }
     }

@@ -8,17 +8,16 @@
 
 import UIKit
 
-
-
 class SettingsController: UIViewController {
-    @IBOutlet weak var languageSelector: UISegmentedControl!
     
+    @IBOutlet weak var languageSelector: UISegmentedControl!
     @IBOutlet weak var changePass: UIButton!
     @IBOutlet weak var exit: UIButton!
     
     
     @IBAction func logoutButton(_ sender: Any) {
-        let alert =  UIAlertController(title: "Çıkış", message: "Çıkış yapmak istediğinize emin misiniz", preferredStyle: UIAlertController.Style.alert)
+      
+        let alert =  UIAlertController(title: "Cikis".localized(), message: "Çıkış yapmak istediğinize emin misiniz".localized(), preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Evet", comment: " ").localized(), style: UIAlertAction.Style.default, handler: {(action) in
             alert.dismiss(animated: true, completion: nil)
