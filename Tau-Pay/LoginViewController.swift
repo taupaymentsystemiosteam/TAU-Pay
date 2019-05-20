@@ -143,9 +143,16 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     UserDefaults.standard.set(response.info!, forKey: "TOKEN")
                     UserDefaults.standard.set(true, forKey: "loggedin")
                     
-                    let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController
-                    self.present(vc, animated: true, completion: nil)
+                    if self.passwort_.text == self.matrikelnummer_.text {
+                        let storyboard = UIStoryboard(name: "FirstLoginStoryboard", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "FirstLogin") as UIViewController
+                        self.present(vc, animated: true, completion: nil)
+                    }
+                    else {
+                        let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileNavController") as UIViewController
+                        self.present(vc, animated: true, completion: nil)
+                    }
                 }
             }
         }

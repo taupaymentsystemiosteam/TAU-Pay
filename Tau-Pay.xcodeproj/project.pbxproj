@@ -38,6 +38,8 @@
 		19E9CF6D227F5E9D006E6EE5 /* TransferPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E9CF6F227F5E9D006E6EE5 /* TransferPage.storyboard */; };
 		19E9CFA122802BFE006E6EE5 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9CFA022802BFE006E6EE5 /* Bundle.swift */; };
 		19E9CFA322802D60006E6EE5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9CFA222802D60006E6EE5 /* String.swift */; };
+		19EDAEC622929B37006C3A5E /* FirstLoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EDAEC522929B37006C3A5E /* FirstLoginStoryboard.storyboard */; };
+		19EDAECA22929D92006C3A5E /* FirstLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EDAEC922929D92006C3A5E /* FirstLoginController.swift */; };
 		76B467EC225E25B300DD2E25 /* Bezahlen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B467EB225E25B300DD2E25 /* Bezahlen.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		19E9CFA022802BFE006E6EE5 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		19E9CFA222802D60006E6EE5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		19EBCF18228EFA5E0018DBC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19EDAEC522929B37006C3A5E /* FirstLoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLoginStoryboard.storyboard; sourceTree = "<group>"; };
+		19EDAEC922929D92006C3A5E /* FirstLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginController.swift; sourceTree = "<group>"; };
 		76B467EB225E25B300DD2E25 /* Bezahlen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezahlen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +184,8 @@
 				19E9CFA222802D60006E6EE5 /* String.swift */,
 				19E446F822893DE5005D12A5 /* TabbarController.swift */,
 				19B58DBB223D298500B081FD /* AppDelegate.swift */,
+				19EDAEC522929B37006C3A5E /* FirstLoginStoryboard.storyboard */,
+				19EDAEC922929D92006C3A5E /* FirstLoginController.swift */,
 			);
 			path = "Tau-Pay";
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			files = (
 				19E9CF5B227F5E83006E6EE5 /* FeedbackPage.storyboard in Resources */,
 				19E9CF46227F5DC1006E6EE5 /* BagisStoryboard.storyboard in Resources */,
+				19EDAEC622929B37006C3A5E /* FirstLoginStoryboard.storyboard in Resources */,
 				19E9CF67227F5E95006E6EE5 /* RecommendPage.storyboard in Resources */,
 				19E9CF41227F5D83006E6EE5 /* Localizable.strings in Resources */,
 				19B58DC5223D298600B081FD /* Assets.xcassets in Resources */,
@@ -349,6 +356,7 @@
 			files = (
 				19DA6AC7224B3D7500D1F3CF /* LoginViewController.swift in Sources */,
 				1915D4EA2270D04E00BBC463 /* SettingsController.swift in Sources */,
+				19EDAECA22929D92006C3A5E /* FirstLoginController.swift in Sources */,
 				19B58DC0223D298500B081FD /* Profil.swift in Sources */,
 				19B58DBC223D298500B081FD /* AppDelegate.swift in Sources */,
 				19789EDC225A3B010028029C /* ChangePasswordViewController.swift in Sources */,

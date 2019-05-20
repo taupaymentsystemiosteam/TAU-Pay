@@ -1,42 +1,51 @@
 //
-//  ChangePasswordViewController.swift
+//  FirstLoginController.swift
 //  Tau-Pay
 //
-//  Created by Nusret Özateş on 7.04.2019.
+//  Created by Nusret Özateş on 20.05.2019.
 //  Copyright © 2019 Nusret Özateş. All rights reserved.
 //
 
 import UIKit
 
-class ChangePasswordViewController: UIViewController {
+class FirstLoginController: UIViewController {
+
+    @IBOutlet weak var firstBoxText: UILabel!
     
-    @IBOutlet weak var newPassRepeated: UITextField!
-    @IBOutlet weak var newPass: UITextField!
+    @IBOutlet weak var oldPassText: UILabel!
+    
+    @IBOutlet weak var newPassText: UILabel!
+    @IBOutlet weak var newPassAgainText: UILabel!
+    @IBOutlet weak var changeButton: UIButton!
+   
+    
     @IBOutlet weak var oldPass: UITextField!
+    @IBOutlet weak var newPass: UITextField!
+    @IBOutlet weak var newPassRepeated: UITextField!
     
-    @IBOutlet weak var oldPassLabel: UILabel!
-    @IBOutlet weak var NewPassLabel: UILabel!
-    @IBOutlet weak var newAgain: UILabel!
-    @IBOutlet weak var change: UIButton!
+    @objc func updateLanguage()
+    {
+        firstBoxText.text = "FirstBox".localized()
+        oldPassText.text = "Eski Sifre".localized()
+        newPassText.text = "Yeni Sifre".localized()
+        newPassAgainText.text = "Yeni Sifre (Tekrar)".localized()
+        
+        changeButton.setTitle("Degistir".localized(), for: UIControl.State.normal)
+        
+        self.navigationItem.title! = self.title!.localized()
+        
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLanguage()
-         NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
-        // Do any additional setup after loading the view.
-    }
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguage), name: .changeLanguage, object: nil)
     
-    @objc func updateLanguage()
-    {
-        oldPassLabel.text = "Eski Sifre".localized()
-        NewPassLabel.text = "Yeni Sifre".localized()
-        newAgain.text = "Yeni Sifre (Tekrar)".localized()
-        change.setTitle("Degistir".localized(), for: UIControl.State.normal)
-        
-         self.navigationItem.title! = self.title!.localized()
-        
     }
-    
+
     @IBAction func ChangePassword(_ sender: Any)
     {
         if oldPass.text == "" || newPass.text == "" || newPassRepeated.text == "" {
@@ -46,8 +55,8 @@ class ChangePasswordViewController: UIViewController {
         
         if newPass.text == newPassRepeated.text {
             let json = [
-                "oldPass": oldPass.text,
-                "newPass": newPass.text
+                "oldPass": oldPassText.text,
+                "newPass": newPassText.text
             ]
             let response = Constants.SendRequestGetString(requestType: "/customers/change-password", json: json as Dictionary<String, Any>)
             
@@ -76,6 +85,8 @@ class ChangePasswordViewController: UIViewController {
                 }
                 
                 ConstantViewFunctions.createAnimatedLogoutPopUp(title: NSLocalizedString("Sonuç", comment: " ").localized(), message: NSLocalizedString("Şifre başarı ile değiştirildi.", comment: " ").localized(), view: self)
+                
+                
             }
             
         }
@@ -84,5 +95,6 @@ class ChangePasswordViewController: UIViewController {
             
         }
     }
-    
 }
+
+

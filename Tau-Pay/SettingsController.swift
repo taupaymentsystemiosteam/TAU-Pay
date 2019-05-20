@@ -27,8 +27,7 @@ class SettingsController: UIViewController {
             alert.dismiss(animated: true, completion: nil)
         }))
         
-        UserDefaults.standard.set("", forKey: "TOKEN")
-        UserDefaults.standard.set(false, forKey: "loggedin")
+        
         
         self.present(alert, animated: true, completion: nil)
         
